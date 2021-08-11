@@ -14,8 +14,28 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash.Background" translatesAutoresizingMaskIntoConstraints="NO" id="WS8-qu-jhW">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash.Image" translatesAutoresizingMaskIntoConstraints="NO" id="8R5-Pb-reK">
+                                <rect key="frame" x="90" y="331" width="234" height="234"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="234" id="5YC-Sg-e7b"/>
+                                    <constraint firstAttribute="width" constant="234" id="kb5-gH-7Dh"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.97647058823529409" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="WS8-qu-jhW" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="0Qb-gg-2yt"/>
+                            <constraint firstItem="WS8-qu-jhW" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="7Am-AW-69o"/>
+                            <constraint firstAttribute="trailing" secondItem="WS8-qu-jhW" secondAttribute="trailing" id="DRo-JB-cya"/>
+                            <constraint firstItem="8R5-Pb-reK" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="mDe-t7-dFd"/>
+                            <constraint firstItem="8R5-Pb-reK" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="sXw-il-wHJ"/>
+                            <constraint firstAttribute="bottom" secondItem="WS8-qu-jhW" secondAttribute="bottom" id="uzL-xP-fwQ"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -23,4 +43,8 @@
             <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Splash.Background" width="375" height="812"/>
+        <image name="Splash.Image" width="234" height="234"/>
+    </resources>
 </document>
