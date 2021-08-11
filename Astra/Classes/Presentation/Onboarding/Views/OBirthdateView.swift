@@ -7,7 +7,6 @@
 
 import UIKit
 import RxSwift
-import RxCocoa
 
 final class OBirthdateView: OSlideView {
     lazy var titleLabel = makeTitleLabel()

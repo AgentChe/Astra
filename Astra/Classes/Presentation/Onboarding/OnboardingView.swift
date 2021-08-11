@@ -29,7 +29,8 @@ final class OnboardingView: UIView {
         [
             OWelcomeView(step: .welcome),
             OGenderView(step: .gender),
-            OBirthdateView(step: .birthdate)
+            OBirthdateView(step: .birthdate),
+            OGoalsView(step: .goals)
         ]
     }()
     

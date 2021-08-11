@@ -21,3 +21,9 @@
 "Onboarding.Gender.SubTitle" = "Swipe to choose";
 "Onboarding.Birthdate.Title" = "When were you born?";
 "Onboarding.Birthdate.SubTitle" = "This is required to prepare a\npersonal horoscope";
+"Onboarding.Goals.Title" = "Choose your goals";
+"Onboarding.Goals.SubTitle" = "What do you want from your life\nin the next few years?";
+"Onboarding.Goals.Cell1" = "Self-improvement";
+"Onboarding.Goals.Cell2" = "Analyse birth chart";
+"Onboarding.Goals.Cell3" = "Try something new";
+"Onboarding.Goals.Cell4" = "Find out the future";
