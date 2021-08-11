@@ -49,6 +49,7 @@
 		968FD46B26C4320700C01D2A /* Qanelas-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 968FD46726C431B200C01D2A /* Qanelas-SemiBold.ttf */; };
 		968FD46D26C4334C00C01D2A /* OGenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD46C26C4334C00C01D2A /* OGenderView.swift */; };
 		968FD47226C4520700C01D2A /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD47126C4520700C01D2A /* Gender.swift */; };
+		968FD47426C45BED00C01D2A /* OBirthdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD47326C45BED00C01D2A /* OBirthdateView.swift */; };
 		EA80E75864467FD58E75C2BA /* Pods_Astra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70F58ABE9BC2B6805D15295E /* Pods_Astra.framework */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +101,7 @@
 		968FD46826C431B200C01D2A /* Qanelas-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Qanelas-Bold.ttf"; sourceTree = "<group>"; };
 		968FD46C26C4334C00C01D2A /* OGenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OGenderView.swift; sourceTree = "<group>"; };
 		968FD47126C4520700C01D2A /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
+		968FD47326C45BED00C01D2A /* OBirthdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBirthdateView.swift; sourceTree = "<group>"; };
 		C46B19553E947FBD72888998 /* Pods-Astra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Astra.debug.xcconfig"; path = "Target Support Files/Pods-Astra/Pods-Astra.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -307,6 +309,7 @@
 				968FD43426C41F0500C01D2A /* OSlideView.swift */,
 				968FD46226C42ED300C01D2A /* OWelcomeView.swift */,
 				968FD46C26C4334C00C01D2A /* OGenderView.swift */,
+				968FD47326C45BED00C01D2A /* OBirthdateView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -492,6 +495,7 @@
 				968FD3FC26C3CB0D00C01D2A /* Toast.swift in Sources */,
 				968FD3FA26C3CB0D00C01D2A /* Weak.swift in Sources */,
 				968FD46126C426A100C01D2A /* OStepView.swift in Sources */,
+				968FD47426C45BED00C01D2A /* OBirthdateView.swift in Sources */,
 				968FD40726C3CB0D00C01D2A /* UIViewRxExtension.swift in Sources */,
 				968FD3FD26C3CB0D00C01D2A /* NavigationController.swift in Sources */,
 				968FD40226C3CB0D00C01D2A /* GradientButton.swift in Sources */,

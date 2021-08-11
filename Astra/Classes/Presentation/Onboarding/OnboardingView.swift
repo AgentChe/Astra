@@ -28,7 +28,8 @@ final class OnboardingView: UIView {
     private lazy var contentViews: [OSlideView] = {
         [
             OWelcomeView(step: .welcome),
-            OGenderView(step: .gender)
+            OGenderView(step: .gender),
+            OBirthdateView(step: .birthdate)
         ]
     }()
     
