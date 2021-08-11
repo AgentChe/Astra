@@ -8,18 +8,18 @@
 import UIKit
 
 struct Fonts {
-    // MARK: SFProRounded
+    // MARK: Qanelas
     struct Qanelas {
         static func bold(size: CGFloat) -> UIFont {
-            UIFont(name: "SFProRounded-Bold", size: size)!
+            UIFont(name: "Qanelas-Bold", size: size)!
         }
         
         static func regular(size: CGFloat) -> UIFont {
-            UIFont(name: "SFProRounded-Regular", size: size)!
+            UIFont(name: "Qanelas-Regular", size: size)!
         }
         
         static func semiBold(size: CGFloat) -> UIFont {
-            UIFont(name: "SFProRounded-Semibold", size: size)!
+            UIFont(name: "Qanelas-Semibold", size: size)!
         }
     }
 }

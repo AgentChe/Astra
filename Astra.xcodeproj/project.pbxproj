@@ -38,6 +38,17 @@
 		968FD41526C3DFC400C01D2A /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD41426C3DFC400C01D2A /* SplashViewController.swift */; };
 		968FD41726C3E02A00C01D2A /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD41626C3E02A00C01D2A /* SplashViewModel.swift */; };
 		968FD41926C3E0CB00C01D2A /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD41826C3E0CB00C01D2A /* SplashView.swift */; };
+		968FD44026C41F0500C01D2A /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD41B26C41F0500C01D2A /* OnboardingViewController.swift */; };
+		968FD45426C41F0500C01D2A /* OSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD43426C41F0500C01D2A /* OSlideView.swift */; };
+		968FD45E26C41F0500C01D2A /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD43E26C41F0500C01D2A /* OnboardingView.swift */; };
+		968FD45F26C41F0500C01D2A /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD43F26C41F0500C01D2A /* OnboardingViewModel.swift */; };
+		968FD46126C426A100C01D2A /* OStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD46026C426A100C01D2A /* OStepView.swift */; };
+		968FD46326C42ED300C01D2A /* OWelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD46226C42ED300C01D2A /* OWelcomeView.swift */; };
+		968FD46926C4320700C01D2A /* Qanelas-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 968FD46826C431B200C01D2A /* Qanelas-Bold.ttf */; };
+		968FD46A26C4320700C01D2A /* Qanelas-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 968FD46626C431B200C01D2A /* Qanelas-Regular.ttf */; };
+		968FD46B26C4320700C01D2A /* Qanelas-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 968FD46726C431B200C01D2A /* Qanelas-SemiBold.ttf */; };
+		968FD46D26C4334C00C01D2A /* OGenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD46C26C4334C00C01D2A /* OGenderView.swift */; };
+		968FD47226C4520700C01D2A /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD47126C4520700C01D2A /* Gender.swift */; };
 		EA80E75864467FD58E75C2BA /* Pods_Astra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70F58ABE9BC2B6805D15295E /* Pods_Astra.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +89,17 @@
 		968FD41426C3DFC400C01D2A /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		968FD41626C3E02A00C01D2A /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		968FD41826C3E0CB00C01D2A /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		968FD41B26C41F0500C01D2A /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		968FD43426C41F0500C01D2A /* OSlideView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSlideView.swift; sourceTree = "<group>"; };
+		968FD43E26C41F0500C01D2A /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		968FD43F26C41F0500C01D2A /* OnboardingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		968FD46026C426A100C01D2A /* OStepView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OStepView.swift; sourceTree = "<group>"; };
+		968FD46226C42ED300C01D2A /* OWelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWelcomeView.swift; sourceTree = "<group>"; };
+		968FD46626C431B200C01D2A /* Qanelas-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Qanelas-Regular.ttf"; sourceTree = "<group>"; };
+		968FD46726C431B200C01D2A /* Qanelas-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Qanelas-SemiBold.ttf"; sourceTree = "<group>"; };
+		968FD46826C431B200C01D2A /* Qanelas-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Qanelas-Bold.ttf"; sourceTree = "<group>"; };
+		968FD46C26C4334C00C01D2A /* OGenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OGenderView.swift; sourceTree = "<group>"; };
+		968FD47126C4520700C01D2A /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
 		C46B19553E947FBD72888998 /* Pods-Astra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Astra.debug.xcconfig"; path = "Target Support Files/Pods-Astra/Pods-Astra.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,6 +154,7 @@
 		968FD3C526C3C84500C01D2A /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				968FD46426C431A300C01D2A /* Fonts */,
 				968FD40B26C3CE2800C01D2A /* Strings */,
 				968FD3BF26C3C83100C01D2A /* Info.plist */,
 				968FD40E26C3CE5400C01D2A /* LaunchScreen.storyboard */,
@@ -144,6 +167,7 @@
 		968FD3C626C3C9ED00C01D2A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				968FD46E26C451EE00C01D2A /* Service */,
 				968FD41126C3CF3600C01D2A /* Presentation */,
 				968FD3C726C3CB0C00C01D2A /* Misc */,
 			);
@@ -249,6 +273,7 @@
 		968FD41126C3CF3600C01D2A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				968FD41A26C41F0500C01D2A /* Onboarding */,
 				968FD41326C3DFAA00C01D2A /* Splash */,
 			);
 			path = Presentation;
@@ -262,6 +287,78 @@
 				968FD41826C3E0CB00C01D2A /* SplashView.swift */,
 			);
 			path = Splash;
+			sourceTree = "<group>";
+		};
+		968FD41A26C41F0500C01D2A /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				968FD41C26C41F0500C01D2A /* Views */,
+				968FD41B26C41F0500C01D2A /* OnboardingViewController.swift */,
+				968FD43F26C41F0500C01D2A /* OnboardingViewModel.swift */,
+				968FD43E26C41F0500C01D2A /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		968FD41C26C41F0500C01D2A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				968FD41E26C41F0500C01D2A /* Atoms */,
+				968FD43426C41F0500C01D2A /* OSlideView.swift */,
+				968FD46226C42ED300C01D2A /* OWelcomeView.swift */,
+				968FD46C26C4334C00C01D2A /* OGenderView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		968FD41E26C41F0500C01D2A /* Atoms */ = {
+			isa = PBXGroup;
+			children = (
+				968FD46026C426A100C01D2A /* OStepView.swift */,
+			);
+			path = Atoms;
+			sourceTree = "<group>";
+		};
+		968FD46426C431A300C01D2A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				968FD46526C431AA00C01D2A /* Qaneles */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		968FD46526C431AA00C01D2A /* Qaneles */ = {
+			isa = PBXGroup;
+			children = (
+				968FD46826C431B200C01D2A /* Qanelas-Bold.ttf */,
+				968FD46626C431B200C01D2A /* Qanelas-Regular.ttf */,
+				968FD46726C431B200C01D2A /* Qanelas-SemiBold.ttf */,
+			);
+			path = Qaneles;
+			sourceTree = "<group>";
+		};
+		968FD46E26C451EE00C01D2A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				968FD46F26C451F600C01D2A /* User */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		968FD46F26C451F600C01D2A /* User */ = {
+			isa = PBXGroup;
+			children = (
+				968FD47026C451FB00C01D2A /* Model */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		968FD47026C451FB00C01D2A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				968FD47126C4520700C01D2A /* Gender.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		A4B089CC1A71FAC485D4124C /* Frameworks */ = {
@@ -331,6 +428,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				968FD46926C4320700C01D2A /* Qanelas-Bold.ttf in Resources */,
+				968FD46A26C4320700C01D2A /* Qanelas-Regular.ttf in Resources */,
+				968FD46B26C4320700C01D2A /* Qanelas-SemiBold.ttf in Resources */,
 				968FD40F26C3CE5400C01D2A /* LaunchScreen.storyboard in Resources */,
 				968FD3BB26C3C83100C01D2A /* Assets.xcassets in Resources */,
 				968FD40D26C3CE2800C01D2A /* Localizable.strings in Resources */,
@@ -391,6 +491,7 @@
 				968FD3F526C3CB0D00C01D2A /* TextAttributes.swift in Sources */,
 				968FD3FC26C3CB0D00C01D2A /* Toast.swift in Sources */,
 				968FD3FA26C3CB0D00C01D2A /* Weak.swift in Sources */,
+				968FD46126C426A100C01D2A /* OStepView.swift in Sources */,
 				968FD40726C3CB0D00C01D2A /* UIViewRxExtension.swift in Sources */,
 				968FD3FD26C3CB0D00C01D2A /* NavigationController.swift in Sources */,
 				968FD40226C3CB0D00C01D2A /* GradientButton.swift in Sources */,
@@ -399,7 +500,9 @@
 				968FD3F426C3CB0D00C01D2A /* Scalable.swift in Sources */,
 				968FD3FE26C3CB0D00C01D2A /* NavigationControllerSettings.swift in Sources */,
 				968FD41726C3E02A00C01D2A /* SplashViewModel.swift in Sources */,
+				968FD44026C41F0500C01D2A /* OnboardingViewController.swift in Sources */,
 				968FD41926C3E0CB00C01D2A /* SplashView.swift in Sources */,
+				968FD45E26C41F0500C01D2A /* OnboardingView.swift in Sources */,
 				968FD3F226C3CB0D00C01D2A /* StringExtension.swift in Sources */,
 				968FD40126C3CB0D00C01D2A /* PaddingPickerView.swift in Sources */,
 				968FD3F026C3CB0D00C01D2A /* UIDeviceExtension.swift in Sources */,
@@ -407,9 +510,14 @@
 				968FD3F926C3CB0D00C01D2A /* SignError.swift in Sources */,
 				968FD3F626C3CB0D00C01D2A /* ScreenSize.swift in Sources */,
 				968FD40A26C3CDDC00C01D2A /* UIEdgeInsets+Extension.swift in Sources */,
+				968FD47226C4520700C01D2A /* Gender.swift in Sources */,
+				968FD45F26C41F0500C01D2A /* OnboardingViewModel.swift in Sources */,
+				968FD46D26C4334C00C01D2A /* OGenderView.swift in Sources */,
 				968FD41526C3DFC400C01D2A /* SplashViewController.swift in Sources */,
 				968FD40026C3CB0D00C01D2A /* PaddingLabel.swift in Sources */,
+				968FD45426C41F0500C01D2A /* OSlideView.swift in Sources */,
 				968FD3FB26C3CB0D00C01D2A /* ImagePicker.swift in Sources */,
+				968FD46326C42ED300C01D2A /* OWelcomeView.swift in Sources */,
 				968FD40426C3CB0D00C01D2A /* GradientView.swift in Sources */,
 				968FD3EF26C3CB0D00C01D2A /* UITapGestureRecognizerExtension.swift in Sources */,
 				968FD40626C3CB0D00C01D2A /* RxActivityIndicator.swift in Sources */,
