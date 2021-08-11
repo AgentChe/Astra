@@ -31,9 +31,9 @@ final class OnboardingViewController: UIViewController {
                 return
             }
             
-//            this.markAsViewed()
+            this.markAsViewed()
             
-//            this.goToNext()
+            this.goToNext()
         }
     }
 }
@@ -59,6 +59,6 @@ private extension OnboardingViewController {
     }
     
     func goToNext() {
-        
+        // todo
     }
 }

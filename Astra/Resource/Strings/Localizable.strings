@@ -27,3 +27,12 @@
 "Onboarding.Goals.Cell2" = "Analyse birth chart";
 "Onboarding.Goals.Cell3" = "Try something new";
 "Onboarding.Goals.Cell4" = "Find out the future";
+"Onboarding.Enjoying.Title" = "What have you been\nenjoying today?";
+"Onboarding.Enjoying.SubTitle" = "Select all the topics that made\nyou happy";
+"Onboarding.Enjoying.Cell1" = "work";
+"Onboarding.Enjoying.Cell2" = "relaxing";
+"Onboarding.Enjoying.Cell3" = "family";
+"Onboarding.Enjoying.Cell4" = "friends";
+"Onboarding.Enjoying.Cell5" = "pets";
+"Onboarding.Enjoying.Cell6" = "fitness";
+"Onboarding.Enjoying.Cell7" = "travel";

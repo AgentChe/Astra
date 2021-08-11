@@ -52,6 +52,8 @@
 		968FD47426C45BED00C01D2A /* OBirthdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD47326C45BED00C01D2A /* OBirthdateView.swift */; };
 		968FD47626C45F7F00C01D2A /* OGoalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD47526C45F7F00C01D2A /* OGoalsView.swift */; };
 		968FD47826C460AC00C01D2A /* OGoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD47726C460AC00C01D2A /* OGoalCell.swift */; };
+		968FD47A26C46F6C00C01D2A /* OEnjoyingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD47926C46F6C00C01D2A /* OEnjoyingView.swift */; };
+		968FD47C26C4736500C01D2A /* OEnjoyingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD47B26C4736500C01D2A /* OEnjoyingCell.swift */; };
 		EA80E75864467FD58E75C2BA /* Pods_Astra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70F58ABE9BC2B6805D15295E /* Pods_Astra.framework */; };
 /* End PBXBuildFile section */
 
@@ -106,6 +108,8 @@
 		968FD47326C45BED00C01D2A /* OBirthdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBirthdateView.swift; sourceTree = "<group>"; };
 		968FD47526C45F7F00C01D2A /* OGoalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OGoalsView.swift; sourceTree = "<group>"; };
 		968FD47726C460AC00C01D2A /* OGoalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OGoalCell.swift; sourceTree = "<group>"; };
+		968FD47926C46F6C00C01D2A /* OEnjoyingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OEnjoyingView.swift; sourceTree = "<group>"; };
+		968FD47B26C4736500C01D2A /* OEnjoyingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OEnjoyingCell.swift; sourceTree = "<group>"; };
 		C46B19553E947FBD72888998 /* Pods-Astra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Astra.debug.xcconfig"; path = "Target Support Files/Pods-Astra/Pods-Astra.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -315,6 +319,7 @@
 				968FD46C26C4334C00C01D2A /* OGenderView.swift */,
 				968FD47326C45BED00C01D2A /* OBirthdateView.swift */,
 				968FD47526C45F7F00C01D2A /* OGoalsView.swift */,
+				968FD47926C46F6C00C01D2A /* OEnjoyingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -324,6 +329,7 @@
 			children = (
 				968FD46026C426A100C01D2A /* OStepView.swift */,
 				968FD47726C460AC00C01D2A /* OGoalCell.swift */,
+				968FD47B26C4736500C01D2A /* OEnjoyingCell.swift */,
 			);
 			path = Atoms;
 			sourceTree = "<group>";
@@ -506,6 +512,7 @@
 				968FD40726C3CB0D00C01D2A /* UIViewRxExtension.swift in Sources */,
 				968FD3FD26C3CB0D00C01D2A /* NavigationController.swift in Sources */,
 				968FD40226C3CB0D00C01D2A /* GradientButton.swift in Sources */,
+				968FD47A26C46F6C00C01D2A /* OEnjoyingView.swift in Sources */,
 				968FD40526C3CB0D00C01D2A /* AppDelegate.swift in Sources */,
 				968FD3F826C3CB0D00C01D2A /* Fonts.swift in Sources */,
 				968FD3F426C3CB0D00C01D2A /* Scalable.swift in Sources */,
@@ -524,6 +531,7 @@
 				968FD40A26C3CDDC00C01D2A /* UIEdgeInsets+Extension.swift in Sources */,
 				968FD47226C4520700C01D2A /* Gender.swift in Sources */,
 				968FD45F26C41F0500C01D2A /* OnboardingViewModel.swift in Sources */,
+				968FD47C26C4736500C01D2A /* OEnjoyingCell.swift in Sources */,
 				968FD46D26C4334C00C01D2A /* OGenderView.swift in Sources */,
 				968FD41526C3DFC400C01D2A /* SplashViewController.swift in Sources */,
 				968FD40026C3CB0D00C01D2A /* PaddingLabel.swift in Sources */,
