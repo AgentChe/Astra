@@ -8,6 +8,6 @@
 #ifndef Accuplacer_Bridging_Header_h
 #define Accuplacer_Bridging_Header_h
 
-//#import <RushSDK/RushSDK.h>
+#import <RushSDK/RushSDK.h>
 
 #endif /* Accuplacer_Bridging_Header_h */

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96059E0926C662C700BD9A0A /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E0826C662C700BD9A0A /* Session.swift */; };
+		96059E0B26C6632A00BD9A0A /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E0A26C6632A00BD9A0A /* SessionManager.swift */; };
+		96059E0D26C6634400BD9A0A /* SessionManagerCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E0C26C6634400BD9A0A /* SessionManagerCore.swift */; };
 		968FD3BB26C3C83100C01D2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 968FD3BA26C3C83100C01D2A /* Assets.xcassets */; };
 		968FD3EC26C3CB0D00C01D2A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD3C926C3CB0C00C01D2A /* UIColorExtension.swift */; };
 		968FD3EF26C3CB0D00C01D2A /* UITapGestureRecognizerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD3CC26C3CB0C00C01D2A /* UITapGestureRecognizerExtension.swift */; };
@@ -60,6 +63,9 @@
 /* Begin PBXFileReference section */
 		382F2E72B6BB3202962D0034 /* Pods-Astra.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Astra.release.xcconfig"; path = "Target Support Files/Pods-Astra/Pods-Astra.release.xcconfig"; sourceTree = "<group>"; };
 		70F58ABE9BC2B6805D15295E /* Pods_Astra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Astra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96059E0826C662C700BD9A0A /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		96059E0A26C6632A00BD9A0A /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		96059E0C26C6634400BD9A0A /* SessionManagerCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManagerCore.swift; sourceTree = "<group>"; };
 		968FD3AE26C3C82D00C01D2A /* Astra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Astra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		968FD3BA26C3C83100C01D2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		968FD3BF26C3C83100C01D2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -132,6 +138,32 @@
 				382F2E72B6BB3202962D0034 /* Pods-Astra.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		96059E0526C662A200BD9A0A /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				96059E0726C662B000BD9A0A /* Manager */,
+				96059E0626C662AB00BD9A0A /* Model */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
+		96059E0626C662AB00BD9A0A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				96059E0826C662C700BD9A0A /* Session.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		96059E0726C662B000BD9A0A /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				96059E0A26C6632A00BD9A0A /* SessionManager.swift */,
+				96059E0C26C6634400BD9A0A /* SessionManagerCore.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		968FD3A526C3C82D00C01D2A = {
@@ -355,6 +387,7 @@
 		968FD46E26C451EE00C01D2A /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				96059E0526C662A200BD9A0A /* Session */,
 				968FD46F26C451F600C01D2A /* User */,
 			);
 			path = Service;
@@ -504,6 +537,7 @@
 				968FD40326C3CB0D00C01D2A /* CircleView.swift in Sources */,
 				968FD47626C45F7F00C01D2A /* OGoalsView.swift in Sources */,
 				968FD3FF26C3CB0D00C01D2A /* TapAreaButton.swift in Sources */,
+				96059E0D26C6634400BD9A0A /* SessionManagerCore.swift in Sources */,
 				968FD3F526C3CB0D00C01D2A /* TextAttributes.swift in Sources */,
 				968FD3FC26C3CB0D00C01D2A /* Toast.swift in Sources */,
 				968FD3FA26C3CB0D00C01D2A /* Weak.swift in Sources */,
@@ -515,6 +549,7 @@
 				968FD47A26C46F6C00C01D2A /* OEnjoyingView.swift in Sources */,
 				968FD40526C3CB0D00C01D2A /* AppDelegate.swift in Sources */,
 				968FD3F826C3CB0D00C01D2A /* Fonts.swift in Sources */,
+				96059E0926C662C700BD9A0A /* Session.swift in Sources */,
 				968FD3F426C3CB0D00C01D2A /* Scalable.swift in Sources */,
 				968FD3FE26C3CB0D00C01D2A /* NavigationControllerSettings.swift in Sources */,
 				968FD41726C3E02A00C01D2A /* SplashViewModel.swift in Sources */,
@@ -528,6 +563,7 @@
 				968FD3F926C3CB0D00C01D2A /* SignError.swift in Sources */,
 				968FD3F626C3CB0D00C01D2A /* ScreenSize.swift in Sources */,
 				968FD47826C460AC00C01D2A /* OGoalCell.swift in Sources */,
+				96059E0B26C6632A00BD9A0A /* SessionManager.swift in Sources */,
 				968FD40A26C3CDDC00C01D2A /* UIEdgeInsets+Extension.swift in Sources */,
 				968FD47226C4520700C01D2A /* Gender.swift in Sources */,
 				968FD45F26C41F0500C01D2A /* OnboardingViewModel.swift in Sources */,
@@ -671,6 +707,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 2GY8CB289H;
 				INFOPLIST_FILE = "$(SRCROOT)/Astra/Resource/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -680,6 +717,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = mLib.Astra;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Astra/Resource/Astra-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -701,6 +739,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = mLib.Astra;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Astra/Resource/Astra-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
