@@ -25,11 +25,13 @@ final class OnboardingView: UIView {
     lazy var scrollView = makeScrollView()
     lazy var progressView = makeProgressView()
     
+    private lazy var nameView = ONameView(step: .name)
+    private lazy var genderView = OGenderView(step: .gender)
     private lazy var contentViews: [OSlideView] = {
         [
             OWelcomeView(step: .welcome),
-            ONameView(step: .name),
-            OGenderView(step: .gender),
+            nameView,
+            genderView,
             OBirthdateView(step: .birthdate),
             OGoalsView(step: .goals),
             OEnjoyingView(step: .enjoying),
@@ -72,6 +74,8 @@ extension OnboardingView: OSlideViewDelegate {
 // MARK: Private
 private extension OnboardingView {
     func initialize() {
+        nameView.nameDelegate = genderView
+        
         contentViews
             .enumerated()
             .forEach { [weak self] index, view in

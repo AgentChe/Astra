@@ -8,7 +8,13 @@
 import UIKit
 import RxSwift
 
+protocol ONameViewDelegate: AnyObject {
+    func nameViewChange(name: String)
+}
+
 final class ONameView: OSlideView {
+    weak var nameDelegate: ONameViewDelegate?
+    
     lazy var titleLabel = makeTitleLabel()
     lazy var subTitleLabel = makeSubTitleLabel()
     lazy var textField = makeTextField()
@@ -69,6 +75,8 @@ private extension ONameView {
                 }
 
                 self?.endEditing(true)
+                
+                self?.nameDelegate?.nameViewChange(name: self?.textField.text ?? "")
                 
                 self?.onNext()
             })

@@ -33,6 +33,20 @@ final class OGenderView: OSlideView {
     }
 }
 
+// MARK: ONameViewDelegate
+extension OGenderView: ONameViewDelegate {
+    func nameViewChange(name: String) {
+        let attrs = TextAttributes()
+            .textColor(UIColor(integralRed: 31, green: 31, blue: 31))
+            .font(Fonts.Qanelas.bold(size: 30.scale))
+            .lineHeight(36.scale)
+            .textAlignment(.center)
+        
+        let string = String(format: "Onboarding.Gender.Title".localized, name)
+        titleLabel.attributedText = string.attributed(with: attrs)
+    }
+}
+
 // MARK: Make constraints
 private extension OGenderView {
     func initialize() {
@@ -139,15 +153,8 @@ private extension OGenderView {
 // MARK: Lazy initialization
 private extension OGenderView {
     func makeTitleLabel() -> UILabel {
-        let attrs = TextAttributes()
-            .textColor(UIColor(integralRed: 31, green: 31, blue: 31))
-            .font(Fonts.Qanelas.bold(size: 30.scale))
-            .lineHeight(36.scale)
-            .textAlignment(.center)
-        
         let view = UILabel()
         view.numberOfLines = 0
-        view.attributedText = "Onboarding.Gender.Title".localized.attributed(with: attrs)
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view
