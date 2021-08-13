@@ -16,6 +16,11 @@
 		96059E1A26C6707C00BD9A0A /* UserManagerCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E1926C6707C00BD9A0A /* UserManagerCore.swift */; };
 		96059E1C26C6819D00BD9A0A /* ONameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E1B26C6819D00BD9A0A /* ONameView.swift */; };
 		96059E1E26C6855900BD9A0A /* PaddingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E1D26C6855900BD9A0A /* PaddingTextField.swift */; };
+		96059E2226C6CBB900BD9A0A /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E2126C6CBB900BD9A0A /* TabController.swift */; };
+		96059E2526C6CBE800BD9A0A /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E2426C6CBE800BD9A0A /* TabView.swift */; };
+		96059E2726C6CBFB00BD9A0A /* TabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E2626C6CBFB00BD9A0A /* TabItemView.swift */; };
+		96059E2926C6CC5B00BD9A0A /* TabMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E2826C6CC5B00BD9A0A /* TabMainView.swift */; };
+		96059E2B26C6CD2700BD9A0A /* TabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E2A26C6CD2700BD9A0A /* TabCoordinator.swift */; };
 		968FD3BB26C3C83100C01D2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 968FD3BA26C3C83100C01D2A /* Assets.xcassets */; };
 		968FD3EC26C3CB0D00C01D2A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD3C926C3CB0C00C01D2A /* UIColorExtension.swift */; };
 		968FD3EF26C3CB0D00C01D2A /* UITapGestureRecognizerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD3CC26C3CB0C00C01D2A /* UITapGestureRecognizerExtension.swift */; };
@@ -78,6 +83,11 @@
 		96059E1926C6707C00BD9A0A /* UserManagerCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManagerCore.swift; sourceTree = "<group>"; };
 		96059E1B26C6819D00BD9A0A /* ONameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ONameView.swift; sourceTree = "<group>"; };
 		96059E1D26C6855900BD9A0A /* PaddingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingTextField.swift; sourceTree = "<group>"; };
+		96059E2126C6CBB900BD9A0A /* TabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabController.swift; sourceTree = "<group>"; };
+		96059E2426C6CBE800BD9A0A /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		96059E2626C6CBFB00BD9A0A /* TabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemView.swift; sourceTree = "<group>"; };
+		96059E2826C6CC5B00BD9A0A /* TabMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMainView.swift; sourceTree = "<group>"; };
+		96059E2A26C6CD2700BD9A0A /* TabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCoordinator.swift; sourceTree = "<group>"; };
 		968FD3AE26C3C82D00C01D2A /* Astra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Astra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		968FD3BA26C3C83100C01D2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		968FD3BF26C3C83100C01D2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -193,6 +203,26 @@
 				96059E1926C6707C00BD9A0A /* UserManagerCore.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		96059E1F26C6CBA200BD9A0A /* TabController */ = {
+			isa = PBXGroup;
+			children = (
+				96059E2326C6CBDA00BD9A0A /* Views */,
+				96059E2126C6CBB900BD9A0A /* TabController.swift */,
+				96059E2826C6CC5B00BD9A0A /* TabMainView.swift */,
+				96059E2A26C6CD2700BD9A0A /* TabCoordinator.swift */,
+			);
+			path = TabController;
+			sourceTree = "<group>";
+		};
+		96059E2326C6CBDA00BD9A0A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				96059E2426C6CBE800BD9A0A /* TabView.swift */,
+				96059E2626C6CBFB00BD9A0A /* TabItemView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		968FD3A526C3C82D00C01D2A = {
@@ -345,6 +375,7 @@
 		968FD41126C3CF3600C01D2A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				96059E1F26C6CBA200BD9A0A /* TabController */,
 				968FD41A26C41F0500C01D2A /* Onboarding */,
 				968FD41326C3DFAA00C01D2A /* Splash */,
 			);
@@ -569,6 +600,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				968FD40326C3CB0D00C01D2A /* CircleView.swift in Sources */,
+				96059E2726C6CBFB00BD9A0A /* TabItemView.swift in Sources */,
+				96059E2226C6CBB900BD9A0A /* TabController.swift in Sources */,
+				96059E2526C6CBE800BD9A0A /* TabView.swift in Sources */,
 				968FD47626C45F7F00C01D2A /* OGoalsView.swift in Sources */,
 				968FD3FF26C3CB0D00C01D2A /* TapAreaButton.swift in Sources */,
 				96059E0D26C6634400BD9A0A /* SessionManagerCore.swift in Sources */,
@@ -592,6 +626,7 @@
 				968FD44026C41F0500C01D2A /* OnboardingViewController.swift in Sources */,
 				968FD41926C3E0CB00C01D2A /* SplashView.swift in Sources */,
 				968FD45E26C41F0500C01D2A /* OnboardingView.swift in Sources */,
+				96059E2926C6CC5B00BD9A0A /* TabMainView.swift in Sources */,
 				968FD3F226C3CB0D00C01D2A /* StringExtension.swift in Sources */,
 				968FD40126C3CB0D00C01D2A /* PaddingPickerView.swift in Sources */,
 				968FD3F026C3CB0D00C01D2A /* UIDeviceExtension.swift in Sources */,
@@ -604,6 +639,7 @@
 				968FD40A26C3CDDC00C01D2A /* UIEdgeInsets+Extension.swift in Sources */,
 				968FD47226C4520700C01D2A /* Gender.swift in Sources */,
 				968FD45F26C41F0500C01D2A /* OnboardingViewModel.swift in Sources */,
+				96059E2B26C6CD2700BD9A0A /* TabCoordinator.swift in Sources */,
 				968FD47C26C4736500C01D2A /* OEnjoyingCell.swift in Sources */,
 				96059E1C26C6819D00BD9A0A /* ONameView.swift in Sources */,
 				968FD46D26C4334C00C01D2A /* OGenderView.swift in Sources */,

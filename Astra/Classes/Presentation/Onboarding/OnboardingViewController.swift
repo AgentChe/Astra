@@ -59,6 +59,6 @@ private extension OnboardingViewController {
     }
     
     func goToNext() {
-        // todo
+        UIApplication.shared.keyWindow?.rootViewController = TabController.make()
     }
 }

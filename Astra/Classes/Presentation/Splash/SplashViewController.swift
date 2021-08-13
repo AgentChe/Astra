@@ -59,10 +59,9 @@ private extension SplashViewController {
     func handle(step: SplashViewModel.Step) {
         switch step {
         case .onboarding:
-            let vc = OnboardingViewController.make()
-            UIApplication.shared.keyWindow?.rootViewController = vc
+            UIApplication.shared.keyWindow?.rootViewController = OnboardingViewController.make()
         case .main:
-            break
+            UIApplication.shared.keyWindow?.rootViewController = TabController.make()
         }
     }
 }
