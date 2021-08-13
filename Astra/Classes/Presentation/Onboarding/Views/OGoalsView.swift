@@ -165,7 +165,7 @@ private extension OGoalsView {
         let view = UIButton()
         view.layer.cornerRadius = 7.scale
         view.backgroundColor = UIColor(integralRed: 255, green: 141, blue: 91)
-        view.setAttributedTitle("Continue".uppercased().localized.attributed(with: attrs), for: .normal)
+        view.setAttributedTitle("Continue".localized.uppercased().attributed(with: attrs), for: .normal)
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view

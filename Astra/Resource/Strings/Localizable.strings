@@ -36,3 +36,6 @@
 "Onboarding.Enjoying.Cell5" = "pets";
 "Onboarding.Enjoying.Cell6" = "fitness";
 "Onboarding.Enjoying.Cell7" = "travel";
+"Onboarding.Plan.Title" = "Your individual plan is\nready";
+"Onboarding.Plan.SubTitle" = "Based on your goals, we have\nselected the following program\nfor you.";
+"Onboarding.Plan.Button" = "SEE PLAN";

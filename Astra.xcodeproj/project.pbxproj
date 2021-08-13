@@ -10,6 +10,7 @@
 		96059E0926C662C700BD9A0A /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E0826C662C700BD9A0A /* Session.swift */; };
 		96059E0B26C6632A00BD9A0A /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E0A26C6632A00BD9A0A /* SessionManager.swift */; };
 		96059E0D26C6634400BD9A0A /* SessionManagerCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E0C26C6634400BD9A0A /* SessionManagerCore.swift */; };
+		96059E1126C6665B00BD9A0A /* OPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E1026C6665B00BD9A0A /* OPlanView.swift */; };
 		968FD3BB26C3C83100C01D2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 968FD3BA26C3C83100C01D2A /* Assets.xcassets */; };
 		968FD3EC26C3CB0D00C01D2A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD3C926C3CB0C00C01D2A /* UIColorExtension.swift */; };
 		968FD3EF26C3CB0D00C01D2A /* UITapGestureRecognizerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD3CC26C3CB0C00C01D2A /* UITapGestureRecognizerExtension.swift */; };
@@ -66,6 +67,7 @@
 		96059E0826C662C700BD9A0A /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		96059E0A26C6632A00BD9A0A /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		96059E0C26C6634400BD9A0A /* SessionManagerCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManagerCore.swift; sourceTree = "<group>"; };
+		96059E1026C6665B00BD9A0A /* OPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPlanView.swift; sourceTree = "<group>"; };
 		968FD3AE26C3C82D00C01D2A /* Astra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Astra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		968FD3BA26C3C83100C01D2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		968FD3BF26C3C83100C01D2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 				968FD47326C45BED00C01D2A /* OBirthdateView.swift */,
 				968FD47526C45F7F00C01D2A /* OGoalsView.swift */,
 				968FD47926C46F6C00C01D2A /* OEnjoyingView.swift */,
+				96059E1026C6665B00BD9A0A /* OPlanView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -574,6 +577,7 @@
 				968FD45426C41F0500C01D2A /* OSlideView.swift in Sources */,
 				968FD3FB26C3CB0D00C01D2A /* ImagePicker.swift in Sources */,
 				968FD46326C42ED300C01D2A /* OWelcomeView.swift in Sources */,
+				96059E1126C6665B00BD9A0A /* OPlanView.swift in Sources */,
 				968FD40426C3CB0D00C01D2A /* GradientView.swift in Sources */,
 				968FD3EF26C3CB0D00C01D2A /* UITapGestureRecognizerExtension.swift in Sources */,
 				968FD40626C3CB0D00C01D2A /* RxActivityIndicator.swift in Sources */,
