@@ -12,16 +12,18 @@ final class OEnjoyingView: OSlideView {
     lazy var titleLabel = makeTitleLabel()
     lazy var subTitleLabel = makeSubTitleLabel()
     lazy var scrollView = makeScrollView()
-    lazy var cell1 = makeCell(title: "Onboarding.Enjoying.Cell1", tag: 1)
-    lazy var cell2 = makeCell(title: "Onboarding.Enjoying.Cell2", tag: 2)
-    lazy var cell3 = makeCell(title: "Onboarding.Enjoying.Cell3", tag: 3)
-    lazy var cell4 = makeCell(title: "Onboarding.Enjoying.Cell4", tag: 4)
-    lazy var cell5 = makeCell(title: "Onboarding.Enjoying.Cell5", tag: 5)
-    lazy var cell6 = makeCell(title: "Onboarding.Enjoying.Cell6", tag: 6)
-    lazy var cell7 = makeCell(title: "Onboarding.Enjoying.Cell7", tag: 7)
+    lazy var cell1 = makeCell(title: "Onboarding.Enjoying.Cell1", tag: 0)
+    lazy var cell2 = makeCell(title: "Onboarding.Enjoying.Cell2", tag: 1)
+    lazy var cell3 = makeCell(title: "Onboarding.Enjoying.Cell3", tag: 2)
+    lazy var cell4 = makeCell(title: "Onboarding.Enjoying.Cell4", tag: 3)
+    lazy var cell5 = makeCell(title: "Onboarding.Enjoying.Cell5", tag: 4)
+    lazy var cell6 = makeCell(title: "Onboarding.Enjoying.Cell6", tag: 5)
+    lazy var cell7 = makeCell(title: "Onboarding.Enjoying.Cell7", tag: 6)
     lazy var button = makeButton()
     
     private lazy var disposeBag = DisposeBag()
+    
+    private lazy var userManager = UserManagerCore()
     
     override init(step: OnboardingView.Step) {
         super.init(step: step)
@@ -40,7 +42,26 @@ final class OEnjoyingView: OSlideView {
 private extension OEnjoyingView {
     func initialize() {
         button.rx.tap
-            .subscribe(onNext: { [weak self] in
+            .flatMapLatest { [weak self] _ -> Single<Bool> in
+                guard let self = self else {
+                    return .never()
+                }
+                
+                let enjoy = [
+                    self.cell1, self.cell2, self.cell3, self.cell4, self.cell5, self.cell6, self.cell7
+                ].filter { $0.isSelected }.map { $0.tag }
+                
+                return self.userManager
+                    .set(enjoy: enjoy)
+                    .map { true }
+                    .catchAndReturn(false)
+            }
+            .subscribe(onNext: { [weak self] success in
+                guard success else {
+                    Toast.notify(with: "Onboarding.FailedToSave".localized, style: .danger)
+                    return
+                }
+
                 self?.onNext()
             })
             .disposed(by: disposeBag)

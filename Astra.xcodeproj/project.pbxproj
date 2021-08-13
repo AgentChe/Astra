@@ -11,6 +11,11 @@
 		96059E0B26C6632A00BD9A0A /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E0A26C6632A00BD9A0A /* SessionManager.swift */; };
 		96059E0D26C6634400BD9A0A /* SessionManagerCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E0C26C6634400BD9A0A /* SessionManagerCore.swift */; };
 		96059E1126C6665B00BD9A0A /* OPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E1026C6665B00BD9A0A /* OPlanView.swift */; };
+		96059E1426C66F0F00BD9A0A /* SetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E1326C66F0F00BD9A0A /* SetRequest.swift */; };
+		96059E1826C6703500BD9A0A /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E1726C6703500BD9A0A /* UserManager.swift */; };
+		96059E1A26C6707C00BD9A0A /* UserManagerCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E1926C6707C00BD9A0A /* UserManagerCore.swift */; };
+		96059E1C26C6819D00BD9A0A /* ONameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E1B26C6819D00BD9A0A /* ONameView.swift */; };
+		96059E1E26C6855900BD9A0A /* PaddingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E1D26C6855900BD9A0A /* PaddingTextField.swift */; };
 		968FD3BB26C3C83100C01D2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 968FD3BA26C3C83100C01D2A /* Assets.xcassets */; };
 		968FD3EC26C3CB0D00C01D2A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD3C926C3CB0C00C01D2A /* UIColorExtension.swift */; };
 		968FD3EF26C3CB0D00C01D2A /* UITapGestureRecognizerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD3CC26C3CB0C00C01D2A /* UITapGestureRecognizerExtension.swift */; };
@@ -68,6 +73,11 @@
 		96059E0A26C6632A00BD9A0A /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		96059E0C26C6634400BD9A0A /* SessionManagerCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManagerCore.swift; sourceTree = "<group>"; };
 		96059E1026C6665B00BD9A0A /* OPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPlanView.swift; sourceTree = "<group>"; };
+		96059E1326C66F0F00BD9A0A /* SetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRequest.swift; sourceTree = "<group>"; };
+		96059E1726C6703500BD9A0A /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		96059E1926C6707C00BD9A0A /* UserManagerCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManagerCore.swift; sourceTree = "<group>"; };
+		96059E1B26C6819D00BD9A0A /* ONameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ONameView.swift; sourceTree = "<group>"; };
+		96059E1D26C6855900BD9A0A /* PaddingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingTextField.swift; sourceTree = "<group>"; };
 		968FD3AE26C3C82D00C01D2A /* Astra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Astra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		968FD3BA26C3C83100C01D2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		968FD3BF26C3C83100C01D2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -164,6 +174,23 @@
 			children = (
 				96059E0A26C6632A00BD9A0A /* SessionManager.swift */,
 				96059E0C26C6634400BD9A0A /* SessionManagerCore.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		96059E1226C66F0600BD9A0A /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				96059E1326C66F0F00BD9A0A /* SetRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		96059E1626C6702500BD9A0A /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				96059E1726C6703500BD9A0A /* UserManager.swift */,
+				96059E1926C6707C00BD9A0A /* UserManagerCore.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -284,6 +311,7 @@
 				968FD3E426C3CB0D00C01D2A /* GradientButton.swift */,
 				968FD3E526C3CB0D00C01D2A /* CircleView.swift */,
 				968FD3E626C3CB0D00C01D2A /* GradientView.swift */,
+				96059E1D26C6855900BD9A0A /* PaddingTextField.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -355,6 +383,7 @@
 				968FD47526C45F7F00C01D2A /* OGoalsView.swift */,
 				968FD47926C46F6C00C01D2A /* OEnjoyingView.swift */,
 				96059E1026C6665B00BD9A0A /* OPlanView.swift */,
+				96059E1B26C6819D00BD9A0A /* ONameView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -399,6 +428,8 @@
 		968FD46F26C451F600C01D2A /* User */ = {
 			isa = PBXGroup;
 			children = (
+				96059E1626C6702500BD9A0A /* Manager */,
+				96059E1226C66F0600BD9A0A /* Request */,
 				968FD47026C451FB00C01D2A /* Model */,
 			);
 			path = User;
@@ -556,6 +587,8 @@
 				968FD3F426C3CB0D00C01D2A /* Scalable.swift in Sources */,
 				968FD3FE26C3CB0D00C01D2A /* NavigationControllerSettings.swift in Sources */,
 				968FD41726C3E02A00C01D2A /* SplashViewModel.swift in Sources */,
+				96059E1E26C6855900BD9A0A /* PaddingTextField.swift in Sources */,
+				96059E1A26C6707C00BD9A0A /* UserManagerCore.swift in Sources */,
 				968FD44026C41F0500C01D2A /* OnboardingViewController.swift in Sources */,
 				968FD41926C3E0CB00C01D2A /* SplashView.swift in Sources */,
 				968FD45E26C41F0500C01D2A /* OnboardingView.swift in Sources */,
@@ -567,10 +600,12 @@
 				968FD3F626C3CB0D00C01D2A /* ScreenSize.swift in Sources */,
 				968FD47826C460AC00C01D2A /* OGoalCell.swift in Sources */,
 				96059E0B26C6632A00BD9A0A /* SessionManager.swift in Sources */,
+				96059E1426C66F0F00BD9A0A /* SetRequest.swift in Sources */,
 				968FD40A26C3CDDC00C01D2A /* UIEdgeInsets+Extension.swift in Sources */,
 				968FD47226C4520700C01D2A /* Gender.swift in Sources */,
 				968FD45F26C41F0500C01D2A /* OnboardingViewModel.swift in Sources */,
 				968FD47C26C4736500C01D2A /* OEnjoyingCell.swift in Sources */,
+				96059E1C26C6819D00BD9A0A /* ONameView.swift in Sources */,
 				968FD46D26C4334C00C01D2A /* OGenderView.swift in Sources */,
 				968FD41526C3DFC400C01D2A /* SplashViewController.swift in Sources */,
 				968FD40026C3CB0D00C01D2A /* PaddingLabel.swift in Sources */,
@@ -582,6 +617,7 @@
 				968FD3EF26C3CB0D00C01D2A /* UITapGestureRecognizerExtension.swift in Sources */,
 				968FD40626C3CB0D00C01D2A /* RxActivityIndicator.swift in Sources */,
 				968FD3F326C3CB0D00C01D2A /* GlobalDefinitions.swift in Sources */,
+				96059E1826C6703500BD9A0A /* UserManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

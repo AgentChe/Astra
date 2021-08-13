@@ -11,13 +11,15 @@ import RxSwift
 final class OGoalsView: OSlideView {
     lazy var titleLabel = makeTitleLabel()
     lazy var subTitleLabel = makeSubTitleLabel()
-    lazy var cell1 = makeCell(title: "Onboarding.Goals.Cell1", tag: 1)
-    lazy var cell2 = makeCell(title: "Onboarding.Goals.Cell2", tag: 2)
-    lazy var cell3 = makeCell(title: "Onboarding.Goals.Cell3", tag: 3)
-    lazy var cell4 = makeCell(title: "Onboarding.Goals.Cell4", tag: 4)
+    lazy var cell1 = makeCell(title: "Onboarding.Goals.Cell1", tag: 0)
+    lazy var cell2 = makeCell(title: "Onboarding.Goals.Cell2", tag: 1)
+    lazy var cell3 = makeCell(title: "Onboarding.Goals.Cell3", tag: 2)
+    lazy var cell4 = makeCell(title: "Onboarding.Goals.Cell4", tag: 3)
     lazy var button = makeButton()
     
     private lazy var disposeBag = DisposeBag()
+    
+    private lazy var userManager = UserManagerCore()
     
     override init(step: OnboardingView.Step) {
         super.init(step: step)
@@ -36,7 +38,26 @@ final class OGoalsView: OSlideView {
 private extension OGoalsView {
     func initialize() {
         button.rx.tap
-            .subscribe(onNext: { [weak self] in
+            .flatMapLatest { [weak self] _ -> Single<Bool> in
+                guard let self = self else {
+                    return .never()
+                }
+                
+                let goals = [
+                    self.cell1, self.cell2, self.cell3, self.cell4
+                ].filter { $0.isSelected }.map { $0.tag }
+                
+                return self.userManager
+                    .set(goals: goals)
+                    .map { true }
+                    .catchAndReturn(false)
+            }
+            .subscribe(onNext: { [weak self] success in
+                guard success else {
+                    Toast.notify(with: "Onboarding.FailedToSave".localized, style: .danger)
+                    return
+                }
+
                 self?.onNext()
             })
             .disposed(by: disposeBag)

@@ -16,6 +16,8 @@ final class OBirthdateView: OSlideView {
     
     private lazy var disposeBag = DisposeBag()
     
+    private lazy var userManager = UserManagerCore()
+    
     override init(step: OnboardingView.Step) {
         super.init(step: step)
         
@@ -32,10 +34,33 @@ final class OBirthdateView: OSlideView {
 private extension OBirthdateView {
     func initialize() {
         button.rx.tap
-            .subscribe(onNext: { [weak self] in
+            .flatMapLatest { [weak self] _ -> Single<Bool> in
+                guard let self = self else {
+                    return .never()
+                }
+                
+                let date = self.map(date: self.datePickerView.date)
+                
+                return self.userManager
+                    .set(birthDate: date)
+                    .map { true }
+                    .catchAndReturn(false)
+            }
+            .subscribe(onNext: { [weak self] success in
+                guard success else {
+                    Toast.notify(with: "Onboarding.FailedToSave".localized, style: .danger)
+                    return
+                }
+
                 self?.onNext()
             })
             .disposed(by: disposeBag)
+    }
+    
+    func map(date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        return formatter.string(from: date)
     }
 }
 

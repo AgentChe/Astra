@@ -16,6 +16,7 @@
 "ImagePicker.PhotoLibrary" = "Photo library";
 
 // MARK: Onboarding
+"Onboarding.FailedToSave" = "Failed to save";
 "Onboarding.Welcome.Text" = "You'll need to answer\na few questions about\nyourself. All of these\nwill be used to create\na personal prediction";
 "Onboarding.Gender.Title" = "What’s your gender?";
 "Onboarding.Gender.SubTitle" = "Swipe to choose";
@@ -39,3 +40,6 @@
 "Onboarding.Plan.Title" = "Your individual plan is\nready";
 "Onboarding.Plan.SubTitle" = "Based on your goals, we have\nselected the following program\nfor you.";
 "Onboarding.Plan.Button" = "SEE PLAN";
+"Onboarding.Name.Title" = "Now, you know me. so\nit’s only fair if i know you";
+"Onboarding.Name.SubTitle" = "What can I call you?";
+"Onboarding.Name.Button" = "let’s go";

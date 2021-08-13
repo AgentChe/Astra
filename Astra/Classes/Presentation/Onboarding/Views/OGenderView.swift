@@ -17,6 +17,8 @@ final class OGenderView: OSlideView {
     
     private lazy var disposeBag = DisposeBag()
     
+    private lazy var userManager = UserManagerCore()
+    
     private var selectedGender: Gender?
     
     override init(step: OnboardingView.Step) {
@@ -60,12 +62,25 @@ private extension OGenderView {
             .disposed(by: disposeBag)
         
         button.rx.tap
-            .subscribe(onNext: { [weak self] in
-                guard let self = self, self.selectedGender != nil else {
-                    return
+            .flatMapLatest { [weak self] _ -> Single<Bool> in
+                guard let self = self, let gender = self.selectedGender else {
+                    return .never()
                 }
                 
-                self.onNext()
+                let code = self.map(gender: gender)
+                
+                return self.userManager
+                    .set(gender: code)
+                    .map { true }
+                    .catchAndReturn(false)
+            }
+            .subscribe(onNext: { [weak self] success in
+                guard success else {
+                    Toast.notify(with: "Onboarding.FailedToSave".localized, style: .danger)
+                    return
+                }
+
+                self?.onNext()
             })
             .disposed(by: disposeBag)
     }
@@ -85,6 +100,15 @@ private extension OGenderView {
             self?.femaleImageView.frame.origin = CGPoint(x: gender == .female ? 64.scale : 316.scale,
                                                          y: gender == .female ? ySelected : yUnselected)
         })
+    }
+    
+    func map(gender: Gender) -> Int {
+        switch gender {
+        case .male:
+            return 1
+        case .female:
+            return 2
+        }
     }
 }
 
