@@ -43,3 +43,6 @@
 "Onboarding.Name.Title" = "Now, you know me. so\nit’s only fair if i know you";
 "Onboarding.Name.SubTitle" = "What can I call you?";
 "Onboarding.Name.Button" = "let’s go";
+
+// MARK: Main
+"Main.Profile.Name" = "Hi, %@";
