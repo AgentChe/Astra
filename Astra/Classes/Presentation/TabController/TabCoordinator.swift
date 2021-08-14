@@ -10,7 +10,7 @@ import UIKit
 final class TabCoordinator {
     weak var parentVC: TabController?
     
-    lazy var horoVC = NavigationController(rootViewController: UIViewController())
+    lazy var horoVC = NavigationController(rootViewController: MainViewController.make())
     lazy var meditationsVC = NavigationController(rootViewController: UIViewController())
     lazy var compatibilityVC = NavigationController(rootViewController: UIViewController())
     

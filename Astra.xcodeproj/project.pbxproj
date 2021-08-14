@@ -21,6 +21,21 @@
 		96059E2726C6CBFB00BD9A0A /* TabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E2626C6CBFB00BD9A0A /* TabItemView.swift */; };
 		96059E2926C6CC5B00BD9A0A /* TabMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E2826C6CC5B00BD9A0A /* TabMainView.swift */; };
 		96059E2B26C6CD2700BD9A0A /* TabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E2A26C6CD2700BD9A0A /* TabCoordinator.swift */; };
+		96059E3126C7093800BD9A0A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E3026C7093800BD9A0A /* MainViewController.swift */; };
+		96059E3326C70B1900BD9A0A /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E3226C70B1900BD9A0A /* MainViewModel.swift */; };
+		96059E3526C70B3900BD9A0A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E3426C70B3900BD9A0A /* MainView.swift */; };
+		96059E3B26C7AC5700BD9A0A /* Sign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E3A26C7AC5700BD9A0A /* Sign.swift */; };
+		96059E3D26C7AE1100BD9A0A /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E3C26C7AE1100BD9A0A /* Dashboard.swift */; };
+		96059E3F26C7AEED00BD9A0A /* Horo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E3E26C7AEED00BD9A0A /* Horo.swift */; };
+		96059E4126C7AF1300BD9A0A /* HoroArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E4026C7AF1300BD9A0A /* HoroArticle.swift */; };
+		96059E4326C7B1B500BD9A0A /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E4226C7B1B500BD9A0A /* Chart.swift */; };
+		96059E4526C7B21800BD9A0A /* Lunar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E4426C7B21800BD9A0A /* Lunar.swift */; };
+		96059E4726C7B27500BD9A0A /* LunarArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E4626C7B27500BD9A0A /* LunarArticle.swift */; };
+		96059E4926C7B2AA00BD9A0A /* LunarCalendarDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E4826C7B2AA00BD9A0A /* LunarCalendarDay.swift */; };
+		96059E4C26C7B98A00BD9A0A /* GetDashboardRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E4B26C7B98A00BD9A0A /* GetDashboardRequest.swift */; };
+		96059E4E26C7BA5500BD9A0A /* GetDashboardResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E4D26C7BA5500BD9A0A /* GetDashboardResponse.swift */; };
+		96059E5126C7C87D00BD9A0A /* ContentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E5026C7C87D00BD9A0A /* ContentManager.swift */; };
+		96059E5326C7C8A600BD9A0A /* ContentManagerCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E5226C7C8A600BD9A0A /* ContentManagerCore.swift */; };
 		968FD3BB26C3C83100C01D2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 968FD3BA26C3C83100C01D2A /* Assets.xcassets */; };
 		968FD3EC26C3CB0D00C01D2A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD3C926C3CB0C00C01D2A /* UIColorExtension.swift */; };
 		968FD3EF26C3CB0D00C01D2A /* UITapGestureRecognizerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD3CC26C3CB0C00C01D2A /* UITapGestureRecognizerExtension.swift */; };
@@ -88,6 +103,21 @@
 		96059E2626C6CBFB00BD9A0A /* TabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemView.swift; sourceTree = "<group>"; };
 		96059E2826C6CC5B00BD9A0A /* TabMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMainView.swift; sourceTree = "<group>"; };
 		96059E2A26C6CD2700BD9A0A /* TabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCoordinator.swift; sourceTree = "<group>"; };
+		96059E3026C7093800BD9A0A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		96059E3226C70B1900BD9A0A /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		96059E3426C70B3900BD9A0A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		96059E3A26C7AC5700BD9A0A /* Sign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sign.swift; sourceTree = "<group>"; };
+		96059E3C26C7AE1100BD9A0A /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
+		96059E3E26C7AEED00BD9A0A /* Horo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Horo.swift; sourceTree = "<group>"; };
+		96059E4026C7AF1300BD9A0A /* HoroArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroArticle.swift; sourceTree = "<group>"; };
+		96059E4226C7B1B500BD9A0A /* Chart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
+		96059E4426C7B21800BD9A0A /* Lunar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lunar.swift; sourceTree = "<group>"; };
+		96059E4626C7B27500BD9A0A /* LunarArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunarArticle.swift; sourceTree = "<group>"; };
+		96059E4826C7B2AA00BD9A0A /* LunarCalendarDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunarCalendarDay.swift; sourceTree = "<group>"; };
+		96059E4B26C7B98A00BD9A0A /* GetDashboardRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDashboardRequest.swift; sourceTree = "<group>"; };
+		96059E4D26C7BA5500BD9A0A /* GetDashboardResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDashboardResponse.swift; sourceTree = "<group>"; };
+		96059E5026C7C87D00BD9A0A /* ContentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentManager.swift; sourceTree = "<group>"; };
+		96059E5226C7C8A600BD9A0A /* ContentManagerCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentManagerCore.swift; sourceTree = "<group>"; };
 		968FD3AE26C3C82D00C01D2A /* Astra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Astra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		968FD3BA26C3C83100C01D2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		968FD3BF26C3C83100C01D2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -223,6 +253,59 @@
 				96059E2626C6CBFB00BD9A0A /* TabItemView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		96059E2F26C7092300BD9A0A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				96059E3026C7093800BD9A0A /* MainViewController.swift */,
+				96059E3226C70B1900BD9A0A /* MainViewModel.swift */,
+				96059E3426C70B3900BD9A0A /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		96059E3826C7AC4400BD9A0A /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				96059E4F26C7C86C00BD9A0A /* Manager */,
+				96059E4A26C7B97100BD9A0A /* Request */,
+				96059E3926C7AC4B00BD9A0A /* Model */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+		96059E3926C7AC4B00BD9A0A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				96059E3A26C7AC5700BD9A0A /* Sign.swift */,
+				96059E3C26C7AE1100BD9A0A /* Dashboard.swift */,
+				96059E3E26C7AEED00BD9A0A /* Horo.swift */,
+				96059E4026C7AF1300BD9A0A /* HoroArticle.swift */,
+				96059E4226C7B1B500BD9A0A /* Chart.swift */,
+				96059E4426C7B21800BD9A0A /* Lunar.swift */,
+				96059E4626C7B27500BD9A0A /* LunarArticle.swift */,
+				96059E4826C7B2AA00BD9A0A /* LunarCalendarDay.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		96059E4A26C7B97100BD9A0A /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				96059E4B26C7B98A00BD9A0A /* GetDashboardRequest.swift */,
+				96059E4D26C7BA5500BD9A0A /* GetDashboardResponse.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		96059E4F26C7C86C00BD9A0A /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				96059E5026C7C87D00BD9A0A /* ContentManager.swift */,
+				96059E5226C7C8A600BD9A0A /* ContentManagerCore.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		968FD3A526C3C82D00C01D2A = {
@@ -375,6 +458,7 @@
 		968FD41126C3CF3600C01D2A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				96059E2F26C7092300BD9A0A /* Main */,
 				96059E1F26C6CBA200BD9A0A /* TabController */,
 				968FD41A26C41F0500C01D2A /* Onboarding */,
 				968FD41326C3DFAA00C01D2A /* Splash */,
@@ -450,6 +534,7 @@
 		968FD46E26C451EE00C01D2A /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				96059E3826C7AC4400BD9A0A /* Content */,
 				96059E0526C662A200BD9A0A /* Session */,
 				968FD46F26C451F600C01D2A /* User */,
 			);
@@ -599,13 +684,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96059E4E26C7BA5500BD9A0A /* GetDashboardResponse.swift in Sources */,
 				968FD40326C3CB0D00C01D2A /* CircleView.swift in Sources */,
 				96059E2726C6CBFB00BD9A0A /* TabItemView.swift in Sources */,
+				96059E4C26C7B98A00BD9A0A /* GetDashboardRequest.swift in Sources */,
+				96059E3B26C7AC5700BD9A0A /* Sign.swift in Sources */,
 				96059E2226C6CBB900BD9A0A /* TabController.swift in Sources */,
 				96059E2526C6CBE800BD9A0A /* TabView.swift in Sources */,
 				968FD47626C45F7F00C01D2A /* OGoalsView.swift in Sources */,
 				968FD3FF26C3CB0D00C01D2A /* TapAreaButton.swift in Sources */,
 				96059E0D26C6634400BD9A0A /* SessionManagerCore.swift in Sources */,
+				96059E5326C7C8A600BD9A0A /* ContentManagerCore.swift in Sources */,
+				96059E3126C7093800BD9A0A /* MainViewController.swift in Sources */,
 				968FD3F526C3CB0D00C01D2A /* TextAttributes.swift in Sources */,
 				968FD3FC26C3CB0D00C01D2A /* Toast.swift in Sources */,
 				968FD3FA26C3CB0D00C01D2A /* Weak.swift in Sources */,
@@ -614,24 +704,32 @@
 				968FD40726C3CB0D00C01D2A /* UIViewRxExtension.swift in Sources */,
 				968FD3FD26C3CB0D00C01D2A /* NavigationController.swift in Sources */,
 				968FD40226C3CB0D00C01D2A /* GradientButton.swift in Sources */,
+				96059E3F26C7AEED00BD9A0A /* Horo.swift in Sources */,
 				968FD47A26C46F6C00C01D2A /* OEnjoyingView.swift in Sources */,
 				968FD40526C3CB0D00C01D2A /* AppDelegate.swift in Sources */,
 				968FD3F826C3CB0D00C01D2A /* Fonts.swift in Sources */,
 				96059E0926C662C700BD9A0A /* Session.swift in Sources */,
 				968FD3F426C3CB0D00C01D2A /* Scalable.swift in Sources */,
+				96059E3D26C7AE1100BD9A0A /* Dashboard.swift in Sources */,
 				968FD3FE26C3CB0D00C01D2A /* NavigationControllerSettings.swift in Sources */,
 				968FD41726C3E02A00C01D2A /* SplashViewModel.swift in Sources */,
 				96059E1E26C6855900BD9A0A /* PaddingTextField.swift in Sources */,
 				96059E1A26C6707C00BD9A0A /* UserManagerCore.swift in Sources */,
+				96059E4126C7AF1300BD9A0A /* HoroArticle.swift in Sources */,
+				96059E3526C70B3900BD9A0A /* MainView.swift in Sources */,
 				968FD44026C41F0500C01D2A /* OnboardingViewController.swift in Sources */,
 				968FD41926C3E0CB00C01D2A /* SplashView.swift in Sources */,
 				968FD45E26C41F0500C01D2A /* OnboardingView.swift in Sources */,
 				96059E2926C6CC5B00BD9A0A /* TabMainView.swift in Sources */,
 				968FD3F226C3CB0D00C01D2A /* StringExtension.swift in Sources */,
+				96059E5126C7C87D00BD9A0A /* ContentManager.swift in Sources */,
 				968FD40126C3CB0D00C01D2A /* PaddingPickerView.swift in Sources */,
 				968FD3F026C3CB0D00C01D2A /* UIDeviceExtension.swift in Sources */,
+				96059E3326C70B1900BD9A0A /* MainViewModel.swift in Sources */,
 				968FD3EC26C3CB0D00C01D2A /* UIColorExtension.swift in Sources */,
+				96059E4926C7B2AA00BD9A0A /* LunarCalendarDay.swift in Sources */,
 				968FD3F926C3CB0D00C01D2A /* SignError.swift in Sources */,
+				96059E4526C7B21800BD9A0A /* Lunar.swift in Sources */,
 				968FD3F626C3CB0D00C01D2A /* ScreenSize.swift in Sources */,
 				968FD47826C460AC00C01D2A /* OGoalCell.swift in Sources */,
 				96059E0B26C6632A00BD9A0A /* SessionManager.swift in Sources */,
@@ -642,9 +740,11 @@
 				96059E2B26C6CD2700BD9A0A /* TabCoordinator.swift in Sources */,
 				968FD47C26C4736500C01D2A /* OEnjoyingCell.swift in Sources */,
 				96059E1C26C6819D00BD9A0A /* ONameView.swift in Sources */,
+				96059E4326C7B1B500BD9A0A /* Chart.swift in Sources */,
 				968FD46D26C4334C00C01D2A /* OGenderView.swift in Sources */,
 				968FD41526C3DFC400C01D2A /* SplashViewController.swift in Sources */,
 				968FD40026C3CB0D00C01D2A /* PaddingLabel.swift in Sources */,
+				96059E4726C7B27500BD9A0A /* LunarArticle.swift in Sources */,
 				968FD45426C41F0500C01D2A /* OSlideView.swift in Sources */,
 				968FD3FB26C3CB0D00C01D2A /* ImagePicker.swift in Sources */,
 				968FD46326C42ED300C01D2A /* OWelcomeView.swift in Sources */,
