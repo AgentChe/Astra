@@ -23,7 +23,15 @@ private extension MainViewModel {
                     return []
                 }
                 
-                return []
+                var result = [MainTableElement]()
+                
+                let profile = ProfileMainTableElement(name: dashboard.name,
+                                                      sign: dashboard.sign,
+                                                      birthDate: dashboard.birthdate)
+                result.append(.profile(profile))
+                result.append(.offset(24.scale))
+                
+                return result
             }
             .asDriver(onErrorJustReturn: [])
     }

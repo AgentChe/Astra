@@ -27,6 +27,8 @@ final class MainViewController: UIViewController {
                 self?.mainView.tableView.setup(elements: elements)
             })
             .disposed(by: disposeBag)
+        
+        mainView.tableView.mainDelegate = self
     }
 }
 
@@ -36,5 +38,12 @@ extension MainViewController {
         let vc = MainViewController()
         vc.navigationItem.backButtonTitle = " "
         return vc
+    }
+}
+
+// MARK: MainTableViewDelegate
+extension MainViewController: MainTableViewDelegate {
+    func mainTableViewSettingsDidTapped() {
+        
     }
 }

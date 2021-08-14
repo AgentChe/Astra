@@ -35,7 +35,7 @@ private extension MainView {
         NSLayoutConstraint.activate([
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            tableView.topAnchor.constraint(equalTo: topAnchor),
+            tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             tableView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
@@ -48,7 +48,7 @@ private extension MainView {
         view.backgroundColor = UIColor.clear
         view.separatorStyle = .none
         view.showsVerticalScrollIndicator = false
-        view.contentInset = UIEdgeInsets(top: 64.scale, left: 0, bottom: 16.scale, right: 0)
+        view.contentInset = UIEdgeInsets(top: 0.scale, left: 0, bottom: 16.scale, right: 0)
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view

@@ -38,6 +38,9 @@
 		96059E5326C7C8A600BD9A0A /* ContentManagerCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E5226C7C8A600BD9A0A /* ContentManagerCore.swift */; };
 		96059E5726C7CEAB00BD9A0A /* MainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E5626C7CEAB00BD9A0A /* MainTableView.swift */; };
 		96059E5926C7CF4A00BD9A0A /* MainTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E5826C7CF4A00BD9A0A /* MainTableElement.swift */; };
+		96059E5D26C7D36B00BD9A0A /* MainProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E5C26C7D36B00BD9A0A /* MainProfileCell.swift */; };
+		96059E6126C847F400BD9A0A /* ProfileMainTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E6026C847F400BD9A0A /* ProfileMainTableElement.swift */; };
+		96059E6326C84FF000BD9A0A /* MainTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E6226C84FF000BD9A0A /* MainTableViewDelegate.swift */; };
 		968FD3BB26C3C83100C01D2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 968FD3BA26C3C83100C01D2A /* Assets.xcassets */; };
 		968FD3EC26C3CB0D00C01D2A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD3C926C3CB0C00C01D2A /* UIColorExtension.swift */; };
 		968FD3EF26C3CB0D00C01D2A /* UITapGestureRecognizerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD3CC26C3CB0C00C01D2A /* UITapGestureRecognizerExtension.swift */; };
@@ -122,6 +125,9 @@
 		96059E5226C7C8A600BD9A0A /* ContentManagerCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentManagerCore.swift; sourceTree = "<group>"; };
 		96059E5626C7CEAB00BD9A0A /* MainTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableView.swift; sourceTree = "<group>"; };
 		96059E5826C7CF4A00BD9A0A /* MainTableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableElement.swift; sourceTree = "<group>"; };
+		96059E5C26C7D36B00BD9A0A /* MainProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProfileCell.swift; sourceTree = "<group>"; };
+		96059E6026C847F400BD9A0A /* ProfileMainTableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMainTableElement.swift; sourceTree = "<group>"; };
+		96059E6226C84FF000BD9A0A /* MainTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewDelegate.swift; sourceTree = "<group>"; };
 		968FD3AE26C3C82D00C01D2A /* Astra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Astra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		968FD3BA26C3C83100C01D2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		968FD3BF26C3C83100C01D2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -319,6 +325,7 @@
 				96059E5B26C7D0CB00BD9A0A /* Cells */,
 				96059E5A26C7CF5300BD9A0A /* Elements */,
 				96059E5626C7CEAB00BD9A0A /* MainTableView.swift */,
+				96059E6226C84FF000BD9A0A /* MainTableViewDelegate.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -327,6 +334,7 @@
 			isa = PBXGroup;
 			children = (
 				96059E5826C7CF4A00BD9A0A /* MainTableElement.swift */,
+				96059E6026C847F400BD9A0A /* ProfileMainTableElement.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -334,6 +342,7 @@
 		96059E5B26C7D0CB00BD9A0A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				96059E5C26C7D36B00BD9A0A /* MainProfileCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -716,6 +725,7 @@
 			files = (
 				96059E4E26C7BA5500BD9A0A /* GetDashboardResponse.swift in Sources */,
 				968FD40326C3CB0D00C01D2A /* CircleView.swift in Sources */,
+				96059E6126C847F400BD9A0A /* ProfileMainTableElement.swift in Sources */,
 				96059E2726C6CBFB00BD9A0A /* TabItemView.swift in Sources */,
 				96059E4C26C7B98A00BD9A0A /* GetDashboardRequest.swift in Sources */,
 				96059E3B26C7AC5700BD9A0A /* Sign.swift in Sources */,
@@ -762,6 +772,7 @@
 				968FD3F926C3CB0D00C01D2A /* SignError.swift in Sources */,
 				96059E4526C7B21800BD9A0A /* Lunar.swift in Sources */,
 				968FD3F626C3CB0D00C01D2A /* ScreenSize.swift in Sources */,
+				96059E5D26C7D36B00BD9A0A /* MainProfileCell.swift in Sources */,
 				968FD47826C460AC00C01D2A /* OGoalCell.swift in Sources */,
 				96059E0B26C6632A00BD9A0A /* SessionManager.swift in Sources */,
 				96059E1426C66F0F00BD9A0A /* SetRequest.swift in Sources */,
@@ -780,6 +791,7 @@
 				968FD3FB26C3CB0D00C01D2A /* ImagePicker.swift in Sources */,
 				96059E5926C7CF4A00BD9A0A /* MainTableElement.swift in Sources */,
 				968FD46326C42ED300C01D2A /* OWelcomeView.swift in Sources */,
+				96059E6326C84FF000BD9A0A /* MainTableViewDelegate.swift in Sources */,
 				96059E1126C6665B00BD9A0A /* OPlanView.swift in Sources */,
 				968FD40426C3CB0D00C01D2A /* GradientView.swift in Sources */,
 				968FD3EF26C3CB0D00C01D2A /* UITapGestureRecognizerExtension.swift in Sources */,

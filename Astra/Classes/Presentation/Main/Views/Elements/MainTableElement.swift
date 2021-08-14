@@ -7,4 +7,5 @@
 
 enum MainTableElement {
     case offset(CGFloat)
+    case profile(ProfileMainTableElement)
 }

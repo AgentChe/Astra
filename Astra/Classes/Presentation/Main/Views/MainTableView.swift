@@ -8,6 +8,8 @@
 import UIKit
 
 final class MainTableView: UITableView {
+    weak var mainDelegate: MainTableViewDelegate?
+    
     private var elements = [MainTableElement]()
     
     override init(frame: CGRect, style: UITableView.Style) {
@@ -38,20 +40,39 @@ extension MainTableView: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch elements[indexPath.row] {
-        case .offset(let offset):
-            return UITableViewCell()
+        case .offset:
+            let cell = dequeueReusableCell(withIdentifier: "OffsetTableCell")!
+            cell.backgroundColor = UIColor.clear
+            cell.contentView.backgroundColor = UIColor.clear
+            cell.selectionStyle = .none
+            return cell
+        case .profile(let profile):
+            let cell = dequeueReusableCell(withIdentifier: String(describing: MainProfileCell.self)) as! MainProfileCell
+            cell.setup(element: profile)
+            cell.mainDelegate = mainDelegate
+            return cell
         }
     }
 }
 
 // MARK: UITableViewDelegate
 extension MainTableView: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch elements[indexPath.row] {
+        case .offset(let offset):
+            return offset
+        default:
+            return UITableView.automaticDimension
+        }
+    }
 }
 
 // MARK: Private
 private extension MainTableView {
     func initialize() {
+        register(UITableViewCell.self, forCellReuseIdentifier: "OffsetTableCell")
+        register(MainProfileCell.self, forCellReuseIdentifier: String(describing: MainProfileCell.self))
+        
         dataSource = self
         delegate = self
     }
