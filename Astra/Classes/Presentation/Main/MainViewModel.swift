@@ -30,6 +30,8 @@ private extension MainViewModel {
                                                       birthDate: dashboard.birthdate)
                 result.append(.profile(profile))
                 result.append(.offset(24.scale))
+                result.append(.title("Main.Horo.Title".localized))
+                result.append(.offset(16.scale))
                 
                 return result
             }

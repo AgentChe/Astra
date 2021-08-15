@@ -51,6 +51,10 @@ extension MainTableView: UITableViewDataSource {
             cell.setup(element: profile)
             cell.mainDelegate = mainDelegate
             return cell
+        case .title(let title):
+            let cell = dequeueReusableCell(withIdentifier: String(describing: TitleMainTableCell.self)) as! TitleMainTableCell
+            cell.setup(title: title)
+            return cell
         }
     }
 }
@@ -72,6 +76,7 @@ private extension MainTableView {
     func initialize() {
         register(UITableViewCell.self, forCellReuseIdentifier: "OffsetTableCell")
         register(MainProfileCell.self, forCellReuseIdentifier: String(describing: MainProfileCell.self))
+        register(TitleMainTableCell.self, forCellReuseIdentifier: String(describing: TitleMainTableCell.self))
         
         dataSource = self
         delegate = self
