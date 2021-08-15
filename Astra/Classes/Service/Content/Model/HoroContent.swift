@@ -1,17 +1,17 @@
 //
-//  HoroArticle.swift
+//  HoroContent.swift
 //  Astra
 //
 //  Created by Andrey Chernyshev on 14.08.2021.
 //
 
-struct HoroArticle {
+struct HoroContent {
     let type: String
     let text: String
 }
 
 // MARK: Codable
-extension HoroArticle: Codable {}
+extension HoroContent: Codable {}
 
 // MARK: Hashable
-extension HoroArticle: Hashable {}
+extension HoroContent: Hashable {}

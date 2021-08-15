@@ -84,23 +84,16 @@ private extension GetDashboardResponse {
         return jsonArray.compactMap { jsonElement -> Horo? in
             guard
                 let period = jsonElement["period"] as? String,
-                let articlesArray = jsonElement["content"] as? [[String: Any]]
+                let contentJSON = jsonElement["content"] as? [String: Any],
+                let type = contentJSON["type"] as? String,
+                let text = contentJSON["text"] as? String
             else {
                 return nil
             }
             
-            let articles = articlesArray.compactMap { articleJSON -> HoroArticle? in
-                guard
-                    let type = articleJSON["type"] as? String,
-                    let text = articleJSON["text"] as? String
-                else {
-                    return nil
-                }
-                
-                return HoroArticle(type: type, text: text)
-            }
+            let content = HoroContent(type: type, text: text)
             
-            return Horo(period: period, articles: articles)
+            return Horo(period: period, content: content)
         }
     }
     

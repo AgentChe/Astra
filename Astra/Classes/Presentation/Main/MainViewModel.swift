@@ -33,6 +33,12 @@ private extension MainViewModel {
                 result.append(.title("Main.Horo.Title".localized))
                 result.append(.offset(16.scale))
                 
+                var horoFilters = [HoroFilterTableElement]()
+                dashboard.horos.enumerated().forEach { index, horo in
+                    horoFilters.append(.init(title: horo.period, isSelected: index == 0))
+                }
+                result.append(.horoFilter(horoFilters))
+                
                 return result
             }
             .asDriver(onErrorJustReturn: [])

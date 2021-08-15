@@ -9,4 +9,5 @@ enum MainTableElement {
     case offset(CGFloat)
     case profile(ProfileMainTableElement)
     case title(String)
+    case horoFilter([HoroFilterTableElement])
 }

@@ -7,7 +7,7 @@
 
 struct Horo {
     let period: String
-    let articles: [HoroArticle]
+    let content: HoroContent
 }
 
 // MARK: Codable
