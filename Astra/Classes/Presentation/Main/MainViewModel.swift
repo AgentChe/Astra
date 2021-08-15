@@ -30,6 +30,7 @@ private extension MainViewModel {
                                                       birthDate: dashboard.birthdate)
                 result.append(.profile(profile))
                 result.append(.offset(24.scale))
+                
                 result.append(.title("Main.Horo.Title".localized))
                 result.append(.offset(16.scale))
                 
@@ -49,6 +50,12 @@ private extension MainViewModel {
                 let horoContent = HoroContentTableElement(horos: dashboard.horos,
                                                           selectedPeriod: dashboard.horos.first?.period ?? "")
                 result.append(.horoContent(horoContent))
+                result.append(.offset(16.scale))
+                
+                result.append(.horoButton)
+                result.append(.offset(24.scale))
+                
+                result.append(.title("Main.Chart.Title".localized))
                 result.append(.offset(16.scale))
                 
                 return result

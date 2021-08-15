@@ -46,4 +46,8 @@ extension MainViewController: MainTableViewDelegate {
     func mainTableViewSettingsDidTapped() {
         
     }
+    
+    func mainTableViewHoroDidTapped() {
+        
+    }
 }

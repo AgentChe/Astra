@@ -7,4 +7,5 @@
 
 protocol MainTableViewDelegate: AnyObject {
     func mainTableViewSettingsDidTapped()
+    func mainTableViewHoroDidTapped()
 }

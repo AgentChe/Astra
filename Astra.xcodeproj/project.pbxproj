@@ -50,6 +50,7 @@
 		96059E7226C9AC0D00BD9A0A /* HoroImageMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E7126C9AC0D00BD9A0A /* HoroImageMainCell.swift */; };
 		96059E7426C9AFF900BD9A0A /* HoroContentMainTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E7326C9AFF900BD9A0A /* HoroContentMainTableCell.swift */; };
 		96059E7D26C9C45000BD9A0A /* HoroContentTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E7C26C9C45000BD9A0A /* HoroContentTableElement.swift */; };
+		96059E7F26C9CFEF00BD9A0A /* HoroButtonMainTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E7E26C9CFEF00BD9A0A /* HoroButtonMainTableCell.swift */; };
 		968FD3BB26C3C83100C01D2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 968FD3BA26C3C83100C01D2A /* Assets.xcassets */; };
 		968FD3EC26C3CB0D00C01D2A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD3C926C3CB0C00C01D2A /* UIColorExtension.swift */; };
 		968FD3EF26C3CB0D00C01D2A /* UITapGestureRecognizerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD3CC26C3CB0C00C01D2A /* UITapGestureRecognizerExtension.swift */; };
@@ -146,6 +147,7 @@
 		96059E7126C9AC0D00BD9A0A /* HoroImageMainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroImageMainCell.swift; sourceTree = "<group>"; };
 		96059E7326C9AFF900BD9A0A /* HoroContentMainTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroContentMainTableCell.swift; sourceTree = "<group>"; };
 		96059E7C26C9C45000BD9A0A /* HoroContentTableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroContentTableElement.swift; sourceTree = "<group>"; };
+		96059E7E26C9CFEF00BD9A0A /* HoroButtonMainTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroButtonMainTableCell.swift; sourceTree = "<group>"; };
 		968FD3AE26C3C82D00C01D2A /* Astra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Astra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		968FD3BA26C3C83100C01D2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		968FD3BF26C3C83100C01D2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -367,6 +369,7 @@
 				96059E6426C90E2C00BD9A0A /* TitleMainTableCell.swift */,
 				96059E7126C9AC0D00BD9A0A /* HoroImageMainCell.swift */,
 				96059E7326C9AFF900BD9A0A /* HoroContentMainTableCell.swift */,
+				96059E7E26C9CFEF00BD9A0A /* HoroButtonMainTableCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -790,6 +793,7 @@
 				968FD3F426C3CB0D00C01D2A /* Scalable.swift in Sources */,
 				96059E3D26C7AE1100BD9A0A /* Dashboard.swift in Sources */,
 				96059E6E26C968D800BD9A0A /* HoroFilterCollectionView.swift in Sources */,
+				96059E7F26C9CFEF00BD9A0A /* HoroButtonMainTableCell.swift in Sources */,
 				96059E6726C9485C00BD9A0A /* HoroFilterMainTableCell.swift in Sources */,
 				968FD3FE26C3CB0D00C01D2A /* NavigationControllerSettings.swift in Sources */,
 				968FD41726C3E02A00C01D2A /* SplashViewModel.swift in Sources */,
