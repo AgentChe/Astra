@@ -59,6 +59,10 @@ extension MainTableView: UITableViewDataSource {
             let cell = dequeueReusableCell(withIdentifier: String(describing: HoroFilterMainTableCell.self)) as! HoroFilterMainTableCell
             cell.setup(element: filters)
             return cell
+        case .horoImage(let path):
+            let cell = dequeueReusableCell(withIdentifier: String(describing: HoroImageMainCell.self)) as! HoroImageMainCell
+            cell.setup(path: path)
+            return cell
         }
     }
 }
@@ -71,6 +75,8 @@ extension MainTableView: UITableViewDelegate {
             return offset
         case .horoFilter:
             return 34.scale
+        case .horoImage:
+            return 292.scale
         default:
             return UITableView.automaticDimension
         }
@@ -84,6 +90,7 @@ private extension MainTableView {
         register(MainProfileCell.self, forCellReuseIdentifier: String(describing: MainProfileCell.self))
         register(TitleMainTableCell.self, forCellReuseIdentifier: String(describing: TitleMainTableCell.self))
         register(HoroFilterMainTableCell.self, forCellReuseIdentifier: String(describing: HoroFilterMainTableCell.self))
+        register(HoroImageMainCell.self, forCellReuseIdentifier: String(describing: HoroImageMainCell.self))
         
         dataSource = self
         delegate = self

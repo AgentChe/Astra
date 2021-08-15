@@ -47,6 +47,7 @@
 		96059E6C26C963DD00BD9A0A /* HoroFilterCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E6B26C963DD00BD9A0A /* HoroFilterCollectionCell.swift */; };
 		96059E6E26C968D800BD9A0A /* HoroFilterCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E6D26C968D800BD9A0A /* HoroFilterCollectionView.swift */; };
 		96059E7026C9A43400BD9A0A /* HoroFilterCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E6F26C9A43400BD9A0A /* HoroFilterCellDelegate.swift */; };
+		96059E7226C9AC0D00BD9A0A /* HoroImageMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E7126C9AC0D00BD9A0A /* HoroImageMainCell.swift */; };
 		968FD3BB26C3C83100C01D2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 968FD3BA26C3C83100C01D2A /* Assets.xcassets */; };
 		968FD3EC26C3CB0D00C01D2A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD3C926C3CB0C00C01D2A /* UIColorExtension.swift */; };
 		968FD3EF26C3CB0D00C01D2A /* UITapGestureRecognizerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD3CC26C3CB0C00C01D2A /* UITapGestureRecognizerExtension.swift */; };
@@ -140,6 +141,7 @@
 		96059E6B26C963DD00BD9A0A /* HoroFilterCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroFilterCollectionCell.swift; sourceTree = "<group>"; };
 		96059E6D26C968D800BD9A0A /* HoroFilterCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroFilterCollectionView.swift; sourceTree = "<group>"; };
 		96059E6F26C9A43400BD9A0A /* HoroFilterCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroFilterCellDelegate.swift; sourceTree = "<group>"; };
+		96059E7126C9AC0D00BD9A0A /* HoroImageMainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroImageMainCell.swift; sourceTree = "<group>"; };
 		968FD3AE26C3C82D00C01D2A /* Astra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Astra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		968FD3BA26C3C83100C01D2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		968FD3BF26C3C83100C01D2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -358,6 +360,7 @@
 				96059E6A26C94C6700BD9A0A /* HoroFilterMainTableCell */,
 				96059E5C26C7D36B00BD9A0A /* MainProfileCell.swift */,
 				96059E6426C90E2C00BD9A0A /* TitleMainTableCell.swift */,
+				96059E7126C9AC0D00BD9A0A /* HoroImageMainCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -765,6 +768,7 @@
 				96059E3126C7093800BD9A0A /* MainViewController.swift in Sources */,
 				968FD3F526C3CB0D00C01D2A /* TextAttributes.swift in Sources */,
 				968FD3FC26C3CB0D00C01D2A /* Toast.swift in Sources */,
+				96059E7226C9AC0D00BD9A0A /* HoroImageMainCell.swift in Sources */,
 				968FD3FA26C3CB0D00C01D2A /* Weak.swift in Sources */,
 				968FD46126C426A100C01D2A /* OStepView.swift in Sources */,
 				968FD47426C45BED00C01D2A /* OBirthdateView.swift in Sources */,

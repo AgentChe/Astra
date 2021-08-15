@@ -38,6 +38,13 @@ private extension MainViewModel {
                     horoFilters.append(.init(title: horo.period, isSelected: index == 0))
                 }
                 result.append(.horoFilter(horoFilters))
+                result.append(.offset(17.scale))
+                
+                if let path = dashboard.horoImage {
+                    result.append(.horoImage(path))
+                }
+            
+                result.append(.offset(16.scale))
                 
                 return result
             }
