@@ -57,13 +57,44 @@ extension MainTableView: UITableViewDataSource {
             return cell
         case .horoFilter(let filters):
             let cell = dequeueReusableCell(withIdentifier: String(describing: HoroFilterMainTableCell.self)) as! HoroFilterMainTableCell
+            cell.collectionView.horoFilterDelegate = self
             cell.setup(element: filters)
             return cell
         case .horoImage(let path):
             let cell = dequeueReusableCell(withIdentifier: String(describing: HoroImageMainCell.self)) as! HoroImageMainCell
             cell.setup(path: path)
             return cell
+        case .horoContent(let content):
+            let cell = dequeueReusableCell(withIdentifier: String(describing: HoroContentMainTableCell.self)) as! HoroContentMainTableCell
+            cell.setup(element: content)
+            return cell
         }
+    }
+}
+
+// MARK: HoroFilterCellDelegate
+extension MainTableView: HoroFilterCellDelegate {
+    func horoFilterCellDidUpdated(selectedPeriod: String) {
+        let firstIndex = elements.firstIndex(where: { element -> Bool in
+            guard case .horoContent = element else {
+                return false
+            }
+            
+            return true
+        })
+        
+        guard let index = firstIndex else {
+            return
+        }
+        
+        guard case let .horoContent(content) = elements[index] else {
+            return
+        }
+        
+        content.selectedPeriod = selectedPeriod
+        
+        let indexPath = IndexPath(row: index, section: 0)
+        reloadRows(at: [indexPath], with: .automatic)
     }
 }
 
@@ -91,6 +122,7 @@ private extension MainTableView {
         register(TitleMainTableCell.self, forCellReuseIdentifier: String(describing: TitleMainTableCell.self))
         register(HoroFilterMainTableCell.self, forCellReuseIdentifier: String(describing: HoroFilterMainTableCell.self))
         register(HoroImageMainCell.self, forCellReuseIdentifier: String(describing: HoroImageMainCell.self))
+        register(HoroContentMainTableCell.self, forCellReuseIdentifier: String(describing: HoroContentMainTableCell.self))
         
         dataSource = self
         delegate = self

@@ -33,9 +33,9 @@ private extension MainViewModel {
                 result.append(.title("Main.Horo.Title".localized))
                 result.append(.offset(16.scale))
                 
-                var horoFilters = [HoroFilterTableElement]()
-                dashboard.horos.enumerated().forEach { index, horo in
-                    horoFilters.append(.init(title: horo.period, isSelected: index == 0))
+                
+                let horoFilters = dashboard.horos.enumerated().map { index, horo -> HoroFilterTableElement in
+                    HoroFilterTableElement(title: horo.period, isSelected: index == 0)
                 }
                 result.append(.horoFilter(horoFilters))
                 result.append(.offset(17.scale))
@@ -43,7 +43,12 @@ private extension MainViewModel {
                 if let path = dashboard.horoImage {
                     result.append(.horoImage(path))
                 }
-            
+                
+                result.append(.offset(16.scale))
+                
+                let horoContent = HoroContentTableElement(horos: dashboard.horos,
+                                                          selectedPeriod: dashboard.horos.first?.period ?? "")
+                result.append(.horoContent(horoContent))
                 result.append(.offset(16.scale))
                 
                 return result

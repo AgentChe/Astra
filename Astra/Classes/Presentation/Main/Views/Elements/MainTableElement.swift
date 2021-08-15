@@ -11,4 +11,5 @@ enum MainTableElement {
     case title(String)
     case horoFilter([HoroFilterTableElement])
     case horoImage(String)
+    case horoContent(HoroContentTableElement)
 }

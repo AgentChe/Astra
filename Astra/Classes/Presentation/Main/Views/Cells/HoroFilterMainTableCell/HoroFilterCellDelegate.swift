@@ -5,6 +5,6 @@
 //  Created by Andrey Chernyshev on 15.08.2021.
 //
 
-protocol HoroFilterCellDelegate: class {
+protocol HoroFilterCellDelegate: AnyObject {
     func horoFilterCellDidUpdated(selectedPeriod: String)
 }
