@@ -71,7 +71,12 @@ private extension MainViewModel {
                 result.append(.offset(24.scale))
                 
                 result.append(.title("Main.Lunar.Title".localized))
-                result.append(.offset(24.scale))
+                result.append(.offset(16.scale))
+                
+                let lunarDays = dashboard.lunar?.days ?? []
+                result.append(.lunarCalendar(lunarDays))
+                
+                result.append(.offset(16.scale))
                 
                 let lunarArticles = dashboard.lunar?.articles ?? []
                 for (index, article) in lunarArticles.enumerated() {

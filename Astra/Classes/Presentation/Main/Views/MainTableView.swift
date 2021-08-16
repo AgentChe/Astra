@@ -82,6 +82,10 @@ extension MainTableView: UITableViewDataSource {
             }
         case .separator:
             return dequeueReusableCell(withIdentifier: String(describing: SeparatorMainTableCell.self), for: indexPath)
+        case .lunarCalendar(let days):
+            let cell = dequeueReusableCell(withIdentifier: String(describing: LunarCalendarMainTableCell.self)) as! LunarCalendarMainTableCell
+            cell.setup(element: days)
+            return cell
         case .lunarArticle(let article):
             let cell = dequeueReusableCell(withIdentifier: String(describing: LunarArticleMainTableCell.self)) as! LunarArticleMainTableCell
             cell.setup(element: article)
@@ -132,6 +136,8 @@ extension MainTableView: UITableViewDelegate {
             return 77.scale
         case .separator:
             return 1.scale
+        case .lunarCalendar:
+            return 100.scale
         default:
             return UITableView.automaticDimension
         }
@@ -164,6 +170,7 @@ private extension MainTableView {
         register(SeparatorMainTableCell.self, forCellReuseIdentifier: String(describing: SeparatorMainTableCell.self))
         register(LunarArticleMainTableCell.self, forCellReuseIdentifier: String(describing: LunarArticleMainTableCell.self))
         register(LunarButtonMainTableCell.self, forCellReuseIdentifier: String(describing: LunarButtonMainTableCell.self))
+        register(LunarCalendarMainTableCell.self, forCellReuseIdentifier: String(describing: LunarCalendarMainTableCell.self))
         
         dataSource = self
         delegate = self

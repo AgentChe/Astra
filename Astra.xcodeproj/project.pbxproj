@@ -57,6 +57,8 @@
 		96059E8826CA77EF00BD9A0A /* SeparatorMainTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E8726CA77EF00BD9A0A /* SeparatorMainTableCell.swift */; };
 		96059E8A26CA7B3400BD9A0A /* LunarArticleMainTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E8926CA7B3400BD9A0A /* LunarArticleMainTableCell.swift */; };
 		96059E8C26CA7EE700BD9A0A /* LunarButtonMainTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E8B26CA7EE700BD9A0A /* LunarButtonMainTableCell.swift */; };
+		96059E8F26CA817C00BD9A0A /* LunarCalendarMainTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E8E26CA817C00BD9A0A /* LunarCalendarMainTableCell.swift */; };
+		96059E9126CA82C600BD9A0A /* LunarDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E9026CA82C600BD9A0A /* LunarDayView.swift */; };
 		968FD3BB26C3C83100C01D2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 968FD3BA26C3C83100C01D2A /* Assets.xcassets */; };
 		968FD3EC26C3CB0D00C01D2A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD3C926C3CB0C00C01D2A /* UIColorExtension.swift */; };
 		968FD3EF26C3CB0D00C01D2A /* UITapGestureRecognizerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD3CC26C3CB0C00C01D2A /* UITapGestureRecognizerExtension.swift */; };
@@ -160,6 +162,8 @@
 		96059E8726CA77EF00BD9A0A /* SeparatorMainTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorMainTableCell.swift; sourceTree = "<group>"; };
 		96059E8926CA7B3400BD9A0A /* LunarArticleMainTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunarArticleMainTableCell.swift; sourceTree = "<group>"; };
 		96059E8B26CA7EE700BD9A0A /* LunarButtonMainTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunarButtonMainTableCell.swift; sourceTree = "<group>"; };
+		96059E8E26CA817C00BD9A0A /* LunarCalendarMainTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunarCalendarMainTableCell.swift; sourceTree = "<group>"; };
+		96059E9026CA82C600BD9A0A /* LunarDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunarDayView.swift; sourceTree = "<group>"; };
 		968FD3AE26C3C82D00C01D2A /* Astra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Astra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		968FD3BA26C3C83100C01D2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		968FD3BF26C3C83100C01D2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -377,6 +381,7 @@
 		96059E5B26C7D0CB00BD9A0A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				96059E8D26CA816600BD9A0A /* LunarCalendarMainTableCell */,
 				96059E8026CA5DB400BD9A0A /* ChartMainTableCell */,
 				96059E6A26C94C6700BD9A0A /* HoroFilterMainTableCell */,
 				96059E5C26C7D36B00BD9A0A /* MainProfileCell.swift */,
@@ -409,6 +414,15 @@
 				96059E8526CA683300BD9A0A /* ChartClosedMainTableCell.swift */,
 			);
 			path = ChartMainTableCell;
+			sourceTree = "<group>";
+		};
+		96059E8D26CA816600BD9A0A /* LunarCalendarMainTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				96059E8E26CA817C00BD9A0A /* LunarCalendarMainTableCell.swift */,
+				96059E9026CA82C600BD9A0A /* LunarDayView.swift */,
+			);
+			path = LunarCalendarMainTableCell;
 			sourceTree = "<group>";
 		};
 		968FD3A526C3C82D00C01D2A = {
@@ -823,6 +837,7 @@
 				968FD3F426C3CB0D00C01D2A /* Scalable.swift in Sources */,
 				96059E3D26C7AE1100BD9A0A /* Dashboard.swift in Sources */,
 				96059E6E26C968D800BD9A0A /* HoroFilterCollectionView.swift in Sources */,
+				96059E8F26CA817C00BD9A0A /* LunarCalendarMainTableCell.swift in Sources */,
 				96059E7F26C9CFEF00BD9A0A /* HoroButtonMainTableCell.swift in Sources */,
 				96059E6726C9485C00BD9A0A /* HoroFilterMainTableCell.swift in Sources */,
 				968FD3FE26C3CB0D00C01D2A /* NavigationControllerSettings.swift in Sources */,
@@ -843,6 +858,7 @@
 				968FD3F026C3CB0D00C01D2A /* UIDeviceExtension.swift in Sources */,
 				96059E3326C70B1900BD9A0A /* MainViewModel.swift in Sources */,
 				968FD3EC26C3CB0D00C01D2A /* UIColorExtension.swift in Sources */,
+				96059E9126CA82C600BD9A0A /* LunarDayView.swift in Sources */,
 				96059E4926C7B2AA00BD9A0A /* LunarCalendarDay.swift in Sources */,
 				968FD3F926C3CB0D00C01D2A /* SignError.swift in Sources */,
 				96059E4526C7B21800BD9A0A /* Lunar.swift in Sources */,
