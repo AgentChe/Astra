@@ -49,3 +49,5 @@
 "Main.Horo.Title" = "Horoscope";
 "Main.HoroButton.Text" = "Love, career and more";
 "Main.Chart.Title" = "The current chart";
+"Main.Lunar.Title" = "Lunar calendar";
+"Main.LunarButton.Text" = "Fav and unfav days for you";

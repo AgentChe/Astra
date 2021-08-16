@@ -70,6 +70,21 @@ private extension MainViewModel {
                 result.append(.separator)
                 result.append(.offset(24.scale))
                 
+                result.append(.title("Main.Lunar.Title".localized))
+                result.append(.offset(24.scale))
+                
+                let lunarArticles = dashboard.lunar?.articles ?? []
+                for (index, article) in lunarArticles.enumerated() {
+                    result.append(.lunarArticle(article))
+                    
+                    if index != (dashboard.charts.count - 1) {
+                        result.append(.offset(8.scale))
+                    }
+                }
+                
+                result.append(.offset(16.scale))
+                result.append(.lunarButton)
+                
                 return result
             }
             .asDriver(onErrorJustReturn: [])

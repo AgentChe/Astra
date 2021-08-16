@@ -50,4 +50,8 @@ extension MainViewController: MainTableViewDelegate {
     func mainTableViewHoroDidTapped() {
         
     }
+    
+    func mainTableViewLunarDidTapped() {
+        
+    }
 }

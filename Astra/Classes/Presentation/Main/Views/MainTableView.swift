@@ -82,6 +82,12 @@ extension MainTableView: UITableViewDataSource {
             }
         case .separator:
             return dequeueReusableCell(withIdentifier: String(describing: SeparatorMainTableCell.self), for: indexPath)
+        case .lunarArticle(let article):
+            let cell = dequeueReusableCell(withIdentifier: String(describing: LunarArticleMainTableCell.self)) as! LunarArticleMainTableCell
+            cell.setup(element: article)
+            return cell
+        case .lunarButton:
+            return dequeueReusableCell(withIdentifier: String(describing: LunarButtonMainTableCell.self), for: indexPath)
         }
     }
 }
@@ -122,7 +128,7 @@ extension MainTableView: UITableViewDelegate {
             return 34.scale
         case .horoImage:
             return 292.scale
-        case .horoButton:
+        case .horoButton, .lunarButton:
             return 77.scale
         case .separator:
             return 1.scale
@@ -156,6 +162,8 @@ private extension MainTableView {
         register(ChartOpenedMainTableCell.self, forCellReuseIdentifier: String(describing: ChartOpenedMainTableCell.self))
         register(ChartClosedMainTableCell.self, forCellReuseIdentifier: String(describing: ChartClosedMainTableCell.self))
         register(SeparatorMainTableCell.self, forCellReuseIdentifier: String(describing: SeparatorMainTableCell.self))
+        register(LunarArticleMainTableCell.self, forCellReuseIdentifier: String(describing: LunarArticleMainTableCell.self))
+        register(LunarButtonMainTableCell.self, forCellReuseIdentifier: String(describing: LunarButtonMainTableCell.self))
         
         dataSource = self
         delegate = self
