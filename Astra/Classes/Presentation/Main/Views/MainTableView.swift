@@ -92,6 +92,10 @@ extension MainTableView: UITableViewDataSource {
             return cell
         case .lunarButton:
             return dequeueReusableCell(withIdentifier: String(describing: LunarButtonMainTableCell.self), for: indexPath)
+        case .dailyTarot:
+            let cell = dequeueReusableCell(withIdentifier: String(describing: DailyTarotMainTableCell.self)) as! DailyTarotMainTableCell
+            cell.mainDelegate = mainDelegate
+            return cell
         }
     }
 }
@@ -171,6 +175,7 @@ private extension MainTableView {
         register(LunarArticleMainTableCell.self, forCellReuseIdentifier: String(describing: LunarArticleMainTableCell.self))
         register(LunarButtonMainTableCell.self, forCellReuseIdentifier: String(describing: LunarButtonMainTableCell.self))
         register(LunarCalendarMainTableCell.self, forCellReuseIdentifier: String(describing: LunarCalendarMainTableCell.self))
+        register(DailyTarotMainTableCell.self, forCellReuseIdentifier: String(describing: DailyTarotMainTableCell.self))
         
         dataSource = self
         delegate = self

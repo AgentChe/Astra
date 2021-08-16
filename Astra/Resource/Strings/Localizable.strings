@@ -51,3 +51,9 @@
 "Main.Chart.Title" = "The current chart";
 "Main.Lunar.Title" = "Lunar calendar";
 "Main.LunarButton.Text" = "Fav and unfav days for you";
+"Main.Tarot.Title" = "Tarot";
+"Main.Tarot.Daily.Title" = "Daily tarot";
+"Main.Tarot.Daily.Text" = "Intuition tool to help you clarify your day to day questions";
+"Main.Tarot.Love.Title" = "Love tarot";
+"Main.Tarot.Career.Title" = "Career tarot";
+"Main.Tarot.Money.Title" = "Money tarot";

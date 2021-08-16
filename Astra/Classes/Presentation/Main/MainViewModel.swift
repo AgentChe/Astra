@@ -90,6 +90,12 @@ private extension MainViewModel {
                 result.append(.offset(16.scale))
                 result.append(.lunarButton)
                 
+                result.append(.offset(24.scale))
+                result.append(.title("Main.Tarot.Title".localized))
+                
+                result.append(.offset(12.scale))
+                result.append(.dailyTarot)
+                
                 return result
             }
             .asDriver(onErrorJustReturn: [])

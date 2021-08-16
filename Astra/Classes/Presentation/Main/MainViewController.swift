@@ -54,4 +54,8 @@ extension MainViewController: MainTableViewDelegate {
     func mainTableViewLunarDidTapped() {
         
     }
+    
+    func mainTableViewTarotDidTapped(code: Int) {
+        print(code)
+    }
 }

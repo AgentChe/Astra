@@ -18,4 +18,5 @@ enum MainTableElement {
     case lunarCalendar([LunarCalendarDay])
     case lunarArticle(LunarArticle)
     case lunarButton
+    case dailyTarot
 }
