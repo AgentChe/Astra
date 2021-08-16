@@ -51,6 +51,9 @@
 		96059E7426C9AFF900BD9A0A /* HoroContentMainTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E7326C9AFF900BD9A0A /* HoroContentMainTableCell.swift */; };
 		96059E7D26C9C45000BD9A0A /* HoroContentTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E7C26C9C45000BD9A0A /* HoroContentTableElement.swift */; };
 		96059E7F26C9CFEF00BD9A0A /* HoroButtonMainTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E7E26C9CFEF00BD9A0A /* HoroButtonMainTableCell.swift */; };
+		96059E8226CA5DF200BD9A0A /* ChartOpenedMainTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E8126CA5DF100BD9A0A /* ChartOpenedMainTableCell.swift */; };
+		96059E8426CA633400BD9A0A /* ChartMainTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E8326CA633400BD9A0A /* ChartMainTableElement.swift */; };
+		96059E8626CA683300BD9A0A /* ChartClosedMainTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E8526CA683300BD9A0A /* ChartClosedMainTableCell.swift */; };
 		968FD3BB26C3C83100C01D2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 968FD3BA26C3C83100C01D2A /* Assets.xcassets */; };
 		968FD3EC26C3CB0D00C01D2A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD3C926C3CB0C00C01D2A /* UIColorExtension.swift */; };
 		968FD3EF26C3CB0D00C01D2A /* UITapGestureRecognizerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD3CC26C3CB0C00C01D2A /* UITapGestureRecognizerExtension.swift */; };
@@ -148,6 +151,9 @@
 		96059E7326C9AFF900BD9A0A /* HoroContentMainTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroContentMainTableCell.swift; sourceTree = "<group>"; };
 		96059E7C26C9C45000BD9A0A /* HoroContentTableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroContentTableElement.swift; sourceTree = "<group>"; };
 		96059E7E26C9CFEF00BD9A0A /* HoroButtonMainTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroButtonMainTableCell.swift; sourceTree = "<group>"; };
+		96059E8126CA5DF100BD9A0A /* ChartOpenedMainTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartOpenedMainTableCell.swift; sourceTree = "<group>"; };
+		96059E8326CA633400BD9A0A /* ChartMainTableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartMainTableElement.swift; sourceTree = "<group>"; };
+		96059E8526CA683300BD9A0A /* ChartClosedMainTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartClosedMainTableCell.swift; sourceTree = "<group>"; };
 		968FD3AE26C3C82D00C01D2A /* Astra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Astra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		968FD3BA26C3C83100C01D2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		968FD3BF26C3C83100C01D2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -357,6 +363,7 @@
 				96059E6026C847F400BD9A0A /* ProfileMainTableElement.swift */,
 				96059E6826C9489600BD9A0A /* HoroFilterTableElement.swift */,
 				96059E7C26C9C45000BD9A0A /* HoroContentTableElement.swift */,
+				96059E8326CA633400BD9A0A /* ChartMainTableElement.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -364,6 +371,7 @@
 		96059E5B26C7D0CB00BD9A0A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				96059E8026CA5DB400BD9A0A /* ChartMainTableCell */,
 				96059E6A26C94C6700BD9A0A /* HoroFilterMainTableCell */,
 				96059E5C26C7D36B00BD9A0A /* MainProfileCell.swift */,
 				96059E6426C90E2C00BD9A0A /* TitleMainTableCell.swift */,
@@ -383,6 +391,15 @@
 				96059E6F26C9A43400BD9A0A /* HoroFilterCellDelegate.swift */,
 			);
 			path = HoroFilterMainTableCell;
+			sourceTree = "<group>";
+		};
+		96059E8026CA5DB400BD9A0A /* ChartMainTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				96059E8126CA5DF100BD9A0A /* ChartOpenedMainTableCell.swift */,
+				96059E8526CA683300BD9A0A /* ChartClosedMainTableCell.swift */,
+			);
+			path = ChartMainTableCell;
 			sourceTree = "<group>";
 		};
 		968FD3A526C3C82D00C01D2A = {
@@ -779,7 +796,9 @@
 				968FD3FC26C3CB0D00C01D2A /* Toast.swift in Sources */,
 				96059E7226C9AC0D00BD9A0A /* HoroImageMainCell.swift in Sources */,
 				968FD3FA26C3CB0D00C01D2A /* Weak.swift in Sources */,
+				96059E8626CA683300BD9A0A /* ChartClosedMainTableCell.swift in Sources */,
 				968FD46126C426A100C01D2A /* OStepView.swift in Sources */,
+				96059E8426CA633400BD9A0A /* ChartMainTableElement.swift in Sources */,
 				968FD47426C45BED00C01D2A /* OBirthdateView.swift in Sources */,
 				968FD40726C3CB0D00C01D2A /* UIViewRxExtension.swift in Sources */,
 				96059E5726C7CEAB00BD9A0A /* MainTableView.swift in Sources */,
@@ -798,6 +817,7 @@
 				968FD3FE26C3CB0D00C01D2A /* NavigationControllerSettings.swift in Sources */,
 				968FD41726C3E02A00C01D2A /* SplashViewModel.swift in Sources */,
 				96059E1E26C6855900BD9A0A /* PaddingTextField.swift in Sources */,
+				96059E8226CA5DF200BD9A0A /* ChartOpenedMainTableCell.swift in Sources */,
 				96059E1A26C6707C00BD9A0A /* UserManagerCore.swift in Sources */,
 				96059E4126C7AF1300BD9A0A /* HoroContent.swift in Sources */,
 				96059E6526C90E2C00BD9A0A /* TitleMainTableCell.swift in Sources */,

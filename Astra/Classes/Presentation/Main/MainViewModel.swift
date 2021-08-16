@@ -58,6 +58,12 @@ private extension MainViewModel {
                 result.append(.title("Main.Chart.Title".localized))
                 result.append(.offset(16.scale))
                 
+                for (index, chart) in dashboard.charts.enumerated() {
+                    let element = ChartMainTableElement(chart: chart, isOpened: index == 0)
+                    result.append(.chart(element))
+                    result.append(.offset(12.scale))
+                }
+                
                 return result
             }
             .asDriver(onErrorJustReturn: [])

@@ -13,4 +13,5 @@ enum MainTableElement {
     case horoImage(String)
     case horoContent(HoroContentTableElement)
     case horoButton
+    case chart(ChartMainTableElement)
 }

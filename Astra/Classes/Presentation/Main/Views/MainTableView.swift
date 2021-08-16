@@ -70,6 +70,16 @@ extension MainTableView: UITableViewDataSource {
             return cell
         case .horoButton:
             return dequeueReusableCell(withIdentifier: String(describing: HoroButtonMainTableCell.self), for: indexPath)
+        case .chart(let element):
+            if element.isOpened {
+                let cell = dequeueReusableCell(withIdentifier: String(describing: ChartOpenedMainTableCell.self)) as! ChartOpenedMainTableCell
+                cell.setup(element: element)
+                return cell
+            } else {
+                let cell = dequeueReusableCell(withIdentifier: String(describing: ChartClosedMainTableCell.self)) as! ChartClosedMainTableCell
+                cell.setup(element: element)
+                return cell
+            }
         }
     }
 }
@@ -116,6 +126,17 @@ extension MainTableView: UITableViewDelegate {
             return UITableView.automaticDimension
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch elements[indexPath.row] {
+        case .chart(let element):
+            element.isOpened.toggle()
+            
+            reloadRows(at: [indexPath], with: .automatic)
+        default:
+            return
+        }
+    }
 }
 
 // MARK: Private
@@ -128,6 +149,8 @@ private extension MainTableView {
         register(HoroImageMainCell.self, forCellReuseIdentifier: String(describing: HoroImageMainCell.self))
         register(HoroContentMainTableCell.self, forCellReuseIdentifier: String(describing: HoroContentMainTableCell.self))
         register(HoroButtonMainTableCell.self, forCellReuseIdentifier: String(describing: HoroButtonMainTableCell.self))
+        register(ChartOpenedMainTableCell.self, forCellReuseIdentifier: String(describing: ChartOpenedMainTableCell.self))
+        register(ChartClosedMainTableCell.self, forCellReuseIdentifier: String(describing: ChartClosedMainTableCell.self))
         
         dataSource = self
         delegate = self
