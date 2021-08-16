@@ -96,6 +96,11 @@ private extension MainViewModel {
                 result.append(.offset(12.scale))
                 result.append(.dailyTarot)
                 
+                result.append(.offset(12.scale))
+                result.append(.tarots)
+                
+                result.append(.offset(24.scale))
+                
                 return result
             }
             .asDriver(onErrorJustReturn: [])

@@ -46,7 +46,7 @@
 
 // MARK: Main
 "Main.Profile.Name" = "Hi, %@";
-"Main.Horo.Title" = "Horoscope";
+"Main.Horo.Title" = "Predictions";
 "Main.HoroButton.Text" = "Love, career and more";
 "Main.Chart.Title" = "The current chart";
 "Main.Lunar.Title" = "Lunar calendar";
