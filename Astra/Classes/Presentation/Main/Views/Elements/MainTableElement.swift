@@ -14,4 +14,5 @@ enum MainTableElement {
     case horoContent(HoroContentTableElement)
     case horoButton
     case chart(ChartMainTableElement)
+    case separator
 }

@@ -34,7 +34,6 @@ private extension MainViewModel {
                 result.append(.title("Main.Horo.Title".localized))
                 result.append(.offset(16.scale))
                 
-                
                 let horoFilters = dashboard.horos.enumerated().map { index, horo -> HoroFilterTableElement in
                     HoroFilterTableElement(title: horo.period, isSelected: index == 0)
                 }
@@ -61,8 +60,15 @@ private extension MainViewModel {
                 for (index, chart) in dashboard.charts.enumerated() {
                     let element = ChartMainTableElement(chart: chart, isOpened: index == 0)
                     result.append(.chart(element))
-                    result.append(.offset(12.scale))
+                    
+                    if index != (dashboard.charts.count - 1) {
+                        result.append(.offset(12.scale))
+                    }
                 }
+                
+                result.append(.offset(24.scale))
+                result.append(.separator)
+                result.append(.offset(24.scale))
                 
                 return result
             }

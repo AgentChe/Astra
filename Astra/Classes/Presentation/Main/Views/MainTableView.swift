@@ -80,6 +80,8 @@ extension MainTableView: UITableViewDataSource {
                 cell.setup(element: element)
                 return cell
             }
+        case .separator:
+            return dequeueReusableCell(withIdentifier: String(describing: SeparatorMainTableCell.self), for: indexPath)
         }
     }
 }
@@ -122,6 +124,8 @@ extension MainTableView: UITableViewDelegate {
             return 292.scale
         case .horoButton:
             return 77.scale
+        case .separator:
+            return 1.scale
         default:
             return UITableView.automaticDimension
         }
@@ -151,6 +155,7 @@ private extension MainTableView {
         register(HoroButtonMainTableCell.self, forCellReuseIdentifier: String(describing: HoroButtonMainTableCell.self))
         register(ChartOpenedMainTableCell.self, forCellReuseIdentifier: String(describing: ChartOpenedMainTableCell.self))
         register(ChartClosedMainTableCell.self, forCellReuseIdentifier: String(describing: ChartClosedMainTableCell.self))
+        register(SeparatorMainTableCell.self, forCellReuseIdentifier: String(describing: SeparatorMainTableCell.self))
         
         dataSource = self
         delegate = self

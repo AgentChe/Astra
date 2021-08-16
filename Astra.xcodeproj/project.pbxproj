@@ -54,6 +54,7 @@
 		96059E8226CA5DF200BD9A0A /* ChartOpenedMainTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E8126CA5DF100BD9A0A /* ChartOpenedMainTableCell.swift */; };
 		96059E8426CA633400BD9A0A /* ChartMainTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E8326CA633400BD9A0A /* ChartMainTableElement.swift */; };
 		96059E8626CA683300BD9A0A /* ChartClosedMainTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E8526CA683300BD9A0A /* ChartClosedMainTableCell.swift */; };
+		96059E8826CA77EF00BD9A0A /* SeparatorMainTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E8726CA77EF00BD9A0A /* SeparatorMainTableCell.swift */; };
 		968FD3BB26C3C83100C01D2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 968FD3BA26C3C83100C01D2A /* Assets.xcassets */; };
 		968FD3EC26C3CB0D00C01D2A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD3C926C3CB0C00C01D2A /* UIColorExtension.swift */; };
 		968FD3EF26C3CB0D00C01D2A /* UITapGestureRecognizerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD3CC26C3CB0C00C01D2A /* UITapGestureRecognizerExtension.swift */; };
@@ -154,6 +155,7 @@
 		96059E8126CA5DF100BD9A0A /* ChartOpenedMainTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartOpenedMainTableCell.swift; sourceTree = "<group>"; };
 		96059E8326CA633400BD9A0A /* ChartMainTableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartMainTableElement.swift; sourceTree = "<group>"; };
 		96059E8526CA683300BD9A0A /* ChartClosedMainTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartClosedMainTableCell.swift; sourceTree = "<group>"; };
+		96059E8726CA77EF00BD9A0A /* SeparatorMainTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorMainTableCell.swift; sourceTree = "<group>"; };
 		968FD3AE26C3C82D00C01D2A /* Astra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Astra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		968FD3BA26C3C83100C01D2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		968FD3BF26C3C83100C01D2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -378,6 +380,7 @@
 				96059E7126C9AC0D00BD9A0A /* HoroImageMainCell.swift */,
 				96059E7326C9AFF900BD9A0A /* HoroContentMainTableCell.swift */,
 				96059E7E26C9CFEF00BD9A0A /* HoroButtonMainTableCell.swift */,
+				96059E8726CA77EF00BD9A0A /* SeparatorMainTableCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -778,6 +781,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96059E8826CA77EF00BD9A0A /* SeparatorMainTableCell.swift in Sources */,
 				96059E4E26C7BA5500BD9A0A /* GetDashboardResponse.swift in Sources */,
 				968FD40326C3CB0D00C01D2A /* CircleView.swift in Sources */,
 				96059E6C26C963DD00BD9A0A /* HoroFilterCollectionCell.swift in Sources */,
