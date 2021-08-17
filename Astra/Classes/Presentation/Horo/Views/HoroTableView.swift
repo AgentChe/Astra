@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import RxCocoa
 
 final class HoroTableView: UITableView {
+    lazy var didSelectPeriod = PublishRelay<String>()
+    
     private var elements = [HoroTableElement]()
     
     override init(frame: CGRect, style: UITableView.Style) {
@@ -56,11 +59,11 @@ extension HoroTableView: UITableViewDataSource {
         case .article(let element):
             if element.isOpened {
                 let cell = dequeueReusableCell(withIdentifier: String(describing: HoroArticleOpenedTableCell.self)) as! HoroArticleOpenedTableCell
-                cell.setup(element: element)
+                cell.setup(element: element.content)
                 return cell
             } else {
                 let cell = dequeueReusableCell(withIdentifier: String(describing: HoroArticleClosedTableCell.self)) as! HoroArticleClosedTableCell
-                cell.setup(element: element)
+                cell.setup(element: element.content)
                 return cell
             }
         }
@@ -70,20 +73,7 @@ extension HoroTableView: UITableViewDataSource {
 // MARK: HoroFilterCellDelegate
 extension HoroTableView: HoroFilterCellDelegate {
     func horoFilterCellDidUpdated(selectedPeriod: String) {
-        var indexPaths = [IndexPath]()
-        
-        for (index, element) in elements.enumerated() {
-            guard case let .article(content) = element else {
-                continue
-            }
-            
-            content.selectedPeriod = selectedPeriod
-            
-            let indexPath = IndexPath(row: index, section: 0)
-            indexPaths.append(indexPath)
-        }
-        
-        reloadRows(at: indexPaths, with: .automatic)
+        didSelectPeriod.accept(selectedPeriod)
     }
 }
 

@@ -73,6 +73,7 @@
 		96059EB226CBE37B00BD9A0A /* HoroFull.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EB126CBE37B00BD9A0A /* HoroFull.swift */; };
 		96059EB426CBE40300BD9A0A /* GetHoroFullRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EB326CBE40300BD9A0A /* GetHoroFullRequest.swift */; };
 		96059EB626CBE40A00BD9A0A /* GetHoroFullResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EB526CBE40A00BD9A0A /* GetHoroFullResponse.swift */; };
+		96059EB826CC2D7300BD9A0A /* HoroFullArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EB726CC2D7300BD9A0A /* HoroFullArticle.swift */; };
 		968FD3BB26C3C83100C01D2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 968FD3BA26C3C83100C01D2A /* Assets.xcassets */; };
 		968FD3EC26C3CB0D00C01D2A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD3C926C3CB0C00C01D2A /* UIColorExtension.swift */; };
 		968FD3EF26C3CB0D00C01D2A /* UITapGestureRecognizerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD3CC26C3CB0C00C01D2A /* UITapGestureRecognizerExtension.swift */; };
@@ -192,6 +193,7 @@
 		96059EB126CBE37B00BD9A0A /* HoroFull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroFull.swift; sourceTree = "<group>"; };
 		96059EB326CBE40300BD9A0A /* GetHoroFullRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHoroFullRequest.swift; sourceTree = "<group>"; };
 		96059EB526CBE40A00BD9A0A /* GetHoroFullResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHoroFullResponse.swift; sourceTree = "<group>"; };
+		96059EB726CC2D7300BD9A0A /* HoroFullArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroFullArticle.swift; sourceTree = "<group>"; };
 		968FD3AE26C3C82D00C01D2A /* Astra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Astra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		968FD3BA26C3C83100C01D2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		968FD3BF26C3C83100C01D2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -358,6 +360,7 @@
 				96059E3E26C7AEED00BD9A0A /* Horo.swift */,
 				96059E4026C7AF1300BD9A0A /* HoroContent.swift */,
 				96059EB126CBE37B00BD9A0A /* HoroFull.swift */,
+				96059EB726CC2D7300BD9A0A /* HoroFullArticle.swift */,
 				96059E4226C7B1B500BD9A0A /* Chart.swift */,
 				96059E4426C7B21800BD9A0A /* Lunar.swift */,
 				96059E4626C7B27500BD9A0A /* LunarArticle.swift */,
@@ -978,6 +981,7 @@
 				968FD47826C460AC00C01D2A /* OGoalCell.swift in Sources */,
 				96059E0B26C6632A00BD9A0A /* SessionManager.swift in Sources */,
 				96059E1426C66F0F00BD9A0A /* SetRequest.swift in Sources */,
+				96059EB826CC2D7300BD9A0A /* HoroFullArticle.swift in Sources */,
 				968FD40A26C3CDDC00C01D2A /* UIEdgeInsets+Extension.swift in Sources */,
 				968FD47226C4520700C01D2A /* Gender.swift in Sources */,
 				968FD45F26C41F0500C01D2A /* OnboardingViewModel.swift in Sources */,

@@ -7,7 +7,7 @@
 
 struct HoroFull {
     let image: String?
-    let horos: [Horo]
+    let articles: [HoroFullArticle]
 }
 
 // MARK: Codable

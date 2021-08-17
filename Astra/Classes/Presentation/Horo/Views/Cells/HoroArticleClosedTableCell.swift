@@ -27,14 +27,10 @@ final class HoroArticleClosedTableCell: UITableViewCell {
 
 // MARK: Public
 extension HoroArticleClosedTableCell {
-    func setup(element: HoroArticleTableElement) {
-        guard let content = element.articles.first(where: { $0.period == element.selectedPeriod })?.content else {
-            return
-        }
+    func setup(element: HoroContent) {
+        iconView.image = mapImage(from: element.iconCode)
         
-        iconView.image = mapImage(from: content.iconCode)
-        
-        titleLabel.attributedText = content.type
+        titleLabel.attributedText = element.type
             .attributed(with: TextAttributes()
                             .textColor(UIColor(integralRed: 31, green: 31, blue: 31))
                             .font(Fonts.Qanelas.bold(size: 17.scale))
@@ -133,7 +129,7 @@ private extension HoroArticleClosedTableCell {
     
     func makeArrowImageView() -> UIImageView {
         let view = UIImageView()
-        view.image = UIImage(named: "Main.Chart.ArrowBottom")
+        view.image = UIImage(named: "Main.Chart.ArrowDown")
         view.contentMode = .scaleAspectFit
         view.translatesAutoresizingMaskIntoConstraints = false
         container.addSubview(view)

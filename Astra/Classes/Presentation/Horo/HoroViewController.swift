@@ -27,6 +27,11 @@ final class HoroViewController: UIViewController {
                 self?.mainView.tableView.setup(elements: elements)
             })
             .disposed(by: disposeBag)
+        
+        mainView.tableView
+            .didSelectPeriod
+            .bind(to: viewModel.didSelectPeriod)
+            .disposed(by: disposeBag)
     }
 }
 
@@ -35,6 +40,7 @@ extension HoroViewController {
     static func make() -> HoroViewController {
         let vc = HoroViewController()
         vc.navigationItem.backButtonTitle = " "
+        vc.navigationItem.title = "Horo.Title".localized
         return vc
     }
 }

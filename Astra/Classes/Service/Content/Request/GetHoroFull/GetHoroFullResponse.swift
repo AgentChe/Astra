@@ -15,50 +15,44 @@ final class GetHoroFullResponse {
         }
         
         let image = data["horoscopes_image"] as? String
-        let horos = mapHoros(json: data)
+        let articles = mapArticles(json: data)
         
         return HoroFull(image: image,
-                        horos: horos)
+                        articles: articles)
     }
 }
 
 // MARK: Privates
 private extension GetHoroFullResponse {
-    static func mapHoros(json: [String: Any]) -> [Horo] {
+    static func mapArticles(json: [String: Any]) -> [HoroFullArticle] {
         guard let horoscopesArray = json["horoscopes"] as? [[String: Any]] else {
             return []
         }
         
-        var result = [Horo]()
-        
-        for horoscopeJSON in horoscopesArray {
+        return horoscopesArray.compactMap { horoscopeJSON -> HoroFullArticle? in
             guard
                 let period = horoscopeJSON["period"] as? String,
                 let articlesArray = horoscopeJSON["articles"] as? [[String: Any]]
             else {
-                continue
+                return nil
             }
             
-            for articleJSON in articlesArray {
+            let content = articlesArray.compactMap { articleJSON -> HoroContent? in
                 guard
                     let type = articleJSON["header"] as? String,
                     let text = articleJSON["text"] as? String,
                     let iconCode = articleJSON["icon_code"] as? Int
                 else {
-                    continue
+                    return nil
                 }
                 
-                let content = HoroContent(type: type,
-                                          text: text,
-                                          iconCode: iconCode)
-                
-                let horo = Horo(period: period,
-                                content: content)
-                
-                result.append(horo)
+                return HoroContent(type: type,
+                                   text: text,
+                                   iconCode: iconCode)
             }
+            
+            return HoroFullArticle(period: period,
+                                   content: content)
         }
-        
-        return result
     }
 }

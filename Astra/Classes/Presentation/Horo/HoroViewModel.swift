@@ -9,6 +9,8 @@ import RxSwift
 import RxCocoa
 
 final class HoroViewModel {
+    lazy var didSelectPeriod = PublishRelay<String>()
+    
     lazy var elements = makeElements()
     
     private lazy var contentManager = ContentManagerCore()
@@ -17,8 +19,11 @@ final class HoroViewModel {
 // MARK: Private
 private extension HoroViewModel {
     func makeElements() -> Driver<[HoroTableElement]> {
-        contentManager
+        let horoFull = contentManager
             .obtainHoroFull()
+            .asDriver(onErrorJustReturn: nil)
+        
+        let elements1 = horoFull
             .map { horoFull -> [HoroTableElement] in
                 guard let horoFull = horoFull else {
                     return []
@@ -26,16 +31,12 @@ private extension HoroViewModel {
                 
                 var result = [HoroTableElement]()
                 
-                var filters = [HoroFilterTableElement]()
-                for (index, horo) in horoFull.horos.enumerated() {
-                    guard !filters.contains(where: { $0.title == horo.period }) else {
-                        continue
+                let filters = horoFull.articles
+                    .map { $0.period }
+                    .enumerated()
+                    .map { index, period -> HoroFilterTableElement in
+                        HoroFilterTableElement(title: period, isSelected: index == 0)
                     }
-                    
-                    let filter = HoroFilterTableElement(title: horo.period, isSelected: index == 0)
-                    
-                    filters.append(filter)
-                }
                 result.append(.filter(filters))
                 
                 result.append(.offset(16.scale))
@@ -45,22 +46,36 @@ private extension HoroViewModel {
                 
                 result.append(.offset(16.scale))
                 
-                for index in 0...(horoFull.horos.count - 1) {
-                    let element = HoroArticleTableElement(articles: horoFull.horos,
-                                                          isOpened: index == 0,
-                                                          selectedPeriod: horoFull.horos.first?.period ?? "")
-                    
-                    result.append(.article(element))
-                    
-                    if index != (horoFull.horos.count - 1) {
-                        result.append(.offset(12.scale))
-                    }
-                }
-                
-                result.append(.offset(16.scale))
-                
                 return result
             }
-            .asDriver(onErrorJustReturn: [])
+        
+        let elements2 = Driver
+            .combineLatest(
+                horoFull,
+                
+                didSelectPeriod
+                    .asDriver(onErrorJustReturn: "")
+                    .startWith("")
+            )
+            .map { horoFull, selectedPeriod -> [HoroTableElement] in
+                guard let horoFull = horoFull else {
+                    return []
+                }
+                
+                let period = selectedPeriod.isEmpty ? (horoFull.articles.first?.period ?? "") : selectedPeriod
+                
+                guard let articles = horoFull.articles.first(where: { $0.period == period }) else {
+                    return []
+                }
+                
+                return articles.content.enumerated().map { index, content -> HoroTableElement in
+                    let element = HoroArticleTableElement(content: content, isOpened: index == 0)
+                    return .article(element)
+                }
+            }
+        
+        return Driver
+            .combineLatest(elements1, elements2)
+            .map { $0 + $1 }
     }
 }

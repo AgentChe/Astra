@@ -6,15 +6,12 @@
 //
 
 final class HoroArticleTableElement {
-    let articles: [Horo]
+    let content: HoroContent
     var isOpened: Bool
-    var selectedPeriod: String
     
-    init(articles: [Horo],
-         isOpened: Bool,
-         selectedPeriod: String) {
-        self.articles = articles
+    init(content: HoroContent,
+         isOpened: Bool) {
+        self.content = content
         self.isOpened = isOpened
-        self.selectedPeriod = selectedPeriod
     }
 }
