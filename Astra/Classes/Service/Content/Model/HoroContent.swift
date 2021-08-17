@@ -8,6 +8,7 @@
 struct HoroContent {
     let type: String
     let text: String
+    let iconCode: Int
 }
 
 // MARK: Codable

@@ -62,6 +62,17 @@
 		96059E9526CB154100BD9A0A /* DailyTarotMainTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E9426CB154100BD9A0A /* DailyTarotMainTableCell.swift */; };
 		96059E9826CB1CDC00BD9A0A /* TarotsMainTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E9726CB1CDC00BD9A0A /* TarotsMainTableCell.swift */; };
 		96059E9A26CB1DE000BD9A0A /* TarotTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E9926CB1DE000BD9A0A /* TarotTableView.swift */; };
+		96059E9D26CBBF0600BD9A0A /* HoroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E9C26CBBF0500BD9A0A /* HoroViewController.swift */; };
+		96059E9F26CBBF3A00BD9A0A /* HoroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E9E26CBBF3A00BD9A0A /* HoroViewModel.swift */; };
+		96059EA126CBBF7C00BD9A0A /* HoroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EA026CBBF7C00BD9A0A /* HoroView.swift */; };
+		96059EA426CBBFCF00BD9A0A /* HoroTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EA326CBBFCF00BD9A0A /* HoroTableView.swift */; };
+		96059EA826CBD53800BD9A0A /* HoroTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EA726CBD53800BD9A0A /* HoroTableElement.swift */; };
+		96059EAA26CBD6EE00BD9A0A /* HoroArticleTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EA926CBD6EE00BD9A0A /* HoroArticleTableElement.swift */; };
+		96059EAC26CBD8AF00BD9A0A /* HoroArticleOpenedTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EAB26CBD8AF00BD9A0A /* HoroArticleOpenedTableCell.swift */; };
+		96059EAE26CBD8BD00BD9A0A /* HoroArticleClosedTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EAD26CBD8BD00BD9A0A /* HoroArticleClosedTableCell.swift */; };
+		96059EB226CBE37B00BD9A0A /* HoroFull.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EB126CBE37B00BD9A0A /* HoroFull.swift */; };
+		96059EB426CBE40300BD9A0A /* GetHoroFullRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EB326CBE40300BD9A0A /* GetHoroFullRequest.swift */; };
+		96059EB626CBE40A00BD9A0A /* GetHoroFullResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EB526CBE40A00BD9A0A /* GetHoroFullResponse.swift */; };
 		968FD3BB26C3C83100C01D2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 968FD3BA26C3C83100C01D2A /* Assets.xcassets */; };
 		968FD3EC26C3CB0D00C01D2A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD3C926C3CB0C00C01D2A /* UIColorExtension.swift */; };
 		968FD3EF26C3CB0D00C01D2A /* UITapGestureRecognizerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD3CC26C3CB0C00C01D2A /* UITapGestureRecognizerExtension.swift */; };
@@ -170,6 +181,17 @@
 		96059E9426CB154100BD9A0A /* DailyTarotMainTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTarotMainTableCell.swift; sourceTree = "<group>"; };
 		96059E9726CB1CDC00BD9A0A /* TarotsMainTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotsMainTableCell.swift; sourceTree = "<group>"; };
 		96059E9926CB1DE000BD9A0A /* TarotTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotTableView.swift; sourceTree = "<group>"; };
+		96059E9C26CBBF0500BD9A0A /* HoroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroViewController.swift; sourceTree = "<group>"; };
+		96059E9E26CBBF3A00BD9A0A /* HoroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroViewModel.swift; sourceTree = "<group>"; };
+		96059EA026CBBF7C00BD9A0A /* HoroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroView.swift; sourceTree = "<group>"; };
+		96059EA326CBBFCF00BD9A0A /* HoroTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroTableView.swift; sourceTree = "<group>"; };
+		96059EA726CBD53800BD9A0A /* HoroTableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroTableElement.swift; sourceTree = "<group>"; };
+		96059EA926CBD6EE00BD9A0A /* HoroArticleTableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroArticleTableElement.swift; sourceTree = "<group>"; };
+		96059EAB26CBD8AF00BD9A0A /* HoroArticleOpenedTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroArticleOpenedTableCell.swift; sourceTree = "<group>"; };
+		96059EAD26CBD8BD00BD9A0A /* HoroArticleClosedTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroArticleClosedTableCell.swift; sourceTree = "<group>"; };
+		96059EB126CBE37B00BD9A0A /* HoroFull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroFull.swift; sourceTree = "<group>"; };
+		96059EB326CBE40300BD9A0A /* GetHoroFullRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHoroFullRequest.swift; sourceTree = "<group>"; };
+		96059EB526CBE40A00BD9A0A /* GetHoroFullResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHoroFullResponse.swift; sourceTree = "<group>"; };
 		968FD3AE26C3C82D00C01D2A /* Astra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Astra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		968FD3BA26C3C83100C01D2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		968FD3BF26C3C83100C01D2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -335,6 +357,7 @@
 				96059E3C26C7AE1100BD9A0A /* Dashboard.swift */,
 				96059E3E26C7AEED00BD9A0A /* Horo.swift */,
 				96059E4026C7AF1300BD9A0A /* HoroContent.swift */,
+				96059EB126CBE37B00BD9A0A /* HoroFull.swift */,
 				96059E4226C7B1B500BD9A0A /* Chart.swift */,
 				96059E4426C7B21800BD9A0A /* Lunar.swift */,
 				96059E4626C7B27500BD9A0A /* LunarArticle.swift */,
@@ -346,8 +369,8 @@
 		96059E4A26C7B97100BD9A0A /* Request */ = {
 			isa = PBXGroup;
 			children = (
-				96059E4B26C7B98A00BD9A0A /* GetDashboardRequest.swift */,
-				96059E4D26C7BA5500BD9A0A /* GetDashboardResponse.swift */,
+				96059EB026CBE2AD00BD9A0A /* GetHoroFull */,
+				96059EAF26CBE2A100BD9A0A /* GetDashboard */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -440,6 +463,63 @@
 				96059E9926CB1DE000BD9A0A /* TarotTableView.swift */,
 			);
 			path = TarotsMainTableCell;
+			sourceTree = "<group>";
+		};
+		96059E9B26CBBEEF00BD9A0A /* Horo */ = {
+			isa = PBXGroup;
+			children = (
+				96059EA226CBBFB900BD9A0A /* Views */,
+				96059E9C26CBBF0500BD9A0A /* HoroViewController.swift */,
+				96059E9E26CBBF3A00BD9A0A /* HoroViewModel.swift */,
+				96059EA026CBBF7C00BD9A0A /* HoroView.swift */,
+			);
+			path = Horo;
+			sourceTree = "<group>";
+		};
+		96059EA226CBBFB900BD9A0A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				96059EA626CBBFDB00BD9A0A /* Cells */,
+				96059EA526CBBFD400BD9A0A /* Elements */,
+				96059EA326CBBFCF00BD9A0A /* HoroTableView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		96059EA526CBBFD400BD9A0A /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				96059EA726CBD53800BD9A0A /* HoroTableElement.swift */,
+				96059EA926CBD6EE00BD9A0A /* HoroArticleTableElement.swift */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
+		96059EA626CBBFDB00BD9A0A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				96059EAB26CBD8AF00BD9A0A /* HoroArticleOpenedTableCell.swift */,
+				96059EAD26CBD8BD00BD9A0A /* HoroArticleClosedTableCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		96059EAF26CBE2A100BD9A0A /* GetDashboard */ = {
+			isa = PBXGroup;
+			children = (
+				96059E4D26C7BA5500BD9A0A /* GetDashboardResponse.swift */,
+				96059E4B26C7B98A00BD9A0A /* GetDashboardRequest.swift */,
+			);
+			path = GetDashboard;
+			sourceTree = "<group>";
+		};
+		96059EB026CBE2AD00BD9A0A /* GetHoroFull */ = {
+			isa = PBXGroup;
+			children = (
+				96059EB326CBE40300BD9A0A /* GetHoroFullRequest.swift */,
+				96059EB526CBE40A00BD9A0A /* GetHoroFullResponse.swift */,
+			);
+			path = GetHoroFull;
 			sourceTree = "<group>";
 		};
 		968FD3A526C3C82D00C01D2A = {
@@ -592,6 +672,7 @@
 		968FD41126C3CF3600C01D2A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				96059E9B26CBBEEF00BD9A0A /* Horo */,
 				96059E2F26C7092300BD9A0A /* Main */,
 				96059E1F26C6CBA200BD9A0A /* TabController */,
 				968FD41A26C41F0500C01D2A /* Onboarding */,
@@ -823,6 +904,7 @@
 				968FD40326C3CB0D00C01D2A /* CircleView.swift in Sources */,
 				96059E6C26C963DD00BD9A0A /* HoroFilterCollectionCell.swift in Sources */,
 				96059E6126C847F400BD9A0A /* ProfileMainTableElement.swift in Sources */,
+				96059E9D26CBBF0600BD9A0A /* HoroViewController.swift in Sources */,
 				96059E2726C6CBFB00BD9A0A /* TabItemView.swift in Sources */,
 				96059E4C26C7B98A00BD9A0A /* GetDashboardRequest.swift in Sources */,
 				96059E3B26C7AC5700BD9A0A /* Sign.swift in Sources */,
@@ -830,6 +912,7 @@
 				96059E2526C6CBE800BD9A0A /* TabView.swift in Sources */,
 				96059E8C26CA7EE700BD9A0A /* LunarButtonMainTableCell.swift in Sources */,
 				968FD47626C45F7F00C01D2A /* OGoalsView.swift in Sources */,
+				96059EAC26CBD8AF00BD9A0A /* HoroArticleOpenedTableCell.swift in Sources */,
 				968FD3FF26C3CB0D00C01D2A /* TapAreaButton.swift in Sources */,
 				96059E0D26C6634400BD9A0A /* SessionManagerCore.swift in Sources */,
 				96059E5326C7C8A600BD9A0A /* ContentManagerCore.swift in Sources */,
@@ -837,6 +920,7 @@
 				968FD3F526C3CB0D00C01D2A /* TextAttributes.swift in Sources */,
 				968FD3FC26C3CB0D00C01D2A /* Toast.swift in Sources */,
 				96059E7226C9AC0D00BD9A0A /* HoroImageMainCell.swift in Sources */,
+				96059EB626CBE40A00BD9A0A /* GetHoroFullResponse.swift in Sources */,
 				968FD3FA26C3CB0D00C01D2A /* Weak.swift in Sources */,
 				96059E8626CA683300BD9A0A /* ChartClosedMainTableCell.swift in Sources */,
 				968FD46126C426A100C01D2A /* OStepView.swift in Sources */,
@@ -844,6 +928,7 @@
 				968FD47426C45BED00C01D2A /* OBirthdateView.swift in Sources */,
 				968FD40726C3CB0D00C01D2A /* UIViewRxExtension.swift in Sources */,
 				96059E5726C7CEAB00BD9A0A /* MainTableView.swift in Sources */,
+				96059EA126CBBF7C00BD9A0A /* HoroView.swift in Sources */,
 				968FD3FD26C3CB0D00C01D2A /* NavigationController.swift in Sources */,
 				968FD40226C3CB0D00C01D2A /* GradientButton.swift in Sources */,
 				96059E3F26C7AEED00BD9A0A /* Horo.swift in Sources */,
@@ -854,7 +939,9 @@
 				968FD3F426C3CB0D00C01D2A /* Scalable.swift in Sources */,
 				96059E3D26C7AE1100BD9A0A /* Dashboard.swift in Sources */,
 				96059E6E26C968D800BD9A0A /* HoroFilterCollectionView.swift in Sources */,
+				96059EB426CBE40300BD9A0A /* GetHoroFullRequest.swift in Sources */,
 				96059E8F26CA817C00BD9A0A /* LunarCalendarMainTableCell.swift in Sources */,
+				96059E9F26CBBF3A00BD9A0A /* HoroViewModel.swift in Sources */,
 				96059E7F26C9CFEF00BD9A0A /* HoroButtonMainTableCell.swift in Sources */,
 				96059E6726C9485C00BD9A0A /* HoroFilterMainTableCell.swift in Sources */,
 				968FD3FE26C3CB0D00C01D2A /* NavigationControllerSettings.swift in Sources */,
@@ -864,6 +951,7 @@
 				96059E1A26C6707C00BD9A0A /* UserManagerCore.swift in Sources */,
 				96059E4126C7AF1300BD9A0A /* HoroContent.swift in Sources */,
 				96059E6526C90E2C00BD9A0A /* TitleMainTableCell.swift in Sources */,
+				96059EA426CBBFCF00BD9A0A /* HoroTableView.swift in Sources */,
 				96059E3526C70B3900BD9A0A /* MainView.swift in Sources */,
 				968FD44026C41F0500C01D2A /* OnboardingViewController.swift in Sources */,
 				968FD41926C3E0CB00C01D2A /* SplashView.swift in Sources */,
@@ -871,6 +959,7 @@
 				96059E2926C6CC5B00BD9A0A /* TabMainView.swift in Sources */,
 				968FD3F226C3CB0D00C01D2A /* StringExtension.swift in Sources */,
 				96059E5126C7C87D00BD9A0A /* ContentManager.swift in Sources */,
+				96059EAE26CBD8BD00BD9A0A /* HoroArticleClosedTableCell.swift in Sources */,
 				968FD40126C3CB0D00C01D2A /* PaddingPickerView.swift in Sources */,
 				968FD3F026C3CB0D00C01D2A /* UIDeviceExtension.swift in Sources */,
 				96059E3326C70B1900BD9A0A /* MainViewModel.swift in Sources */,
@@ -897,6 +986,7 @@
 				96059E1C26C6819D00BD9A0A /* ONameView.swift in Sources */,
 				96059E4326C7B1B500BD9A0A /* Chart.swift in Sources */,
 				968FD46D26C4334C00C01D2A /* OGenderView.swift in Sources */,
+				96059EA826CBD53800BD9A0A /* HoroTableElement.swift in Sources */,
 				96059E8A26CA7B3400BD9A0A /* LunarArticleMainTableCell.swift in Sources */,
 				968FD41526C3DFC400C01D2A /* SplashViewController.swift in Sources */,
 				968FD40026C3CB0D00C01D2A /* PaddingLabel.swift in Sources */,
@@ -911,8 +1001,10 @@
 				96059E1126C6665B00BD9A0A /* OPlanView.swift in Sources */,
 				968FD40426C3CB0D00C01D2A /* GradientView.swift in Sources */,
 				968FD3EF26C3CB0D00C01D2A /* UITapGestureRecognizerExtension.swift in Sources */,
+				96059EAA26CBD6EE00BD9A0A /* HoroArticleTableElement.swift in Sources */,
 				968FD40626C3CB0D00C01D2A /* RxActivityIndicator.swift in Sources */,
 				968FD3F326C3CB0D00C01D2A /* GlobalDefinitions.swift in Sources */,
+				96059EB226CBE37B00BD9A0A /* HoroFull.swift in Sources */,
 				96059E1826C6703500BD9A0A /* UserManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

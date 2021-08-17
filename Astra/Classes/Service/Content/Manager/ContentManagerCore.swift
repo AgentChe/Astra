@@ -24,4 +24,18 @@ extension ContentManagerCore {
             .callServerApi(requestBody: request)
             .map { GetDashboardResponse.map(from: $0) }
     }
+    
+    func obtainHoroFull() -> Single<HoroFull?> {
+        guard let userToken = SessionManagerCore().getSession()?.userToken else {
+            return .error(SignError.tokenNotFound)
+        }
+        
+        let request = GetHoroFullRequest(userToken: userToken,
+                                         locale: UIDevice.deviceLanguageCode ?? "en")
+        
+        return SDKStorage.shared
+            .restApiTransport
+            .callServerApi(requestBody: request)
+            .map { GetHoroFullResponse.map(from: $0) }
+    }
 }

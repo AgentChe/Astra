@@ -69,7 +69,9 @@ extension MainTableView: UITableViewDataSource {
             cell.setup(element: content)
             return cell
         case .horoButton:
-            return dequeueReusableCell(withIdentifier: String(describing: HoroButtonMainTableCell.self), for: indexPath)
+            let cell = dequeueReusableCell(withIdentifier: String(describing: HoroButtonMainTableCell.self), for: indexPath) as! HoroButtonMainTableCell
+            cell.mainDelegate = mainDelegate
+            return cell
         case .chart(let element):
             if element.isOpened {
                 let cell = dequeueReusableCell(withIdentifier: String(describing: ChartOpenedMainTableCell.self)) as! ChartOpenedMainTableCell
@@ -91,7 +93,9 @@ extension MainTableView: UITableViewDataSource {
             cell.setup(element: article)
             return cell
         case .lunarButton:
-            return dequeueReusableCell(withIdentifier: String(describing: LunarButtonMainTableCell.self), for: indexPath)
+            let cell = dequeueReusableCell(withIdentifier: String(describing: LunarButtonMainTableCell.self), for: indexPath) as! LunarButtonMainTableCell
+            cell.mainDelegate = mainDelegate
+            return cell
         case .dailyTarot:
             let cell = dequeueReusableCell(withIdentifier: String(describing: DailyTarotMainTableCell.self)) as! DailyTarotMainTableCell
             cell.mainDelegate = mainDelegate

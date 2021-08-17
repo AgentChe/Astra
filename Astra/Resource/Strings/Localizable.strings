@@ -57,3 +57,6 @@
 "Main.Tarot.Love.Title" = "Love tarot";
 "Main.Tarot.Career.Title" = "Career tarot";
 "Main.Tarot.Money.Title" = "Money tarot";
+
+// MARK: Horo
+"Horo.Title" = "HOROSCOPE";

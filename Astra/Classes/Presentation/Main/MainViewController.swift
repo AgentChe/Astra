@@ -48,7 +48,8 @@ extension MainViewController: MainTableViewDelegate {
     }
     
     func mainTableViewHoroDidTapped() {
-        
+        let vc = HoroViewController.make()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     func mainTableViewLunarDidTapped() {
@@ -56,6 +57,6 @@ extension MainViewController: MainTableViewDelegate {
     }
     
     func mainTableViewTarotDidTapped(code: Int) {
-        print(code)
+        
     }
 }

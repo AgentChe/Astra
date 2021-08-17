@@ -86,12 +86,15 @@ private extension GetDashboardResponse {
                 let period = jsonElement["period"] as? String,
                 let contentJSON = jsonElement["content"] as? [String: Any],
                 let type = contentJSON["type"] as? String,
-                let text = contentJSON["text"] as? String
+                let text = contentJSON["text"] as? String,
+                let iconCode = contentJSON["icon_code"] as? Int
             else {
                 return nil
             }
             
-            let content = HoroContent(type: type, text: text)
+            let content = HoroContent(type: type,
+                                      text: text,
+                                      iconCode: iconCode)
             
             return Horo(period: period, content: content)
         }
