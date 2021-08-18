@@ -60,3 +60,10 @@
 
 // MARK: Horo
 "Horo.Title" = "HOROSCOPE";
+
+// MARK: Settings
+"Settings.Title" = "Settings";
+"Settings.RateUs" = "Rate us";
+"Settings.ContactUs" = "Contact us";
+"Settings.TermsOfuse" = "Terms of use";
+"Settings.PrivacyPolicy" = "Privacy Policy";

@@ -74,6 +74,13 @@
 		96059EB426CBE40300BD9A0A /* GetHoroFullRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EB326CBE40300BD9A0A /* GetHoroFullRequest.swift */; };
 		96059EB626CBE40A00BD9A0A /* GetHoroFullResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EB526CBE40A00BD9A0A /* GetHoroFullResponse.swift */; };
 		96059EB826CC2D7300BD9A0A /* HoroFullArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EB726CC2D7300BD9A0A /* HoroFullArticle.swift */; };
+		96059EBB26CD01C700BD9A0A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EBA26CD01C700BD9A0A /* SettingsViewController.swift */; };
+		96059EBD26CD020300BD9A0A /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EBC26CD020300BD9A0A /* SettingsViewModel.swift */; };
+		96059EBF26CD021800BD9A0A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EBE26CD021800BD9A0A /* SettingsView.swift */; };
+		96059EC226CD06C100BD9A0A /* SettingsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EC126CD06C100BD9A0A /* SettingsTableView.swift */; };
+		96059EC426CD06DA00BD9A0A /* SettingsTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EC326CD06DA00BD9A0A /* SettingsTableElement.swift */; };
+		96059EC726CD070A00BD9A0A /* SettingsLinkTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EC626CD070A00BD9A0A /* SettingsLinkTableCell.swift */; };
+		96059EC926CD21F600BD9A0A /* RateUs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EC826CD21F600BD9A0A /* RateUs.swift */; };
 		968FD3BB26C3C83100C01D2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 968FD3BA26C3C83100C01D2A /* Assets.xcassets */; };
 		968FD3EC26C3CB0D00C01D2A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD3C926C3CB0C00C01D2A /* UIColorExtension.swift */; };
 		968FD3EF26C3CB0D00C01D2A /* UITapGestureRecognizerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD3CC26C3CB0C00C01D2A /* UITapGestureRecognizerExtension.swift */; };
@@ -194,6 +201,13 @@
 		96059EB326CBE40300BD9A0A /* GetHoroFullRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHoroFullRequest.swift; sourceTree = "<group>"; };
 		96059EB526CBE40A00BD9A0A /* GetHoroFullResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHoroFullResponse.swift; sourceTree = "<group>"; };
 		96059EB726CC2D7300BD9A0A /* HoroFullArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroFullArticle.swift; sourceTree = "<group>"; };
+		96059EBA26CD01C700BD9A0A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		96059EBC26CD020300BD9A0A /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		96059EBE26CD021800BD9A0A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		96059EC126CD06C100BD9A0A /* SettingsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableView.swift; sourceTree = "<group>"; };
+		96059EC326CD06DA00BD9A0A /* SettingsTableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableElement.swift; sourceTree = "<group>"; };
+		96059EC626CD070A00BD9A0A /* SettingsLinkTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLinkTableCell.swift; sourceTree = "<group>"; };
+		96059EC826CD21F600BD9A0A /* RateUs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateUs.swift; sourceTree = "<group>"; };
 		968FD3AE26C3C82D00C01D2A /* Astra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Astra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		968FD3BA26C3C83100C01D2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		968FD3BF26C3C83100C01D2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -525,6 +539,35 @@
 			path = GetHoroFull;
 			sourceTree = "<group>";
 		};
+		96059EB926CD01B700BD9A0A /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				96059EC026CD06A500BD9A0A /* Views */,
+				96059EBA26CD01C700BD9A0A /* SettingsViewController.swift */,
+				96059EBC26CD020300BD9A0A /* SettingsViewModel.swift */,
+				96059EBE26CD021800BD9A0A /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		96059EC026CD06A500BD9A0A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				96059EC526CD06EA00BD9A0A /* Cells */,
+				96059EC126CD06C100BD9A0A /* SettingsTableView.swift */,
+				96059EC326CD06DA00BD9A0A /* SettingsTableElement.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		96059EC526CD06EA00BD9A0A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				96059EC626CD070A00BD9A0A /* SettingsLinkTableCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		968FD3A526C3C82D00C01D2A = {
 			isa = PBXGroup;
 			children = (
@@ -610,6 +653,7 @@
 				968FD3D626C3CB0D00C01D2A /* Fonts.swift */,
 				968FD3D726C3CB0D00C01D2A /* Error */,
 				968FD3D926C3CB0D00C01D2A /* Weak.swift */,
+				96059EC826CD21F600BD9A0A /* RateUs.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -675,6 +719,7 @@
 		968FD41126C3CF3600C01D2A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				96059EB926CD01B700BD9A0A /* Settings */,
 				96059E9B26CBBEEF00BD9A0A /* Horo */,
 				96059E2F26C7092300BD9A0A /* Main */,
 				96059E1F26C6CBA200BD9A0A /* TabController */,
@@ -908,6 +953,7 @@
 				96059E6C26C963DD00BD9A0A /* HoroFilterCollectionCell.swift in Sources */,
 				96059E6126C847F400BD9A0A /* ProfileMainTableElement.swift in Sources */,
 				96059E9D26CBBF0600BD9A0A /* HoroViewController.swift in Sources */,
+				96059EBF26CD021800BD9A0A /* SettingsView.swift in Sources */,
 				96059E2726C6CBFB00BD9A0A /* TabItemView.swift in Sources */,
 				96059E4C26C7B98A00BD9A0A /* GetDashboardRequest.swift in Sources */,
 				96059E3B26C7AC5700BD9A0A /* Sign.swift in Sources */,
@@ -948,6 +994,7 @@
 				96059E7F26C9CFEF00BD9A0A /* HoroButtonMainTableCell.swift in Sources */,
 				96059E6726C9485C00BD9A0A /* HoroFilterMainTableCell.swift in Sources */,
 				968FD3FE26C3CB0D00C01D2A /* NavigationControllerSettings.swift in Sources */,
+				96059EC926CD21F600BD9A0A /* RateUs.swift in Sources */,
 				968FD41726C3E02A00C01D2A /* SplashViewModel.swift in Sources */,
 				96059E1E26C6855900BD9A0A /* PaddingTextField.swift in Sources */,
 				96059E8226CA5DF200BD9A0A /* ChartOpenedMainTableCell.swift in Sources */,
@@ -971,6 +1018,7 @@
 				96059E4926C7B2AA00BD9A0A /* LunarCalendarDay.swift in Sources */,
 				968FD3F926C3CB0D00C01D2A /* SignError.swift in Sources */,
 				96059E9A26CB1DE000BD9A0A /* TarotTableView.swift in Sources */,
+				96059EC226CD06C100BD9A0A /* SettingsTableView.swift in Sources */,
 				96059E9526CB154100BD9A0A /* DailyTarotMainTableCell.swift in Sources */,
 				96059E4526C7B21800BD9A0A /* Lunar.swift in Sources */,
 				96059E9826CB1CDC00BD9A0A /* TarotsMainTableCell.swift in Sources */,
@@ -982,13 +1030,16 @@
 				96059E0B26C6632A00BD9A0A /* SessionManager.swift in Sources */,
 				96059E1426C66F0F00BD9A0A /* SetRequest.swift in Sources */,
 				96059EB826CC2D7300BD9A0A /* HoroFullArticle.swift in Sources */,
+				96059EC426CD06DA00BD9A0A /* SettingsTableElement.swift in Sources */,
 				968FD40A26C3CDDC00C01D2A /* UIEdgeInsets+Extension.swift in Sources */,
 				968FD47226C4520700C01D2A /* Gender.swift in Sources */,
 				968FD45F26C41F0500C01D2A /* OnboardingViewModel.swift in Sources */,
 				96059E2B26C6CD2700BD9A0A /* TabCoordinator.swift in Sources */,
 				968FD47C26C4736500C01D2A /* OEnjoyingCell.swift in Sources */,
+				96059EBD26CD020300BD9A0A /* SettingsViewModel.swift in Sources */,
 				96059E1C26C6819D00BD9A0A /* ONameView.swift in Sources */,
 				96059E4326C7B1B500BD9A0A /* Chart.swift in Sources */,
+				96059EBB26CD01C700BD9A0A /* SettingsViewController.swift in Sources */,
 				968FD46D26C4334C00C01D2A /* OGenderView.swift in Sources */,
 				96059EA826CBD53800BD9A0A /* HoroTableElement.swift in Sources */,
 				96059E8A26CA7B3400BD9A0A /* LunarArticleMainTableCell.swift in Sources */,
@@ -1006,6 +1057,7 @@
 				968FD40426C3CB0D00C01D2A /* GradientView.swift in Sources */,
 				968FD3EF26C3CB0D00C01D2A /* UITapGestureRecognizerExtension.swift in Sources */,
 				96059EAA26CBD6EE00BD9A0A /* HoroArticleTableElement.swift in Sources */,
+				96059EC726CD070A00BD9A0A /* SettingsLinkTableCell.swift in Sources */,
 				968FD40626C3CB0D00C01D2A /* RxActivityIndicator.swift in Sources */,
 				968FD3F326C3CB0D00C01D2A /* GlobalDefinitions.swift in Sources */,
 				96059EB226CBE37B00BD9A0A /* HoroFull.swift in Sources */,

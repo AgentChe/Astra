@@ -44,7 +44,8 @@ extension MainViewController {
 // MARK: MainTableViewDelegate
 extension MainViewController: MainTableViewDelegate {
     func mainTableViewSettingsDidTapped() {
-        
+        let vc = SettingsViewController.make()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     func mainTableViewHoroDidTapped() {
