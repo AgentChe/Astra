@@ -48,7 +48,7 @@ private extension LunarView {
         
         NSLayoutConstraint.activate([
             titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 64.scale)
+            titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: ScreenSize.isIphoneXFamily ? 64.scale : 40.scale)
         ])
         
         NSLayoutConstraint.activate([
