@@ -54,7 +54,8 @@ extension MainViewController: MainTableViewDelegate {
     }
     
     func mainTableViewLunarDidTapped() {
-        
+        let vc = LunarViewController.make()
+        UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true)
     }
     
     func mainTableViewTarotDidTapped(code: Int) {

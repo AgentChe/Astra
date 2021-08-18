@@ -6,6 +6,36 @@
 //
 
 final class LunarDayView: UIView {
+    lazy var circle1Color: UIColor = UIColor(integralRed: 241, green: 240, blue: 238) {
+        didSet {
+            circle1View.backgroundColor = circle1Color
+        }
+    }
+    
+    lazy var circle2Color: UIColor = UIColor(integralRed: 63, green: 63, blue: 63) {
+        didSet {
+            circle2View.backgroundColor = circle2Color
+        }
+    }
+    
+    lazy var textColorHighlighted: UIColor = UIColor.white {
+        didSet {
+            update()
+        }
+    }
+    
+    lazy var dayColor: UIColor = UIColor(integralRed: 63, green: 63, blue: 63) {
+        didSet {
+            update()
+        }
+    }
+    
+    lazy var numberColor: UIColor = UIColor(integralRed: 63, green: 63, blue: 63) {
+        didSet {
+            update()
+        }
+    }
+    
     lazy var dayLabel = makeLabel()
     lazy var numberLabel = makeLabel()
     lazy var circle1View = makeCircle1View()
@@ -38,8 +68,8 @@ private extension LunarDayView {
     func initialize() {
         layer.masksToBounds = true
         
-        circle1View.backgroundColor = UIColor(integralRed: 241, green: 240, blue: 238)
-        circle2View.backgroundColor = UIColor(integralRed: 63, green: 63, blue: 63)
+        circle1View.backgroundColor = circle1Color
+        circle2View.backgroundColor = circle2Color
     }
     
     func update() {
@@ -51,13 +81,13 @@ private extension LunarDayView {
         
         dayLabel.attributedText = day.code
             .attributed(with: TextAttributes()
-                            .textColor(day.highlighted ? UIColor.white : UIColor(integralRed: 63, green: 63, blue: 63))
+                            .textColor(day.highlighted ? textColorHighlighted : dayColor)
                             .font(Fonts.Qanelas.regular(size: 14.scale))
                             .lineHeight(19.6.scale))
         
         numberLabel.attributedText = day.number
             .attributed(with: TextAttributes()
-                            .textColor(day.highlighted ? UIColor.white : UIColor(integralRed: 63, green: 63, blue: 63))
+                            .textColor(day.highlighted ? textColorHighlighted : numberColor)
                             .font(Fonts.Qanelas.regular(size: 14.scale))
                             .lineHeight(19.6.scale))
 

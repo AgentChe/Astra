@@ -81,6 +81,21 @@
 		96059EC426CD06DA00BD9A0A /* SettingsTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EC326CD06DA00BD9A0A /* SettingsTableElement.swift */; };
 		96059EC726CD070A00BD9A0A /* SettingsLinkTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EC626CD070A00BD9A0A /* SettingsLinkTableCell.swift */; };
 		96059EC926CD21F600BD9A0A /* RateUs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EC826CD21F600BD9A0A /* RateUs.swift */; };
+		96059ECC26CD253200BD9A0A /* LunarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059ECB26CD253200BD9A0A /* LunarViewController.swift */; };
+		96059ECE26CD262E00BD9A0A /* LunarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059ECD26CD262E00BD9A0A /* LunarViewModel.swift */; };
+		96059ED026CD264500BD9A0A /* LunarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059ECF26CD264500BD9A0A /* LunarView.swift */; };
+		96059ED326CD26E400BD9A0A /* LunarTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059ED226CD26E400BD9A0A /* LunarTableView.swift */; };
+		96059ED626CD275C00BD9A0A /* LunarTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059ED526CD275C00BD9A0A /* LunarTableElement.swift */; };
+		96059ED926CD2A3C00BD9A0A /* LunarCalendarTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059ED826CD2A3C00BD9A0A /* LunarCalendarTableCell.swift */; };
+		96059EDB26CD2A5700BD9A0A /* LunarArticleTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EDA26CD2A5700BD9A0A /* LunarArticleTableCell.swift */; };
+		96059EDD26CD9AC300BD9A0A /* LunarFavorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EDC26CD9AC300BD9A0A /* LunarFavorable.swift */; };
+		96059EDF26CD9B1800BD9A0A /* LunarFull.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EDE26CD9B1800BD9A0A /* LunarFull.swift */; };
+		96059EE226CD9C1400BD9A0A /* GetLunarFullRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EE126CD9C1400BD9A0A /* GetLunarFullRequest.swift */; };
+		96059EE426CD9C4100BD9A0A /* GetLunarFullResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EE326CD9C4100BD9A0A /* GetLunarFullResponse.swift */; };
+		96059EE626CDA24600BD9A0A /* SeparatorLunarTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EE526CDA24600BD9A0A /* SeparatorLunarTableCell.swift */; };
+		96059EE826CDA36B00BD9A0A /* TitleLunarTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EE726CDA36B00BD9A0A /* TitleLunarTableCell.swift */; };
+		96059EEA26CDA8B900BD9A0A /* FavorableLunarTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EE926CDA8B900BD9A0A /* FavorableLunarTableCell.swift */; };
+		96059EEC26CDADE700BD9A0A /* NumbersLunarTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EEB26CDADE700BD9A0A /* NumbersLunarTableCell.swift */; };
 		968FD3BB26C3C83100C01D2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 968FD3BA26C3C83100C01D2A /* Assets.xcassets */; };
 		968FD3EC26C3CB0D00C01D2A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD3C926C3CB0C00C01D2A /* UIColorExtension.swift */; };
 		968FD3EF26C3CB0D00C01D2A /* UITapGestureRecognizerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD3CC26C3CB0C00C01D2A /* UITapGestureRecognizerExtension.swift */; };
@@ -208,6 +223,21 @@
 		96059EC326CD06DA00BD9A0A /* SettingsTableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableElement.swift; sourceTree = "<group>"; };
 		96059EC626CD070A00BD9A0A /* SettingsLinkTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLinkTableCell.swift; sourceTree = "<group>"; };
 		96059EC826CD21F600BD9A0A /* RateUs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateUs.swift; sourceTree = "<group>"; };
+		96059ECB26CD253200BD9A0A /* LunarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunarViewController.swift; sourceTree = "<group>"; };
+		96059ECD26CD262E00BD9A0A /* LunarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunarViewModel.swift; sourceTree = "<group>"; };
+		96059ECF26CD264500BD9A0A /* LunarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunarView.swift; sourceTree = "<group>"; };
+		96059ED226CD26E400BD9A0A /* LunarTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunarTableView.swift; sourceTree = "<group>"; };
+		96059ED526CD275C00BD9A0A /* LunarTableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunarTableElement.swift; sourceTree = "<group>"; };
+		96059ED826CD2A3C00BD9A0A /* LunarCalendarTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunarCalendarTableCell.swift; sourceTree = "<group>"; };
+		96059EDA26CD2A5700BD9A0A /* LunarArticleTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunarArticleTableCell.swift; sourceTree = "<group>"; };
+		96059EDC26CD9AC300BD9A0A /* LunarFavorable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunarFavorable.swift; sourceTree = "<group>"; };
+		96059EDE26CD9B1800BD9A0A /* LunarFull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunarFull.swift; sourceTree = "<group>"; };
+		96059EE126CD9C1400BD9A0A /* GetLunarFullRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLunarFullRequest.swift; sourceTree = "<group>"; };
+		96059EE326CD9C4100BD9A0A /* GetLunarFullResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLunarFullResponse.swift; sourceTree = "<group>"; };
+		96059EE526CDA24600BD9A0A /* SeparatorLunarTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorLunarTableCell.swift; sourceTree = "<group>"; };
+		96059EE726CDA36B00BD9A0A /* TitleLunarTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLunarTableCell.swift; sourceTree = "<group>"; };
+		96059EE926CDA8B900BD9A0A /* FavorableLunarTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavorableLunarTableCell.swift; sourceTree = "<group>"; };
+		96059EEB26CDADE700BD9A0A /* NumbersLunarTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersLunarTableCell.swift; sourceTree = "<group>"; };
 		968FD3AE26C3C82D00C01D2A /* Astra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Astra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		968FD3BA26C3C83100C01D2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		968FD3BF26C3C83100C01D2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -379,6 +409,8 @@
 				96059E4426C7B21800BD9A0A /* Lunar.swift */,
 				96059E4626C7B27500BD9A0A /* LunarArticle.swift */,
 				96059E4826C7B2AA00BD9A0A /* LunarCalendarDay.swift */,
+				96059EDC26CD9AC300BD9A0A /* LunarFavorable.swift */,
+				96059EDE26CD9B1800BD9A0A /* LunarFull.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -386,6 +418,7 @@
 		96059E4A26C7B97100BD9A0A /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				96059EE026CD9BFF00BD9A0A /* GetLunarFull */,
 				96059EB026CBE2AD00BD9A0A /* GetHoroFull */,
 				96059EAF26CBE2A100BD9A0A /* GetDashboard */,
 			);
@@ -568,6 +601,57 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		96059ECA26CD252300BD9A0A /* Lunar */ = {
+			isa = PBXGroup;
+			children = (
+				96059ED126CD26CA00BD9A0A /* TableView */,
+				96059ECB26CD253200BD9A0A /* LunarViewController.swift */,
+				96059ECD26CD262E00BD9A0A /* LunarViewModel.swift */,
+				96059ECF26CD264500BD9A0A /* LunarView.swift */,
+			);
+			path = Lunar;
+			sourceTree = "<group>";
+		};
+		96059ED126CD26CA00BD9A0A /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				96059ED726CD299100BD9A0A /* Elements */,
+				96059ED426CD274800BD9A0A /* Cells */,
+				96059ED226CD26E400BD9A0A /* LunarTableView.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		96059ED426CD274800BD9A0A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				96059ED826CD2A3C00BD9A0A /* LunarCalendarTableCell.swift */,
+				96059EDA26CD2A5700BD9A0A /* LunarArticleTableCell.swift */,
+				96059EE526CDA24600BD9A0A /* SeparatorLunarTableCell.swift */,
+				96059EE726CDA36B00BD9A0A /* TitleLunarTableCell.swift */,
+				96059EE926CDA8B900BD9A0A /* FavorableLunarTableCell.swift */,
+				96059EEB26CDADE700BD9A0A /* NumbersLunarTableCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		96059ED726CD299100BD9A0A /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				96059ED526CD275C00BD9A0A /* LunarTableElement.swift */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
+		96059EE026CD9BFF00BD9A0A /* GetLunarFull */ = {
+			isa = PBXGroup;
+			children = (
+				96059EE126CD9C1400BD9A0A /* GetLunarFullRequest.swift */,
+				96059EE326CD9C4100BD9A0A /* GetLunarFullResponse.swift */,
+			);
+			path = GetLunarFull;
+			sourceTree = "<group>";
+		};
 		968FD3A526C3C82D00C01D2A = {
 			isa = PBXGroup;
 			children = (
@@ -719,6 +803,7 @@
 		968FD41126C3CF3600C01D2A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				96059ECA26CD252300BD9A0A /* Lunar */,
 				96059EB926CD01B700BD9A0A /* Settings */,
 				96059E9B26CBBEEF00BD9A0A /* Horo */,
 				96059E2F26C7092300BD9A0A /* Main */,
@@ -947,6 +1032,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96059EEC26CDADE700BD9A0A /* NumbersLunarTableCell.swift in Sources */,
 				96059E8826CA77EF00BD9A0A /* SeparatorMainTableCell.swift in Sources */,
 				96059E4E26C7BA5500BD9A0A /* GetDashboardResponse.swift in Sources */,
 				968FD40326C3CB0D00C01D2A /* CircleView.swift in Sources */,
@@ -966,6 +1052,7 @@
 				96059E0D26C6634400BD9A0A /* SessionManagerCore.swift in Sources */,
 				96059E5326C7C8A600BD9A0A /* ContentManagerCore.swift in Sources */,
 				96059E3126C7093800BD9A0A /* MainViewController.swift in Sources */,
+				96059EDF26CD9B1800BD9A0A /* LunarFull.swift in Sources */,
 				968FD3F526C3CB0D00C01D2A /* TextAttributes.swift in Sources */,
 				968FD3FC26C3CB0D00C01D2A /* Toast.swift in Sources */,
 				96059E7226C9AC0D00BD9A0A /* HoroImageMainCell.swift in Sources */,
@@ -973,6 +1060,8 @@
 				968FD3FA26C3CB0D00C01D2A /* Weak.swift in Sources */,
 				96059E8626CA683300BD9A0A /* ChartClosedMainTableCell.swift in Sources */,
 				968FD46126C426A100C01D2A /* OStepView.swift in Sources */,
+				96059EE426CD9C4100BD9A0A /* GetLunarFullResponse.swift in Sources */,
+				96059EE226CD9C1400BD9A0A /* GetLunarFullRequest.swift in Sources */,
 				96059E8426CA633400BD9A0A /* ChartMainTableElement.swift in Sources */,
 				968FD47426C45BED00C01D2A /* OBirthdateView.swift in Sources */,
 				968FD40726C3CB0D00C01D2A /* UIViewRxExtension.swift in Sources */,
@@ -983,6 +1072,7 @@
 				96059E3F26C7AEED00BD9A0A /* Horo.swift in Sources */,
 				968FD47A26C46F6C00C01D2A /* OEnjoyingView.swift in Sources */,
 				968FD40526C3CB0D00C01D2A /* AppDelegate.swift in Sources */,
+				96059ED926CD2A3C00BD9A0A /* LunarCalendarTableCell.swift in Sources */,
 				968FD3F826C3CB0D00C01D2A /* Fonts.swift in Sources */,
 				96059E0926C662C700BD9A0A /* Session.swift in Sources */,
 				968FD3F426C3CB0D00C01D2A /* Scalable.swift in Sources */,
@@ -991,6 +1081,7 @@
 				96059EB426CBE40300BD9A0A /* GetHoroFullRequest.swift in Sources */,
 				96059E8F26CA817C00BD9A0A /* LunarCalendarMainTableCell.swift in Sources */,
 				96059E9F26CBBF3A00BD9A0A /* HoroViewModel.swift in Sources */,
+				96059ECE26CD262E00BD9A0A /* LunarViewModel.swift in Sources */,
 				96059E7F26C9CFEF00BD9A0A /* HoroButtonMainTableCell.swift in Sources */,
 				96059E6726C9485C00BD9A0A /* HoroFilterMainTableCell.swift in Sources */,
 				968FD3FE26C3CB0D00C01D2A /* NavigationControllerSettings.swift in Sources */,
@@ -1017,6 +1108,8 @@
 				96059E9126CA82C600BD9A0A /* LunarDayView.swift in Sources */,
 				96059E4926C7B2AA00BD9A0A /* LunarCalendarDay.swift in Sources */,
 				968FD3F926C3CB0D00C01D2A /* SignError.swift in Sources */,
+				96059EEA26CDA8B900BD9A0A /* FavorableLunarTableCell.swift in Sources */,
+				96059EDB26CD2A5700BD9A0A /* LunarArticleTableCell.swift in Sources */,
 				96059E9A26CB1DE000BD9A0A /* TarotTableView.swift in Sources */,
 				96059EC226CD06C100BD9A0A /* SettingsTableView.swift in Sources */,
 				96059E9526CB154100BD9A0A /* DailyTarotMainTableCell.swift in Sources */,
@@ -1037,6 +1130,7 @@
 				96059E2B26C6CD2700BD9A0A /* TabCoordinator.swift in Sources */,
 				968FD47C26C4736500C01D2A /* OEnjoyingCell.swift in Sources */,
 				96059EBD26CD020300BD9A0A /* SettingsViewModel.swift in Sources */,
+				96059EE826CDA36B00BD9A0A /* TitleLunarTableCell.swift in Sources */,
 				96059E1C26C6819D00BD9A0A /* ONameView.swift in Sources */,
 				96059E4326C7B1B500BD9A0A /* Chart.swift in Sources */,
 				96059EBB26CD01C700BD9A0A /* SettingsViewController.swift in Sources */,
@@ -1047,19 +1141,25 @@
 				968FD40026C3CB0D00C01D2A /* PaddingLabel.swift in Sources */,
 				96059E4726C7B27500BD9A0A /* LunarArticle.swift in Sources */,
 				968FD45426C41F0500C01D2A /* OSlideView.swift in Sources */,
+				96059EE626CDA24600BD9A0A /* SeparatorLunarTableCell.swift in Sources */,
 				968FD3FB26C3CB0D00C01D2A /* ImagePicker.swift in Sources */,
+				96059ED626CD275C00BD9A0A /* LunarTableElement.swift in Sources */,
 				96059E5926C7CF4A00BD9A0A /* MainTableElement.swift in Sources */,
 				968FD46326C42ED300C01D2A /* OWelcomeView.swift in Sources */,
 				96059E7426C9AFF900BD9A0A /* HoroContentMainTableCell.swift in Sources */,
+				96059ED026CD264500BD9A0A /* LunarView.swift in Sources */,
+				96059ED326CD26E400BD9A0A /* LunarTableView.swift in Sources */,
 				96059E7026C9A43400BD9A0A /* HoroFilterCellDelegate.swift in Sources */,
 				96059E6326C84FF000BD9A0A /* MainTableViewDelegate.swift in Sources */,
 				96059E1126C6665B00BD9A0A /* OPlanView.swift in Sources */,
 				968FD40426C3CB0D00C01D2A /* GradientView.swift in Sources */,
+				96059EDD26CD9AC300BD9A0A /* LunarFavorable.swift in Sources */,
 				968FD3EF26C3CB0D00C01D2A /* UITapGestureRecognizerExtension.swift in Sources */,
 				96059EAA26CBD6EE00BD9A0A /* HoroArticleTableElement.swift in Sources */,
 				96059EC726CD070A00BD9A0A /* SettingsLinkTableCell.swift in Sources */,
 				968FD40626C3CB0D00C01D2A /* RxActivityIndicator.swift in Sources */,
 				968FD3F326C3CB0D00C01D2A /* GlobalDefinitions.swift in Sources */,
+				96059ECC26CD253200BD9A0A /* LunarViewController.swift in Sources */,
 				96059EB226CBE37B00BD9A0A /* HoroFull.swift in Sources */,
 				96059E1826C6703500BD9A0A /* UserManager.swift in Sources */,
 			);

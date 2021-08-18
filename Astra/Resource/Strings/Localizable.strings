@@ -67,3 +67,9 @@
 "Settings.ContactUs" = "Contact us";
 "Settings.TermsOfuse" = "Terms of use";
 "Settings.PrivacyPolicy" = "Privacy Policy";
+
+// MARK: Lunar
+"Lunar.Title" = "LUNAR CALENDAR";
+"Lunar.Favorable" = "Favorable day to:";
+"Lunar.Unfavorable" = "Unfavorable day to:";
+"Lunar.Numbers" = "Lucky numbers";

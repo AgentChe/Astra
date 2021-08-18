@@ -38,4 +38,18 @@ extension ContentManagerCore {
             .callServerApi(requestBody: request)
             .map { GetHoroFullResponse.map(from: $0) }
     }
+    
+    func obtainLunarFull() -> Single<LunarFull?> {
+        guard let userToken = SessionManagerCore().getSession()?.userToken else {
+            return .error(SignError.tokenNotFound)
+        }
+        
+        let request = GetLunarFullRequest(userToken: userToken,
+                                          locale: UIDevice.deviceLanguageCode ?? "en")
+        
+        return SDKStorage.shared
+            .restApiTransport
+            .callServerApi(requestBody: request)
+            .map { GetLunarFullResponse.map(from: $0) }
+    }
 }

@@ -82,7 +82,7 @@ private extension MainViewModel {
                 for (index, article) in lunarArticles.enumerated() {
                     result.append(.lunarArticle(article))
                     
-                    if index != (dashboard.charts.count - 1) {
+                    if index != (lunarArticles.count - 1) {
                         result.append(.offset(8.scale))
                     }
                 }

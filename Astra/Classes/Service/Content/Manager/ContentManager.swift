@@ -10,4 +10,5 @@ import RxSwift
 protocol ContentManager {
     func obtainDashboard() -> Single<Dashboard?>
     func obtainHoroFull() -> Single<HoroFull?>
+    func obtainLunarFull() -> Single<LunarFull?>
 }
