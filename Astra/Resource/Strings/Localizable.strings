@@ -73,3 +73,14 @@
 "Lunar.Favorable" = "Favorable day to:";
 "Lunar.Unfavorable" = "Unfavorable day to:";
 "Lunar.Numbers" = "Lucky numbers";
+
+// MARK: Choose tarot
+"ChooseTarot.Title.Daily" = "DAILY TAROT";
+"ChooseTarot.Title.Love" = "LOVE TAROT";
+"ChooseTarot.Title.Career" = "CAREER TAROT";
+"ChooseTarot.Title.Money" = "MONEY TAROT";
+"ChooseTarot.SubTitle" = "Choose a card";
+"ChooseTarot.Button" = "TURN OVER";
+
+// MARK: Tarot
+"Tarot.Reversed" = "Reversed";

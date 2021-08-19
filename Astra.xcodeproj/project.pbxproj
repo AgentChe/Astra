@@ -61,7 +61,7 @@
 		96059E9126CA82C600BD9A0A /* LunarDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E9026CA82C600BD9A0A /* LunarDayView.swift */; };
 		96059E9526CB154100BD9A0A /* DailyTarotMainTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E9426CB154100BD9A0A /* DailyTarotMainTableCell.swift */; };
 		96059E9826CB1CDC00BD9A0A /* TarotsMainTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E9726CB1CDC00BD9A0A /* TarotsMainTableCell.swift */; };
-		96059E9A26CB1DE000BD9A0A /* TarotTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E9926CB1DE000BD9A0A /* TarotTableView.swift */; };
+		96059E9A26CB1DE000BD9A0A /* TarotTableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E9926CB1DE000BD9A0A /* TarotTableButton.swift */; };
 		96059E9D26CBBF0600BD9A0A /* HoroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E9C26CBBF0500BD9A0A /* HoroViewController.swift */; };
 		96059E9F26CBBF3A00BD9A0A /* HoroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E9E26CBBF3A00BD9A0A /* HoroViewModel.swift */; };
 		96059EA126CBBF7C00BD9A0A /* HoroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EA026CBBF7C00BD9A0A /* HoroView.swift */; };
@@ -96,6 +96,27 @@
 		96059EE826CDA36B00BD9A0A /* TitleLunarTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EE726CDA36B00BD9A0A /* TitleLunarTableCell.swift */; };
 		96059EEA26CDA8B900BD9A0A /* FavorableLunarTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EE926CDA8B900BD9A0A /* FavorableLunarTableCell.swift */; };
 		96059EEC26CDADE700BD9A0A /* NumbersLunarTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EEB26CDADE700BD9A0A /* NumbersLunarTableCell.swift */; };
+		96059EF026CE3B4300BD9A0A /* ChooseTarotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EEF26CE3B4300BD9A0A /* ChooseTarotViewController.swift */; };
+		96059EF226CE3BBA00BD9A0A /* ChooseTarotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EF126CE3BBA00BD9A0A /* ChooseTarotViewModel.swift */; };
+		96059EF426CE3BD300BD9A0A /* ChooseTarotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EF326CE3BD300BD9A0A /* ChooseTarotView.swift */; };
+		96059EF826CE3D7F00BD9A0A /* TarotType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EF726CE3D7F00BD9A0A /* TarotType.swift */; };
+		96059EFB26CE3EC100BD9A0A /* TarotManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EFA26CE3EC100BD9A0A /* TarotManager.swift */; };
+		96059EFD26CE408100BD9A0A /* TarotManagerCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EFC26CE408100BD9A0A /* TarotManagerCore.swift */; };
+		96059EFF26CE716C00BD9A0A /* Tarot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059EFE26CE716C00BD9A0A /* Tarot.swift */; };
+		96059F0326CE72DA00BD9A0A /* GetTarotRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059F0226CE72DA00BD9A0A /* GetTarotRequest.swift */; };
+		96059F0526CE732A00BD9A0A /* GetTarotResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059F0426CE732A00BD9A0A /* GetTarotResponse.swift */; };
+		96059F0826CE845800BD9A0A /* TarotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059F0726CE845800BD9A0A /* TarotViewController.swift */; };
+		96059F0A26CE84AA00BD9A0A /* TarotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059F0926CE84AA00BD9A0A /* TarotViewModel.swift */; };
+		96059F0C26CE84C300BD9A0A /* TarotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059F0B26CE84C300BD9A0A /* TarotView.swift */; };
+		96059F0F26CE952300BD9A0A /* TarotTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059F0E26CE952300BD9A0A /* TarotTableView.swift */; };
+		96059F1126CE956F00BD9A0A /* TarotTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059F1026CE956F00BD9A0A /* TarotTableElement.swift */; };
+		96059F1426CE98C900BD9A0A /* TarotImageTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059F1326CE98C900BD9A0A /* TarotImageTableCell.swift */; };
+		96059F1626CE9A9800BD9A0A /* TarotReservedTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059F1526CE9A9800BD9A0A /* TarotReservedTableCell.swift */; };
+		96059F1826CE9B2C00BD9A0A /* TarotNameTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059F1726CE9B2C00BD9A0A /* TarotNameTableCell.swift */; };
+		96059F1A26CE9BD500BD9A0A /* TarotTagsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059F1926CE9BD500BD9A0A /* TarotTagsTableCell.swift */; };
+		96059F1C26CE9C1300BD9A0A /* TarotTextTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059F1B26CE9C1300BD9A0A /* TarotTextTableCell.swift */; };
+		96059F2026CEEA1500BD9A0A /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059F1F26CEEA1500BD9A0A /* TagView.swift */; };
+		96059F2226CEEA2B00BD9A0A /* TagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059F2126CEEA2B00BD9A0A /* TagsView.swift */; };
 		968FD3BB26C3C83100C01D2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 968FD3BA26C3C83100C01D2A /* Assets.xcassets */; };
 		968FD3EC26C3CB0D00C01D2A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD3C926C3CB0C00C01D2A /* UIColorExtension.swift */; };
 		968FD3EF26C3CB0D00C01D2A /* UITapGestureRecognizerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD3CC26C3CB0C00C01D2A /* UITapGestureRecognizerExtension.swift */; };
@@ -203,7 +224,7 @@
 		96059E9026CA82C600BD9A0A /* LunarDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunarDayView.swift; sourceTree = "<group>"; };
 		96059E9426CB154100BD9A0A /* DailyTarotMainTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTarotMainTableCell.swift; sourceTree = "<group>"; };
 		96059E9726CB1CDC00BD9A0A /* TarotsMainTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotsMainTableCell.swift; sourceTree = "<group>"; };
-		96059E9926CB1DE000BD9A0A /* TarotTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotTableView.swift; sourceTree = "<group>"; };
+		96059E9926CB1DE000BD9A0A /* TarotTableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotTableButton.swift; sourceTree = "<group>"; };
 		96059E9C26CBBF0500BD9A0A /* HoroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroViewController.swift; sourceTree = "<group>"; };
 		96059E9E26CBBF3A00BD9A0A /* HoroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroViewModel.swift; sourceTree = "<group>"; };
 		96059EA026CBBF7C00BD9A0A /* HoroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroView.swift; sourceTree = "<group>"; };
@@ -238,6 +259,27 @@
 		96059EE726CDA36B00BD9A0A /* TitleLunarTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLunarTableCell.swift; sourceTree = "<group>"; };
 		96059EE926CDA8B900BD9A0A /* FavorableLunarTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavorableLunarTableCell.swift; sourceTree = "<group>"; };
 		96059EEB26CDADE700BD9A0A /* NumbersLunarTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersLunarTableCell.swift; sourceTree = "<group>"; };
+		96059EEF26CE3B4300BD9A0A /* ChooseTarotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseTarotViewController.swift; sourceTree = "<group>"; };
+		96059EF126CE3BBA00BD9A0A /* ChooseTarotViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseTarotViewModel.swift; sourceTree = "<group>"; };
+		96059EF326CE3BD300BD9A0A /* ChooseTarotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseTarotView.swift; sourceTree = "<group>"; };
+		96059EF726CE3D7F00BD9A0A /* TarotType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotType.swift; sourceTree = "<group>"; };
+		96059EFA26CE3EC100BD9A0A /* TarotManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotManager.swift; sourceTree = "<group>"; };
+		96059EFC26CE408100BD9A0A /* TarotManagerCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotManagerCore.swift; sourceTree = "<group>"; };
+		96059EFE26CE716C00BD9A0A /* Tarot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tarot.swift; sourceTree = "<group>"; };
+		96059F0226CE72DA00BD9A0A /* GetTarotRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTarotRequest.swift; sourceTree = "<group>"; };
+		96059F0426CE732A00BD9A0A /* GetTarotResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTarotResponse.swift; sourceTree = "<group>"; };
+		96059F0726CE845800BD9A0A /* TarotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotViewController.swift; sourceTree = "<group>"; };
+		96059F0926CE84AA00BD9A0A /* TarotViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotViewModel.swift; sourceTree = "<group>"; };
+		96059F0B26CE84C300BD9A0A /* TarotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotView.swift; sourceTree = "<group>"; };
+		96059F0E26CE952300BD9A0A /* TarotTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotTableView.swift; sourceTree = "<group>"; };
+		96059F1026CE956F00BD9A0A /* TarotTableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotTableElement.swift; sourceTree = "<group>"; };
+		96059F1326CE98C900BD9A0A /* TarotImageTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotImageTableCell.swift; sourceTree = "<group>"; };
+		96059F1526CE9A9800BD9A0A /* TarotReservedTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotReservedTableCell.swift; sourceTree = "<group>"; };
+		96059F1726CE9B2C00BD9A0A /* TarotNameTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotNameTableCell.swift; sourceTree = "<group>"; };
+		96059F1926CE9BD500BD9A0A /* TarotTagsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotTagsTableCell.swift; sourceTree = "<group>"; };
+		96059F1B26CE9C1300BD9A0A /* TarotTextTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotTextTableCell.swift; sourceTree = "<group>"; };
+		96059F1F26CEEA1500BD9A0A /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
+		96059F2126CEEA2B00BD9A0A /* TagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsView.swift; sourceTree = "<group>"; };
 		968FD3AE26C3C82D00C01D2A /* Astra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Astra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		968FD3BA26C3C83100C01D2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		968FD3BF26C3C83100C01D2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -510,7 +552,7 @@
 			isa = PBXGroup;
 			children = (
 				96059E9726CB1CDC00BD9A0A /* TarotsMainTableCell.swift */,
-				96059E9926CB1DE000BD9A0A /* TarotTableView.swift */,
+				96059E9926CB1DE000BD9A0A /* TarotTableButton.swift */,
 			);
 			path = TarotsMainTableCell;
 			sourceTree = "<group>";
@@ -650,6 +692,121 @@
 				96059EE326CD9C4100BD9A0A /* GetLunarFullResponse.swift */,
 			);
 			path = GetLunarFull;
+			sourceTree = "<group>";
+		};
+		96059EED26CE3B2F00BD9A0A /* Tarot */ = {
+			isa = PBXGroup;
+			children = (
+				96059F0626CE844800BD9A0A /* Tarot */,
+				96059EEE26CE3B3500BD9A0A /* ChooseTarot */,
+			);
+			path = Tarot;
+			sourceTree = "<group>";
+		};
+		96059EEE26CE3B3500BD9A0A /* ChooseTarot */ = {
+			isa = PBXGroup;
+			children = (
+				96059EEF26CE3B4300BD9A0A /* ChooseTarotViewController.swift */,
+				96059EF126CE3BBA00BD9A0A /* ChooseTarotViewModel.swift */,
+				96059EF326CE3BD300BD9A0A /* ChooseTarotView.swift */,
+			);
+			path = ChooseTarot;
+			sourceTree = "<group>";
+		};
+		96059EF526CE3D6B00BD9A0A /* Tarot */ = {
+			isa = PBXGroup;
+			children = (
+				96059F0026CE72C200BD9A0A /* Request */,
+				96059EF926CE3EAE00BD9A0A /* Manager */,
+				96059EF626CE3D7200BD9A0A /* Model */,
+			);
+			path = Tarot;
+			sourceTree = "<group>";
+		};
+		96059EF626CE3D7200BD9A0A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				96059EF726CE3D7F00BD9A0A /* TarotType.swift */,
+				96059EFE26CE716C00BD9A0A /* Tarot.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		96059EF926CE3EAE00BD9A0A /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				96059EFA26CE3EC100BD9A0A /* TarotManager.swift */,
+				96059EFC26CE408100BD9A0A /* TarotManagerCore.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		96059F0026CE72C200BD9A0A /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				96059F0126CE72CC00BD9A0A /* GetTarot */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		96059F0126CE72CC00BD9A0A /* GetTarot */ = {
+			isa = PBXGroup;
+			children = (
+				96059F0226CE72DA00BD9A0A /* GetTarotRequest.swift */,
+				96059F0426CE732A00BD9A0A /* GetTarotResponse.swift */,
+			);
+			path = GetTarot;
+			sourceTree = "<group>";
+		};
+		96059F0626CE844800BD9A0A /* Tarot */ = {
+			isa = PBXGroup;
+			children = (
+				96059F0D26CE951100BD9A0A /* TableView */,
+				96059F0726CE845800BD9A0A /* TarotViewController.swift */,
+				96059F0926CE84AA00BD9A0A /* TarotViewModel.swift */,
+				96059F0B26CE84C300BD9A0A /* TarotView.swift */,
+			);
+			path = Tarot;
+			sourceTree = "<group>";
+		};
+		96059F0D26CE951100BD9A0A /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				96059F1226CE987500BD9A0A /* Cells */,
+				96059F0E26CE952300BD9A0A /* TarotTableView.swift */,
+				96059F1026CE956F00BD9A0A /* TarotTableElement.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		96059F1226CE987500BD9A0A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				96059F1D26CEE9E500BD9A0A /* TarotTags */,
+				96059F1326CE98C900BD9A0A /* TarotImageTableCell.swift */,
+				96059F1526CE9A9800BD9A0A /* TarotReservedTableCell.swift */,
+				96059F1726CE9B2C00BD9A0A /* TarotNameTableCell.swift */,
+				96059F1B26CE9C1300BD9A0A /* TarotTextTableCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		96059F1D26CEE9E500BD9A0A /* TarotTags */ = {
+			isa = PBXGroup;
+			children = (
+				96059F1E26CEE9F600BD9A0A /* Tags */,
+				96059F1926CE9BD500BD9A0A /* TarotTagsTableCell.swift */,
+			);
+			path = TarotTags;
+			sourceTree = "<group>";
+		};
+		96059F1E26CEE9F600BD9A0A /* Tags */ = {
+			isa = PBXGroup;
+			children = (
+				96059F1F26CEEA1500BD9A0A /* TagView.swift */,
+				96059F2126CEEA2B00BD9A0A /* TagsView.swift */,
+			);
+			path = Tags;
 			sourceTree = "<group>";
 		};
 		968FD3A526C3C82D00C01D2A = {
@@ -803,6 +960,7 @@
 		968FD41126C3CF3600C01D2A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				96059EED26CE3B2F00BD9A0A /* Tarot */,
 				96059ECA26CD252300BD9A0A /* Lunar */,
 				96059EB926CD01B700BD9A0A /* Settings */,
 				96059E9B26CBBEEF00BD9A0A /* Horo */,
@@ -882,6 +1040,7 @@
 		968FD46E26C451EE00C01D2A /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				96059EF526CE3D6B00BD9A0A /* Tarot */,
 				96059E3826C7AC4400BD9A0A /* Content */,
 				96059E0526C662A200BD9A0A /* Session */,
 				968FD46F26C451F600C01D2A /* User */,
@@ -1046,6 +1205,7 @@
 				96059E2226C6CBB900BD9A0A /* TabController.swift in Sources */,
 				96059E2526C6CBE800BD9A0A /* TabView.swift in Sources */,
 				96059E8C26CA7EE700BD9A0A /* LunarButtonMainTableCell.swift in Sources */,
+				96059F1126CE956F00BD9A0A /* TarotTableElement.swift in Sources */,
 				968FD47626C45F7F00C01D2A /* OGoalsView.swift in Sources */,
 				96059EAC26CBD8AF00BD9A0A /* HoroArticleOpenedTableCell.swift in Sources */,
 				968FD3FF26C3CB0D00C01D2A /* TapAreaButton.swift in Sources */,
@@ -1055,6 +1215,7 @@
 				96059EDF26CD9B1800BD9A0A /* LunarFull.swift in Sources */,
 				968FD3F526C3CB0D00C01D2A /* TextAttributes.swift in Sources */,
 				968FD3FC26C3CB0D00C01D2A /* Toast.swift in Sources */,
+				96059F1C26CE9C1300BD9A0A /* TarotTextTableCell.swift in Sources */,
 				96059E7226C9AC0D00BD9A0A /* HoroImageMainCell.swift in Sources */,
 				96059EB626CBE40A00BD9A0A /* GetHoroFullResponse.swift in Sources */,
 				968FD3FA26C3CB0D00C01D2A /* Weak.swift in Sources */,
@@ -1066,13 +1227,18 @@
 				968FD47426C45BED00C01D2A /* OBirthdateView.swift in Sources */,
 				968FD40726C3CB0D00C01D2A /* UIViewRxExtension.swift in Sources */,
 				96059E5726C7CEAB00BD9A0A /* MainTableView.swift in Sources */,
+				96059F0F26CE952300BD9A0A /* TarotTableView.swift in Sources */,
+				96059EF826CE3D7F00BD9A0A /* TarotType.swift in Sources */,
 				96059EA126CBBF7C00BD9A0A /* HoroView.swift in Sources */,
 				968FD3FD26C3CB0D00C01D2A /* NavigationController.swift in Sources */,
 				968FD40226C3CB0D00C01D2A /* GradientButton.swift in Sources */,
 				96059E3F26C7AEED00BD9A0A /* Horo.swift in Sources */,
+				96059F0526CE732A00BD9A0A /* GetTarotResponse.swift in Sources */,
 				968FD47A26C46F6C00C01D2A /* OEnjoyingView.swift in Sources */,
 				968FD40526C3CB0D00C01D2A /* AppDelegate.swift in Sources */,
+				96059F1A26CE9BD500BD9A0A /* TarotTagsTableCell.swift in Sources */,
 				96059ED926CD2A3C00BD9A0A /* LunarCalendarTableCell.swift in Sources */,
+				96059F1426CE98C900BD9A0A /* TarotImageTableCell.swift in Sources */,
 				968FD3F826C3CB0D00C01D2A /* Fonts.swift in Sources */,
 				96059E0926C662C700BD9A0A /* Session.swift in Sources */,
 				968FD3F426C3CB0D00C01D2A /* Scalable.swift in Sources */,
@@ -1080,6 +1246,7 @@
 				96059E6E26C968D800BD9A0A /* HoroFilterCollectionView.swift in Sources */,
 				96059EB426CBE40300BD9A0A /* GetHoroFullRequest.swift in Sources */,
 				96059E8F26CA817C00BD9A0A /* LunarCalendarMainTableCell.swift in Sources */,
+				96059F1826CE9B2C00BD9A0A /* TarotNameTableCell.swift in Sources */,
 				96059E9F26CBBF3A00BD9A0A /* HoroViewModel.swift in Sources */,
 				96059ECE26CD262E00BD9A0A /* LunarViewModel.swift in Sources */,
 				96059E7F26C9CFEF00BD9A0A /* HoroButtonMainTableCell.swift in Sources */,
@@ -1099,6 +1266,7 @@
 				968FD45E26C41F0500C01D2A /* OnboardingView.swift in Sources */,
 				96059E2926C6CC5B00BD9A0A /* TabMainView.swift in Sources */,
 				968FD3F226C3CB0D00C01D2A /* StringExtension.swift in Sources */,
+				96059EFF26CE716C00BD9A0A /* Tarot.swift in Sources */,
 				96059E5126C7C87D00BD9A0A /* ContentManager.swift in Sources */,
 				96059EAE26CBD8BD00BD9A0A /* HoroArticleClosedTableCell.swift in Sources */,
 				968FD40126C3CB0D00C01D2A /* PaddingPickerView.swift in Sources */,
@@ -1110,10 +1278,11 @@
 				968FD3F926C3CB0D00C01D2A /* SignError.swift in Sources */,
 				96059EEA26CDA8B900BD9A0A /* FavorableLunarTableCell.swift in Sources */,
 				96059EDB26CD2A5700BD9A0A /* LunarArticleTableCell.swift in Sources */,
-				96059E9A26CB1DE000BD9A0A /* TarotTableView.swift in Sources */,
+				96059E9A26CB1DE000BD9A0A /* TarotTableButton.swift in Sources */,
 				96059EC226CD06C100BD9A0A /* SettingsTableView.swift in Sources */,
 				96059E9526CB154100BD9A0A /* DailyTarotMainTableCell.swift in Sources */,
 				96059E4526C7B21800BD9A0A /* Lunar.swift in Sources */,
+				96059F0C26CE84C300BD9A0A /* TarotView.swift in Sources */,
 				96059E9826CB1CDC00BD9A0A /* TarotsMainTableCell.swift in Sources */,
 				96059E7D26C9C45000BD9A0A /* HoroContentTableElement.swift in Sources */,
 				968FD3F626C3CB0D00C01D2A /* ScreenSize.swift in Sources */,
@@ -1126,6 +1295,8 @@
 				96059EC426CD06DA00BD9A0A /* SettingsTableElement.swift in Sources */,
 				968FD40A26C3CDDC00C01D2A /* UIEdgeInsets+Extension.swift in Sources */,
 				968FD47226C4520700C01D2A /* Gender.swift in Sources */,
+				96059EFD26CE408100BD9A0A /* TarotManagerCore.swift in Sources */,
+				96059F0A26CE84AA00BD9A0A /* TarotViewModel.swift in Sources */,
 				968FD45F26C41F0500C01D2A /* OnboardingViewModel.swift in Sources */,
 				96059E2B26C6CD2700BD9A0A /* TabCoordinator.swift in Sources */,
 				968FD47C26C4736500C01D2A /* OEnjoyingCell.swift in Sources */,
@@ -1137,8 +1308,12 @@
 				968FD46D26C4334C00C01D2A /* OGenderView.swift in Sources */,
 				96059EA826CBD53800BD9A0A /* HoroTableElement.swift in Sources */,
 				96059E8A26CA7B3400BD9A0A /* LunarArticleMainTableCell.swift in Sources */,
+				96059EFB26CE3EC100BD9A0A /* TarotManager.swift in Sources */,
 				968FD41526C3DFC400C01D2A /* SplashViewController.swift in Sources */,
+				96059EF026CE3B4300BD9A0A /* ChooseTarotViewController.swift in Sources */,
 				968FD40026C3CB0D00C01D2A /* PaddingLabel.swift in Sources */,
+				96059EF426CE3BD300BD9A0A /* ChooseTarotView.swift in Sources */,
+				96059EF226CE3BBA00BD9A0A /* ChooseTarotViewModel.swift in Sources */,
 				96059E4726C7B27500BD9A0A /* LunarArticle.swift in Sources */,
 				968FD45426C41F0500C01D2A /* OSlideView.swift in Sources */,
 				96059EE626CDA24600BD9A0A /* SeparatorLunarTableCell.swift in Sources */,
@@ -1147,6 +1322,7 @@
 				96059E5926C7CF4A00BD9A0A /* MainTableElement.swift in Sources */,
 				968FD46326C42ED300C01D2A /* OWelcomeView.swift in Sources */,
 				96059E7426C9AFF900BD9A0A /* HoroContentMainTableCell.swift in Sources */,
+				96059F2026CEEA1500BD9A0A /* TagView.swift in Sources */,
 				96059ED026CD264500BD9A0A /* LunarView.swift in Sources */,
 				96059ED326CD26E400BD9A0A /* LunarTableView.swift in Sources */,
 				96059E7026C9A43400BD9A0A /* HoroFilterCellDelegate.swift in Sources */,
@@ -1157,11 +1333,15 @@
 				968FD3EF26C3CB0D00C01D2A /* UITapGestureRecognizerExtension.swift in Sources */,
 				96059EAA26CBD6EE00BD9A0A /* HoroArticleTableElement.swift in Sources */,
 				96059EC726CD070A00BD9A0A /* SettingsLinkTableCell.swift in Sources */,
+				96059F0826CE845800BD9A0A /* TarotViewController.swift in Sources */,
 				968FD40626C3CB0D00C01D2A /* RxActivityIndicator.swift in Sources */,
 				968FD3F326C3CB0D00C01D2A /* GlobalDefinitions.swift in Sources */,
+				96059F1626CE9A9800BD9A0A /* TarotReservedTableCell.swift in Sources */,
 				96059ECC26CD253200BD9A0A /* LunarViewController.swift in Sources */,
 				96059EB226CBE37B00BD9A0A /* HoroFull.swift in Sources */,
 				96059E1826C6703500BD9A0A /* UserManager.swift in Sources */,
+				96059F2226CEEA2B00BD9A0A /* TagsView.swift in Sources */,
+				96059F0326CE72DA00BD9A0A /* GetTarotRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

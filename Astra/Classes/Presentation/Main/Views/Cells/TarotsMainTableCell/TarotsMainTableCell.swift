@@ -36,7 +36,7 @@ final class TarotsMainTableCell: UITableViewCell {
 // MARK: Private
 private extension TarotsMainTableCell {
     @objc
-    func tapped(sender: TarotTableView) {
+    func tapped(sender: TarotTableButton) {
         mainDelegate?.mainTableViewTarotDidTapped(code: sender.code)
     }
 }
@@ -94,13 +94,13 @@ private extension TarotsMainTableCell {
         return view
     }
     
-    func makeButton(code: Int, image: String, title: String) -> TarotTableView {
+    func makeButton(code: Int, image: String, title: String) -> TarotTableButton {
         let attrs = TextAttributes()
             .textColor(UIColor(integralRed: 31, green: 31, blue: 31))
             .font(Fonts.Qanelas.bold(size: 17.scale))
             .lineHeight(23.8.scale)
         
-        let view = TarotTableView()
+        let view = TarotTableButton()
         view.code = code
         view.pictureView.image = UIImage(named: image)
         view.textLabel.attributedText = title.localized.attributed(with: attrs)

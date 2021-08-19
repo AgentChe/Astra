@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class TarotTableView: UIButton {
+final class TarotTableButton: UIButton {
     lazy var code = -1
     
     lazy var pictureView = makeImageView()
@@ -29,7 +29,7 @@ final class TarotTableView: UIButton {
 }
 
 // MARK: Make constraints
-private extension TarotTableView {
+private extension TarotTableButton {
     func makeConstraints() {
         NSLayoutConstraint.activate([
             pictureView.leadingAnchor.constraint(equalTo: leadingAnchor),
@@ -46,7 +46,7 @@ private extension TarotTableView {
 }
 
 // MARK: Lazy initialization
-private extension TarotTableView {
+private extension TarotTableButton {
     func makeImageView() -> UIImageView {
         let view = UIImageView()
         view.isUserInteractionEnabled = false

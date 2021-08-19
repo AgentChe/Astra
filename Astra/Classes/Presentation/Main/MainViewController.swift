@@ -59,6 +59,16 @@ extension MainViewController: MainTableViewDelegate {
     }
     
     func mainTableViewTarotDidTapped(code: Int) {
+        guard let type = TarotType(code: code) else {
+            return
+        }
         
+        if TarotManagerCore().hasTarotOnToday(with: type) {
+            let vc = TarotViewController.make(type: type)
+            UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true)
+        } else {
+            let vc = ChooseTarotViewController.make(type: type)
+            UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true)
+        }
     }
 }
