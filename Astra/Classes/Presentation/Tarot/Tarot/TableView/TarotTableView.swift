@@ -8,6 +8,8 @@
 import UIKit
 
 final class TarotTableView: UITableView {
+    weak var vc: TarotViewController?
+    
     private var elements = [TarotTableElement]()
     
     override init(frame: CGRect, style: UITableView.Style) {
@@ -79,6 +81,23 @@ extension TarotTableView: UITableViewDelegate {
         default:
             return UITableView.automaticDimension
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let vc = vc, let cell = cellForRow(at: indexPath) as? TarotImageTableCell else {
+            return
+        }
+        
+        guard case let .image(url, isReversed) = elements[indexPath.row] else {
+            return
+        }
+        
+        let path = url.absoluteString
+        
+        let pictureInCellFrame = cell.convert(cell.pictureView.frame, to: cell)
+        let pictureInVCFrame = convert(pictureInCellFrame, to: vc.mainView)
+        
+        vc.taroTableViewDidSelect(imagePath: path, isReversed: isReversed, in: pictureInVCFrame)
     }
 }
 

@@ -164,6 +164,8 @@
 		968FD47826C460AC00C01D2A /* OGoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD47726C460AC00C01D2A /* OGoalCell.swift */; };
 		968FD47A26C46F6C00C01D2A /* OEnjoyingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD47926C46F6C00C01D2A /* OEnjoyingView.swift */; };
 		968FD47C26C4736500C01D2A /* OEnjoyingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD47B26C4736500C01D2A /* OEnjoyingCell.swift */; };
+		96BFF5C826D17E5A00B8D8CC /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF5C726D17E5A00B8D8CC /* ImageLoader.swift */; };
+		96BFF5CA26D1810400B8D8CC /* TarotTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF5C926D1810400B8D8CC /* TarotTableViewDelegate.swift */; };
 		EA80E75864467FD58E75C2BA /* Pods_Astra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70F58ABE9BC2B6805D15295E /* Pods_Astra.framework */; };
 /* End PBXBuildFile section */
 
@@ -330,6 +332,8 @@
 		968FD47726C460AC00C01D2A /* OGoalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OGoalCell.swift; sourceTree = "<group>"; };
 		968FD47926C46F6C00C01D2A /* OEnjoyingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OEnjoyingView.swift; sourceTree = "<group>"; };
 		968FD47B26C4736500C01D2A /* OEnjoyingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OEnjoyingCell.swift; sourceTree = "<group>"; };
+		96BFF5C726D17E5A00B8D8CC /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		96BFF5C926D1810400B8D8CC /* TarotTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotTableViewDelegate.swift; sourceTree = "<group>"; };
 		C46B19553E947FBD72888998 /* Pods-Astra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Astra.debug.xcconfig"; path = "Target Support Files/Pods-Astra/Pods-Astra.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -775,6 +779,7 @@
 				96059F1226CE987500BD9A0A /* Cells */,
 				96059F0E26CE952300BD9A0A /* TarotTableView.swift */,
 				96059F1026CE956F00BD9A0A /* TarotTableElement.swift */,
+				96BFF5C926D1810400B8D8CC /* TarotTableViewDelegate.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -895,6 +900,7 @@
 				968FD3D726C3CB0D00C01D2A /* Error */,
 				968FD3D926C3CB0D00C01D2A /* Weak.swift */,
 				96059EC826CD21F600BD9A0A /* RateUs.swift */,
+				96BFF5C726D17E5A00B8D8CC /* ImageLoader.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1333,6 +1339,8 @@
 				968FD3EF26C3CB0D00C01D2A /* UITapGestureRecognizerExtension.swift in Sources */,
 				96059EAA26CBD6EE00BD9A0A /* HoroArticleTableElement.swift in Sources */,
 				96059EC726CD070A00BD9A0A /* SettingsLinkTableCell.swift in Sources */,
+				96BFF5CA26D1810400B8D8CC /* TarotTableViewDelegate.swift in Sources */,
+				96BFF5C826D17E5A00B8D8CC /* ImageLoader.swift in Sources */,
 				96059F0826CE845800BD9A0A /* TarotViewController.swift in Sources */,
 				968FD40626C3CB0D00C01D2A /* RxActivityIndicator.swift in Sources */,
 				968FD3F326C3CB0D00C01D2A /* GlobalDefinitions.swift in Sources */,

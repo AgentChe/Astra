@@ -24,12 +24,11 @@ final class GetTarotResponse {
             return nil
         }
         
-        // TODO
         return Tarot(type: type,
                      name: name,
                      tags: tags,
                      image: image,
-                     reversed: true,
+                     reversed: reversed,
                      description: description)
     }
 }

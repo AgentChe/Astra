@@ -6,12 +6,9 @@
 //
 
 import UIKit
-import Kingfisher
 
 final class TarotImageTableCell: UITableViewCell {
     lazy var pictureView = makePictureView()
-    
-    private lazy var reversered = false
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -31,10 +28,9 @@ extension TarotImageTableCell {
         pictureView.kf.cancelDownloadTask()
         pictureView.kf.setImage(with: url)
         
-        if isReserved, !reversered {
-            reversered = true
-            pictureView.transform = pictureView.transform.rotated(by: .pi)
-        }
+        ImageLoader.setup(in: pictureView,
+                          imageUrl: url.absoluteString,
+                          orientation: isReserved ? .downMirrored : .none)
     }
 }
 
@@ -65,7 +61,7 @@ private extension TarotImageTableCell {
     func makePictureView() -> UIImageView {
         let view = UIImageView()
         view.clipsToBounds = true
-        view.contentMode = .scaleAspectFill
+        view.contentMode = .scaleAspectFit
         view.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(view)
         return view
