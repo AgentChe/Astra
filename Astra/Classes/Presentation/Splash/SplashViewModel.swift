@@ -13,12 +13,22 @@ final class SplashViewModel {
         case onboarding, main
     }
     
-    lazy var step = makeStep()
+    lazy var step = library()
+        .andThen(makeStep())
+        .asDriver(onErrorDriveWith: .empty())
+    
+    private lazy var compatibilityManager = CompatibilityManagerCore()
 }
 
 // MARK: Private
 private extension SplashViewModel {
-    func makeStep() -> Driver<Step> {
+    func library() -> Completable {
+        compatibilityManager
+            .obtainCompatibilities(forceUpdate: true)
+            .asCompletable()
+    }
+    
+    func makeStep() -> Single<Step> {
         guard OnboardingViewController.wasViewed() else {
             return .deferred { .just(.onboarding) }
         }

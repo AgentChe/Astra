@@ -41,39 +41,13 @@ private extension GetDashboardResponse {
     static func mapSign(json: [String: Any]) -> Sign? {
         guard
             let code = json["sign_code"] as? Int,
+            let signCode = Sign.Code(code: code),
             let name = json["sign_name"] as? String
         else {
             return nil
         }
         
-        switch code {
-        case 1:
-            return Sign(code: .aries, name: name)
-        case 2:
-            return Sign(code: .taurus, name: name)
-        case 3:
-            return Sign(code: .gemini, name: name)
-        case 4:
-            return Sign(code: .cancer, name: name)
-        case 5:
-            return Sign(code: .leo, name: name)
-        case 6:
-            return Sign(code: .virgo, name: name)
-        case 7:
-            return Sign(code: .libra, name: name)
-        case 8:
-            return Sign(code: .scorpio, name: name)
-        case 9:
-            return Sign(code: .sagittarius, name: name)
-        case 10:
-            return Sign(code: .capricorn, name: name)
-        case 11:
-            return Sign(code: .aquarius, name: name)
-        case 12:
-            return Sign(code: .pisces, name: name)
-        default:
-            return nil
-        }
+        return Sign(code: signCode, name: name)
     }
     
     static func mapHoros(json: [String: Any]) -> [Horo] {
