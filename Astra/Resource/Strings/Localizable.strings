@@ -92,6 +92,14 @@
 "CompatibilitySigns.Compare" = "Signs to compare ";
 "CompatibilitySigns.Check" = "CHECK COMPATIBILITY";
 
+// MARK: Compatibility
+"Compatibility.Title" = "COMPATIBILITY";
+"Compatibility.Love" = "Love";
+"Compatibility.Trust" = "Trust";
+"Compatibility.Emotions" = "Emotions";
+"Compatibility.Values" = "Values";
+"Compatibility.Names" = "%@+%@";
+
 // MARK: Signs
 "Sign.Aries" = "Aries";
 "Sign.Taurus" = "Taurus";

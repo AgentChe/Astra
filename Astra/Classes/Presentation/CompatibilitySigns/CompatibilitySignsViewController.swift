@@ -33,6 +33,7 @@ final class CompatibilitySignsViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
+        // TODO
         Observable
             .combineLatest(
                 mainView.signs1PickerView.didSelect,
@@ -41,6 +42,13 @@ final class CompatibilitySignsViewController: UIViewController {
                 CompatibilitySigns(signCode1: sign1, signCode2: sign2)
             }
             .bind(to: viewModel.store)
+            .disposed(by: disposeBag)
+        
+        mainView.button.rx.tap
+            .subscribe(onNext: { [weak self] in
+                let vc = CompatibilityViewController.make()
+                self?.navigationController?.pushViewController(vc, animated: true)
+            })
             .disposed(by: disposeBag)
     }
 }
