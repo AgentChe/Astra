@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import RxCocoa
 
 final class SignsPickerView: AKPickerView {
+    lazy var didSelect = PublishRelay<Sign.Code>()
+    
     lazy var elements = [
         SignsPickerElement(sign: Sign(code: .aries,
                                       name: "Sign.Aries".localized),
@@ -88,6 +91,17 @@ final class SignsPickerView: AKPickerView {
     }
 }
 
+// MARK: Public
+extension SignsPickerView {
+    func select(sign: Sign.Code) {
+        guard let index = elements.firstIndex(where: { $0.sign.code == sign }) else {
+            return
+        }
+        
+        selectItem(index, animated: false)
+    }
+}
+
 // MARK: AKPickerViewDataSource
 extension SignsPickerView: AKPickerViewDataSource {
     func numberOfItemsInPickerView(_ pickerView: AKPickerView) -> Int {
@@ -99,6 +113,7 @@ extension SignsPickerView: AKPickerViewDataSource {
 extension SignsPickerView: AKPickerViewDelegate {
     func pickerView(_ pickerView: AKPickerView, didSelectItem item: Int) {
         let code = elements[item].sign.code
+        didSelect.accept(code)
     }
 }
 
