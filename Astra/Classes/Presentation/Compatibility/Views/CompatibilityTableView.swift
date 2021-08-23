@@ -52,6 +52,14 @@ extension CompatibilityTableView: UITableViewDataSource {
             let cell = dequeueReusableCell(withIdentifier: String(describing: CompatibilitySignsNamesTableCell.self)) as! CompatibilitySignsNamesTableCell
             cell.setup(code1: code1, code2: code2)
             return cell
+        case .values(let values):
+            let cell = dequeueReusableCell(withIdentifier: String(describing: CompatibilityValuesTableCell.self)) as! CompatibilityValuesTableCell
+            cell.setup(values: values)
+            return cell
+        case .text(let text):
+            let cell = dequeueReusableCell(withIdentifier: String(describing: CompatibilityTextTableCelll.self)) as! CompatibilityTextTableCelll
+            cell.setup(text: text)
+            return cell
         }
     }
 }
@@ -64,6 +72,8 @@ extension CompatibilityTableView: UITableViewDelegate {
             return offset
         case .images:
             return 160.scale
+        case .values:
+            return 276.scale
         default:
             return UITableView.automaticDimension
         }
@@ -76,6 +86,8 @@ private extension CompatibilityTableView {
         register(UITableViewCell.self, forCellReuseIdentifier: "OffsetTableCell")
         register(CompatibilitySignsImagesTableCell.self, forCellReuseIdentifier: String(describing: CompatibilitySignsImagesTableCell.self))
         register(CompatibilitySignsNamesTableCell.self, forCellReuseIdentifier: String(describing: CompatibilitySignsNamesTableCell.self))
+        register(CompatibilityValuesTableCell.self, forCellReuseIdentifier: String(describing: CompatibilityValuesTableCell.self))
+        register(CompatibilityTextTableCelll.self, forCellReuseIdentifier: String(describing: CompatibilityTextTableCelll.self))
         
         dataSource = self
         delegate = self

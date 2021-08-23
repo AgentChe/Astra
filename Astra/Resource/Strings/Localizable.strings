@@ -99,6 +99,7 @@
 "Compatibility.Emotions" = "Emotions";
 "Compatibility.Values" = "Values";
 "Compatibility.Names" = "%@+%@";
+"Compatibility.Percent" = "%@%%";
 
 // MARK: Signs
 "Sign.Aries" = "Aries";

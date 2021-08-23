@@ -51,6 +51,16 @@ private extension CompatibilityViewModel {
                 
                 result.append(.offset(24.scale))
                 
+                let values = CompatibilityValuesTableElement(love: compatibility.loveScore,
+                                                             trust: compatibility.trustScore,
+                                                             emotions: compatibility.emotionsScore,
+                                                             values: compatibility.valuesScore)
+                result.append(.values(values))
+                
+                result.append(.offset(24.scale))
+                
+                result.append(.text(compatibility.compatibility))
+                
                 return result
             }
             .asDriver(onErrorJustReturn: [])

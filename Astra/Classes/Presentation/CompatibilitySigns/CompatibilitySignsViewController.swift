@@ -22,18 +22,16 @@ final class CompatibilitySignsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel.initialSigns
-            .drive(onNext: { [weak self] signs in
-                guard let self = self, let signs = signs else {
-                    return
+        let initialSigns = viewModel.initialSigns
+            .map { signs -> CompatibilitySigns in
+                guard let signs = signs else {
+                    return CompatibilitySigns(signCode1: .aries,
+                                              signCode2: .aries)
                 }
                 
-                self.mainView.signs1PickerView.select(sign: signs.signCode1)
-                self.mainView.signs2PickerView.select(sign: signs.signCode2)
-            })
-            .disposed(by: disposeBag)
+                return signs
+            }
         
-        // TODO
         Observable
             .combineLatest(
                 mainView.signs1PickerView.didSelect,
@@ -41,7 +39,26 @@ final class CompatibilitySignsViewController: UIViewController {
             ) { sign1, sign2 -> CompatibilitySigns in
                 CompatibilitySigns(signCode1: sign1, signCode2: sign2)
             }
-            .bind(to: viewModel.store)
+            .flatMapLatest { [weak self] sings -> Completable in
+                guard let self = self else {
+                    return .never()
+                }
+                
+                return self.viewModel
+                    .store(signs: sings)
+            }
+            .subscribe()
+            .disposed(by: disposeBag)
+        
+        initialSigns
+            .drive(onNext: { [weak self] signs in
+                guard let self = self else {
+                    return
+                }
+                
+                self.mainView.signs1PickerView.select(sign: signs.signCode1)
+                self.mainView.signs2PickerView.select(sign: signs.signCode2)
+            })
             .disposed(by: disposeBag)
         
         mainView.button.rx.tap

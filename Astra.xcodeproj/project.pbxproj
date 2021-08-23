@@ -187,6 +187,9 @@
 		96BFF5F926D3F88700B8D8CC /* CompatibilitySignsImagesTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF5F826D3F88700B8D8CC /* CompatibilitySignsImagesTableCell.swift */; };
 		96BFF5FC26D3F91500B8D8CC /* CompatibilityTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF5FB26D3F91500B8D8CC /* CompatibilityTableElement.swift */; };
 		96BFF5FE26D406C700B8D8CC /* CompatibilitySignsNamesTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF5FD26D406C700B8D8CC /* CompatibilitySignsNamesTableCell.swift */; };
+		96BFF60026D42DBB00B8D8CC /* CompatibilityValuesTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF5FF26D42DBB00B8D8CC /* CompatibilityValuesTableCell.swift */; };
+		96BFF60226D42E1C00B8D8CC /* CompatibilityValuesTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF60126D42E1C00B8D8CC /* CompatibilityValuesTableElement.swift */; };
+		96BFF60426D42F7700B8D8CC /* CompatibilityTextTableCelll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF60326D42F7700B8D8CC /* CompatibilityTextTableCelll.swift */; };
 		EA80E75864467FD58E75C2BA /* Pods_Astra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70F58ABE9BC2B6805D15295E /* Pods_Astra.framework */; };
 /* End PBXBuildFile section */
 
@@ -376,6 +379,9 @@
 		96BFF5F826D3F88700B8D8CC /* CompatibilitySignsImagesTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompatibilitySignsImagesTableCell.swift; sourceTree = "<group>"; };
 		96BFF5FB26D3F91500B8D8CC /* CompatibilityTableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompatibilityTableElement.swift; sourceTree = "<group>"; };
 		96BFF5FD26D406C700B8D8CC /* CompatibilitySignsNamesTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompatibilitySignsNamesTableCell.swift; sourceTree = "<group>"; };
+		96BFF5FF26D42DBB00B8D8CC /* CompatibilityValuesTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompatibilityValuesTableCell.swift; sourceTree = "<group>"; };
+		96BFF60126D42E1C00B8D8CC /* CompatibilityValuesTableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompatibilityValuesTableElement.swift; sourceTree = "<group>"; };
+		96BFF60326D42F7700B8D8CC /* CompatibilityTextTableCelll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompatibilityTextTableCelll.swift; sourceTree = "<group>"; };
 		C46B19553E947FBD72888998 /* Pods-Astra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Astra.debug.xcconfig"; path = "Target Support Files/Pods-Astra/Pods-Astra.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1203,6 +1209,8 @@
 			children = (
 				96BFF5F826D3F88700B8D8CC /* CompatibilitySignsImagesTableCell.swift */,
 				96BFF5FD26D406C700B8D8CC /* CompatibilitySignsNamesTableCell.swift */,
+				96BFF5FF26D42DBB00B8D8CC /* CompatibilityValuesTableCell.swift */,
+				96BFF60326D42F7700B8D8CC /* CompatibilityTextTableCelll.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1211,6 +1219,7 @@
 			isa = PBXGroup;
 			children = (
 				96BFF5FB26D3F91500B8D8CC /* CompatibilityTableElement.swift */,
+				96BFF60126D42E1C00B8D8CC /* CompatibilityValuesTableElement.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -1390,6 +1399,8 @@
 				96059E3F26C7AEED00BD9A0A /* Horo.swift in Sources */,
 				96059F0526CE732A00BD9A0A /* GetTarotResponse.swift in Sources */,
 				968FD47A26C46F6C00C01D2A /* OEnjoyingView.swift in Sources */,
+				96BFF60026D42DBB00B8D8CC /* CompatibilityValuesTableCell.swift in Sources */,
+				96BFF60426D42F7700B8D8CC /* CompatibilityTextTableCelll.swift in Sources */,
 				968FD40526C3CB0D00C01D2A /* AppDelegate.swift in Sources */,
 				96059F1A26CE9BD500BD9A0A /* TarotTagsTableCell.swift in Sources */,
 				96059ED926CD2A3C00BD9A0A /* LunarCalendarTableCell.swift in Sources */,
@@ -1447,6 +1458,7 @@
 				968FD3F626C3CB0D00C01D2A /* ScreenSize.swift in Sources */,
 				96BFF5DA26D21E7500B8D8CC /* CompatibilityManagerCore.swift in Sources */,
 				96059E6926C9489600BD9A0A /* HoroFilterTableElement.swift in Sources */,
+				96BFF60226D42E1C00B8D8CC /* CompatibilityValuesTableElement.swift in Sources */,
 				96BFF5F126D3F79400B8D8CC /* CompatibilityViewModel.swift in Sources */,
 				96059E5D26C7D36B00BD9A0A /* MainProfileCell.swift in Sources */,
 				968FD47826C460AC00C01D2A /* OGoalCell.swift in Sources */,
