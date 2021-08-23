@@ -84,3 +84,24 @@
 
 // MARK: Tarot
 "Tarot.Reversed" = "Reversed";
+
+// MARK: CompatibilitySigns
+"CompatibilitySigns.Title" = "COMPATIBILITY";
+"CompatibilitySigns.Header" = "Signs compatibility";
+"CompatibilitySigns.Choose" = "Choose";
+"CompatibilitySigns.Compare" = "Signs to compare ";
+"CompatibilitySigns.Check" = "CHECK COMPATIBILITY";
+
+// MARK: Signs
+"Sign.Aries" = "Aries";
+"Sign.Taurus" = "Taurus";
+"Sign.Gemini" = "Gemini";
+"Sign.Cancer" = "Cancer";
+"Sign.Leo" = "Leo";
+"Sign.Virgo" = "Virgo";
+"Sign.Libra" = "Libra";
+"Sign.Scorpio" = "Scorpio";
+"Sign.Sagittarius" = "Sagittarius";
+"Sign.Capricorn" = "Capricorn";
+"Sign.Aquarius" = "Aquarius";
+"Sign.Pisces" = "Pisces";

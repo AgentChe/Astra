@@ -173,6 +173,13 @@
 		96BFF5D826D21E3F00B8D8CC /* CompatibilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF5D726D21E3F00B8D8CC /* CompatibilityManager.swift */; };
 		96BFF5DA26D21E7500B8D8CC /* CompatibilityManagerCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF5D926D21E7500B8D8CC /* CompatibilityManagerCore.swift */; };
 		96BFF5DC26D226F500B8D8CC /* CompatibilitySigns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF5DB26D226F500B8D8CC /* CompatibilitySigns.swift */; };
+		96BFF5DF26D2B04500B8D8CC /* CompatibilitySignsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF5DE26D2B04500B8D8CC /* CompatibilitySignsViewController.swift */; };
+		96BFF5E126D2B0C300B8D8CC /* CompatibilitySignsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF5E026D2B0C300B8D8CC /* CompatibilitySignsViewModel.swift */; };
+		96BFF5E326D2B0E600B8D8CC /* CompatibilitySignsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF5E226D2B0E600B8D8CC /* CompatibilitySignsView.swift */; };
+		96BFF5E626D3913600B8D8CC /* AKPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF5E526D3913600B8D8CC /* AKPickerView.swift */; };
+		96BFF5E826D3C73000B8D8CC /* SignsPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF5E726D3C73000B8D8CC /* SignsPickerView.swift */; };
+		96BFF5EA26D3D47E00B8D8CC /* SignsPickerElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF5E926D3D47E00B8D8CC /* SignsPickerElement.swift */; };
+		96BFF5EC26D3D4F400B8D8CC /* SignsPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF5EB26D3D4F400B8D8CC /* SignsPickerCell.swift */; };
 		EA80E75864467FD58E75C2BA /* Pods_Astra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70F58ABE9BC2B6805D15295E /* Pods_Astra.framework */; };
 /* End PBXBuildFile section */
 
@@ -348,6 +355,13 @@
 		96BFF5D726D21E3F00B8D8CC /* CompatibilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompatibilityManager.swift; sourceTree = "<group>"; };
 		96BFF5D926D21E7500B8D8CC /* CompatibilityManagerCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompatibilityManagerCore.swift; sourceTree = "<group>"; };
 		96BFF5DB26D226F500B8D8CC /* CompatibilitySigns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompatibilitySigns.swift; sourceTree = "<group>"; };
+		96BFF5DE26D2B04500B8D8CC /* CompatibilitySignsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompatibilitySignsViewController.swift; sourceTree = "<group>"; };
+		96BFF5E026D2B0C300B8D8CC /* CompatibilitySignsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompatibilitySignsViewModel.swift; sourceTree = "<group>"; };
+		96BFF5E226D2B0E600B8D8CC /* CompatibilitySignsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompatibilitySignsView.swift; sourceTree = "<group>"; };
+		96BFF5E526D3913600B8D8CC /* AKPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKPickerView.swift; sourceTree = "<group>"; };
+		96BFF5E726D3C73000B8D8CC /* SignsPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignsPickerView.swift; sourceTree = "<group>"; };
+		96BFF5E926D3D47E00B8D8CC /* SignsPickerElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignsPickerElement.swift; sourceTree = "<group>"; };
+		96BFF5EB26D3D4F400B8D8CC /* SignsPickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignsPickerCell.swift; sourceTree = "<group>"; };
 		C46B19553E947FBD72888998 /* Pods-Astra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Astra.debug.xcconfig"; path = "Target Support Files/Pods-Astra/Pods-Astra.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -980,6 +994,7 @@
 		968FD41126C3CF3600C01D2A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				96BFF5DD26D2B03A00B8D8CC /* CompatibilitySigns */,
 				96059EED26CE3B2F00BD9A0A /* Tarot */,
 				96059ECA26CD252300BD9A0A /* Lunar */,
 				96059EB926CD01B700BD9A0A /* Settings */,
@@ -1125,6 +1140,28 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
+		96BFF5DD26D2B03A00B8D8CC /* CompatibilitySigns */ = {
+			isa = PBXGroup;
+			children = (
+				96BFF5E426D3912700B8D8CC /* Views */,
+				96BFF5DE26D2B04500B8D8CC /* CompatibilitySignsViewController.swift */,
+				96BFF5E026D2B0C300B8D8CC /* CompatibilitySignsViewModel.swift */,
+				96BFF5E226D2B0E600B8D8CC /* CompatibilitySignsView.swift */,
+			);
+			path = CompatibilitySigns;
+			sourceTree = "<group>";
+		};
+		96BFF5E426D3912700B8D8CC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				96BFF5E526D3913600B8D8CC /* AKPickerView.swift */,
+				96BFF5E726D3C73000B8D8CC /* SignsPickerView.swift */,
+				96BFF5E926D3D47E00B8D8CC /* SignsPickerElement.swift */,
+				96BFF5EB26D3D4F400B8D8CC /* SignsPickerCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		A4B089CC1A71FAC485D4124C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1251,6 +1288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96059EEC26CDADE700BD9A0A /* NumbersLunarTableCell.swift in Sources */,
+				96BFF5DF26D2B04500B8D8CC /* CompatibilitySignsViewController.swift in Sources */,
 				96059E8826CA77EF00BD9A0A /* SeparatorMainTableCell.swift in Sources */,
 				96059E4E26C7BA5500BD9A0A /* GetDashboardResponse.swift in Sources */,
 				968FD40326C3CB0D00C01D2A /* CircleView.swift in Sources */,
@@ -1284,8 +1322,10 @@
 				968FD46126C426A100C01D2A /* OStepView.swift in Sources */,
 				96059EE426CD9C4100BD9A0A /* GetLunarFullResponse.swift in Sources */,
 				96BFF5D026D2166400B8D8CC /* Compatibilities.swift in Sources */,
+				96BFF5EA26D3D47E00B8D8CC /* SignsPickerElement.swift in Sources */,
 				96059EE226CD9C1400BD9A0A /* GetLunarFullRequest.swift in Sources */,
 				96059E8426CA633400BD9A0A /* ChartMainTableElement.swift in Sources */,
+				96BFF5EC26D3D4F400B8D8CC /* SignsPickerCell.swift in Sources */,
 				968FD47426C45BED00C01D2A /* OBirthdateView.swift in Sources */,
 				968FD40726C3CB0D00C01D2A /* UIViewRxExtension.swift in Sources */,
 				96059E5726C7CEAB00BD9A0A /* MainTableView.swift in Sources */,
@@ -1310,6 +1350,7 @@
 				96059E8F26CA817C00BD9A0A /* LunarCalendarMainTableCell.swift in Sources */,
 				96059F1826CE9B2C00BD9A0A /* TarotNameTableCell.swift in Sources */,
 				96059E9F26CBBF3A00BD9A0A /* HoroViewModel.swift in Sources */,
+				96BFF5E826D3C73000B8D8CC /* SignsPickerView.swift in Sources */,
 				96059ECE26CD262E00BD9A0A /* LunarViewModel.swift in Sources */,
 				96059E7F26C9CFEF00BD9A0A /* HoroButtonMainTableCell.swift in Sources */,
 				96059E6726C9485C00BD9A0A /* HoroFilterMainTableCell.swift in Sources */,
@@ -1322,6 +1363,7 @@
 				96059E4126C7AF1300BD9A0A /* HoroContent.swift in Sources */,
 				96059E6526C90E2C00BD9A0A /* TitleMainTableCell.swift in Sources */,
 				96059EA426CBBFCF00BD9A0A /* HoroTableView.swift in Sources */,
+				96BFF5E626D3913600B8D8CC /* AKPickerView.swift in Sources */,
 				96059E3526C70B3900BD9A0A /* MainView.swift in Sources */,
 				968FD44026C41F0500C01D2A /* OnboardingViewController.swift in Sources */,
 				968FD41926C3E0CB00C01D2A /* SplashView.swift in Sources */,
@@ -1359,6 +1401,7 @@
 				96059EC426CD06DA00BD9A0A /* SettingsTableElement.swift in Sources */,
 				968FD40A26C3CDDC00C01D2A /* UIEdgeInsets+Extension.swift in Sources */,
 				968FD47226C4520700C01D2A /* Gender.swift in Sources */,
+				96BFF5E126D2B0C300B8D8CC /* CompatibilitySignsViewModel.swift in Sources */,
 				96BFF5CE26D2161C00B8D8CC /* Compatibility.swift in Sources */,
 				96059EFD26CE408100BD9A0A /* TarotManagerCore.swift in Sources */,
 				96059F0A26CE84AA00BD9A0A /* TarotViewModel.swift in Sources */,
@@ -1400,6 +1443,7 @@
 				96059EC726CD070A00BD9A0A /* SettingsLinkTableCell.swift in Sources */,
 				96BFF5CA26D1810400B8D8CC /* TarotTableViewDelegate.swift in Sources */,
 				96BFF5C826D17E5A00B8D8CC /* ImageLoader.swift in Sources */,
+				96BFF5E326D2B0E600B8D8CC /* CompatibilitySignsView.swift in Sources */,
 				96BFF5D826D21E3F00B8D8CC /* CompatibilityManager.swift in Sources */,
 				96059F0826CE845800BD9A0A /* TarotViewController.swift in Sources */,
 				968FD40626C3CB0D00C01D2A /* RxActivityIndicator.swift in Sources */,
