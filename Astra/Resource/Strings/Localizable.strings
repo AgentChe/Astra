@@ -114,3 +114,6 @@
 "Sign.Capricorn" = "Capricorn";
 "Sign.Aquarius" = "Aquarius";
 "Sign.Pisces" = "Pisces";
+
+// MARK: MeditationsDashboard
+"MeditationsDashboard.Title" = "MEDITATION";

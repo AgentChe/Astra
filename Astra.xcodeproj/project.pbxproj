@@ -190,6 +190,21 @@
 		96BFF60026D42DBB00B8D8CC /* CompatibilityValuesTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF5FF26D42DBB00B8D8CC /* CompatibilityValuesTableCell.swift */; };
 		96BFF60226D42E1C00B8D8CC /* CompatibilityValuesTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF60126D42E1C00B8D8CC /* CompatibilityValuesTableElement.swift */; };
 		96BFF60426D42F7700B8D8CC /* CompatibilityTextTableCelll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF60326D42F7700B8D8CC /* CompatibilityTextTableCelll.swift */; };
+		96BFF86226D522A900B8D8CC /* DailyMeditation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF86126D522A900B8D8CC /* DailyMeditation.swift */; };
+		96BFF86426D5241000B8D8CC /* MeditationCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF86326D5241000B8D8CC /* MeditationCourse.swift */; };
+		96BFF86626D5246100B8D8CC /* MeditationAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF86526D5246100B8D8CC /* MeditationAudio.swift */; };
+		96BFF86826D5257A00B8D8CC /* MeditationGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF86726D5257A00B8D8CC /* MeditationGroup.swift */; };
+		96BFF86A26D5260800B8D8CC /* MeditationDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF86926D5260800B8D8CC /* MeditationDashboard.swift */; };
+		96BFF86D26D5280600B8D8CC /* GetMeditationDashboardRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF86C26D5280600B8D8CC /* GetMeditationDashboardRequest.swift */; };
+		96BFF86F26D5283E00B8D8CC /* GetMeditationDashboardResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF86E26D5283E00B8D8CC /* GetMeditationDashboardResponse.swift */; };
+		96BFF87126D5364300B8D8CC /* MeditationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF87026D5364300B8D8CC /* MeditationManager.swift */; };
+		96BFF87326D536A600B8D8CC /* MeditationManagerCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF87226D536A600B8D8CC /* MeditationManagerCore.swift */; };
+		96BFF87526D53A5400B8D8CC /* MeditationCourseDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF87426D53A5400B8D8CC /* MeditationCourseDetails.swift */; };
+		96BFF87826D53AFD00B8D8CC /* GetMeditationCourseDetailsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF87726D53AFD00B8D8CC /* GetMeditationCourseDetailsRequest.swift */; };
+		96BFF87A26D53B4B00B8D8CC /* GetMeditationCourseDetailsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF87926D53B4B00B8D8CC /* GetMeditationCourseDetailsResponse.swift */; };
+		96BFF87D26D53F1300B8D8CC /* MeditationsDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF87C26D53F1300B8D8CC /* MeditationsDashboardViewController.swift */; };
+		96BFF87F26D53F7D00B8D8CC /* MeditationsDashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF87E26D53F7D00B8D8CC /* MeditationsDashboardViewModel.swift */; };
+		96BFF88126D53F9500B8D8CC /* MeditationsDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF88026D53F9500B8D8CC /* MeditationsDashboardView.swift */; };
 		EA80E75864467FD58E75C2BA /* Pods_Astra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70F58ABE9BC2B6805D15295E /* Pods_Astra.framework */; };
 /* End PBXBuildFile section */
 
@@ -382,6 +397,21 @@
 		96BFF5FF26D42DBB00B8D8CC /* CompatibilityValuesTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompatibilityValuesTableCell.swift; sourceTree = "<group>"; };
 		96BFF60126D42E1C00B8D8CC /* CompatibilityValuesTableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompatibilityValuesTableElement.swift; sourceTree = "<group>"; };
 		96BFF60326D42F7700B8D8CC /* CompatibilityTextTableCelll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompatibilityTextTableCelll.swift; sourceTree = "<group>"; };
+		96BFF86126D522A900B8D8CC /* DailyMeditation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMeditation.swift; sourceTree = "<group>"; };
+		96BFF86326D5241000B8D8CC /* MeditationCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationCourse.swift; sourceTree = "<group>"; };
+		96BFF86526D5246100B8D8CC /* MeditationAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationAudio.swift; sourceTree = "<group>"; };
+		96BFF86726D5257A00B8D8CC /* MeditationGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationGroup.swift; sourceTree = "<group>"; };
+		96BFF86926D5260800B8D8CC /* MeditationDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationDashboard.swift; sourceTree = "<group>"; };
+		96BFF86C26D5280600B8D8CC /* GetMeditationDashboardRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMeditationDashboardRequest.swift; sourceTree = "<group>"; };
+		96BFF86E26D5283E00B8D8CC /* GetMeditationDashboardResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMeditationDashboardResponse.swift; sourceTree = "<group>"; };
+		96BFF87026D5364300B8D8CC /* MeditationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationManager.swift; sourceTree = "<group>"; };
+		96BFF87226D536A600B8D8CC /* MeditationManagerCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationManagerCore.swift; sourceTree = "<group>"; };
+		96BFF87426D53A5400B8D8CC /* MeditationCourseDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationCourseDetails.swift; sourceTree = "<group>"; };
+		96BFF87726D53AFD00B8D8CC /* GetMeditationCourseDetailsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMeditationCourseDetailsRequest.swift; sourceTree = "<group>"; };
+		96BFF87926D53B4B00B8D8CC /* GetMeditationCourseDetailsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMeditationCourseDetailsResponse.swift; sourceTree = "<group>"; };
+		96BFF87C26D53F1300B8D8CC /* MeditationsDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationsDashboardViewController.swift; sourceTree = "<group>"; };
+		96BFF87E26D53F7D00B8D8CC /* MeditationsDashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationsDashboardViewModel.swift; sourceTree = "<group>"; };
+		96BFF88026D53F9500B8D8CC /* MeditationsDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationsDashboardView.swift; sourceTree = "<group>"; };
 		C46B19553E947FBD72888998 /* Pods-Astra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Astra.debug.xcconfig"; path = "Target Support Files/Pods-Astra/Pods-Astra.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1014,6 +1044,7 @@
 		968FD41126C3CF3600C01D2A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				96BFF87B26D53EB900B8D8CC /* MeditationsDashboard */,
 				96BFF5ED26D3F6FE00B8D8CC /* Compatibility */,
 				96BFF5DD26D2B03A00B8D8CC /* CompatibilitySigns */,
 				96059EED26CE3B2F00BD9A0A /* Tarot */,
@@ -1096,6 +1127,7 @@
 		968FD46E26C451EE00C01D2A /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				96BFF60526D4E09B00B8D8CC /* Meditation */,
 				96BFF5CB26D2160000B8D8CC /* Compatibility */,
 				96059EF526CE3D6B00BD9A0A /* Tarot */,
 				96059E3826C7AC4400BD9A0A /* Content */,
@@ -1222,6 +1254,75 @@
 				96BFF60126D42E1C00B8D8CC /* CompatibilityValuesTableElement.swift */,
 			);
 			path = Elements;
+			sourceTree = "<group>";
+		};
+		96BFF60526D4E09B00B8D8CC /* Meditation */ = {
+			isa = PBXGroup;
+			children = (
+				96BFF86026D5229400B8D8CC /* Manager */,
+				96BFF85F26D5228A00B8D8CC /* Request */,
+				96BFF85E26D5228400B8D8CC /* Models */,
+			);
+			path = Meditation;
+			sourceTree = "<group>";
+		};
+		96BFF85E26D5228400B8D8CC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				96BFF86126D522A900B8D8CC /* DailyMeditation.swift */,
+				96BFF86326D5241000B8D8CC /* MeditationCourse.swift */,
+				96BFF86526D5246100B8D8CC /* MeditationAudio.swift */,
+				96BFF86726D5257A00B8D8CC /* MeditationGroup.swift */,
+				96BFF86926D5260800B8D8CC /* MeditationDashboard.swift */,
+				96BFF87426D53A5400B8D8CC /* MeditationCourseDetails.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		96BFF85F26D5228A00B8D8CC /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				96BFF87626D53AE800B8D8CC /* GetMeditationCourseDetails */,
+				96BFF86B26D527EF00B8D8CC /* GetMeditationDashboard */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		96BFF86026D5229400B8D8CC /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				96BFF87026D5364300B8D8CC /* MeditationManager.swift */,
+				96BFF87226D536A600B8D8CC /* MeditationManagerCore.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		96BFF86B26D527EF00B8D8CC /* GetMeditationDashboard */ = {
+			isa = PBXGroup;
+			children = (
+				96BFF86C26D5280600B8D8CC /* GetMeditationDashboardRequest.swift */,
+				96BFF86E26D5283E00B8D8CC /* GetMeditationDashboardResponse.swift */,
+			);
+			path = GetMeditationDashboard;
+			sourceTree = "<group>";
+		};
+		96BFF87626D53AE800B8D8CC /* GetMeditationCourseDetails */ = {
+			isa = PBXGroup;
+			children = (
+				96BFF87726D53AFD00B8D8CC /* GetMeditationCourseDetailsRequest.swift */,
+				96BFF87926D53B4B00B8D8CC /* GetMeditationCourseDetailsResponse.swift */,
+			);
+			path = GetMeditationCourseDetails;
+			sourceTree = "<group>";
+		};
+		96BFF87B26D53EB900B8D8CC /* MeditationsDashboard */ = {
+			isa = PBXGroup;
+			children = (
+				96BFF87C26D53F1300B8D8CC /* MeditationsDashboardViewController.swift */,
+				96BFF87E26D53F7D00B8D8CC /* MeditationsDashboardViewModel.swift */,
+				96BFF88026D53F9500B8D8CC /* MeditationsDashboardView.swift */,
+			);
+			path = MeditationsDashboard;
 			sourceTree = "<group>";
 		};
 		A4B089CC1A71FAC485D4124C /* Frameworks */ = {
@@ -1351,6 +1452,7 @@
 			files = (
 				96059EEC26CDADE700BD9A0A /* NumbersLunarTableCell.swift in Sources */,
 				96BFF5DF26D2B04500B8D8CC /* CompatibilitySignsViewController.swift in Sources */,
+				96BFF86426D5241000B8D8CC /* MeditationCourse.swift in Sources */,
 				96059E8826CA77EF00BD9A0A /* SeparatorMainTableCell.swift in Sources */,
 				96059E4E26C7BA5500BD9A0A /* GetDashboardResponse.swift in Sources */,
 				968FD40326C3CB0D00C01D2A /* CircleView.swift in Sources */,
@@ -1360,14 +1462,17 @@
 				96059EBF26CD021800BD9A0A /* SettingsView.swift in Sources */,
 				96059E2726C6CBFB00BD9A0A /* TabItemView.swift in Sources */,
 				96059E4C26C7B98A00BD9A0A /* GetDashboardRequest.swift in Sources */,
+				96BFF87F26D53F7D00B8D8CC /* MeditationsDashboardViewModel.swift in Sources */,
 				96059E3B26C7AC5700BD9A0A /* Sign.swift in Sources */,
 				96059E2226C6CBB900BD9A0A /* TabController.swift in Sources */,
 				96059E2526C6CBE800BD9A0A /* TabView.swift in Sources */,
 				96059E8C26CA7EE700BD9A0A /* LunarButtonMainTableCell.swift in Sources */,
+				96BFF86226D522A900B8D8CC /* DailyMeditation.swift in Sources */,
 				96059F1126CE956F00BD9A0A /* TarotTableElement.swift in Sources */,
 				968FD47626C45F7F00C01D2A /* OGoalsView.swift in Sources */,
 				96059EAC26CBD8AF00BD9A0A /* HoroArticleOpenedTableCell.swift in Sources */,
 				968FD3FF26C3CB0D00C01D2A /* TapAreaButton.swift in Sources */,
+				96BFF86D26D5280600B8D8CC /* GetMeditationDashboardRequest.swift in Sources */,
 				96059E0D26C6634400BD9A0A /* SessionManagerCore.swift in Sources */,
 				96059E5326C7C8A600BD9A0A /* ContentManagerCore.swift in Sources */,
 				96059E3126C7093800BD9A0A /* MainViewController.swift in Sources */,
@@ -1382,6 +1487,7 @@
 				96059E8626CA683300BD9A0A /* ChartClosedMainTableCell.swift in Sources */,
 				96BFF5D326D21A7A00B8D8CC /* GetCompatibilitiesRequest.swift in Sources */,
 				968FD46126C426A100C01D2A /* OStepView.swift in Sources */,
+				96BFF86F26D5283E00B8D8CC /* GetMeditationDashboardResponse.swift in Sources */,
 				96059EE426CD9C4100BD9A0A /* GetLunarFullResponse.swift in Sources */,
 				96BFF5D026D2166400B8D8CC /* Compatibilities.swift in Sources */,
 				96BFF5EA26D3D47E00B8D8CC /* SignsPickerElement.swift in Sources */,
@@ -1397,9 +1503,12 @@
 				968FD3FD26C3CB0D00C01D2A /* NavigationController.swift in Sources */,
 				968FD40226C3CB0D00C01D2A /* GradientButton.swift in Sources */,
 				96059E3F26C7AEED00BD9A0A /* Horo.swift in Sources */,
+				96BFF87126D5364300B8D8CC /* MeditationManager.swift in Sources */,
 				96059F0526CE732A00BD9A0A /* GetTarotResponse.swift in Sources */,
 				968FD47A26C46F6C00C01D2A /* OEnjoyingView.swift in Sources */,
 				96BFF60026D42DBB00B8D8CC /* CompatibilityValuesTableCell.swift in Sources */,
+				96BFF87526D53A5400B8D8CC /* MeditationCourseDetails.swift in Sources */,
+				96BFF87A26D53B4B00B8D8CC /* GetMeditationCourseDetailsResponse.swift in Sources */,
 				96BFF60426D42F7700B8D8CC /* CompatibilityTextTableCelll.swift in Sources */,
 				968FD40526C3CB0D00C01D2A /* AppDelegate.swift in Sources */,
 				96059F1A26CE9BD500BD9A0A /* TarotTagsTableCell.swift in Sources */,
@@ -1414,6 +1523,7 @@
 				96059E8F26CA817C00BD9A0A /* LunarCalendarMainTableCell.swift in Sources */,
 				96059F1826CE9B2C00BD9A0A /* TarotNameTableCell.swift in Sources */,
 				96059E9F26CBBF3A00BD9A0A /* HoroViewModel.swift in Sources */,
+				96BFF86826D5257A00B8D8CC /* MeditationGroup.swift in Sources */,
 				96BFF5E826D3C73000B8D8CC /* SignsPickerView.swift in Sources */,
 				96059ECE26CD262E00BD9A0A /* LunarViewModel.swift in Sources */,
 				96059E7F26C9CFEF00BD9A0A /* HoroButtonMainTableCell.swift in Sources */,
@@ -1422,6 +1532,7 @@
 				96059EC926CD21F600BD9A0A /* RateUs.swift in Sources */,
 				968FD41726C3E02A00C01D2A /* SplashViewModel.swift in Sources */,
 				96059E1E26C6855900BD9A0A /* PaddingTextField.swift in Sources */,
+				96BFF86A26D5260800B8D8CC /* MeditationDashboard.swift in Sources */,
 				96059E8226CA5DF200BD9A0A /* ChartOpenedMainTableCell.swift in Sources */,
 				96059E1A26C6707C00BD9A0A /* UserManagerCore.swift in Sources */,
 				96059E4126C7AF1300BD9A0A /* HoroContent.swift in Sources */,
@@ -1432,6 +1543,7 @@
 				968FD44026C41F0500C01D2A /* OnboardingViewController.swift in Sources */,
 				968FD41926C3E0CB00C01D2A /* SplashView.swift in Sources */,
 				968FD45E26C41F0500C01D2A /* OnboardingView.swift in Sources */,
+				96BFF88126D53F9500B8D8CC /* MeditationsDashboardView.swift in Sources */,
 				96059E2926C6CC5B00BD9A0A /* TabMainView.swift in Sources */,
 				968FD3F226C3CB0D00C01D2A /* StringExtension.swift in Sources */,
 				96059EFF26CE716C00BD9A0A /* Tarot.swift in Sources */,
@@ -1459,7 +1571,9 @@
 				96BFF5DA26D21E7500B8D8CC /* CompatibilityManagerCore.swift in Sources */,
 				96059E6926C9489600BD9A0A /* HoroFilterTableElement.swift in Sources */,
 				96BFF60226D42E1C00B8D8CC /* CompatibilityValuesTableElement.swift in Sources */,
+				96BFF87D26D53F1300B8D8CC /* MeditationsDashboardViewController.swift in Sources */,
 				96BFF5F126D3F79400B8D8CC /* CompatibilityViewModel.swift in Sources */,
+				96BFF87326D536A600B8D8CC /* MeditationManagerCore.swift in Sources */,
 				96059E5D26C7D36B00BD9A0A /* MainProfileCell.swift in Sources */,
 				968FD47826C460AC00C01D2A /* OGoalCell.swift in Sources */,
 				96059E0B26C6632A00BD9A0A /* SessionManager.swift in Sources */,
@@ -1479,6 +1593,7 @@
 				96059EBD26CD020300BD9A0A /* SettingsViewModel.swift in Sources */,
 				96059EE826CDA36B00BD9A0A /* TitleLunarTableCell.swift in Sources */,
 				96059E1C26C6819D00BD9A0A /* ONameView.swift in Sources */,
+				96BFF86626D5246100B8D8CC /* MeditationAudio.swift in Sources */,
 				96059E4326C7B1B500BD9A0A /* Chart.swift in Sources */,
 				96059EBB26CD01C700BD9A0A /* SettingsViewController.swift in Sources */,
 				968FD46D26C4334C00C01D2A /* OGenderView.swift in Sources */,
@@ -1507,6 +1622,7 @@
 				96059E6326C84FF000BD9A0A /* MainTableViewDelegate.swift in Sources */,
 				96059E1126C6665B00BD9A0A /* OPlanView.swift in Sources */,
 				968FD40426C3CB0D00C01D2A /* GradientView.swift in Sources */,
+				96BFF87826D53AFD00B8D8CC /* GetMeditationCourseDetailsRequest.swift in Sources */,
 				96BFF5F926D3F88700B8D8CC /* CompatibilitySignsImagesTableCell.swift in Sources */,
 				96059EDD26CD9AC300BD9A0A /* LunarFavorable.swift in Sources */,
 				968FD3EF26C3CB0D00C01D2A /* UITapGestureRecognizerExtension.swift in Sources */,
