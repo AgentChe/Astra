@@ -117,3 +117,5 @@
 
 // MARK: MeditationsDashboard
 "MeditationsDashboard.Title" = "MEDITATION";
+"MeditationsDashboard.Filter.All" = "All";
+"MeditationsDashboard.Filter.Courses" = "Courses";

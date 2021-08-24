@@ -205,6 +205,9 @@
 		96BFF87D26D53F1300B8D8CC /* MeditationsDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF87C26D53F1300B8D8CC /* MeditationsDashboardViewController.swift */; };
 		96BFF87F26D53F7D00B8D8CC /* MeditationsDashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF87E26D53F7D00B8D8CC /* MeditationsDashboardViewModel.swift */; };
 		96BFF88126D53F9500B8D8CC /* MeditationsDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF88026D53F9500B8D8CC /* MeditationsDashboardView.swift */; };
+		96BFF88526D54AAA00B8D8CC /* MeditationsFilterCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF88426D54AAA00B8D8CC /* MeditationsFilterCollectionView.swift */; };
+		96BFF88726D54B1800B8D8CC /* MeditationsFilterCollectionElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF88626D54B1800B8D8CC /* MeditationsFilterCollectionElement.swift */; };
+		96BFF88926D54BD400B8D8CC /* MeditationsFilterCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF88826D54BD400B8D8CC /* MeditationsFilterCollectionCell.swift */; };
 		EA80E75864467FD58E75C2BA /* Pods_Astra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70F58ABE9BC2B6805D15295E /* Pods_Astra.framework */; };
 /* End PBXBuildFile section */
 
@@ -412,6 +415,9 @@
 		96BFF87C26D53F1300B8D8CC /* MeditationsDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationsDashboardViewController.swift; sourceTree = "<group>"; };
 		96BFF87E26D53F7D00B8D8CC /* MeditationsDashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationsDashboardViewModel.swift; sourceTree = "<group>"; };
 		96BFF88026D53F9500B8D8CC /* MeditationsDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationsDashboardView.swift; sourceTree = "<group>"; };
+		96BFF88426D54AAA00B8D8CC /* MeditationsFilterCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationsFilterCollectionView.swift; sourceTree = "<group>"; };
+		96BFF88626D54B1800B8D8CC /* MeditationsFilterCollectionElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationsFilterCollectionElement.swift; sourceTree = "<group>"; };
+		96BFF88826D54BD400B8D8CC /* MeditationsFilterCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationsFilterCollectionCell.swift; sourceTree = "<group>"; };
 		C46B19553E947FBD72888998 /* Pods-Astra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Astra.debug.xcconfig"; path = "Target Support Files/Pods-Astra/Pods-Astra.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1318,11 +1324,30 @@
 		96BFF87B26D53EB900B8D8CC /* MeditationsDashboard */ = {
 			isa = PBXGroup;
 			children = (
+				96BFF88226D54A7400B8D8CC /* Views */,
 				96BFF87C26D53F1300B8D8CC /* MeditationsDashboardViewController.swift */,
 				96BFF87E26D53F7D00B8D8CC /* MeditationsDashboardViewModel.swift */,
 				96BFF88026D53F9500B8D8CC /* MeditationsDashboardView.swift */,
 			);
 			path = MeditationsDashboard;
+			sourceTree = "<group>";
+		};
+		96BFF88226D54A7400B8D8CC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				96BFF88326D54A9500B8D8CC /* Filter */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		96BFF88326D54A9500B8D8CC /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				96BFF88426D54AAA00B8D8CC /* MeditationsFilterCollectionView.swift */,
+				96BFF88626D54B1800B8D8CC /* MeditationsFilterCollectionElement.swift */,
+				96BFF88826D54BD400B8D8CC /* MeditationsFilterCollectionCell.swift */,
+			);
+			path = Filter;
 			sourceTree = "<group>";
 		};
 		A4B089CC1A71FAC485D4124C /* Frameworks */ = {
@@ -1503,6 +1528,7 @@
 				968FD3FD26C3CB0D00C01D2A /* NavigationController.swift in Sources */,
 				968FD40226C3CB0D00C01D2A /* GradientButton.swift in Sources */,
 				96059E3F26C7AEED00BD9A0A /* Horo.swift in Sources */,
+				96BFF88926D54BD400B8D8CC /* MeditationsFilterCollectionCell.swift in Sources */,
 				96BFF87126D5364300B8D8CC /* MeditationManager.swift in Sources */,
 				96059F0526CE732A00BD9A0A /* GetTarotResponse.swift in Sources */,
 				968FD47A26C46F6C00C01D2A /* OEnjoyingView.swift in Sources */,
@@ -1580,6 +1606,7 @@
 				96059E1426C66F0F00BD9A0A /* SetRequest.swift in Sources */,
 				96059EB826CC2D7300BD9A0A /* HoroFullArticle.swift in Sources */,
 				96059EC426CD06DA00BD9A0A /* SettingsTableElement.swift in Sources */,
+				96BFF88726D54B1800B8D8CC /* MeditationsFilterCollectionElement.swift in Sources */,
 				96BFF5F326D3F7AB00B8D8CC /* CompatibilityView.swift in Sources */,
 				968FD40A26C3CDDC00C01D2A /* UIEdgeInsets+Extension.swift in Sources */,
 				968FD47226C4520700C01D2A /* Gender.swift in Sources */,
@@ -1587,6 +1614,7 @@
 				96BFF5CE26D2161C00B8D8CC /* Compatibility.swift in Sources */,
 				96059EFD26CE408100BD9A0A /* TarotManagerCore.swift in Sources */,
 				96059F0A26CE84AA00BD9A0A /* TarotViewModel.swift in Sources */,
+				96BFF88526D54AAA00B8D8CC /* MeditationsFilterCollectionView.swift in Sources */,
 				968FD45F26C41F0500C01D2A /* OnboardingViewModel.swift in Sources */,
 				96059E2B26C6CD2700BD9A0A /* TabCoordinator.swift in Sources */,
 				968FD47C26C4736500C01D2A /* OEnjoyingCell.swift in Sources */,

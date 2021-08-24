@@ -18,6 +18,16 @@ final class MeditationsDashboardViewController: UIViewController {
     override func loadView() {
         view = mainView
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        viewModel.filters
+            .drive(onNext: { [weak self] filters in
+                self?.mainView.filtersView.setup(elements: filters)
+            })
+            .disposed(by: disposeBag)
+    }
 }
 
 // MARK: Make

@@ -8,6 +8,8 @@
 import UIKit
 
 final class MeditationsDashboardView: UIView {
+    lazy var filtersView = makeFiltersView()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -30,11 +32,27 @@ private extension MeditationsDashboardView {
 // MARK: Make constraints
 private extension MeditationsDashboardView {
     func makeConstraints() {
-        
+        NSLayoutConstraint.activate([
+            filtersView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            filtersView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            filtersView.heightAnchor.constraint(equalToConstant: 34.scale),
+            filtersView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 24.scale)
+        ])
     }
 }
 
 // MARK: Lazy initialization
 private extension MeditationsDashboardView {
-    
+    func makeFiltersView() -> MeditationsFilterCollectionView {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        
+        let view = MeditationsFilterCollectionView(frame: .zero, collectionViewLayout: layout)
+        view.contentInset = UIEdgeInsets(top: 0, left: 24.scale, bottom: 0, right: 24.scale)
+        view.backgroundColor = UIColor.clear
+        view.showsHorizontalScrollIndicator = false
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        return view
+    }
 }
