@@ -39,9 +39,18 @@ final class MeditationsDashboardViewController: UIViewController {
             .disposed(by: disposeBag)
         
         mainView.dashboardView.didSelect
-            .subscribe(onNext: { element in
-                print(element)
+            .subscribe(onNext: { [weak self] element in
+                switch element {
+                case .daily(let daily):
+                    break
+                case .audio(let audio):
+                    break
+                case .course(let course):
+                    let vc = MeditationCourseViewController.make(courseId: course.id)
+                    self?.navigationController?.pushViewController(vc, animated: true)
+                }
             })
+            .disposed(by: disposeBag)
     }
 }
 

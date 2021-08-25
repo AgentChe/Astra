@@ -123,3 +123,7 @@
 "MeditationsDashboard.Courses.Title" = "Courses";
 "MeditationsDashboard.Courses.SubTitle" = "We have selected courses based on your personal data";
 "MeditationsDashboard.Courses.Count" = "%i MEDITATIONS";
+
+// MARK: MeditationCourse
+"MeditationCourse.Course" = "COURSE";
+"MeditationCourse.Min" = "%i MIN";
