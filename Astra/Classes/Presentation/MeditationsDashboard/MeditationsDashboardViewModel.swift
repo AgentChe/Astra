@@ -80,6 +80,25 @@ private extension MeditationsDashboardViewModel {
                     result.append(.offset(24.scale))
                 }
                 
+                if !dashboard.groupes.isEmpty {
+                    dashboard.groupes.enumerated().forEach { groupIndex, group in
+                        result.append(.title(group.title))
+                        result.append(.offset(16.scale))
+                        
+                        group.audios.enumerated().forEach { audioIndex, audio in
+                            result.append(.audio(audio))
+                            
+                            if (audioIndex % 2 == 0) && audioIndex != (group.audios.count - 1) {
+                                result.append(.offset(12.scale))
+                            }
+                        }
+                        
+                        if groupIndex != (dashboard.groupes.count - 1) {
+                            result.append(.offset(24.scale))
+                        }
+                    }
+                }
+                
                 return result
             }
     }

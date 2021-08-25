@@ -214,6 +214,7 @@
 		96BFF89626D5861100B8D8CC /* MeditationDashboardTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF89526D5861100B8D8CC /* MeditationDashboardTitleCell.swift */; };
 		96BFF89826D63F7800B8D8CC /* MeditationDashboardSubTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF89726D63F7700B8D8CC /* MeditationDashboardSubTitleCell.swift */; };
 		96BFF89A26D651CB00B8D8CC /* MeditationDashboardCourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF89926D651CB00B8D8CC /* MeditationDashboardCourseCell.swift */; };
+		96BFF89C26D6602F00B8D8CC /* MeditationDashboardAudioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF89B26D6602F00B8D8CC /* MeditationDashboardAudioCell.swift */; };
 		EA80E75864467FD58E75C2BA /* Pods_Astra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70F58ABE9BC2B6805D15295E /* Pods_Astra.framework */; };
 /* End PBXBuildFile section */
 
@@ -430,6 +431,7 @@
 		96BFF89526D5861100B8D8CC /* MeditationDashboardTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationDashboardTitleCell.swift; sourceTree = "<group>"; };
 		96BFF89726D63F7700B8D8CC /* MeditationDashboardSubTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationDashboardSubTitleCell.swift; sourceTree = "<group>"; };
 		96BFF89926D651CB00B8D8CC /* MeditationDashboardCourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationDashboardCourseCell.swift; sourceTree = "<group>"; };
+		96BFF89B26D6602F00B8D8CC /* MeditationDashboardAudioCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationDashboardAudioCell.swift; sourceTree = "<group>"; };
 		C46B19553E947FBD72888998 /* Pods-Astra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Astra.debug.xcconfig"; path = "Target Support Files/Pods-Astra/Pods-Astra.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1388,6 +1390,7 @@
 				96BFF89526D5861100B8D8CC /* MeditationDashboardTitleCell.swift */,
 				96BFF89726D63F7700B8D8CC /* MeditationDashboardSubTitleCell.swift */,
 				96BFF89926D651CB00B8D8CC /* MeditationDashboardCourseCell.swift */,
+				96BFF89B26D6602F00B8D8CC /* MeditationDashboardAudioCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1700,6 +1703,7 @@
 				968FD40426C3CB0D00C01D2A /* GradientView.swift in Sources */,
 				96BFF87826D53AFD00B8D8CC /* GetMeditationCourseDetailsRequest.swift in Sources */,
 				96BFF5F926D3F88700B8D8CC /* CompatibilitySignsImagesTableCell.swift in Sources */,
+				96BFF89C26D6602F00B8D8CC /* MeditationDashboardAudioCell.swift in Sources */,
 				96059EDD26CD9AC300BD9A0A /* LunarFavorable.swift in Sources */,
 				968FD3EF26C3CB0D00C01D2A /* UITapGestureRecognizerExtension.swift in Sources */,
 				96059EAA26CBD6EE00BD9A0A /* HoroArticleTableElement.swift in Sources */,

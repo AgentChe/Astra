@@ -11,4 +11,5 @@ enum MeditationDashboardCollectionElement {
     case title(String)
     case subTitle(String)
     case course(MeditationCourse)
+    case audio(MeditationAudio)
 }

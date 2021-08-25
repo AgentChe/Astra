@@ -154,6 +154,7 @@ private extension MeditationDashboardCourseCell {
         let view = UIImageView()
         view.clipsToBounds = true
         view.layer.cornerRadius = 10.scale
+        view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         view.contentMode = .scaleAspectFill
         view.translatesAutoresizingMaskIntoConstraints = false
         container.addSubview(view)

@@ -64,6 +64,10 @@ extension MeditationDashboardCollectionView: UICollectionViewDataSource {
             let cell = dequeueReusableCell(withReuseIdentifier: String(describing: MeditationDashboardCourseCell.self), for: indexPath) as! MeditationDashboardCourseCell
             cell.setup(element: course)
             return cell
+        case .audio(let audio):
+            let cell = dequeueReusableCell(withReuseIdentifier: String(describing: MeditationDashboardAudioCell.self), for: indexPath) as! MeditationDashboardAudioCell
+            cell.setup(element: audio)
+            return cell
         }
     }
 }
@@ -91,6 +95,8 @@ extension MeditationDashboardCollectionView: UICollectionViewDelegateFlowLayout 
                           height: MeditationDashboardCourseCell
                             .calculateHeight(width: 375.scale,
                                              course: course))
+        case .audio:
+            return CGSize(width: 167.scale, height: 195.scale)
         }
     }
 }
@@ -106,5 +112,6 @@ private extension MeditationDashboardCollectionView {
         register(MeditationDashboardTitleCell.self, forCellWithReuseIdentifier: String(describing: MeditationDashboardTitleCell.self))
         register(MeditationDashboardSubTitleCell.self, forCellWithReuseIdentifier: String(describing: MeditationDashboardSubTitleCell.self))
         register(MeditationDashboardCourseCell.self, forCellWithReuseIdentifier: String(describing: MeditationDashboardCourseCell.self))
+        register(MeditationDashboardAudioCell.self, forCellWithReuseIdentifier: String(describing: MeditationDashboardAudioCell.self))
     }
 }
