@@ -8,7 +8,7 @@
 import UIKit
 
 final class MeditationDashboardCollectionView: UICollectionView {
-    lazy var elements = [MeditationDashboardCollectionElement]()
+    lazy var elements = [MeditationDashboardCollectionSection]()
     
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
@@ -23,7 +23,7 @@ final class MeditationDashboardCollectionView: UICollectionView {
 
 // MARK: Public
 extension MeditationDashboardCollectionView {
-    func setup(elements: [MeditationDashboardCollectionElement]) {
+    func setup(elements: [MeditationDashboardCollectionSection]) {
         self.elements = elements
         
         reloadData()
@@ -32,12 +32,16 @@ extension MeditationDashboardCollectionView {
 
 // MARK: UICollectionViewDataSource
 extension MeditationDashboardCollectionView: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         elements.count
     }
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        elements[section].elements.count
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        switch elements[indexPath.row] {
+        switch elements[indexPath.section].elements[indexPath.row] {
         case .offset:
             let cell = dequeueReusableCell(withReuseIdentifier: String(describing: UICollectionViewCell.self), for: indexPath)
             cell.backgroundColor = UIColor.clear
@@ -75,29 +79,49 @@ extension MeditationDashboardCollectionView: UICollectionViewDataSource {
 // MARK: UICollectionViewDataSource
 extension MeditationDashboardCollectionView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        switch elements[indexPath.row] {
+        switch elements[indexPath.section].elements[indexPath.row] {
         case .offset(let height):
-            return CGSize(width: 375.scale, height: height)
+            return CGSize(width: 343.scale, height: height)
         case .daily:
-            return CGSize(width: 375.scale, height: 175.scale)
+            return CGSize(width: 343.scale, height: 175.scale)
         case .title(let title):
-            return CGSize(width: 375.scale,
+            return CGSize(width: 343.scale,
                           height: MeditationDashboardTitleCell
-                            .calculateHeight(width: 375.scale,
+                            .calculateHeight(width: 343.scale,
                                              string: title))
         case .subTitle(let subTitle):
-            return CGSize(width: 375.scale,
+            return CGSize(width: 343.scale,
                           height: MeditationDashboardSubTitleCell
-                            .calculateHeight(width: 375.scale,
+                            .calculateHeight(width: 343.scale,
                                              string: subTitle))
         case .course(let course):
-            return CGSize(width: 375.scale,
+            return CGSize(width: 343.scale,
                           height: MeditationDashboardCourseCell
-                            .calculateHeight(width: 375.scale,
+                            .calculateHeight(width: 343.scale,
                                              course: course))
         case .audio:
             return CGSize(width: 167.scale, height: 195.scale)
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        guard section == 1 else {
+            return 0
+        }
+        
+        return 12.scale
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        guard section == 1 else {
+            return 0
+        }
+        
+        return 9.scale
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        UIEdgeInsets(top: 0, left: 16.scale, bottom: 0, right: 16.scale)
     }
 }
 

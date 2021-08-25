@@ -66,8 +66,6 @@ private extension MeditationsDashboardView {
     func makeDashboardView() -> MeditationDashboardCollectionView {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
-        layout.minimumLineSpacing = 0
-        layout.minimumInteritemSpacing = 0
         
         let view = MeditationDashboardCollectionView(frame: .zero, collectionViewLayout: layout)
         view.backgroundColor = UIColor.clear

@@ -51,53 +51,50 @@ private extension MeditationsDashboardViewModel {
             }
     }
     
-    func makeElements() -> Driver<[MeditationDashboardCollectionElement]> {
+    func makeElements() -> Driver<[MeditationDashboardCollectionSection]> {
         dashboard
-            .map { dashboard -> [MeditationDashboardCollectionElement] in
-                var result = [MeditationDashboardCollectionElement]()
+            .map { dashboard -> [MeditationDashboardCollectionSection] in
+                var result = [MeditationDashboardCollectionSection]()
                 
-                result.append(.offset(24.scale))
+                var elementsSection1 = [MeditationDashboardCollectionElement]()
+                var elementsSection2 = [MeditationDashboardCollectionElement]()
+                
+                elementsSection1.append(.offset(24.scale))
                 
                 if let daily = dashboard.daily {
-                    result.append(.daily(daily))
-                    result.append(.offset(24.scale))
+                    elementsSection1.append(.daily(daily))
+                    elementsSection1.append(.offset(24.scale))
                 }
                 
                 if !dashboard.courses.isEmpty {
-                    result.append(.title("MeditationsDashboard.Courses.Title".localized))
-                    result.append(.offset(8.scale))
-                    result.append(.subTitle("MeditationsDashboard.Courses.SubTitle".localized))
-                    result.append(.offset(16.scale))
+                    elementsSection1.append(.title("MeditationsDashboard.Courses.Title".localized))
+                    elementsSection1.append(.offset(8.scale))
+                    elementsSection1.append(.subTitle("MeditationsDashboard.Courses.SubTitle".localized))
+                    elementsSection1.append(.offset(16.scale))
                     
                     dashboard.courses.enumerated().forEach { index, course in
-                        result.append(.course(course))
+                        elementsSection1.append(.course(course))
                         
                         if index != (dashboard.courses.count - 1) {
-                            result.append(.offset(12.scale))
+                            elementsSection1.append(.offset(12.scale))
                         }
                     }
                     
-                    result.append(.offset(24.scale))
+                    elementsSection1.append(.offset(24.scale))
                 }
                 
                 if !dashboard.groupes.isEmpty {
-                    dashboard.groupes.enumerated().forEach { groupIndex, group in
-                        result.append(.title(group.title))
-                        result.append(.offset(16.scale))
+                    dashboard.groupes.forEach { group in
+                        elementsSection2.append(.title(group.title))
                         
-                        group.audios.enumerated().forEach { audioIndex, audio in
-                            result.append(.audio(audio))
-                            
-                            if (audioIndex % 2 == 0) && audioIndex != (group.audios.count - 1) {
-                                result.append(.offset(12.scale))
-                            }
-                        }
-                        
-                        if groupIndex != (dashboard.groupes.count - 1) {
-                            result.append(.offset(24.scale))
+                        group.audios.forEach { audio in
+                            elementsSection2.append(.audio(audio))
                         }
                     }
                 }
+                
+                result.append(MeditationDashboardCollectionSection(elements: elementsSection1))
+                result.append(MeditationDashboardCollectionSection(elements: elementsSection2))
                 
                 return result
             }

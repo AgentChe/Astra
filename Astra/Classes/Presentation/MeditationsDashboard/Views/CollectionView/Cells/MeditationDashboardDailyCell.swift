@@ -67,21 +67,21 @@ private extension MeditationDashboardDailyCell {
 private extension MeditationDashboardDailyCell {
     func makeConstraints() {
         NSLayoutConstraint.activate([
-            pictureImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16.scale),
-            pictureImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16.scale),
+            pictureImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            pictureImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             pictureImageView.topAnchor.constraint(equalTo: contentView.topAnchor),
             pictureImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
         
         NSLayoutConstraint.activate([
-            titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 29.scale),
-            titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -29.scale),
+            titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 13.scale),
+            titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -13.scale),
             titleLabel.bottomAnchor.constraint(equalTo: infoLabel.topAnchor, constant: -2.scale)
         ])
         
         NSLayoutConstraint.activate([
-            infoLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 29.scale),
-            infoLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -29.scale),
+            infoLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 13.scale),
+            infoLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -13.scale),
             infoLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20.scale)
         ])
     }

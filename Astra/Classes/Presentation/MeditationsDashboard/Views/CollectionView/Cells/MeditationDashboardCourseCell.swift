@@ -103,8 +103,8 @@ private extension MeditationDashboardCourseCell {
 private extension MeditationDashboardCourseCell {
     func makeConstraints() {
         NSLayoutConstraint.activate([
-            container.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16.scale),
-            container.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16.scale),
+            container.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            container.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             container.topAnchor.constraint(equalTo: contentView.topAnchor),
             container.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
