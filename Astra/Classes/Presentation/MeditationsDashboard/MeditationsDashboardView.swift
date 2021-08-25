@@ -9,6 +9,7 @@ import UIKit
 
 final class MeditationsDashboardView: UIView {
     lazy var filtersView = makeFiltersView()
+    lazy var dashboardView = makeDashboardView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -38,6 +39,13 @@ private extension MeditationsDashboardView {
             filtersView.heightAnchor.constraint(equalToConstant: 34.scale),
             filtersView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 24.scale)
         ])
+        
+        NSLayoutConstraint.activate([
+            dashboardView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            dashboardView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            dashboardView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            dashboardView.topAnchor.constraint(equalTo: filtersView.bottomAnchor, constant: 24.scale)
+        ])
     }
 }
 
@@ -48,9 +56,22 @@ private extension MeditationsDashboardView {
         layout.scrollDirection = .horizontal
         
         let view = MeditationsFilterCollectionView(frame: .zero, collectionViewLayout: layout)
-        view.contentInset = UIEdgeInsets(top: 0, left: 24.scale, bottom: 0, right: 24.scale)
         view.backgroundColor = UIColor.clear
         view.showsHorizontalScrollIndicator = false
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        return view
+    }
+    
+    func makeDashboardView() -> MeditationDashboardCollectionView {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.minimumLineSpacing = 0
+        layout.minimumInteritemSpacing = 0
+        
+        let view = MeditationDashboardCollectionView(frame: .zero, collectionViewLayout: layout)
+        view.backgroundColor = UIColor.clear
+        view.showsVerticalScrollIndicator = false
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view

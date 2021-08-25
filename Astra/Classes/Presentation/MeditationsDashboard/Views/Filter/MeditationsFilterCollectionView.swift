@@ -46,7 +46,7 @@ extension MeditationsFilterCollectionView: UICollectionViewDataSource {
 // MARK: UICollectionViewDataSource
 extension MeditationsFilterCollectionView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        24.scale
+        20.scale
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

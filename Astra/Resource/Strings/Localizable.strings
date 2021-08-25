@@ -119,3 +119,7 @@
 "MeditationsDashboard.Title" = "MEDITATION";
 "MeditationsDashboard.Filter.All" = "All";
 "MeditationsDashboard.Filter.Courses" = "Courses";
+"MeditationsDashboard.Daily.Title" = "Daily meditation";
+"MeditationsDashboard.Courses.Title" = "Courses";
+"MeditationsDashboard.Courses.SubTitle" = "We have selected courses based on your personal data";
+"MeditationsDashboard.Courses.Count" = "%i MEDITATIONS";
