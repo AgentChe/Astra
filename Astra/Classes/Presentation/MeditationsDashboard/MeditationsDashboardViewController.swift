@@ -33,6 +33,15 @@ final class MeditationsDashboardViewController: UIViewController {
                 self?.mainView.dashboardView.setup(elements: elements)
             })
             .disposed(by: disposeBag)
+        
+        mainView.filtersView.didSelect
+            .bind(to: viewModel.didSelectFilter)
+            .disposed(by: disposeBag)
+        
+        mainView.dashboardView.didSelect
+            .subscribe(onNext: { element in
+                print(element)
+            })
     }
 }
 

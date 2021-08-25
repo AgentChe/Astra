@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import RxCocoa
 
 final class MeditationDashboardCollectionView: UICollectionView {
+    lazy var didSelect = PublishRelay<MeditationDashboardTappedElement>()
+    
     lazy var elements = [MeditationDashboardCollectionSection]()
     
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
@@ -122,6 +125,19 @@ extension MeditationDashboardCollectionView: UICollectionViewDelegateFlowLayout 
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         UIEdgeInsets(top: 0, left: 16.scale, bottom: 0, right: 16.scale)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch elements[indexPath.section].elements[indexPath.row] {
+        case .daily(let daily):
+            didSelect.accept(.daily(daily))
+        case .course(let course):
+            didSelect.accept(.course(course))
+        case .audio(let audio):
+            didSelect.accept(.audio(audio))
+        default:
+            return
+        }
     }
 }
 

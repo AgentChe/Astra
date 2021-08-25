@@ -6,7 +6,7 @@
 //
 
 final class MeditationsFilterCollectionElement {
-    enum Code {
+    enum Code: Hashable {
         case all
         case courses
         case another(String)

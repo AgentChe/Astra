@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import RxCocoa
 
 final class MeditationsFilterCollectionView: UICollectionView {
+    lazy var didSelect = PublishRelay<MeditationsFilterCollectionElement>()
+    
     lazy var elements = [MeditationsFilterCollectionElement]()
     
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
@@ -68,6 +71,8 @@ extension MeditationsFilterCollectionView: UICollectionViewDelegateFlowLayout {
         indexPaths.append(IndexPath(row: indexPath.row, section: 0))
         
         reloadItems(at: indexPaths)
+        
+        didSelect.accept(elements[indexPath.row])
     }
 }
 

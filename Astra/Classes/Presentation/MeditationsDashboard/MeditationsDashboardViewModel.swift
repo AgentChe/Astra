@@ -12,6 +12,8 @@ final class MeditationsDashboardViewModel {
     lazy var filters = makeFilters()
     lazy var elements = makeElements()
     
+    lazy var didSelectFilter = PublishRelay<MeditationsFilterCollectionElement>()
+    
     private lazy var dashboard = makeDashboard()
     
     private lazy var meditationManager = MeditationManagerCore()
@@ -52,7 +54,7 @@ private extension MeditationsDashboardViewModel {
     }
     
     func makeElements() -> Driver<[MeditationDashboardCollectionSection]> {
-        dashboard
+        let sections = dashboard
             .map { dashboard -> [MeditationDashboardCollectionSection] in
                 var result = [MeditationDashboardCollectionSection]()
                 
@@ -98,5 +100,23 @@ private extension MeditationsDashboardViewModel {
                 
                 return result
             }
+        
+        let result = Driver
+            .combineLatest(
+                didSelectFilter
+                    .map { $0.code}
+                    .asDriver(onErrorDriveWith: .empty())
+                    .startWith(.all),
+                
+                sections
+            ) { code, sections -> [MeditationDashboardCollectionSection] in
+                if code == MeditationsFilterCollectionElement.Code.all {
+                    return sections
+                }
+                
+                return sections
+            }
+        
+        return result
     }
 }
