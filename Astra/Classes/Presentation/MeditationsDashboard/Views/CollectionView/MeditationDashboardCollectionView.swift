@@ -11,7 +11,7 @@ import RxCocoa
 final class MeditationDashboardCollectionView: UICollectionView {
     lazy var didSelect = PublishRelay<MeditationDashboardTappedElement>()
     
-    lazy var elements = [MeditationDashboardCollectionSection]()
+    lazy var sections = [MeditationDashboardCollectionSection]()
     
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
@@ -26,8 +26,8 @@ final class MeditationDashboardCollectionView: UICollectionView {
 
 // MARK: Public
 extension MeditationDashboardCollectionView {
-    func setup(elements: [MeditationDashboardCollectionSection]) {
-        self.elements = elements
+    func setup(sections: [MeditationDashboardCollectionSection]) {
+        self.sections = sections
         
         reloadData()
     }
@@ -36,15 +36,15 @@ extension MeditationDashboardCollectionView {
 // MARK: UICollectionViewDataSource
 extension MeditationDashboardCollectionView: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        elements.count
+        sections.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        elements[section].elements.count
+        sections[section].elements.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        switch elements[indexPath.section].elements[indexPath.row] {
+        switch sections[indexPath.section].elements[indexPath.row] {
         case .offset:
             let cell = dequeueReusableCell(withReuseIdentifier: String(describing: UICollectionViewCell.self), for: indexPath)
             cell.backgroundColor = UIColor.clear
@@ -82,7 +82,7 @@ extension MeditationDashboardCollectionView: UICollectionViewDataSource {
 // MARK: UICollectionViewDataSource
 extension MeditationDashboardCollectionView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        switch elements[indexPath.section].elements[indexPath.row] {
+        switch sections[indexPath.section].elements[indexPath.row] {
         case .offset(let height):
             return CGSize(width: 343.scale, height: height)
         case .daily:
@@ -108,19 +108,21 @@ extension MeditationDashboardCollectionView: UICollectionViewDelegateFlowLayout 
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        guard section == 1 else {
+        switch sections[section].code {
+        case .daily, .courses:
             return 0
+        case .group:
+            return 12.scale
         }
-        
-        return 12.scale
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        guard section == 1 else {
+        switch sections[section].code {
+        case .daily, .courses:
             return 0
+        case .group:
+            return 9.scale
         }
-        
-        return 9.scale
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -128,7 +130,7 @@ extension MeditationDashboardCollectionView: UICollectionViewDelegateFlowLayout 
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        switch elements[indexPath.section].elements[indexPath.row] {
+        switch sections[indexPath.section].elements[indexPath.row] {
         case .daily(let daily):
             didSelect.accept(.daily(daily))
         case .course(let course):

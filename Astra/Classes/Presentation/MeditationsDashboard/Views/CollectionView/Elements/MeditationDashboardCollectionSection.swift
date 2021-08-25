@@ -6,5 +6,12 @@
 //
 
 struct MeditationDashboardCollectionSection {
+    enum Code {
+        case daily
+        case courses
+        case group(String)
+    }
+    
+    let code: Code
     let elements: [MeditationDashboardCollectionElement]
 }

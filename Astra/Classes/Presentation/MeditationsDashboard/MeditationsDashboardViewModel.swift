@@ -10,7 +10,7 @@ import RxCocoa
 
 final class MeditationsDashboardViewModel {
     lazy var filters = makeFilters()
-    lazy var elements = makeElements()
+    lazy var sections = makeSections()
     
     lazy var didSelectFilter = PublishRelay<MeditationsFilterCollectionElement>()
     
@@ -53,50 +53,61 @@ private extension MeditationsDashboardViewModel {
             }
     }
     
-    func makeElements() -> Driver<[MeditationDashboardCollectionSection]> {
+    func makeSections() -> Driver<[MeditationDashboardCollectionSection]> {
         let sections = dashboard
             .map { dashboard -> [MeditationDashboardCollectionSection] in
                 var result = [MeditationDashboardCollectionSection]()
                 
-                var elementsSection1 = [MeditationDashboardCollectionElement]()
-                var elementsSection2 = [MeditationDashboardCollectionElement]()
-                
-                elementsSection1.append(.offset(24.scale))
-                
                 if let daily = dashboard.daily {
-                    elementsSection1.append(.daily(daily))
-                    elementsSection1.append(.offset(24.scale))
+                    let elements: [MeditationDashboardCollectionElement] = [
+                        .daily(daily),
+                        .offset(24.scale)
+                    ]
+                    let section = MeditationDashboardCollectionSection(code: .daily,
+                                                                       elements: elements)
+                    result.append(section)
                 }
                 
                 if !dashboard.courses.isEmpty {
-                    elementsSection1.append(.title("MeditationsDashboard.Courses.Title".localized))
-                    elementsSection1.append(.offset(8.scale))
-                    elementsSection1.append(.subTitle("MeditationsDashboard.Courses.SubTitle".localized))
-                    elementsSection1.append(.offset(16.scale))
+                    var elements: [MeditationDashboardCollectionElement] = [
+                        .title("MeditationsDashboard.Courses.Title".localized),
+                        .offset(8.scale),
+                        .subTitle("MeditationsDashboard.Courses.SubTitle".localized),
+                        .offset(16.scale)
+                    ]
                     
                     dashboard.courses.enumerated().forEach { index, course in
-                        elementsSection1.append(.course(course))
+                        elements.append(.course(course))
                         
                         if index != (dashboard.courses.count - 1) {
-                            elementsSection1.append(.offset(12.scale))
+                            elements.append(.offset(12.scale))
                         }
                     }
                     
-                    elementsSection1.append(.offset(24.scale))
+                    elements.append(.offset(24.scale))
+                    
+                    let section = MeditationDashboardCollectionSection(code: .courses,
+                                                                       elements: elements)
+                    result.append(section)
                 }
                 
                 if !dashboard.groupes.isEmpty {
                     dashboard.groupes.forEach { group in
-                        elementsSection2.append(.title(group.title))
+                        var elements: [MeditationDashboardCollectionElement] = []
+                        
+                        elements.append(.title(group.title))
                         
                         group.audios.forEach { audio in
-                            elementsSection2.append(.audio(audio))
+                            elements.append(.audio(audio))
                         }
+                        
+                        elements.append(.offset(12.scale))
+                        
+                        let section = MeditationDashboardCollectionSection(code: .group(group.title),
+                                                                           elements: elements)
+                        result.append(section)
                     }
                 }
-                
-                result.append(MeditationDashboardCollectionSection(elements: elementsSection1))
-                result.append(MeditationDashboardCollectionSection(elements: elementsSection2))
                 
                 return result
             }
@@ -110,11 +121,26 @@ private extension MeditationsDashboardViewModel {
                 
                 sections
             ) { code, sections -> [MeditationDashboardCollectionSection] in
-                if code == MeditationsFilterCollectionElement.Code.all {
+                switch code {
+                case .all:
                     return sections
+                case .courses:
+                    return sections.filter { section -> Bool in
+                        guard case .courses = section.code else {
+                            return false
+                        }
+                        
+                        return true
+                    }
+                case .another(let name):
+                    return sections.filter { section -> Bool in
+                        guard case let .group(groupName) = section.code, groupName == name else {
+                            return false
+                        }
+                        
+                        return true
+                    }
                 }
-                
-                return sections
             }
         
         return result

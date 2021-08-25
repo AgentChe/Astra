@@ -28,9 +28,9 @@ final class MeditationsDashboardViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
-        viewModel.elements
-            .drive(onNext: { [weak self] elements in
-                self?.mainView.dashboardView.setup(elements: elements)
+        viewModel.sections
+            .drive(onNext: { [weak self] sections in
+                self?.mainView.dashboardView.setup(sections: sections)
             })
             .disposed(by: disposeBag)
         
