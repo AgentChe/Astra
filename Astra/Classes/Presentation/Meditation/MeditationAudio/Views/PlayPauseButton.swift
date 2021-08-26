@@ -12,7 +12,7 @@ final class PlayPauseButton: UIButton {
         case play, pause
     }
     
-    var stateCode = State.play {
+    var stateCode = State.pause {
         didSet {
             update()
         }
@@ -43,9 +43,9 @@ private extension PlayPauseButton {
     func update() {
         switch stateCode {
         case .play:
-            setImage(UIImage(named: "MeditationAudio.Player.Play"), for: .normal)
-        case .pause:
             setImage(UIImage(named: "MeditationAudio.Player.Pause"), for: .normal)
+        case .pause:
+            setImage(UIImage(named: "MeditationAudio.Player.Play"), for: .normal)
         }
     }
 }

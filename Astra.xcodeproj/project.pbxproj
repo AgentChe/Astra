@@ -121,6 +121,8 @@
 		968F639D26D7617E00C61474 /* MeditationAudioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F639C26D7617E00C61474 /* MeditationAudioViewModel.swift */; };
 		968F639F26D7619800C61474 /* MeditationAudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F639E26D7619800C61474 /* MeditationAudioView.swift */; };
 		968F63A326D7753A00C61474 /* PlayPauseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F63A226D7753A00C61474 /* PlayPauseButton.swift */; };
+		968F63A526D7827400C61474 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F63A426D7827400C61474 /* AudioPlayer.swift */; };
+		968F63A826D7CA0A00C61474 /* AudioPlayerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F63A726D7CA0A00C61474 /* AudioPlayerDelegate.swift */; };
 		968FD3BB26C3C83100C01D2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 968FD3BA26C3C83100C01D2A /* Assets.xcassets */; };
 		968FD3EC26C3CB0D00C01D2A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD3C926C3CB0C00C01D2A /* UIColorExtension.swift */; };
 		968FD3EF26C3CB0D00C01D2A /* UITapGestureRecognizerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD3CC26C3CB0C00C01D2A /* UITapGestureRecognizerExtension.swift */; };
@@ -350,6 +352,8 @@
 		968F639C26D7617E00C61474 /* MeditationAudioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationAudioViewModel.swift; sourceTree = "<group>"; };
 		968F639E26D7619800C61474 /* MeditationAudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationAudioView.swift; sourceTree = "<group>"; };
 		968F63A226D7753A00C61474 /* PlayPauseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayPauseButton.swift; sourceTree = "<group>"; };
+		968F63A426D7827400C61474 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		968F63A726D7CA0A00C61474 /* AudioPlayerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerDelegate.swift; sourceTree = "<group>"; };
 		968FD3AE26C3C82D00C01D2A /* Astra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Astra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		968FD3BA26C3C83100C01D2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		968FD3BF26C3C83100C01D2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -945,6 +949,7 @@
 		968F639926D7611B00C61474 /* MeditationAudio */ = {
 			isa = PBXGroup;
 			children = (
+				968F63A626D7827900C61474 /* Utils */,
 				968F63A126D7752800C61474 /* Views */,
 				968F639A26D7612D00C61474 /* MeditationAudioViewController.swift */,
 				968F639C26D7617E00C61474 /* MeditationAudioViewModel.swift */,
@@ -959,6 +964,15 @@
 				968F63A226D7753A00C61474 /* PlayPauseButton.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		968F63A626D7827900C61474 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				968F63A426D7827400C61474 /* AudioPlayer.swift */,
+				968F63A726D7CA0A00C61474 /* AudioPlayerDelegate.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		968FD3A526C3C82D00C01D2A = {
@@ -1626,6 +1640,7 @@
 				96BFF86426D5241000B8D8CC /* MeditationCourse.swift in Sources */,
 				96059E8826CA77EF00BD9A0A /* SeparatorMainTableCell.swift in Sources */,
 				96BFF8B126D68F6E00B8D8CC /* MeditationCourseHeaderCell.swift in Sources */,
+				968F63A826D7CA0A00C61474 /* AudioPlayerDelegate.swift in Sources */,
 				96059E4E26C7BA5500BD9A0A /* GetDashboardResponse.swift in Sources */,
 				968FD40326C3CB0D00C01D2A /* CircleView.swift in Sources */,
 				96059E6C26C963DD00BD9A0A /* HoroFilterCollectionCell.swift in Sources */,
@@ -1836,6 +1851,7 @@
 				96059ECC26CD253200BD9A0A /* LunarViewController.swift in Sources */,
 				96059EB226CBE37B00BD9A0A /* HoroFull.swift in Sources */,
 				96059E1826C6703500BD9A0A /* UserManager.swift in Sources */,
+				968F63A526D7827400C61474 /* AudioPlayer.swift in Sources */,
 				96059F2226CEEA2B00BD9A0A /* TagsView.swift in Sources */,
 				96059F0326CE72DA00BD9A0A /* GetTarotRequest.swift in Sources */,
 			);

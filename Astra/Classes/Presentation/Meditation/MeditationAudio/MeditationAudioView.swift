@@ -7,6 +7,7 @@
 
 import UIKit
 import Kingfisher
+import AVFoundation
 
 final class MeditationAudioView: GradientView {
     lazy var backButton = makeBackButton()
@@ -45,6 +46,27 @@ extension MeditationAudioView {
                             .lineHeight(28.8.scale)
                             .textAlignment(.center))
     }
+    
+    func setup(totalDuration: Float64) {
+        slider.minimumValue = 0
+        slider.maximumValue = Float(totalDuration)
+        
+        totalTimeLabel.attributedText = string(from: totalDuration)
+            .attributed(with: TextAttributes()
+                            .textColor(UIColor(integralRed: 31, green: 31, blue: 31))
+                            .font(Fonts.Qanelas.regular(size: 14.scale))
+                            .lineHeight(19.6.scale))
+    }
+    
+    func setup(currentTime: Float64) {
+        slider.value = Float(currentTime)
+        
+        currentTimeLabel.attributedText = string(from: currentTime)
+            .attributed(with: TextAttributes()
+                            .textColor(UIColor(integralRed: 31, green: 31, blue: 31))
+                            .font(Fonts.Qanelas.regular(size: 14.scale))
+                            .lineHeight(19.6.scale))
+    }
 }
 
 // MARK: Private
@@ -57,6 +79,13 @@ private extension MeditationAudioView {
             UIColor(integralRed: 226, green: 101, blue: 123).cgColor
         ]
     }
+    
+    func string(from interval: TimeInterval) -> String {
+        let interval = Int(interval)
+        let seconds = interval % 60
+        let minutes = (interval / 60) % 60
+        return String(format: "%02d:%02d", minutes, seconds)
+    }
 }
 
 // MARK: Make constraints
@@ -66,14 +95,14 @@ private extension MeditationAudioView {
             backButton.widthAnchor.constraint(equalToConstant: 24.scale),
             backButton.heightAnchor.constraint(equalToConstant: 24.scale),
             backButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8.scale),
-            backButton.topAnchor.constraint(equalTo: topAnchor, constant: 64.scale)
+            backButton.topAnchor.constraint(equalTo: topAnchor, constant: ScreenSize.isIphoneXFamily ? 64.scale : 30.scale)
         ])
         
         NSLayoutConstraint.activate([
             imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
             imageView.widthAnchor.constraint(equalToConstant: 343.scale),
             imageView.heightAnchor.constraint(equalToConstant: 271.scale),
-            imageView.topAnchor.constraint(equalTo: topAnchor, constant: 120.scale)
+            imageView.topAnchor.constraint(equalTo: topAnchor, constant: ScreenSize.isIphoneXFamily ? 120.scale : 70.scale)
         ])
         
         NSLayoutConstraint.activate([
@@ -152,7 +181,7 @@ private extension MeditationAudioView {
     
     func makePlayPauseButton() -> PlayPauseButton {
         let view = PlayPauseButton()
-        view.stateCode = .play
+        view.stateCode = .pause
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view
@@ -179,6 +208,7 @@ private extension MeditationAudioView {
         view.thumbTintColor = UIColor(integralRed: 132, green: 214, blue: 218)
         view.minimumTrackTintColor = UIColor(integralRed: 132, green: 214, blue: 218)
         view.maximumTrackTintColor = UIColor.white.withAlphaComponent(0.2)
+        view.isContinuous = true
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view
