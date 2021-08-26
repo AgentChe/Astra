@@ -42,9 +42,11 @@ final class MeditationsDashboardViewController: UIViewController {
             .subscribe(onNext: { [weak self] element in
                 switch element {
                 case .daily(let daily):
-                    break
+                    let vc = MeditationAudioViewController.make(audio: daily.audio)
+                    UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true)
                 case .audio(let audio):
-                    break
+                    let vc = MeditationAudioViewController.make(audio: audio)
+                    UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true)
                 case .course(let course):
                     let vc = MeditationCourseViewController.make(courseId: course.id)
                     self?.navigationController?.pushViewController(vc, animated: true)

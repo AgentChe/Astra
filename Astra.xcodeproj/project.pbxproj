@@ -117,6 +117,10 @@
 		96059F1C26CE9C1300BD9A0A /* TarotTextTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059F1B26CE9C1300BD9A0A /* TarotTextTableCell.swift */; };
 		96059F2026CEEA1500BD9A0A /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059F1F26CEEA1500BD9A0A /* TagView.swift */; };
 		96059F2226CEEA2B00BD9A0A /* TagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059F2126CEEA2B00BD9A0A /* TagsView.swift */; };
+		968F639B26D7612D00C61474 /* MeditationAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F639A26D7612D00C61474 /* MeditationAudioViewController.swift */; };
+		968F639D26D7617E00C61474 /* MeditationAudioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F639C26D7617E00C61474 /* MeditationAudioViewModel.swift */; };
+		968F639F26D7619800C61474 /* MeditationAudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F639E26D7619800C61474 /* MeditationAudioView.swift */; };
+		968F63A326D7753A00C61474 /* PlayPauseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F63A226D7753A00C61474 /* PlayPauseButton.swift */; };
 		968FD3BB26C3C83100C01D2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 968FD3BA26C3C83100C01D2A /* Assets.xcassets */; };
 		968FD3EC26C3CB0D00C01D2A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD3C926C3CB0C00C01D2A /* UIColorExtension.swift */; };
 		968FD3EF26C3CB0D00C01D2A /* UITapGestureRecognizerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FD3CC26C3CB0C00C01D2A /* UITapGestureRecognizerExtension.swift */; };
@@ -342,6 +346,10 @@
 		96059F1B26CE9C1300BD9A0A /* TarotTextTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotTextTableCell.swift; sourceTree = "<group>"; };
 		96059F1F26CEEA1500BD9A0A /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		96059F2126CEEA2B00BD9A0A /* TagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsView.swift; sourceTree = "<group>"; };
+		968F639A26D7612D00C61474 /* MeditationAudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationAudioViewController.swift; sourceTree = "<group>"; };
+		968F639C26D7617E00C61474 /* MeditationAudioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationAudioViewModel.swift; sourceTree = "<group>"; };
+		968F639E26D7619800C61474 /* MeditationAudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationAudioView.swift; sourceTree = "<group>"; };
+		968F63A226D7753A00C61474 /* PlayPauseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayPauseButton.swift; sourceTree = "<group>"; };
 		968FD3AE26C3C82D00C01D2A /* Astra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Astra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		968FD3BA26C3C83100C01D2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		968FD3BF26C3C83100C01D2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -934,6 +942,25 @@
 			path = Tags;
 			sourceTree = "<group>";
 		};
+		968F639926D7611B00C61474 /* MeditationAudio */ = {
+			isa = PBXGroup;
+			children = (
+				968F63A126D7752800C61474 /* Views */,
+				968F639A26D7612D00C61474 /* MeditationAudioViewController.swift */,
+				968F639C26D7617E00C61474 /* MeditationAudioViewModel.swift */,
+				968F639E26D7619800C61474 /* MeditationAudioView.swift */,
+			);
+			path = MeditationAudio;
+			sourceTree = "<group>";
+		};
+		968F63A126D7752800C61474 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				968F63A226D7753A00C61474 /* PlayPauseButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		968FD3A526C3C82D00C01D2A = {
 			isa = PBXGroup;
 			children = (
@@ -1422,6 +1449,7 @@
 		96BFF8A126D67B1400B8D8CC /* Meditation */ = {
 			isa = PBXGroup;
 			children = (
+				968F639926D7611B00C61474 /* MeditationAudio */,
 				96BFF8A226D67B4300B8D8CC /* MeditationCourse */,
 				96BFF87B26D53EB900B8D8CC /* MeditationsDashboard */,
 			);
@@ -1609,6 +1637,7 @@
 				96BFF8AB26D67D2D00B8D8CC /* MeditationCourseTableView.swift in Sources */,
 				96059E4C26C7B98A00BD9A0A /* GetDashboardRequest.swift in Sources */,
 				96BFF87F26D53F7D00B8D8CC /* MeditationsDashboardViewModel.swift in Sources */,
+				968F63A326D7753A00C61474 /* PlayPauseButton.swift in Sources */,
 				96059E3B26C7AC5700BD9A0A /* Sign.swift in Sources */,
 				96059E2226C6CBB900BD9A0A /* TabController.swift in Sources */,
 				96BFF8B726D6A1F000B8D8CC /* MeditationCourseAudioCell.swift in Sources */,
@@ -1629,6 +1658,7 @@
 				96059EDF26CD9B1800BD9A0A /* LunarFull.swift in Sources */,
 				968FD3F526C3CB0D00C01D2A /* TextAttributes.swift in Sources */,
 				968FD3FC26C3CB0D00C01D2A /* Toast.swift in Sources */,
+				968F639D26D7617E00C61474 /* MeditationAudioViewModel.swift in Sources */,
 				96059F1C26CE9C1300BD9A0A /* TarotTextTableCell.swift in Sources */,
 				96059E7226C9AC0D00BD9A0A /* HoroImageMainCell.swift in Sources */,
 				96059EB626CBE40A00BD9A0A /* GetHoroFullResponse.swift in Sources */,
@@ -1728,6 +1758,7 @@
 				96BFF5DA26D21E7500B8D8CC /* CompatibilityManagerCore.swift in Sources */,
 				96059E6926C9489600BD9A0A /* HoroFilterTableElement.swift in Sources */,
 				96BFF60226D42E1C00B8D8CC /* CompatibilityValuesTableElement.swift in Sources */,
+				968F639B26D7612D00C61474 /* MeditationAudioViewController.swift in Sources */,
 				96BFF87D26D53F1300B8D8CC /* MeditationsDashboardViewController.swift in Sources */,
 				96BFF8A626D67B6800B8D8CC /* MeditationCourseViewModel.swift in Sources */,
 				96BFF5F126D3F79400B8D8CC /* CompatibilityViewModel.swift in Sources */,
@@ -1742,6 +1773,7 @@
 				96BFF88726D54B1800B8D8CC /* MeditationsFilterCollectionElement.swift in Sources */,
 				96BFF5F326D3F7AB00B8D8CC /* CompatibilityView.swift in Sources */,
 				968FD40A26C3CDDC00C01D2A /* UIEdgeInsets+Extension.swift in Sources */,
+				968F639F26D7619800C61474 /* MeditationAudioView.swift in Sources */,
 				968FD47226C4520700C01D2A /* Gender.swift in Sources */,
 				96BFF5E126D2B0C300B8D8CC /* CompatibilitySignsViewModel.swift in Sources */,
 				96BFF5CE26D2161C00B8D8CC /* Compatibility.swift in Sources */,

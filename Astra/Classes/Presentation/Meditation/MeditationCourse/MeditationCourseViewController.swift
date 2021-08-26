@@ -30,7 +30,8 @@ final class MeditationCourseViewController: UIViewController {
         
         mainView.tableView.didSelect
             .subscribe(onNext: { audio in
-                print(audio)
+                let vc = MeditationAudioViewController.make(audio: audio)
+                UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true)
             })
             .disposed(by: disposeBag)
     }
