@@ -117,6 +117,7 @@
 		96059F1C26CE9C1300BD9A0A /* TarotTextTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059F1B26CE9C1300BD9A0A /* TarotTextTableCell.swift */; };
 		96059F2026CEEA1500BD9A0A /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059F1F26CEEA1500BD9A0A /* TagView.swift */; };
 		96059F2226CEEA2B00BD9A0A /* TagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059F2126CEEA2B00BD9A0A /* TagsView.swift */; };
+		9654D0D426DFBE8A00179E40 /* OFindMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9654D0D326DFBE8A00179E40 /* OFindMoreView.swift */; };
 		96658E6826DF6AC90020FD9B /* OSignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96658E6726DF6AC80020FD9B /* OSignView.swift */; };
 		96658E6A26DF71000020FD9B /* SignDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96658E6926DF71000020FD9B /* SignDate.swift */; };
 		96658E6C26DF7D1B0020FD9B /* OBirthtimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96658E6B26DF7D1B0020FD9B /* OBirthtimeView.swift */; };
@@ -351,6 +352,7 @@
 		96059F1B26CE9C1300BD9A0A /* TarotTextTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotTextTableCell.swift; sourceTree = "<group>"; };
 		96059F1F26CEEA1500BD9A0A /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		96059F2126CEEA2B00BD9A0A /* TagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsView.swift; sourceTree = "<group>"; };
+		9654D0D326DFBE8A00179E40 /* OFindMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OFindMoreView.swift; sourceTree = "<group>"; };
 		96658E6726DF6AC80020FD9B /* OSignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSignView.swift; sourceTree = "<group>"; };
 		96658E6926DF71000020FD9B /* SignDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignDate.swift; sourceTree = "<group>"; };
 		96658E6B26DF7D1B0020FD9B /* OBirthtimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBirthtimeView.swift; sourceTree = "<group>"; };
@@ -1184,6 +1186,7 @@
 				96059E1B26C6819D00BD9A0A /* ONameView.swift */,
 				96658E6726DF6AC80020FD9B /* OSignView.swift */,
 				96658E6B26DF7D1B0020FD9B /* OBirthtimeView.swift */,
+				9654D0D326DFBE8A00179E40 /* OFindMoreView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1662,6 +1665,7 @@
 				96BFF8AB26D67D2D00B8D8CC /* MeditationCourseTableView.swift in Sources */,
 				96059E4C26C7B98A00BD9A0A /* GetDashboardRequest.swift in Sources */,
 				96BFF87F26D53F7D00B8D8CC /* MeditationsDashboardViewModel.swift in Sources */,
+				9654D0D426DFBE8A00179E40 /* OFindMoreView.swift in Sources */,
 				968F63A326D7753A00C61474 /* PlayPauseButton.swift in Sources */,
 				96059E3B26C7AC5700BD9A0A /* Sign.swift in Sources */,
 				96059E2226C6CBB900BD9A0A /* TabController.swift in Sources */,
