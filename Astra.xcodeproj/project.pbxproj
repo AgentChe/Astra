@@ -119,6 +119,7 @@
 		96059F2226CEEA2B00BD9A0A /* TagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059F2126CEEA2B00BD9A0A /* TagsView.swift */; };
 		9654D0D426DFBE8A00179E40 /* OFindMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9654D0D326DFBE8A00179E40 /* OFindMoreView.swift */; };
 		9654D0D626DFC33800179E40 /* OFeelTodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9654D0D526DFC33800179E40 /* OFeelTodayView.swift */; };
+		9654D0D826DFCB2B00179E40 /* OMaritalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9654D0D726DFCB2B00179E40 /* OMaritalView.swift */; };
 		96658E6826DF6AC90020FD9B /* OSignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96658E6726DF6AC80020FD9B /* OSignView.swift */; };
 		96658E6A26DF71000020FD9B /* SignDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96658E6926DF71000020FD9B /* SignDate.swift */; };
 		96658E6C26DF7D1B0020FD9B /* OBirthtimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96658E6B26DF7D1B0020FD9B /* OBirthtimeView.swift */; };
@@ -355,6 +356,7 @@
 		96059F2126CEEA2B00BD9A0A /* TagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsView.swift; sourceTree = "<group>"; };
 		9654D0D326DFBE8A00179E40 /* OFindMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OFindMoreView.swift; sourceTree = "<group>"; };
 		9654D0D526DFC33800179E40 /* OFeelTodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OFeelTodayView.swift; sourceTree = "<group>"; };
+		9654D0D726DFCB2B00179E40 /* OMaritalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMaritalView.swift; sourceTree = "<group>"; };
 		96658E6726DF6AC80020FD9B /* OSignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSignView.swift; sourceTree = "<group>"; };
 		96658E6926DF71000020FD9B /* SignDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignDate.swift; sourceTree = "<group>"; };
 		96658E6B26DF7D1B0020FD9B /* OBirthtimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBirthtimeView.swift; sourceTree = "<group>"; };
@@ -1190,6 +1192,7 @@
 				96658E6B26DF7D1B0020FD9B /* OBirthtimeView.swift */,
 				9654D0D326DFBE8A00179E40 /* OFindMoreView.swift */,
 				9654D0D526DFC33800179E40 /* OFeelTodayView.swift */,
+				9654D0D726DFCB2B00179E40 /* OMaritalView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1696,6 +1699,7 @@
 				96059EB626CBE40A00BD9A0A /* GetHoroFullResponse.swift in Sources */,
 				968FD3FA26C3CB0D00C01D2A /* Weak.swift in Sources */,
 				96059E8626CA683300BD9A0A /* ChartClosedMainTableCell.swift in Sources */,
+				9654D0D826DFCB2B00179E40 /* OMaritalView.swift in Sources */,
 				96BFF5D326D21A7A00B8D8CC /* GetCompatibilitiesRequest.swift in Sources */,
 				968FD46126C426A100C01D2A /* OStepView.swift in Sources */,
 				96BFF86F26D5283E00B8D8CC /* GetMeditationDashboardResponse.swift in Sources */,

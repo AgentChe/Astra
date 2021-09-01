@@ -50,6 +50,13 @@
 "Onboarding.Birthtime.DontKnow" = "I DON'T KNOW";
 "Onboarding.FindMore.Text" = "A little more!\nLet’s find out more about\nyour character";
 "Onboarding.FeelToday.Title" = "How do you feel today?";
+"Onboarding.Marital.Title" = "What marital status are\nyou in now?";
+"Onboarding.Marital.Cell1" = "In a relationship";
+"Onboarding.Marital.Cell2" = "Married";
+"Onboarding.Marital.Cell3" = "Single";
+"Onboarding.Marital.Cell4" = "Divorced";
+"Onboarding.Marital.Cell5" = "Engaged";
+"Onboarding.Marital.Cell6" = "It’s difficult";
 
 // MARK: Main
 "Main.Profile.Name" = "Hi, %@";

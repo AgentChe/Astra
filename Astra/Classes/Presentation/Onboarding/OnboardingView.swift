@@ -9,7 +9,7 @@ import UIKit
 
 final class OnboardingView: UIView {
     enum Step: Int {
-        case welcome, name, gender, birthdate, sign, birttime, findMore, feelToday, goals, enjoying, plan
+        case welcome, name, gender, birthdate, sign, birttime, findMore, feelToday, goals, marital, enjoying, plan
     }
     
     var didFinish: (() -> Void)?
@@ -40,6 +40,7 @@ final class OnboardingView: UIView {
             OFindMoreView(step: .findMore),
             OFeelTodayView(step: .feelToday),
             OGoalsView(step: .goals),
+            OMaritalView(step: .marital),
             OEnjoyingView(step: .enjoying),
             OPlanView(step: .plan)
         ]
@@ -58,7 +59,7 @@ final class OnboardingView: UIView {
     }
     
     private lazy var progressCases: [Step] = [
-        .name, .gender, .birthdate, .birttime, .goals, .enjoying
+        .name, .gender, .birthdate, .birttime, .goals, .marital, .enjoying
     ]
 }
 
