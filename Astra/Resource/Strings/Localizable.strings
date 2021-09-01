@@ -45,6 +45,9 @@
 "Onboarding.Name.Button" = "let’s go";
 "Onboarding.Sign.Title" = "So, you are %@";
 "Onboarding.Sign.Text" = "There's an opinion that %@ are the most conflicted, is it true?";
+"Onboarding.Birthtime.Title" = "Do you now your birth time?";
+"Onboarding.Birthtime.Subtitle" = "For more accurate  predictions";
+"Onboarding.Birthtime.DontKnow" = "I DON'T KNOW";
 
 // MARK: Main
 "Main.Profile.Name" = "Hi, %@";

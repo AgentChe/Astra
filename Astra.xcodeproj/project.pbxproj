@@ -119,6 +119,7 @@
 		96059F2226CEEA2B00BD9A0A /* TagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059F2126CEEA2B00BD9A0A /* TagsView.swift */; };
 		96658E6826DF6AC90020FD9B /* OSignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96658E6726DF6AC80020FD9B /* OSignView.swift */; };
 		96658E6A26DF71000020FD9B /* SignDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96658E6926DF71000020FD9B /* SignDate.swift */; };
+		96658E6C26DF7D1B0020FD9B /* OBirthtimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96658E6B26DF7D1B0020FD9B /* OBirthtimeView.swift */; };
 		968F639B26D7612D00C61474 /* MeditationAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F639A26D7612D00C61474 /* MeditationAudioViewController.swift */; };
 		968F639D26D7617E00C61474 /* MeditationAudioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F639C26D7617E00C61474 /* MeditationAudioViewModel.swift */; };
 		968F639F26D7619800C61474 /* MeditationAudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F639E26D7619800C61474 /* MeditationAudioView.swift */; };
@@ -352,6 +353,7 @@
 		96059F2126CEEA2B00BD9A0A /* TagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsView.swift; sourceTree = "<group>"; };
 		96658E6726DF6AC80020FD9B /* OSignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSignView.swift; sourceTree = "<group>"; };
 		96658E6926DF71000020FD9B /* SignDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignDate.swift; sourceTree = "<group>"; };
+		96658E6B26DF7D1B0020FD9B /* OBirthtimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBirthtimeView.swift; sourceTree = "<group>"; };
 		968F639A26D7612D00C61474 /* MeditationAudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationAudioViewController.swift; sourceTree = "<group>"; };
 		968F639C26D7617E00C61474 /* MeditationAudioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationAudioViewModel.swift; sourceTree = "<group>"; };
 		968F639E26D7619800C61474 /* MeditationAudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationAudioView.swift; sourceTree = "<group>"; };
@@ -1181,6 +1183,7 @@
 				96059E1026C6665B00BD9A0A /* OPlanView.swift */,
 				96059E1B26C6819D00BD9A0A /* ONameView.swift */,
 				96658E6726DF6AC80020FD9B /* OSignView.swift */,
+				96658E6B26DF7D1B0020FD9B /* OBirthtimeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1762,6 +1765,7 @@
 				96BFF8A826D67B8000B8D8CC /* MeditationCourseView.swift in Sources */,
 				96BFF89826D63F7800B8D8CC /* MeditationDashboardSubTitleCell.swift in Sources */,
 				96BFF5FE26D406C700B8D8CC /* CompatibilitySignsNamesTableCell.swift in Sources */,
+				96658E6C26DF7D1B0020FD9B /* OBirthtimeView.swift in Sources */,
 				96BFF89E26D6649F00B8D8CC /* MeditationDashboardCollectionSection.swift in Sources */,
 				96059E3326C70B1900BD9A0A /* MainViewModel.swift in Sources */,
 				968FD3EC26C3CB0D00C01D2A /* UIColorExtension.swift in Sources */,
