@@ -49,6 +49,7 @@
 "Onboarding.Birthtime.Subtitle" = "For more accurate  predictions";
 "Onboarding.Birthtime.DontKnow" = "I DON'T KNOW";
 "Onboarding.FindMore.Text" = "A little more!\nLet’s find out more about\nyour character";
+"Onboarding.FeelToday.Title" = "How do you feel today?";
 
 // MARK: Main
 "Main.Profile.Name" = "Hi, %@";
