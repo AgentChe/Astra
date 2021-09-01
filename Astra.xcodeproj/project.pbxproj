@@ -117,6 +117,8 @@
 		96059F1C26CE9C1300BD9A0A /* TarotTextTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059F1B26CE9C1300BD9A0A /* TarotTextTableCell.swift */; };
 		96059F2026CEEA1500BD9A0A /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059F1F26CEEA1500BD9A0A /* TagView.swift */; };
 		96059F2226CEEA2B00BD9A0A /* TagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059F2126CEEA2B00BD9A0A /* TagsView.swift */; };
+		96658E6826DF6AC90020FD9B /* OSignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96658E6726DF6AC80020FD9B /* OSignView.swift */; };
+		96658E6A26DF71000020FD9B /* SignDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96658E6926DF71000020FD9B /* SignDate.swift */; };
 		968F639B26D7612D00C61474 /* MeditationAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F639A26D7612D00C61474 /* MeditationAudioViewController.swift */; };
 		968F639D26D7617E00C61474 /* MeditationAudioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F639C26D7617E00C61474 /* MeditationAudioViewModel.swift */; };
 		968F639F26D7619800C61474 /* MeditationAudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F639E26D7619800C61474 /* MeditationAudioView.swift */; };
@@ -348,6 +350,8 @@
 		96059F1B26CE9C1300BD9A0A /* TarotTextTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotTextTableCell.swift; sourceTree = "<group>"; };
 		96059F1F26CEEA1500BD9A0A /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		96059F2126CEEA2B00BD9A0A /* TagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsView.swift; sourceTree = "<group>"; };
+		96658E6726DF6AC80020FD9B /* OSignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSignView.swift; sourceTree = "<group>"; };
+		96658E6926DF71000020FD9B /* SignDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignDate.swift; sourceTree = "<group>"; };
 		968F639A26D7612D00C61474 /* MeditationAudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationAudioViewController.swift; sourceTree = "<group>"; };
 		968F639C26D7617E00C61474 /* MeditationAudioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationAudioViewModel.swift; sourceTree = "<group>"; };
 		968F639E26D7619800C61474 /* MeditationAudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationAudioView.swift; sourceTree = "<group>"; };
@@ -589,6 +593,7 @@
 				96059E4826C7B2AA00BD9A0A /* LunarCalendarDay.swift */,
 				96059EDC26CD9AC300BD9A0A /* LunarFavorable.swift */,
 				96059EDE26CD9B1800BD9A0A /* LunarFull.swift */,
+				96658E6926DF71000020FD9B /* SignDate.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1175,6 +1180,7 @@
 				968FD47926C46F6C00C01D2A /* OEnjoyingView.swift */,
 				96059E1026C6665B00BD9A0A /* OPlanView.swift */,
 				96059E1B26C6819D00BD9A0A /* ONameView.swift */,
+				96658E6726DF6AC80020FD9B /* OSignView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1646,6 +1652,7 @@
 				96059E6C26C963DD00BD9A0A /* HoroFilterCollectionCell.swift in Sources */,
 				96059E6126C847F400BD9A0A /* ProfileMainTableElement.swift in Sources */,
 				96BFF89A26D651CB00B8D8CC /* MeditationDashboardCourseCell.swift in Sources */,
+				96658E6A26DF71000020FD9B /* SignDate.swift in Sources */,
 				96059E9D26CBBF0600BD9A0A /* HoroViewController.swift in Sources */,
 				96059EBF26CD021800BD9A0A /* SettingsView.swift in Sources */,
 				96059E2726C6CBFB00BD9A0A /* TabItemView.swift in Sources */,
@@ -1684,6 +1691,7 @@
 				96BFF86F26D5283E00B8D8CC /* GetMeditationDashboardResponse.swift in Sources */,
 				96059EE426CD9C4100BD9A0A /* GetLunarFullResponse.swift in Sources */,
 				96BFF5D026D2166400B8D8CC /* Compatibilities.swift in Sources */,
+				96658E6826DF6AC90020FD9B /* OSignView.swift in Sources */,
 				96BFF5EA26D3D47E00B8D8CC /* SignsPickerElement.swift in Sources */,
 				96059EE226CD9C1400BD9A0A /* GetLunarFullRequest.swift in Sources */,
 				96059E8426CA633400BD9A0A /* ChartMainTableElement.swift in Sources */,

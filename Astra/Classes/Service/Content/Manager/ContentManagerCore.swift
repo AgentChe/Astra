@@ -53,3 +53,38 @@ extension ContentManagerCore {
             .map { GetLunarFullResponse.map(from: $0) }
     }
 }
+
+// MARK: Public(Sign)
+extension ContentManagerCore {
+    func signsDates() -> [SignDate] {
+        [
+            SignDate(code: .aquarius, fromMonth: 1, fromDay: 20, beforeMonth: 2, beforeDay: 18),
+            SignDate(code: .pisces, fromMonth: 2, fromDay: 19, beforeMonth: 3, beforeDay: 20),
+            SignDate(code: .aries, fromMonth: 3, fromDay: 21, beforeMonth: 4, beforeDay: 19),
+            SignDate(code: .taurus, fromMonth: 4, fromDay: 20, beforeMonth: 5, beforeDay: 20),
+            SignDate(code: .gemini, fromMonth: 5, fromDay: 21, beforeMonth: 6, beforeDay: 20),
+            SignDate(code: .cancer, fromMonth: 6, fromDay: 21, beforeMonth: 7, beforeDay: 22),
+            SignDate(code: .leo, fromMonth: 7, fromDay: 23, beforeMonth: 8, beforeDay: 22),
+            SignDate(code: .virgo, fromMonth: 8, fromDay: 23, beforeMonth: 9, beforeDay: 22),
+            SignDate(code: .libra, fromMonth: 9, fromDay: 23, beforeMonth: 10, beforeDay: 22),
+            SignDate(code: .scorpio, fromMonth: 10, fromDay: 23, beforeMonth: 11, beforeDay: 21),
+            SignDate(code: .sagittarius, fromMonth: 11, fromDay: 22, beforeMonth: 12, beforeDay: 21),
+            SignDate(code: .capricorn, fromMonth: 12, fromDay: 22, beforeMonth: 1, beforeDay: 19)
+        ]
+    }
+    
+    func signDate(at date: Date) -> SignDate? {
+        let selectedMonth = Calendar.current.component(.month, from: date)
+        let selectedDay = Calendar.current.component(.day, from: date)
+    
+        for signDate in signsDates() {
+            if signDate.fromMonth == selectedMonth && selectedDay >= signDate.fromDay {
+                return signDate
+            } else if signDate.beforeMonth == selectedMonth && selectedDay <= signDate.beforeDay {
+                return signDate
+            }
+        }
+
+        return nil
+    }
+}

@@ -9,7 +9,7 @@ import UIKit
 
 final class OnboardingView: UIView {
     enum Step: Int {
-        case welcome, name, gender, birthdate, goals, enjoying, plan
+        case welcome, name, gender, birthdate, sign, goals, enjoying, plan
     }
     
     var didFinish: (() -> Void)?
@@ -27,12 +27,15 @@ final class OnboardingView: UIView {
     
     private lazy var nameView = ONameView(step: .name)
     private lazy var genderView = OGenderView(step: .gender)
+    private lazy var birthdateView = OBirthdateView(step: .birthdate)
+    private lazy var signView = OSignView(step: .sign)
     private lazy var contentViews: [OSlideView] = {
         [
             OWelcomeView(step: .welcome),
             nameView,
             genderView,
-            OBirthdateView(step: .birthdate),
+            birthdateView,
+            signView,
             OGoalsView(step: .goals),
             OEnjoyingView(step: .enjoying),
             OPlanView(step: .plan)
@@ -75,6 +78,7 @@ extension OnboardingView: OSlideViewDelegate {
 private extension OnboardingView {
     func initialize() {
         nameView.nameDelegate = genderView
+        birthdateView.birthdateDelegate = signView
         
         contentViews
             .enumerated()
@@ -109,7 +113,7 @@ private extension OnboardingView {
     
     func headerUpdate() {
         switch step {
-        case .welcome, .plan:
+        case .welcome, .plan, .sign:
             progressView.isHidden = true
         default:
             progressView.isHidden = false

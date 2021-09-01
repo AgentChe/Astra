@@ -8,7 +8,13 @@
 import UIKit
 import RxSwift
 
+protocol OBirthdateViewDelegate: AnyObject {
+    func birthdateViewChange(date: Date)
+}
+
 final class OBirthdateView: OSlideView {
+    weak var birthdateDelegate: OBirthdateViewDelegate?
+    
     lazy var titleLabel = makeTitleLabel()
     lazy var subTitleLabel = makeSubTitleLabel()
     lazy var datePickerView = makeDatePickerView()
@@ -47,12 +53,18 @@ private extension OBirthdateView {
                     .catchAndReturn(false)
             }
             .subscribe(onNext: { [weak self] success in
+                guard let self = self else {
+                    return
+                }
+                
                 guard success else {
                     Toast.notify(with: "Onboarding.FailedToSave".localized, style: .danger)
                     return
                 }
+                
+                self.birthdateDelegate?.birthdateViewChange(date: self.datePickerView.date)
 
-                self?.onNext()
+                self.onNext()
             })
             .disposed(by: disposeBag)
     }

@@ -14,6 +14,11 @@ extension UserManagerCore {
     func set(gender: Int? = nil,
              name: String? = nil,
              birthDate: String? = nil,
+             birthTime: String? = nil,
+             city: String? = nil,
+             feelToday: Int? = nil,
+             marital: Int? = nil,
+             partnerZodiac: Int? = nil,
              goals: [Int]? = nil,
              enjoy: [Int]? = nil,
              notificationKey: String? = nil) -> Single<Void> {
@@ -25,6 +30,11 @@ extension UserManagerCore {
                                  gender: gender,
                                  name: name,
                                  birthDate: birthDate,
+                                 birthTime: birthTime,
+                                 city: city,
+                                 feelToday: feelToday,
+                                 marital: marital,
+                                 partnerZodiac: partnerZodiac,
                                  goals: goals,
                                  enjoy: enjoy,
                                  notificationKey: notificationKey)

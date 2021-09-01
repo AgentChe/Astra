@@ -11,6 +11,11 @@ protocol UserManager {
     func set(gender: Int?,
              name: String?,
              birthDate: String?,
+             birthTime: String?,
+             city: String?,
+             feelToday: Int?,
+             marital: Int?,
+             partnerZodiac: Int?,
              goals: [Int]?,
              enjoy: [Int]?,
              notificationKey: String?) -> Single<Void>

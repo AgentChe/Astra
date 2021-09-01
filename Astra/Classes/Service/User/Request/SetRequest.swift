@@ -12,6 +12,11 @@ struct SetRequest: APIRequestBody {
     private let gender: Int?
     private let name: String?
     private let birthDate: String?
+    private let birthTime: String?
+    private let city: String?
+    private let feelToday: Int?
+    private let marital: Int?
+    private let partnerZodiac: Int?
     private let goals: [Int]?
     private let enjoy: [Int]?
     private let notificationKey: String?
@@ -20,6 +25,11 @@ struct SetRequest: APIRequestBody {
          gender: Int? = nil,
          name: String? = nil,
          birthDate: String? = nil,
+         birthTime: String? = nil,
+         city: String? = nil,
+         feelToday: Int? = nil,
+         marital: Int? = nil,
+         partnerZodiac: Int? = nil,
          goals: [Int]? = nil,
          enjoy: [Int]? = nil,
          notificationKey: String? = nil) {
@@ -27,6 +37,11 @@ struct SetRequest: APIRequestBody {
         self.gender = gender
         self.name = name
         self.birthDate = birthDate
+        self.birthTime = birthTime
+        self.city = city
+        self.feelToday = feelToday
+        self.marital = marital
+        self.partnerZodiac = partnerZodiac
         self.goals = goals
         self.enjoy = enjoy
         self.notificationKey = notificationKey
@@ -56,6 +71,26 @@ struct SetRequest: APIRequestBody {
         
         if let birthDate = self.birthDate {
             params["birthdate"] = birthDate
+        }
+        
+        if let birthTime = self.birthTime {
+            params["birthTime"] = birthTime
+        }
+        
+        if let city = self.city {
+            params["city"] = city
+        }
+        
+        if let feelToday = self.feelToday {
+            params["feelToday"] = feelToday
+        }
+        
+        if let marital = self.marital {
+            params["marital"] = marital
+        }
+        
+        if let partnerZodiac = self.partnerZodiac {
+            params["partnerZodiac"] = partnerZodiac
         }
         
         if let goals = self.goals {
