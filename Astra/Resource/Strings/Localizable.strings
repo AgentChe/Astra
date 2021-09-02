@@ -57,6 +57,8 @@
 "Onboarding.Marital.Cell4" = "Divorced";
 "Onboarding.Marital.Cell5" = "Engaged";
 "Onboarding.Marital.Cell6" = "It’s difficult";
+"Onboarding.PartnerSign.Title" = "What is your partner’s\nzodiac sign?";
+"Onboarding.PartnerSign.Subtitle" = "I’ll compare you and map\ncompatibility";
 
 // MARK: Main
 "Main.Profile.Name" = "Hi, %@";

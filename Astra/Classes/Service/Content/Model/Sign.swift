@@ -61,3 +61,35 @@ extension Sign: Codable {}
 
 // MARK: Hashable
 extension Sign: Hashable {}
+
+// MARK: Code
+extension Sign.Code {
+    var code: Int {
+        switch self {
+        case .aries:
+            return 1
+        case .taurus:
+            return 2
+        case .gemini:
+            return 3
+        case .cancer:
+            return 4
+        case .leo:
+            return 5
+        case .virgo:
+            return 6
+        case .libra:
+            return 7
+        case .scorpio:
+            return 8
+        case .sagittarius:
+            return 9
+        case .capricorn:
+            return 10
+        case .aquarius:
+            return 11
+        case .pisces:
+            return 12
+        }
+    }
+}
