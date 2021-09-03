@@ -232,6 +232,7 @@
 		96BFF8B326D69F9B00B8D8CC /* MeditationCourseDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF8B226D69F9B00B8D8CC /* MeditationCourseDescriptionCell.swift */; };
 		96BFF8B526D6A1C200B8D8CC /* MeditationCourseAudioElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF8B426D6A1C200B8D8CC /* MeditationCourseAudioElement.swift */; };
 		96BFF8B726D6A1F000B8D8CC /* MeditationCourseAudioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF8B626D6A1F000B8D8CC /* MeditationCourseAudioCell.swift */; };
+		D447459426E274940025601E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D447459326E274940025601E /* GoogleService-Info.plist */; };
 		EA80E75864467FD58E75C2BA /* Pods_Astra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70F58ABE9BC2B6805D15295E /* Pods_Astra.framework */; };
 /* End PBXBuildFile section */
 
@@ -467,6 +468,8 @@
 		96BFF8B426D6A1C200B8D8CC /* MeditationCourseAudioElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationCourseAudioElement.swift; sourceTree = "<group>"; };
 		96BFF8B626D6A1F000B8D8CC /* MeditationCourseAudioCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationCourseAudioCell.swift; sourceTree = "<group>"; };
 		C46B19553E947FBD72888998 /* Pods-Astra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Astra.debug.xcconfig"; path = "Target Support Files/Pods-Astra/Pods-Astra.debug.xcconfig"; sourceTree = "<group>"; };
+		D447459326E274940025601E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D4CA69F726E2740A00B983BF /* Astra.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Astra.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -996,6 +999,7 @@
 		968FD3B026C3C82D00C01D2A /* Astra */ = {
 			isa = PBXGroup;
 			children = (
+				D4CA69F726E2740A00B983BF /* Astra.entitlements */,
 				968FD3C626C3C9ED00C01D2A /* Classes */,
 				968FD3C526C3C84500C01D2A /* Resource */,
 			);
@@ -1008,6 +1012,7 @@
 				968FD46426C431A300C01D2A /* Fonts */,
 				968FD40B26C3CE2800C01D2A /* Strings */,
 				968FD3BF26C3C83100C01D2A /* Info.plist */,
+				D447459326E274940025601E /* GoogleService-Info.plist */,
 				968FD40E26C3CE5400C01D2A /* LaunchScreen.storyboard */,
 				968FD41026C3CF1F00C01D2A /* Astra-Bridging-Header.h */,
 				968FD3BA26C3C83100C01D2A /* Assets.xcassets */,
@@ -1530,6 +1535,7 @@
 				968FD3AB26C3C82D00C01D2A /* Frameworks */,
 				968FD3AC26C3C82D00C01D2A /* Resources */,
 				EABD5DC7282052B388206063 /* [CP] Embed Pods Frameworks */,
+				D447459526E274B80025601E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1583,6 +1589,7 @@
 				968FD40F26C3CE5400C01D2A /* LaunchScreen.storyboard in Resources */,
 				968FD3BB26C3C83100C01D2A /* Assets.xcassets in Resources */,
 				968FD40D26C3CE2800C01D2A /* Localizable.strings in Resources */,
+				D447459426E274940025601E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1610,6 +1617,25 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		D447459526E274B80025601E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
 		};
 		EABD5DC7282052B388206063 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1982,17 +2008,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = Astra/Astra.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 2GY8CB289H;
+				DEVELOPMENT_TEAM = AY43JM5PH6;
 				INFOPLIST_FILE = "$(SRCROOT)/Astra/Resource/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = mLib.Astra;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.astra;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Astra Development";
 				SWIFT_OBJC_BRIDGING_HEADER = "Astra/Resource/Astra-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -2005,16 +2035,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2GY8CB289H;
+				CODE_SIGN_ENTITLEMENTS = Astra/Astra.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = AY43JM5PH6;
 				INFOPLIST_FILE = "$(SRCROOT)/Astra/Resource/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = mLib.Astra;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.astra;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Astra AppStore";
 				SWIFT_OBJC_BRIDGING_HEADER = "Astra/Resource/Astra-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

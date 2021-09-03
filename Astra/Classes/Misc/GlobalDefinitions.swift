@@ -17,9 +17,9 @@ final class GlobalDefinitions {
     static let amplitudeApiKey = "b503251969f4b1d7901d2f7d1388d476"
     static let appsFlyerApiKey = "DCciCfYXjMQ8QnkdCg8qzk"
 
-    static let appleAppID = ""
+    static let appleAppID = "1584340757"
 
-    static let termsOfServiceUrl = "https://astra.thinkaboutapps.com/terms"
-    static let privacyPolicyUrl = "https://astra.thinkaboutapps.com/policy"
-    static let contactUsUrl = "https://astra.thinkaboutapps.com/contact"
+    static let termsOfServiceUrl = "https://lunar-astra.com/terms"
+    static let privacyPolicyUrl = "https://lunar-astra.com/policy"
+    static let contactUsUrl = "https://lunar-astra.com/contact"
 }
