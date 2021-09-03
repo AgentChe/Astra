@@ -9,7 +9,7 @@ import UIKit
 
 final class OnboardingView: UIView {
     enum Step: Int {
-        case welcome, name, gender, birthdate, sign, birttime, findMore, feelToday, goals, marital, partnerSign, enjoying, plan
+        case welcome, name, gender, birthdate, sign, birttime, findMore, feelToday, goals, marital, partnerSign, enjoying, prePalm, palm, plan
     }
     
     var didFinish: (() -> Void)?
@@ -29,6 +29,7 @@ final class OnboardingView: UIView {
     private lazy var genderView = OGenderView(step: .gender)
     private lazy var birthdateView = OBirthdateView(step: .birthdate)
     private lazy var signView = OSignView(step: .sign)
+    private lazy var prePalmView = OPrePalmView(step: .prePalm)
     private lazy var contentViews: [OSlideView] = {
         [
             OWelcomeView(step: .welcome),
@@ -43,6 +44,8 @@ final class OnboardingView: UIView {
             OMaritalView(step: .marital),
             OPartnerSignView(step: .partnerSign),
             OEnjoyingView(step: .enjoying),
+            prePalmView,
+            OPalmView(step: .palm),
             OPlanView(step: .plan)
         ]
     }()
@@ -60,7 +63,7 @@ final class OnboardingView: UIView {
     }
     
     private lazy var progressCases: [Step] = [
-        .name, .gender, .birthdate, .birttime, .goals, .marital, .partnerSign, .enjoying
+        .name, .gender, .birthdate, .birttime, .goals, .marital, .partnerSign, .enjoying, .prePalm
     ]
 }
 
@@ -79,11 +82,24 @@ extension OnboardingView: OSlideViewDelegate {
     }
 }
 
+// MARK: OPrePalmViewDelegate
+extension OnboardingView: OPrePalmViewDelegate {
+    func prePalmViewDidAccessDenied() {
+        // TODO
+        step = .plan
+    }
+    
+    func prePalmViewDidAccessGranted() {
+        slideViewDidNext(from: .prePalm)
+    }
+}
+
 // MARK: Private
 private extension OnboardingView {
     func initialize() {
         nameView.nameDelegate = genderView
         birthdateView.birthdateDelegate = signView
+        prePalmView.prePalmDelegate = self
         
         contentViews
             .enumerated()
@@ -118,7 +134,7 @@ private extension OnboardingView {
     
     func headerUpdate() {
         switch step {
-        case .welcome, .plan, .sign, .findMore:
+        case .welcome, .plan, .sign, .findMore, .palm:
             progressView.isHidden = true
         default:
             progressView.isHidden = false

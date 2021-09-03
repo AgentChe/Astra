@@ -59,6 +59,9 @@
 "Onboarding.Marital.Cell6" = "It’s difficult";
 "Onboarding.PartnerSign.Title" = "What is your partner’s\nzodiac sign?";
 "Onboarding.PartnerSign.Subtitle" = "I’ll compare you and map\ncompatibility";
+"Onboarding.PrePalm.Title" = "What do your palms say\nabout you?";
+"Onboarding.PrePalm.Subtitle" = "Take a photo of your palm";
+"Onboarding.PrePalm.Button" = "SCAN";
 
 // MARK: Main
 "Main.Profile.Name" = "Hi, %@";

@@ -43,6 +43,8 @@
 	<string>Astra</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>To scan your palms you should allow access to the camera.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Qanelas-Bold.ttf</string>

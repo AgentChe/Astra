@@ -124,6 +124,8 @@
 		9654D0DD26DFE43B00179E40 /* PartnerSignCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9654D0DC26DFE43B00179E40 /* PartnerSignCollectionCell.swift */; };
 		9654D0DF26DFE6A400179E40 /* PartnerSignCollectionElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9654D0DE26DFE6A400179E40 /* PartnerSignCollectionElement.swift */; };
 		9654D0E126DFE78E00179E40 /* PartnerSignCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9654D0E026DFE78E00179E40 /* PartnerSignCollectionView.swift */; };
+		9654D0E326E0DB9800179E40 /* OPrePalmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9654D0E226E0DB9800179E40 /* OPrePalmView.swift */; };
+		9654D0E526E13BF700179E40 /* OPalmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9654D0E426E13BF700179E40 /* OPalmView.swift */; };
 		96658E6826DF6AC90020FD9B /* OSignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96658E6726DF6AC80020FD9B /* OSignView.swift */; };
 		96658E6A26DF71000020FD9B /* SignDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96658E6926DF71000020FD9B /* SignDate.swift */; };
 		96658E6C26DF7D1B0020FD9B /* OBirthtimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96658E6B26DF7D1B0020FD9B /* OBirthtimeView.swift */; };
@@ -365,6 +367,8 @@
 		9654D0DC26DFE43B00179E40 /* PartnerSignCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartnerSignCollectionCell.swift; sourceTree = "<group>"; };
 		9654D0DE26DFE6A400179E40 /* PartnerSignCollectionElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartnerSignCollectionElement.swift; sourceTree = "<group>"; };
 		9654D0E026DFE78E00179E40 /* PartnerSignCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartnerSignCollectionView.swift; sourceTree = "<group>"; };
+		9654D0E226E0DB9800179E40 /* OPrePalmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPrePalmView.swift; sourceTree = "<group>"; };
+		9654D0E426E13BF700179E40 /* OPalmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPalmView.swift; sourceTree = "<group>"; };
 		96658E6726DF6AC80020FD9B /* OSignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSignView.swift; sourceTree = "<group>"; };
 		96658E6926DF71000020FD9B /* SignDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignDate.swift; sourceTree = "<group>"; };
 		96658E6B26DF7D1B0020FD9B /* OBirthtimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBirthtimeView.swift; sourceTree = "<group>"; };
@@ -1212,6 +1216,8 @@
 				9654D0D526DFC33800179E40 /* OFeelTodayView.swift */,
 				9654D0D726DFCB2B00179E40 /* OMaritalView.swift */,
 				9654D0D926DFCF5100179E40 /* OPartnerSignView.swift */,
+				9654D0E226E0DB9800179E40 /* OPrePalmView.swift */,
+				9654D0E426E13BF700179E40 /* OPalmView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1693,6 +1699,7 @@
 				96BFF87F26D53F7D00B8D8CC /* MeditationsDashboardViewModel.swift in Sources */,
 				9654D0D426DFBE8A00179E40 /* OFindMoreView.swift in Sources */,
 				968F63A326D7753A00C61474 /* PlayPauseButton.swift in Sources */,
+				9654D0E526E13BF700179E40 /* OPalmView.swift in Sources */,
 				96059E3B26C7AC5700BD9A0A /* Sign.swift in Sources */,
 				96059E2226C6CBB900BD9A0A /* TabController.swift in Sources */,
 				96BFF8B726D6A1F000B8D8CC /* MeditationCourseAudioCell.swift in Sources */,
@@ -1787,6 +1794,7 @@
 				968FD45E26C41F0500C01D2A /* OnboardingView.swift in Sources */,
 				96BFF88126D53F9500B8D8CC /* MeditationsDashboardView.swift in Sources */,
 				96059E2926C6CC5B00BD9A0A /* TabMainView.swift in Sources */,
+				9654D0E326E0DB9800179E40 /* OPrePalmView.swift in Sources */,
 				968FD3F226C3CB0D00C01D2A /* StringExtension.swift in Sources */,
 				96059EFF26CE716C00BD9A0A /* Tarot.swift in Sources */,
 				96059E5126C7C87D00BD9A0A /* ContentManager.swift in Sources */,
