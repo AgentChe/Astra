@@ -64,6 +64,12 @@
 "Onboarding.PrePalm.Button" = "SCAN";
 "Onboarding.Palm.Text" = "Take a photo of your left palm.\nTook your hand in frame.";
 "Onboarding.Palm.Success" = "Success!";
+"Onboarding.Question.Title" = "Do you agree with the statement?";
+"Onboarding.Question1" = "Astrology offers a mirror in which we see both our best selves and our growth edges";
+"Onboarding.Question2" = "Astrology offers a mirror in which we see both our best selves and our growth edges";
+"Onboarding.Question3" = "Astrology offers a mirror in which we see both our best selves and our growth edges";
+"Onboarding.Question.Yes" = "YES";
+"Onboarding.Question.No" = "NO";
 
 // MARK: Main
 "Main.Profile.Name" = "Hi, %@";
