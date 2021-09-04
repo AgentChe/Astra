@@ -25,6 +25,8 @@ final class OnboardingView: UIView {
     lazy var scrollView = makeScrollView()
     lazy var progressView = makeProgressView()
     
+    private weak var vc: UIViewController?
+    
     private lazy var nameView = ONameView(step: .name)
     private lazy var genderView = OGenderView(step: .gender)
     private lazy var birthdateView = OBirthdateView(step: .birthdate)
@@ -45,17 +47,23 @@ final class OnboardingView: UIView {
             OPartnerSignView(step: .partnerSign),
             OEnjoyingView(step: .enjoying),
             prePalmView,
-            OPalmView(step: .palm),
+            OPalmView(step: .palm, vc: vc),
             OPlanView(step: .plan)
         ]
     }()
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    convenience init(vc: UIViewController?) {
+        self.init(frame: .zero)
+        
+        self.vc = vc
         
         makeConstraints()
         initialize()
         headerUpdate()
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
     }
     
     required init?(coder: NSCoder) {

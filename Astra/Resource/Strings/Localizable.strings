@@ -62,6 +62,8 @@
 "Onboarding.PrePalm.Title" = "What do your palms say\nabout you?";
 "Onboarding.PrePalm.Subtitle" = "Take a photo of your palm";
 "Onboarding.PrePalm.Button" = "SCAN";
+"Onboarding.Palm.Text" = "Take a photo of your left palm.\nTook your hand in frame.";
+"Onboarding.Palm.Success" = "Success!";
 
 // MARK: Main
 "Main.Profile.Name" = "Hi, %@";
