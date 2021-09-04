@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9605018E26E39B1F004E0F11 /* OQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605018D26E39B1F004E0F11 /* OQuestionView.swift */; };
+		9605019026E3A4C1004E0F11 /* OPreloaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605018F26E3A4C1004E0F11 /* OPreloaderView.swift */; };
+		9605019326E3A902004E0F11 /* Onboarding.Preloader.json in Resources */ = {isa = PBXBuildFile; fileRef = 9605019226E3A902004E0F11 /* Onboarding.Preloader.json */; };
 		96059E0926C662C700BD9A0A /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E0826C662C700BD9A0A /* Session.swift */; };
 		96059E0B26C6632A00BD9A0A /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E0A26C6632A00BD9A0A /* SessionManager.swift */; };
 		96059E0D26C6634400BD9A0A /* SessionManagerCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E0C26C6634400BD9A0A /* SessionManagerCore.swift */; };
@@ -253,6 +255,8 @@
 		382F2E72B6BB3202962D0034 /* Pods-Astra.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Astra.release.xcconfig"; path = "Target Support Files/Pods-Astra/Pods-Astra.release.xcconfig"; sourceTree = "<group>"; };
 		70F58ABE9BC2B6805D15295E /* Pods_Astra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Astra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9605018D26E39B1F004E0F11 /* OQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OQuestionView.swift; sourceTree = "<group>"; };
+		9605018F26E3A4C1004E0F11 /* OPreloaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPreloaderView.swift; sourceTree = "<group>"; };
+		9605019226E3A902004E0F11 /* Onboarding.Preloader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Onboarding.Preloader.json; sourceTree = "<group>"; };
 		96059E0826C662C700BD9A0A /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		96059E0A26C6632A00BD9A0A /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		96059E0C26C6634400BD9A0A /* SessionManagerCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManagerCore.swift; sourceTree = "<group>"; };
@@ -517,6 +521,14 @@
 				382F2E72B6BB3202962D0034 /* Pods-Astra.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		9605019126E3A898004E0F11 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				9605019226E3A902004E0F11 /* Onboarding.Preloader.json */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 		96059E0526C662A200BD9A0A /* Session */ = {
@@ -1208,6 +1220,7 @@
 		968FD41C26C41F0500C01D2A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9605019126E3A898004E0F11 /* Source */,
 				968FD41E26C41F0500C01D2A /* Atoms */,
 				968FD43426C41F0500C01D2A /* OSlideView.swift */,
 				968FD46226C42ED300C01D2A /* OWelcomeView.swift */,
@@ -1226,6 +1239,7 @@
 				9654D0E226E0DB9800179E40 /* OPrePalmView.swift */,
 				9654D0E426E13BF700179E40 /* OPalmView.swift */,
 				9605018D26E39B1F004E0F11 /* OQuestionView.swift */,
+				9605018F26E3A4C1004E0F11 /* OPreloaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1630,6 +1644,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9605019326E3A902004E0F11 /* Onboarding.Preloader.json in Resources */,
 				968FD46926C4320700C01D2A /* Qanelas-Bold.ttf in Resources */,
 				968FD46A26C4320700C01D2A /* Qanelas-Regular.ttf in Resources */,
 				968FD46B26C4320700C01D2A /* Qanelas-SemiBold.ttf in Resources */,
@@ -1843,6 +1858,7 @@
 				96059E4926C7B2AA00BD9A0A /* LunarCalendarDay.swift in Sources */,
 				968FD3F926C3CB0D00C01D2A /* SignError.swift in Sources */,
 				96059EEA26CDA8B900BD9A0A /* FavorableLunarTableCell.swift in Sources */,
+				9605019026E3A4C1004E0F11 /* OPreloaderView.swift in Sources */,
 				96059EDB26CD2A5700BD9A0A /* LunarArticleTableCell.swift in Sources */,
 				96059E9A26CB1DE000BD9A0A /* TarotTableButton.swift in Sources */,
 				96059EC226CD06C100BD9A0A /* SettingsTableView.swift in Sources */,

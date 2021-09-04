@@ -70,6 +70,11 @@
 "Onboarding.Question3" = "Astrology offers a mirror in which we see both our best selves and our growth edges";
 "Onboarding.Question.Yes" = "YES";
 "Onboarding.Question.No" = "NO";
+"Onboarding.Preloader.Subtitle" = "Just a moment...\nWe are creating a plan for you";
+"Onboarding.Preloader.Info1" = "Astra takes more than just your sun sign into account.";
+"Onboarding.Preloader.Info2" = "Our approuch to help reach your potencial, not predict only the future";
+"Onboarding.Preloader.Info3" = "We are going to change your relationship with astrology";
+"Onboarding.Preloader.Info4" = "We’ll help you to know yourself";
 
 // MARK: Main
 "Main.Profile.Name" = "Hi, %@";

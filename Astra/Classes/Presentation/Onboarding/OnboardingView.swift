@@ -9,7 +9,7 @@ import UIKit
 
 final class OnboardingView: UIView {
     enum Step: Int {
-        case welcome, name, gender, birthdate, sign, birttime, findMore, feelToday, goals, marital, partnerSign, enjoying, question1, question2, question3, prePalm, palm, plan
+        case welcome, name, gender, birthdate, sign, birttime, findMore, feelToday, goals, marital, partnerSign, enjoying, question1, question2, question3, prePalm, palm, preloader, plan
     }
     
     var didFinish: (() -> Void)?
@@ -51,6 +51,7 @@ final class OnboardingView: UIView {
             OQuestionView(step: .question3, question: "Onboarding.Question3".localized),
             prePalmView,
             OPalmView(step: .palm, vc: vc),
+            OPreloaderView(step: .preloader),
             OPlanView(step: .plan)
         ]
     }()
@@ -96,8 +97,7 @@ extension OnboardingView: OSlideViewDelegate {
 // MARK: OPrePalmViewDelegate
 extension OnboardingView: OPrePalmViewDelegate {
     func prePalmViewDidAccessDenied() {
-        // TODO
-        step = .plan
+        step = .preloader
     }
     
     func prePalmViewDidAccessGranted() {
@@ -145,7 +145,7 @@ private extension OnboardingView {
     
     func headerUpdate() {
         switch step {
-        case .welcome, .plan, .sign, .findMore, .palm:
+        case .welcome, .plan, .sign, .findMore, .palm, .preloader:
             progressView.isHidden = true
         default:
             progressView.isHidden = false
