@@ -44,7 +44,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>To scan your palms you should allow access to the camera.</string>
+	<string>The camera is used for taking pictures of your palm</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Qanelas-Bold.ttf</string>
