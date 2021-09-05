@@ -11,7 +11,7 @@ struct GetCitiesRequest: APIRequestBody {
     let name: String
     
     var url: String {
-        GlobalDefinitions.domainUrl + "api/cities/search"
+        GlobalDefinitions.domainUrl + "/api/cities/search"
     }
     
     var method: HTTPMethod {

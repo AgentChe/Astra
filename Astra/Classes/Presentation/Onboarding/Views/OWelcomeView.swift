@@ -25,7 +25,7 @@ final class OWelcomeView: OSlideView {
 // MARK: Private
 private extension OWelcomeView {
     func initialize() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
             self?.onNext()
         }
     }

@@ -12,12 +12,18 @@ final class OCityView: OSlideView {
     lazy var titleLabel = makeTitleLabel()
     lazy var searchView = makeSearchView()
     lazy var imageView = makeImageView()
+    lazy var tableView = makeTableView()
     lazy var button = makeButton()
+    
+    private lazy var disposeBag = DisposeBag()
+    
+    private lazy var userManager = UserManagerCore()
     
     override init(step: OnboardingView.Step) {
         super.init(step: step)
         
         makeConstraits()
+        initiallize()
     }
     
     required init?(coder: NSCoder) {
@@ -27,7 +33,62 @@ final class OCityView: OSlideView {
 
 // MARK: Private
 private extension OCityView {
-    
+    func initiallize() {
+        searchView.text
+            .filter { $0.count >= 3 }
+            .distinctUntilChanged()
+            .flatMapLatest { [weak self] text -> Single<[City]> in
+                guard let self = self else {
+                    return .never()
+                }
+                
+                return self.userManager
+                    .searchCities(with: text)
+                    .catchAndReturn([])
+            }
+            .asDriver(onErrorJustReturn: [])
+            .drive(onNext: { [weak self] cities in
+                self?.tableView.setup(cities: cities)
+            })
+            .disposed(by: disposeBag)
+        
+        searchView.text
+            .map { $0.count >= 3 ? OCityButton.Style.next : OCityButton.Style.skip }
+            .startWith(.skip)
+            .distinctUntilChanged()
+            .subscribe(onNext: { [weak self] style in
+                self?.button.style = style
+            })
+            .disposed(by: disposeBag)
+        
+        searchView.text
+            .map { $0.count >= 3 }
+            .startWith(false)
+            .distinctUntilChanged()
+            .subscribe(onNext: { [weak self] hasName in
+                self?.imageView.isHidden = hasName
+                self?.tableView.isHidden = !hasName
+            })
+            .disposed(by: disposeBag)
+        
+        tableView.rx.didScroll
+            .subscribe(onNext: { [weak self] in
+                self?.searchView.textField.resignFirstResponder()
+            })
+            .disposed(by: disposeBag)
+        
+        tableView.didSelect
+            .subscribe(onNext: { [weak self] city in
+                self?.searchView.setup(name: city.name)
+            })
+            .disposed(by: disposeBag)
+        
+        rx.keyboardHeight
+            .subscribe(onNext: { [weak self] keyboardHeight in
+                self?.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardHeight, right: 0)
+            })
+            .disposed(by: disposeBag)
+    }
 }
 
 // MARK: Make constraints
@@ -51,6 +112,13 @@ private extension OCityView {
             imageView.heightAnchor.constraint(equalToConstant: 270.scale),
             imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
             imageView.topAnchor.constraint(equalTo: searchView.bottomAnchor, constant: 45.scale)
+        ])
+        
+        NSLayoutConstraint.activate([
+            tableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16.scale),
+            tableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16.scale),
+            tableView.topAnchor.constraint(equalTo: searchView.bottomAnchor, constant: 8.scale),
+            tableView.bottomAnchor.constraint(equalTo: button.topAnchor, constant: -24.scale)
         ])
         
         NSLayoutConstraint.activate([
@@ -97,9 +165,19 @@ private extension OCityView {
         return view
     }
     
+    func makeTableView() -> CitySearchTableView {
+        let view = CitySearchTableView()
+        view.separatorStyle = .none
+        view.layer.cornerRadius = 4.scale
+        view.layer.masksToBounds = true
+        view.backgroundColor = UIColor.white
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        return view
+    }
+    
     func makeButton() -> OCityButton {
         let view = OCityButton()
-        view.style = .skip
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view

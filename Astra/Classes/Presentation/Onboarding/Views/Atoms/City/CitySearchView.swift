@@ -7,16 +7,22 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 final class CitySearchView: UIView {
+    lazy var text = BehaviorRelay<String>(value: "")
+    
     lazy var imageView = makeImageView()
     lazy var textField = makeTextField()
     lazy var clearButton = makeClearButton()
+    
+    private lazy var disposeBag = DisposeBag()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         makeConstraits()
+        initialize()
     }
     
     required init?(coder: NSCoder) {
@@ -24,9 +30,31 @@ final class CitySearchView: UIView {
     }
 }
 
+// MARK: Public
+extension CitySearchView {
+    func setup(name: String) {
+        textField.text = name
+    }
+}
+
 // MARK: Private
 private extension CitySearchView {
+    func initialize() {
+        text.map { $0.isEmpty }
+            .bind(to: clearButton.rx.isHidden)
+            .disposed(by: disposeBag)
+    }
     
+    @objc
+    func clear() {
+        textField.text = ""
+        textChanged()
+    }
+    
+    @objc
+    func textChanged() {
+        text.accept(textField.text ?? "")
+    }
 }
 
 // MARK: Make constraints
@@ -74,6 +102,7 @@ private extension CitySearchView {
         view.font = Fonts.Qanelas.regular(size: 24.scale)
         view.placeholder = "Onboarding.City.Placeholder".localized
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.addTarget(self, action: #selector(textChanged), for: .editingChanged)
         addSubview(view)
         return view
     }
@@ -82,6 +111,7 @@ private extension CitySearchView {
         let view = TapAreaButton()
         view.setImage(UIImage(named: "Onboarding.City.SelectClear"), for: .normal)
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.addTarget(self, action: #selector(clear), for: .touchUpInside)
         addSubview(view)
         return view
     }
