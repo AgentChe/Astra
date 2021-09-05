@@ -19,6 +19,8 @@ final class OCityView: OSlideView {
     
     private lazy var userManager = UserManagerCore()
     
+    private var selectedCity: City?
+    
     override init(step: OnboardingView.Step) {
         super.init(step: step)
         
@@ -71,6 +73,12 @@ private extension OCityView {
             })
             .disposed(by: disposeBag)
         
+        searchView.text
+            .subscribe(onNext: { [weak self] _ in
+                self?.selectedCity = nil
+            })
+            .disposed(by: disposeBag)
+        
         tableView.rx.didScroll
             .subscribe(onNext: { [weak self] in
                 self?.searchView.textField.resignFirstResponder()
@@ -80,12 +88,63 @@ private extension OCityView {
         tableView.didSelect
             .subscribe(onNext: { [weak self] city in
                 self?.searchView.setup(name: city.name)
+                self?.selectedCity = city
             })
             .disposed(by: disposeBag)
         
         rx.keyboardHeight
             .subscribe(onNext: { [weak self] keyboardHeight in
                 self?.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardHeight, right: 0)
+            })
+            .disposed(by: disposeBag)
+        
+        button.rx.tap
+            .subscribe(onNext: { [weak self] in
+                guard let self = self, self.button.style == .skip else {
+                    return
+                }
+                
+                self.onNext()
+            })
+            .disposed(by: disposeBag)
+        
+        button.rx.tap
+            .flatMapLatest { [weak self] _ -> Single<Bool> in
+                guard let self = self else {
+                    return .never()
+                }
+                
+                guard self.button.style == .next else {
+                    return .never()
+                }
+                
+                if let selectedCity = self.selectedCity {
+                    return self.userManager
+                        .set(city: selectedCity.name)
+                        .map { true }
+                        .catchAndReturn(false)
+                } else {
+                    return self.userManager
+                        .add(city: self.searchView.textField.text ?? "")
+                        .flatMap { city -> Single<Bool> in
+                            guard let city = city else {
+                                return .just(false)
+                            }
+                            
+                            return self.userManager
+                                .set(city: city.name)
+                                .map { true }
+                                .catchAndReturn(false)
+                        }
+                }
+            }
+            .subscribe(onNext: { [weak self] success in
+                guard success else {
+                    Toast.notify(with: "Onboarding.FailedToSave".localized, style: .danger)
+                    return
+                }
+
+                self?.onNext()
             })
             .disposed(by: disposeBag)
     }
