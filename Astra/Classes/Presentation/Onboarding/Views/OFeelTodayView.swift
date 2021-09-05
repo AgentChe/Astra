@@ -104,7 +104,7 @@ private extension OFeelTodayView {
         NSLayoutConstraint.activate([
             button.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 26.scale),
             button.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -26.scale),
-            button.heightAnchor.constraint(equalToConstant: 60.scale),
+            button.heightAnchor.constraint(equalToConstant: 51.scale),
             button.bottomAnchor.constraint(equalTo: bottomAnchor, constant: ScreenSize.isIphoneXFamily ? -60.scale : -20.scale)
         ])
     }

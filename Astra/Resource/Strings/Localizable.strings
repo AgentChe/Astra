@@ -16,6 +16,7 @@
 "ImagePicker.PhotoLibrary" = "Photo library";
 
 // MARK: Onboarding
+"Onboarding.Skip" = "skip";
 "Onboarding.FailedToSave" = "Failed to save";
 "Onboarding.Welcome.Text" = "You'll need to answer\na few questions about\nyourself. All of these\nwill be used to create\na personal prediction";
 "Onboarding.Gender.Title" = "Nice to meet you, %@!\nWhat’s your gender?";
@@ -75,6 +76,8 @@
 "Onboarding.Preloader.Info2" = "Our approuch to help reach your potencial, not predict only the future";
 "Onboarding.Preloader.Info3" = "We are going to change your relationship with astrology";
 "Onboarding.Preloader.Info4" = "We’ll help you to know yourself";
+"Onboarding.City.Title" = "Where were you born?";
+"Onboarding.City.Placeholder" = "Your city";
 
 // MARK: Main
 "Main.Profile.Name" = "Hi, %@";

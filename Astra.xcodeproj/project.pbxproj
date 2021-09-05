@@ -10,6 +10,14 @@
 		9605018E26E39B1F004E0F11 /* OQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605018D26E39B1F004E0F11 /* OQuestionView.swift */; };
 		9605019026E3A4C1004E0F11 /* OPreloaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605018F26E3A4C1004E0F11 /* OPreloaderView.swift */; };
 		9605019326E3A902004E0F11 /* Onboarding.Preloader.json in Resources */ = {isa = PBXBuildFile; fileRef = 9605019226E3A902004E0F11 /* Onboarding.Preloader.json */; };
+		9605019526E3CCC0004E0F11 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605019426E3CCC0004E0F11 /* City.swift */; };
+		9605019826E3CD4A004E0F11 /* GetCitiesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605019726E3CD4A004E0F11 /* GetCitiesRequest.swift */; };
+		9605019A26E3CDD5004E0F11 /* GetCitiesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605019926E3CDD5004E0F11 /* GetCitiesResponse.swift */; };
+		9605019D26E3CE73004E0F11 /* AddCityRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605019C26E3CE73004E0F11 /* AddCityRequest.swift */; };
+		9605019F26E3CEA4004E0F11 /* AddCityResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605019E26E3CEA4004E0F11 /* AddCityResponse.swift */; };
+		960501A126E3CFC6004E0F11 /* OCityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960501A026E3CFC6004E0F11 /* OCityView.swift */; };
+		960501A426E405E8004E0F11 /* CitySearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960501A326E405E8004E0F11 /* CitySearchView.swift */; };
+		960501A626E4AEFA004E0F11 /* OCityButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960501A526E4AEFA004E0F11 /* OCityButton.swift */; };
 		96059E0926C662C700BD9A0A /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E0826C662C700BD9A0A /* Session.swift */; };
 		96059E0B26C6632A00BD9A0A /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E0A26C6632A00BD9A0A /* SessionManager.swift */; };
 		96059E0D26C6634400BD9A0A /* SessionManagerCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E0C26C6634400BD9A0A /* SessionManagerCore.swift */; };
@@ -257,6 +265,14 @@
 		9605018D26E39B1F004E0F11 /* OQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OQuestionView.swift; sourceTree = "<group>"; };
 		9605018F26E3A4C1004E0F11 /* OPreloaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPreloaderView.swift; sourceTree = "<group>"; };
 		9605019226E3A902004E0F11 /* Onboarding.Preloader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Onboarding.Preloader.json; sourceTree = "<group>"; };
+		9605019426E3CCC0004E0F11 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		9605019726E3CD4A004E0F11 /* GetCitiesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCitiesRequest.swift; sourceTree = "<group>"; };
+		9605019926E3CDD5004E0F11 /* GetCitiesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCitiesResponse.swift; sourceTree = "<group>"; };
+		9605019C26E3CE73004E0F11 /* AddCityRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityRequest.swift; sourceTree = "<group>"; };
+		9605019E26E3CEA4004E0F11 /* AddCityResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityResponse.swift; sourceTree = "<group>"; };
+		960501A026E3CFC6004E0F11 /* OCityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCityView.swift; sourceTree = "<group>"; };
+		960501A326E405E8004E0F11 /* CitySearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySearchView.swift; sourceTree = "<group>"; };
+		960501A526E4AEFA004E0F11 /* OCityButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCityButton.swift; sourceTree = "<group>"; };
 		96059E0826C662C700BD9A0A /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		96059E0A26C6632A00BD9A0A /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		96059E0C26C6634400BD9A0A /* SessionManagerCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManagerCore.swift; sourceTree = "<group>"; };
@@ -531,6 +547,33 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
+		9605019626E3CD3B004E0F11 /* GetCities */ = {
+			isa = PBXGroup;
+			children = (
+				9605019726E3CD4A004E0F11 /* GetCitiesRequest.swift */,
+				9605019926E3CDD5004E0F11 /* GetCitiesResponse.swift */,
+			);
+			path = GetCities;
+			sourceTree = "<group>";
+		};
+		9605019B26E3CE65004E0F11 /* AddCity */ = {
+			isa = PBXGroup;
+			children = (
+				9605019C26E3CE73004E0F11 /* AddCityRequest.swift */,
+				9605019E26E3CEA4004E0F11 /* AddCityResponse.swift */,
+			);
+			path = AddCity;
+			sourceTree = "<group>";
+		};
+		960501A226E405AE004E0F11 /* City */ = {
+			isa = PBXGroup;
+			children = (
+				960501A326E405E8004E0F11 /* CitySearchView.swift */,
+				960501A526E4AEFA004E0F11 /* OCityButton.swift */,
+			);
+			path = City;
+			sourceTree = "<group>";
+		};
 		96059E0526C662A200BD9A0A /* Session */ = {
 			isa = PBXGroup;
 			children = (
@@ -560,6 +603,8 @@
 		96059E1226C66F0600BD9A0A /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				9605019B26E3CE65004E0F11 /* AddCity */,
+				9605019626E3CD3B004E0F11 /* GetCities */,
 				96059E1326C66F0F00BD9A0A /* SetRequest.swift */,
 			);
 			path = Request;
@@ -1240,6 +1285,7 @@
 				9654D0E426E13BF700179E40 /* OPalmView.swift */,
 				9605018D26E39B1F004E0F11 /* OQuestionView.swift */,
 				9605018F26E3A4C1004E0F11 /* OPreloaderView.swift */,
+				960501A026E3CFC6004E0F11 /* OCityView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1247,6 +1293,7 @@
 		968FD41E26C41F0500C01D2A /* Atoms */ = {
 			isa = PBXGroup;
 			children = (
+				960501A226E405AE004E0F11 /* City */,
 				9654D0DB26DFE42100179E40 /* PartnerSign */,
 				968FD46026C426A100C01D2A /* OStepView.swift */,
 				968FD47726C460AC00C01D2A /* OGoalCell.swift */,
@@ -1300,6 +1347,7 @@
 			isa = PBXGroup;
 			children = (
 				968FD47126C4520700C01D2A /* Gender.swift */,
+				9605019426E3CCC0004E0F11 /* City.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1724,6 +1772,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96059EEC26CDADE700BD9A0A /* NumbersLunarTableCell.swift in Sources */,
+				9605019F26E3CEA4004E0F11 /* AddCityResponse.swift in Sources */,
 				96BFF5DF26D2B04500B8D8CC /* CompatibilitySignsViewController.swift in Sources */,
 				96BFF86426D5241000B8D8CC /* MeditationCourse.swift in Sources */,
 				96059E8826CA77EF00BD9A0A /* SeparatorMainTableCell.swift in Sources */,
@@ -1731,6 +1780,7 @@
 				968F63A826D7CA0A00C61474 /* AudioPlayerDelegate.swift in Sources */,
 				96059E4E26C7BA5500BD9A0A /* GetDashboardResponse.swift in Sources */,
 				968FD40326C3CB0D00C01D2A /* CircleView.swift in Sources */,
+				960501A426E405E8004E0F11 /* CitySearchView.swift in Sources */,
 				96059E6C26C963DD00BD9A0A /* HoroFilterCollectionCell.swift in Sources */,
 				96059E6126C847F400BD9A0A /* ProfileMainTableElement.swift in Sources */,
 				96BFF89A26D651CB00B8D8CC /* MeditationDashboardCourseCell.swift in Sources */,
@@ -1759,6 +1809,7 @@
 				96059E0D26C6634400BD9A0A /* SessionManagerCore.swift in Sources */,
 				96059E5326C7C8A600BD9A0A /* ContentManagerCore.swift in Sources */,
 				96BFF89426D585B800B8D8CC /* MeditationDashboardDailyCell.swift in Sources */,
+				9605019D26E3CE73004E0F11 /* AddCityRequest.swift in Sources */,
 				96059E3126C7093800BD9A0A /* MainViewController.swift in Sources */,
 				96BFF5D526D21C0E00B8D8CC /* GetCompatibilitiesResponse.swift in Sources */,
 				96059EDF26CD9B1800BD9A0A /* LunarFull.swift in Sources */,
@@ -1775,7 +1826,9 @@
 				968FD46126C426A100C01D2A /* OStepView.swift in Sources */,
 				96BFF86F26D5283E00B8D8CC /* GetMeditationDashboardResponse.swift in Sources */,
 				96059EE426CD9C4100BD9A0A /* GetLunarFullResponse.swift in Sources */,
+				9605019826E3CD4A004E0F11 /* GetCitiesRequest.swift in Sources */,
 				96BFF5D026D2166400B8D8CC /* Compatibilities.swift in Sources */,
+				9605019A26E3CDD5004E0F11 /* GetCitiesResponse.swift in Sources */,
 				96658E6826DF6AC90020FD9B /* OSignView.swift in Sources */,
 				96BFF5EA26D3D47E00B8D8CC /* SignsPickerElement.swift in Sources */,
 				96059EE226CD9C1400BD9A0A /* GetLunarFullRequest.swift in Sources */,
@@ -1797,6 +1850,7 @@
 				96BFF87126D5364300B8D8CC /* MeditationManager.swift in Sources */,
 				96059F0526CE732A00BD9A0A /* GetTarotResponse.swift in Sources */,
 				968FD47A26C46F6C00C01D2A /* OEnjoyingView.swift in Sources */,
+				960501A126E3CFC6004E0F11 /* OCityView.swift in Sources */,
 				96BFF60026D42DBB00B8D8CC /* CompatibilityValuesTableCell.swift in Sources */,
 				96BFF87526D53A5400B8D8CC /* MeditationCourseDetails.swift in Sources */,
 				96BFF87A26D53B4B00B8D8CC /* GetMeditationCourseDetailsResponse.swift in Sources */,
@@ -1851,6 +1905,7 @@
 				96BFF5FE26D406C700B8D8CC /* CompatibilitySignsNamesTableCell.swift in Sources */,
 				96658E6C26DF7D1B0020FD9B /* OBirthtimeView.swift in Sources */,
 				96BFF89E26D6649F00B8D8CC /* MeditationDashboardCollectionSection.swift in Sources */,
+				9605019526E3CCC0004E0F11 /* City.swift in Sources */,
 				96059E3326C70B1900BD9A0A /* MainViewModel.swift in Sources */,
 				968FD3EC26C3CB0D00C01D2A /* UIColorExtension.swift in Sources */,
 				9654D0DF26DFE6A400179E40 /* PartnerSignCollectionElement.swift in Sources */,
@@ -1860,6 +1915,7 @@
 				96059EEA26CDA8B900BD9A0A /* FavorableLunarTableCell.swift in Sources */,
 				9605019026E3A4C1004E0F11 /* OPreloaderView.swift in Sources */,
 				96059EDB26CD2A5700BD9A0A /* LunarArticleTableCell.swift in Sources */,
+				960501A626E4AEFA004E0F11 /* OCityButton.swift in Sources */,
 				96059E9A26CB1DE000BD9A0A /* TarotTableButton.swift in Sources */,
 				96059EC226CD06C100BD9A0A /* SettingsTableView.swift in Sources */,
 				96059E9526CB154100BD9A0A /* DailyTarotMainTableCell.swift in Sources */,

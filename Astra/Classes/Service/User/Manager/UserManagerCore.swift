@@ -44,4 +44,18 @@ extension UserManagerCore {
             .callServerApi(requestBody: request)
             .map { _ in Void() }
     }
+    
+    func searchCities(with name: String) -> Single<[City]> {
+        SDKStorage.shared
+            .restApiTransport
+            .callServerApi(requestBody: GetCitiesRequest(name: name))
+            .map { GetCitiesResponse.map(from: $0) }
+    }
+    
+    func add(city name: String) -> Single<City?> {
+        SDKStorage.shared
+            .restApiTransport
+            .callServerApi(requestBody: AddCityRequest(name: name))
+            .map { AddCityResponse.map(from: $0, name: name) }
+    }
 }

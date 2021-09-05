@@ -19,4 +19,8 @@ protocol UserManager {
              goals: [Int]?,
              enjoy: [Int]?,
              notificationKey: String?) -> Single<Void>
+    
+    // MARK: City
+    func searchCities(with name: String) -> Single<[City]>
+    func add(city name: String) -> Single<City?>
 }
