@@ -48,14 +48,14 @@ private extension TabItemView {
             imageView.widthAnchor.constraint(equalToConstant: 24.scale),
             imageView.heightAnchor.constraint(equalToConstant: 24.scale),
             imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            imageView.topAnchor.constraint(equalTo: topAnchor, constant: 4.scale)
+            imageView.topAnchor.constraint(equalTo: topAnchor, constant: 14.scale)
         ])
         
         NSLayoutConstraint.activate([
             circleView.widthAnchor.constraint(equalToConstant: 9.scale),
             circleView.heightAnchor.constraint(equalToConstant: 9.scale),
             circleView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            circleView.topAnchor.constraint(equalTo: topAnchor, constant: 12.scale)
+            circleView.topAnchor.constraint(equalTo: topAnchor, constant: 22.scale)
         ])
     }
 }
