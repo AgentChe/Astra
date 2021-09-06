@@ -44,9 +44,9 @@ private extension CompatibilitySignsView {
         NSLayoutConstraint.activate([
             headerContainerView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16.scale),
             headerContainerView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16.scale),
-            headerContainerView.heightAnchor.constraint(equalToConstant: ScreenSize.isIphoneXFamily ? 203.scale : 190.scale),
+            headerContainerView.heightAnchor.constraint(equalToConstant: ScreenSize.isIphoneXFamily ? 203.scale : 180.scale),
             headerContainerView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            headerContainerView.topAnchor.constraint(equalTo: topAnchor, constant: ScreenSize.isIphoneXFamily ? 120.scale : 60.scale)
+            headerContainerView.topAnchor.constraint(equalTo: topAnchor, constant: ScreenSize.isIphoneXFamily ? 120.scale : 80.scale)
         ])
         
         NSLayoutConstraint.activate([
