@@ -44,15 +44,25 @@ private extension OWelcomeView {
 // MARK: Lazy initialization
 private extension OWelcomeView {
     func makeLabel() -> UILabel {
-        let attrs = TextAttributes()
+        let attrs1 = TextAttributes()
+            .textColor(UIColor(integralRed: 31, green: 31, blue: 31))
+            .font(Fonts.Qanelas.bold(size: 24.scale))
+            .lineHeight(31.2.scale)
+            .textAlignment(.center)
+        
+        let attrs2 = TextAttributes()
             .textColor(UIColor(integralRed: 31, green: 31, blue: 31))
             .font(Fonts.Qanelas.regular(size: 24.scale))
             .lineHeight(31.2.scale)
             .textAlignment(.center)
         
+        let string = NSMutableAttributedString()
+        string.append("Onboarding.Welcome.Text1".localized.attributed(with: attrs1))
+        string.append("Onboarding.Welcome.Text2".localized.attributed(with: attrs2))
+        
         let view = UILabel()
         view.numberOfLines = 0
-        view.attributedText = "Onboarding.Welcome.Text".localized.attributed(with: attrs)
+        view.attributedText = string
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view
