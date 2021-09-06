@@ -6,11 +6,12 @@
 //
 
 import UIKit
+import Lottie
 
 final class OPlanView: OSlideView {
     lazy var titleLabel = makeTitleLabel()
     lazy var subTitleLabel = makeSubTitleLabel()
-    lazy var imageView = makeImageView()
+    lazy var animationView = makeAnimationView()
     lazy var button = makeButton()
     
     override init(step: OnboardingView.Step) {
@@ -22,11 +23,40 @@ final class OPlanView: OSlideView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    override func moveToThis() {
+        super.moveToThis()
+        
+        animationView.play()
+    }
+}
+
+// MARK: OGenderViewDelegate
+extension OPlanView: OGenderViewDelegate {
+    func genderViewDidSelect(gender: Gender) {
+        let name: String
+        
+        switch gender {
+        case .male:
+            name = "Onboarding.Men"
+        case .female:
+            name = "Onboarding.Women"
+        }
+        
+        animationView.animation = Animation.named(name)
+    }
 }
 
 // MARK: Make constraints
 private extension OPlanView {
     func makeConstraints() {
+        NSLayoutConstraint.activate([
+            animationView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            animationView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            animationView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            animationView.topAnchor.constraint(equalTo: topAnchor)
+        ])
+        
         NSLayoutConstraint.activate([
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16.scale),
             titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16.scale),
@@ -37,13 +67,6 @@ private extension OPlanView {
             subTitleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16.scale),
             subTitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16.scale),
             subTitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 12.scale)
-        ])
-        
-        NSLayoutConstraint.activate([
-            imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            imageView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            imageView.heightAnchor.constraint(equalToConstant: ScreenSize.isIphoneXFamily ? 380.scale : 300),
-            imageView.topAnchor.constraint(equalTo: subTitleLabel.bottomAnchor)
         ])
         
         NSLayoutConstraint.activate([
@@ -87,10 +110,10 @@ private extension OPlanView {
         return view
     }
     
-    func makeImageView() -> UIImageView {
-        let view = UIImageView()
+    func makeAnimationView() -> AnimationView {
+        let view = AnimationView()
         view.contentMode = .scaleAspectFit
-        view.image = UIImage(named: "Onboarding.Plan")
+        view.loopMode = .playOnce
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view

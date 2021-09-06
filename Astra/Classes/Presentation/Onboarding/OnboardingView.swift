@@ -32,6 +32,7 @@ final class OnboardingView: UIView {
     private lazy var birthdateView = OBirthdateView(step: .birthdate)
     private lazy var signView = OSignView(step: .sign)
     private lazy var prePalmView = OPrePalmView(step: .prePalm)
+    private lazy var planView = OPlanView(step: .plan)
     private lazy var contentViews: [OSlideView] = {
         [
             OWelcomeView(step: .welcome),
@@ -53,7 +54,7 @@ final class OnboardingView: UIView {
             prePalmView,
             OPalmView(step: .palm, vc: vc),
             OPreloaderView(step: .preloader),
-            OPlanView(step: .plan)
+            planView
         ]
     }()
     
@@ -118,6 +119,7 @@ private extension OnboardingView {
         nameView.nameDelegate = genderView
         birthdateView.birthdateDelegate = signView
         prePalmView.prePalmDelegate = self
+        genderView.genderDelegate = planView
         
         contentViews
             .enumerated()
@@ -208,7 +210,7 @@ private extension OnboardingView {
         NSLayoutConstraint.activate([
             progressView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 17.scale),
             progressView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -17.scale),
-            progressView.topAnchor.constraint(equalTo: topAnchor, constant: ScreenSize.isIphoneXFamily ? 57.scale : 18.scale),
+            progressView.topAnchor.constraint(equalTo: topAnchor, constant: ScreenSize.isIphoneXFamily ? 57.scale : 30.scale),
             progressView.heightAnchor.constraint(equalToConstant: 24.scale)
         ])
     }

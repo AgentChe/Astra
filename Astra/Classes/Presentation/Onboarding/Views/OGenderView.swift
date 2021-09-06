@@ -8,7 +8,13 @@
 import UIKit
 import RxSwift
 
+protocol OGenderViewDelegate: AnyObject {
+    func genderViewDidSelect(gender: Gender)
+}
+
 final class OGenderView: OSlideView {
+    weak var genderDelegate: OGenderViewDelegate?
+    
     lazy var titleLabel = makeTitleLabel()
     lazy var subTitleLabel = makeSubTitleLabel()
     lazy var maleImageView = makeMaleImageView()
@@ -92,6 +98,10 @@ private extension OGenderView {
                 guard success else {
                     Toast.notify(with: "Onboarding.FailedToSave".localized, style: .danger)
                     return
+                }
+                
+                if let gender = self?.selectedGender {
+                    self?.genderDelegate?.genderViewDidSelect(gender: gender)
                 }
 
                 self?.onNext()
