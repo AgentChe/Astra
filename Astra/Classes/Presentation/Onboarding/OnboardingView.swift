@@ -127,6 +127,8 @@ private extension OnboardingView {
         
         scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width * CGFloat(contentViews.count),
                                         height: UIScreen.main.bounds.height)
+        
+        progressView.skipButton.addTarget(self, action: #selector(skipTapped), for: .touchUpInside)
     }
     
     func scroll() {
@@ -157,6 +159,11 @@ private extension OnboardingView {
         }
         progressView.step = index + 1
     }
+    
+    @objc
+    func skipTapped() {
+        
+    }
 }
 
 // MARK: Make constraints
@@ -179,8 +186,8 @@ private extension OnboardingView {
         NSLayoutConstraint.activate([
             progressView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 17.scale),
             progressView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -17.scale),
-            progressView.topAnchor.constraint(equalTo: topAnchor, constant: ScreenSize.isIphoneXFamily ? 69.scale : 40.scale),
-            progressView.heightAnchor.constraint(equalToConstant: 2.scale)
+            progressView.topAnchor.constraint(equalTo: topAnchor, constant: ScreenSize.isIphoneXFamily ? 57.scale : 18.scale),
+            progressView.heightAnchor.constraint(equalToConstant: 24.scale)
         ])
     }
 }
