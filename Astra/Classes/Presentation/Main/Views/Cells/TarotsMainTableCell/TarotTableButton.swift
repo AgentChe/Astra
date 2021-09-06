@@ -51,6 +51,7 @@ private extension TarotTableButton {
         let view = UIImageView()
         view.isUserInteractionEnabled = false
         view.contentMode = .scaleAspectFill
+        view.clipsToBounds = true
         view.layer.cornerRadius = 7.scale
         view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         view.translatesAutoresizingMaskIntoConstraints = false
