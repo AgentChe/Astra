@@ -75,8 +75,11 @@ final class OnboardingView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private lazy var progressCases: [Step] = [
-        .name, .gender, .birthdate, .birttime, .city, .goals, .marital, .partnerSign, .enjoying, .question1, .question2, .question3, .prePalm
+    private lazy var progressCases1: [Step] = [
+        .name, .gender, .birthdate, .birttime, .city
+    ]
+    private lazy var progressCases2: [Step] = [
+        .feelToday, .goals, .marital, .partnerSign, .enjoying, .question1, .question2, .question3, .prePalm
     ]
 }
 
@@ -84,13 +87,13 @@ final class OnboardingView: UIView {
 extension OnboardingView: OSlideViewDelegate {
     func slideViewDidNext(from step: Step) {
         let nextRawValue = step.rawValue + 1
-        
+
         guard let nextStep = Step(rawValue: nextRawValue) else {
             didFinish?()
-            
+
             return
         }
-        
+
         self.step = nextStep
     }
 }
@@ -109,6 +112,9 @@ extension OnboardingView: OPrePalmViewDelegate {
 // MARK: Private
 private extension OnboardingView {
     func initialize() {
+        progressView.count = (progressCases1 + progressCases2).count
+        progressView.step = 1
+        
         nameView.nameDelegate = genderView
         birthdateView.birthdateDelegate = signView
         prePalmView.prePalmDelegate = self
@@ -154,7 +160,18 @@ private extension OnboardingView {
             progressView.isHidden = false
         }
         
-        guard let index = progressCases.firstIndex(of: step) else {
+        let count = progressCases1.contains(step) ? progressCases1.count : progressCases2.count
+        if progressView.count != count {
+            progressView.count = count
+        }
+        
+        let showSkip = progressCases2.contains(step)
+        if progressView.showSkip != showSkip {
+            progressView.showSkip = showSkip
+        }
+        
+        let index = progressCases1.firstIndex(of: step) ?? progressCases2.firstIndex(of: step)
+        guard let index = index else {
             return
         }
         progressView.step = index + 1
@@ -162,7 +179,12 @@ private extension OnboardingView {
     
     @objc
     func skipTapped() {
-        
+        switch step {
+        case .prePalm:
+            step = .preloader
+        default:
+            slideViewDidNext(from: step)
+        }
     }
 }
 
@@ -218,8 +240,6 @@ private extension OnboardingView {
     
     func makeProgressView() -> OStepView {
         let view = OStepView()
-        view.count = progressCases.count
-        view.step = 1
         view.backgroundColor = UIColor.clear
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
