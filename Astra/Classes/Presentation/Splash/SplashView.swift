@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import Lottie
 
 final class SplashView: UIView {
     lazy var backgroundImageView = makeBackgroundImageView()
-    lazy var imageView = makeImageView()
+    lazy var animationView = makeAnimationView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -33,10 +34,10 @@ private extension SplashView {
         ])
          
         NSLayoutConstraint.activate([
-            imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            imageView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            imageView.widthAnchor.constraint(equalToConstant: 234.scale),
-            imageView.heightAnchor.constraint(equalToConstant: 234.scale)
+            animationView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            animationView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            animationView.widthAnchor.constraint(equalToConstant: 234.scale),
+            animationView.heightAnchor.constraint(equalToConstant: 234.scale)
         ])
     }
 }
@@ -52,10 +53,11 @@ private extension SplashView {
         return view
     }
     
-    func makeImageView() -> UIImageView {
-        let view = UIImageView()
-        view.contentMode = .scaleAspectFit
-        view.image = UIImage(named: "Splash.Image")
+    func makeAnimationView() -> AnimationView {
+        let view = AnimationView()
+        view.animation = Animation.named("Splash.Animation")
+        view.contentMode = .scaleAspectFill
+        view.loopMode = .playOnce
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view

@@ -35,11 +35,32 @@ final class SplashViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        generateStep
+        let animation = generateStep
+            .flatMapLatest { _ -> Driver<Void> in
+                Single<Void>
+                    .create { [weak self] event in
+                        guard let self = self else {
+                            return Disposables.create()
+                        }
+                        
+                        self.mainView.animationView.play { _ in
+                            event(.success(Void()))
+                        }
+                        
+                        return Disposables.create()
+                    }
+                    .asDriver(onErrorDriveWith: .empty())
+            }
+        
+        let step = generateStep
             .delay(RxTimeInterval.seconds(1))
             .flatMap { [weak self] in
                 self?.viewModel.step ?? .empty()
             }
+        
+        Driver
+            .zip(animation, step)
+            .map { $1 }
             .drive(onNext: { [weak self] step in
                 self?.handle(step: step)
             })

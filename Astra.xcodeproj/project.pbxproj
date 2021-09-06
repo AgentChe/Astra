@@ -20,6 +20,7 @@
 		960501A626E4AEFA004E0F11 /* OCityButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960501A526E4AEFA004E0F11 /* OCityButton.swift */; };
 		960501A926E4D525004E0F11 /* CitySearchTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960501A826E4D525004E0F11 /* CitySearchTableView.swift */; };
 		960501AB26E4D5EC004E0F11 /* CitySearchTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960501AA26E4D5EC004E0F11 /* CitySearchTableCell.swift */; };
+		960501AE26E6234F004E0F11 /* Splash.Animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 960501AD26E6234F004E0F11 /* Splash.Animation.json */; };
 		96059E0926C662C700BD9A0A /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E0826C662C700BD9A0A /* Session.swift */; };
 		96059E0B26C6632A00BD9A0A /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E0A26C6632A00BD9A0A /* SessionManager.swift */; };
 		96059E0D26C6634400BD9A0A /* SessionManagerCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E0C26C6634400BD9A0A /* SessionManagerCore.swift */; };
@@ -277,6 +278,7 @@
 		960501A526E4AEFA004E0F11 /* OCityButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCityButton.swift; sourceTree = "<group>"; };
 		960501A826E4D525004E0F11 /* CitySearchTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySearchTableView.swift; sourceTree = "<group>"; };
 		960501AA26E4D5EC004E0F11 /* CitySearchTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySearchTableCell.swift; sourceTree = "<group>"; };
+		960501AD26E6234F004E0F11 /* Splash.Animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Splash.Animation.json; sourceTree = "<group>"; };
 		96059E0826C662C700BD9A0A /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		96059E0A26C6632A00BD9A0A /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		96059E0C26C6634400BD9A0A /* SessionManagerCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManagerCore.swift; sourceTree = "<group>"; };
@@ -586,6 +588,14 @@
 				960501AA26E4D5EC004E0F11 /* CitySearchTableCell.swift */,
 			);
 			path = TableView;
+			sourceTree = "<group>";
+		};
+		960501AC26E62346004E0F11 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				960501AD26E6234F004E0F11 /* Splash.Animation.json */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 		96059E0526C662A200BD9A0A /* Session */ = {
@@ -1258,6 +1268,7 @@
 		968FD41326C3DFAA00C01D2A /* Splash */ = {
 			isa = PBXGroup;
 			children = (
+				960501AC26E62346004E0F11 /* Source */,
 				968FD41426C3DFC400C01D2A /* SplashViewController.swift */,
 				968FD41626C3E02A00C01D2A /* SplashViewModel.swift */,
 				968FD41826C3E0CB00C01D2A /* SplashView.swift */,
@@ -1712,6 +1723,7 @@
 				968FD46B26C4320700C01D2A /* Qanelas-SemiBold.ttf in Resources */,
 				968FD40F26C3CE5400C01D2A /* LaunchScreen.storyboard in Resources */,
 				968FD3BB26C3C83100C01D2A /* Assets.xcassets in Resources */,
+				960501AE26E6234F004E0F11 /* Splash.Animation.json in Resources */,
 				968FD40D26C3CE2800C01D2A /* Localizable.strings in Resources */,
 				D447459426E274940025601E /* GoogleService-Info.plist in Resources */,
 			);
