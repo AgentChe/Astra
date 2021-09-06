@@ -153,8 +153,8 @@ private extension MeditationAudioView {
 
 // MARK: Lazy initialization
 private extension MeditationAudioView {
-    func makeBackButton() -> UIButton {
-        let view = UIButton()
+    func makeBackButton() -> TapAreaButton {
+        let view = TapAreaButton()
         view.setImage(UIImage(named: "MeditationAudio.Back"), for: .normal)
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
