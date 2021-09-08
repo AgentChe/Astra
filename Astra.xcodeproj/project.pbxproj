@@ -21,8 +21,6 @@
 		960501A926E4D525004E0F11 /* CitySearchTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960501A826E4D525004E0F11 /* CitySearchTableView.swift */; };
 		960501AB26E4D5EC004E0F11 /* CitySearchTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960501AA26E4D5EC004E0F11 /* CitySearchTableCell.swift */; };
 		960501AE26E6234F004E0F11 /* Splash.Animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 960501AD26E6234F004E0F11 /* Splash.Animation.json */; };
-		960501B426E69461004E0F11 /* Onboarding.Men.json in Resources */ = {isa = PBXBuildFile; fileRef = 960501B226E69461004E0F11 /* Onboarding.Men.json */; };
-		9605026D26E76852004E0F11 /* Onboarding.Women.json in Resources */ = {isa = PBXBuildFile; fileRef = 9605026C26E76852004E0F11 /* Onboarding.Women.json */; };
 		96059E0926C662C700BD9A0A /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E0826C662C700BD9A0A /* Session.swift */; };
 		96059E0B26C6632A00BD9A0A /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E0A26C6632A00BD9A0A /* SessionManager.swift */; };
 		96059E0D26C6634400BD9A0A /* SessionManagerCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E0C26C6634400BD9A0A /* SessionManagerCore.swift */; };
@@ -263,6 +261,8 @@
 		96F0674E26E8BFF100CD9F0A /* PaygateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F0674D26E8BFF100CD9F0A /* PaygateViewController.swift */; };
 		96F0675026E8C05600CD9F0A /* PaygateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F0674F26E8C05600CD9F0A /* PaygateViewModel.swift */; };
 		96F0675226E8C07E00CD9F0A /* PaygateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F0675126E8C07E00CD9F0A /* PaygateView.swift */; };
+		96F0675626E8DE6200CD9F0A /* Onboarding.Women.json in Resources */ = {isa = PBXBuildFile; fileRef = 96F0675526E8DE6200CD9F0A /* Onboarding.Women.json */; };
+		96F0675826E8DE7600CD9F0A /* Onboarding.Men.json in Resources */ = {isa = PBXBuildFile; fileRef = 96F0675726E8DE7600CD9F0A /* Onboarding.Men.json */; };
 		D447459426E274940025601E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D447459326E274940025601E /* GoogleService-Info.plist */; };
 		EA80E75864467FD58E75C2BA /* Pods_Astra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70F58ABE9BC2B6805D15295E /* Pods_Astra.framework */; };
 /* End PBXBuildFile section */
@@ -284,8 +284,6 @@
 		960501A826E4D525004E0F11 /* CitySearchTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySearchTableView.swift; sourceTree = "<group>"; };
 		960501AA26E4D5EC004E0F11 /* CitySearchTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySearchTableCell.swift; sourceTree = "<group>"; };
 		960501AD26E6234F004E0F11 /* Splash.Animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Splash.Animation.json; sourceTree = "<group>"; };
-		960501B226E69461004E0F11 /* Onboarding.Men.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Onboarding.Men.json; sourceTree = "<group>"; };
-		9605026C26E76852004E0F11 /* Onboarding.Women.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Onboarding.Women.json; sourceTree = "<group>"; };
 		96059E0826C662C700BD9A0A /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		96059E0A26C6632A00BD9A0A /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		96059E0C26C6634400BD9A0A /* SessionManagerCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManagerCore.swift; sourceTree = "<group>"; };
@@ -529,6 +527,8 @@
 		96F0674D26E8BFF100CD9F0A /* PaygateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaygateViewController.swift; sourceTree = "<group>"; };
 		96F0674F26E8C05600CD9F0A /* PaygateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaygateViewModel.swift; sourceTree = "<group>"; };
 		96F0675126E8C07E00CD9F0A /* PaygateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaygateView.swift; sourceTree = "<group>"; };
+		96F0675526E8DE6200CD9F0A /* Onboarding.Women.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Onboarding.Women.json; sourceTree = "<group>"; };
+		96F0675726E8DE7600CD9F0A /* Onboarding.Men.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Onboarding.Men.json; sourceTree = "<group>"; };
 		C46B19553E947FBD72888998 /* Pods-Astra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Astra.debug.xcconfig"; path = "Target Support Files/Pods-Astra/Pods-Astra.debug.xcconfig"; sourceTree = "<group>"; };
 		D447459326E274940025601E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D4CA69F726E2740A00B983BF /* Astra.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Astra.entitlements; sourceTree = "<group>"; };
@@ -558,8 +558,8 @@
 		9605019126E3A898004E0F11 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				9605026C26E76852004E0F11 /* Onboarding.Women.json */,
-				960501B226E69461004E0F11 /* Onboarding.Men.json */,
+				96F0675726E8DE7600CD9F0A /* Onboarding.Men.json */,
+				96F0675526E8DE6200CD9F0A /* Onboarding.Women.json */,
 				9605019226E3A902004E0F11 /* Onboarding.Preloader.json */,
 			);
 			path = Source;
@@ -1745,12 +1745,12 @@
 				968FD46A26C4320700C01D2A /* Qanelas-Regular.ttf in Resources */,
 				968FD46B26C4320700C01D2A /* Qanelas-SemiBold.ttf in Resources */,
 				968FD40F26C3CE5400C01D2A /* LaunchScreen.storyboard in Resources */,
-				960501B426E69461004E0F11 /* Onboarding.Men.json in Resources */,
 				968FD3BB26C3C83100C01D2A /* Assets.xcassets in Resources */,
+				96F0675826E8DE7600CD9F0A /* Onboarding.Men.json in Resources */,
 				960501AE26E6234F004E0F11 /* Splash.Animation.json in Resources */,
 				968FD40D26C3CE2800C01D2A /* Localizable.strings in Resources */,
 				D447459426E274940025601E /* GoogleService-Info.plist in Resources */,
-				9605026D26E76852004E0F11 /* Onboarding.Women.json in Resources */,
+				96F0675626E8DE6200CD9F0A /* Onboarding.Women.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
