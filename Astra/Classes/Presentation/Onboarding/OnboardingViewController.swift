@@ -59,6 +59,14 @@ private extension OnboardingViewController {
     }
     
     func goToNext() {
-        UIApplication.shared.keyWindow?.rootViewController = TabController.make()
+        switch viewModel.whatNext() {
+        case .main:
+            UIApplication.shared.keyWindow?.rootViewController = TabController.make()
+        case .paygate:
+            let vc = PaygateViewController.make { result in
+                UIApplication.shared.keyWindow?.rootViewController = TabController.make()
+            }
+            present(vc, animated: true)
+        }
     }
 }

@@ -83,6 +83,11 @@ private extension SplashViewController {
             UIApplication.shared.keyWindow?.rootViewController = OnboardingViewController.make()
         case .main:
             UIApplication.shared.keyWindow?.rootViewController = TabController.make()
+        case .paygate:
+            let vc = PaygateViewController.make { result in
+                UIApplication.shared.keyWindow?.rootViewController = TabController.make()
+            }
+            present(vc, animated: true)
         }
     }
 }

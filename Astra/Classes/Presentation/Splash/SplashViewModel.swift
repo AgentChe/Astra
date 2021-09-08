@@ -10,7 +10,7 @@ import RxCocoa
 
 final class SplashViewModel {
     enum Step {
-        case onboarding, main
+        case onboarding, main, paygate
     }
     
     lazy var step = library()
@@ -18,6 +18,7 @@ final class SplashViewModel {
         .asDriver(onErrorDriveWith: .empty())
     
     private lazy var compatibilityManager = CompatibilityManagerCore()
+    private lazy var sessionManager = SessionManagerCore()
 }
 
 // MARK: Private
@@ -29,10 +30,14 @@ private extension SplashViewModel {
     }
     
     func makeStep() -> Single<Step> {
-        guard OnboardingViewController.wasViewed() else {
-            return .deferred { .just(.onboarding) }
+        if let session = sessionManager.getSession(), session.activeSubscription {
+            return .deferred { .just(.main) }
         }
         
-        return .deferred { .just(.main) }
+        if OnboardingViewController.wasViewed() {
+            return .deferred { .just(.paygate) }
+        }
+        
+        return .deferred { .just(.onboarding) }
     }
 }

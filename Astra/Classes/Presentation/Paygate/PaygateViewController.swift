@@ -19,9 +19,9 @@ final class PaygateViewController: UIViewController {
     
     private lazy var viewModel = PaygateViewModel()
     
-    private let complete: (Result) -> Void
+    private let complete: ((Result) -> Void)?
     
-    private init(complete: @escaping (Result) -> Void) {
+    private init(complete: ((Result) -> Void)?) {
         self.complete = complete
         
         super.init(nibName: nil, bundle: nil)
@@ -29,6 +29,10 @@ final class PaygateViewController: UIViewController {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func loadView() {
+        view = mainView
     }
     
     override func viewDidLoad() {
@@ -41,7 +45,7 @@ final class PaygateViewController: UIViewController {
                 }
                 
                 self.dismiss(animated: true) {
-                    self.complete(.canceled)
+                    self.complete?(.canceled)
                 }
             })
             .disposed(by: disposeBag)
@@ -50,7 +54,7 @@ final class PaygateViewController: UIViewController {
 
 // MARK: Make
 extension PaygateViewController {
-    static func make(complete: @escaping (Result) -> Void) -> PaygateViewController {
+    static func make(complete: ((Result) -> Void)? = nil) -> PaygateViewController {
         let vc = PaygateViewController(complete: complete)
         vc.modalPresentationStyle = .fullScreen
         return vc
