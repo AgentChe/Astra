@@ -15,8 +15,10 @@ final class MeditationsDashboardViewModel {
     lazy var didSelectFilter = PublishRelay<MeditationsFilterCollectionElement>()
     
     private lazy var dashboard = makeDashboard()
+    private lazy var activeSubscription = makeActiveSubscription()
     
     private lazy var meditationManager = MeditationManagerCore()
+    private lazy var sessionManager = SessionManagerCore()
 }
 
 // MARK: Private
@@ -54,13 +56,14 @@ private extension MeditationsDashboardViewModel {
     }
     
     func makeSections() -> Driver<[MeditationDashboardCollectionSection]> {
-        let sections = dashboard
-            .map { dashboard -> [MeditationDashboardCollectionSection] in
+        let sections = Driver.combineLatest(dashboard, activeSubscription)
+            .map { dashboard, activeSubscription -> [MeditationDashboardCollectionSection] in
                 var result = [MeditationDashboardCollectionSection]()
                 
                 if let daily = dashboard.daily {
                     let elements: [MeditationDashboardCollectionElement] = [
-                        .daily(daily),
+                        .daily(MeditationDashboardCollectionDailyElement(daily: daily,
+                                                                         needPayment: activeSubscription ? false : daily.audio.paid)),
                         .offset(24.scale)
                     ]
                     let section = MeditationDashboardCollectionSection(code: .daily,
@@ -98,7 +101,8 @@ private extension MeditationsDashboardViewModel {
                         elements.append(.title(group.title))
                         
                         group.audios.forEach { audio in
-                            elements.append(.audio(audio))
+                            elements.append(.audio(MeditationDashboardCollectionAudioElement(audio: audio,
+                                                                                             needPayment: activeSubscription ? false : audio.paid)))
                         }
                         
                         elements.append(.offset(12.scale))
@@ -144,5 +148,27 @@ private extension MeditationsDashboardViewModel {
             }
         
         return result
+    }
+    
+    func makeActiveSubscription() -> Driver<Bool> {
+        let updated = SDKStorage.shared
+            .purchaseMediator
+            .rxPurchaseMediatorDidValidateReceipt
+            .compactMap { $0?.activeSubscription }
+            .asDriver(onErrorJustReturn: false)
+        
+        let initial = Driver<Bool>
+            .deferred { [weak self] in
+                guard let this = self else {
+                    return .never()
+                }
+                
+                let activeSubscription = this.sessionManager.getSession()?.activeSubscription ?? false
+                
+                return .just(activeSubscription)
+            }
+        
+        return Driver
+            .merge(initial, updated)
     }
 }

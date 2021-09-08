@@ -7,9 +7,9 @@
 
 enum MeditationDashboardCollectionElement {
     case offset(CGFloat)
-    case daily(DailyMeditation)
+    case daily(MeditationDashboardCollectionDailyElement)
     case title(String)
     case subTitle(String)
     case course(MeditationCourse)
-    case audio(MeditationAudio)
+    case audio(MeditationDashboardCollectionAudioElement)
 }

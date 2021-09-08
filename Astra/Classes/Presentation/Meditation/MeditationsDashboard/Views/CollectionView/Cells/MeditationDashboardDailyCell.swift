@@ -12,6 +12,7 @@ final class MeditationDashboardDailyCell: UICollectionViewCell {
     lazy var pictureImageView = makeImageView()
     lazy var titleLabel = makeLabel()
     lazy var infoLabel = makeLabel()
+    lazy var lockView = makeLockView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -27,11 +28,15 @@ final class MeditationDashboardDailyCell: UICollectionViewCell {
 
 // MARK: Public
 extension MeditationDashboardDailyCell {
-    func setup(element: DailyMeditation) {
+    func setup(element: MeditationDashboardCollectionDailyElement) {
+        let daily = element.daily
+        
+        lockView.isHidden = !element.needPayment
+        
         pictureImageView.image = nil
         pictureImageView.kf.cancelDownloadTask()
         
-        if let url = URL(string: element.audio.imageUrl) {
+        if let url = URL(string: daily.audio.imageUrl) {
             pictureImageView.kf.setImage(with: url)
         }
         
@@ -42,7 +47,7 @@ extension MeditationDashboardDailyCell {
                             .font(Fonts.Qanelas.bold(size: 17.scale))
                             .lineHeight(23.8.scale))
         
-        let info = String(format: "%@ • %@", element.date, element.audio.title)
+        let info = String(format: "%@ • %@", daily.date, daily.audio.title)
         infoLabel.attributedText = info
             .attributed(with: TextAttributes()
                             .textColor(UIColor.white)
@@ -84,6 +89,13 @@ private extension MeditationDashboardDailyCell {
             infoLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -13.scale),
             infoLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20.scale)
         ])
+        
+        NSLayoutConstraint.activate([
+            lockView.widthAnchor.constraint(equalToConstant: 34.scale),
+            lockView.heightAnchor.constraint(equalToConstant: 34.scale),
+            lockView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16.scale),
+            lockView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16.scale)
+        ])
     }
 }
 
@@ -104,5 +116,15 @@ private extension MeditationDashboardDailyCell {
         view.numberOfLines = 0
         view.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(view)
-        return view    }
+        return view
+    }
+    
+    func makeLockView() -> UIImageView {
+        let view = UIImageView()
+        view.image = UIImage(named: "Meditation.Lock")
+        view.contentMode = .scaleAspectFit
+        view.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(view)
+        return view
+    }
 }

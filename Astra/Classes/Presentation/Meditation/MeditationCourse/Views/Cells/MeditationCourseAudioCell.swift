@@ -12,6 +12,7 @@ final class MeditationCourseAudioCell: UITableViewCell {
     lazy var titleLabel = makeLabel()
     lazy var minutesLabel = makeLabel()
     lazy var separator = makeSeparator()
+    lazy var lockView = makeLockView()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -28,6 +29,8 @@ final class MeditationCourseAudioCell: UITableViewCell {
 // MARK: Public
 extension MeditationCourseAudioCell {
     func setup(element: MeditationCourseAudioElement) {
+        lockView.isHidden = !element.needPayment
+        
         numberLabel.attributedText = String(element.number)
             .attributed(with: TextAttributes()
                             .textColor(UIColor(integralRed: 63, green: 63, blue: 63))
@@ -90,6 +93,13 @@ private extension MeditationCourseAudioCell {
             separator.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             separator.heightAnchor.constraint(equalToConstant: 1.scale)
         ])
+        
+        NSLayoutConstraint.activate([
+            lockView.widthAnchor.constraint(equalToConstant: 24.scale),
+            lockView.heightAnchor.constraint(equalToConstant: 24.scale),
+            lockView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            lockView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -24.scale)
+        ])
     }
 }
 
@@ -116,6 +126,15 @@ private extension MeditationCourseAudioCell {
     func makeSeparator() -> UIView {
         let view = UIView()
         view.backgroundColor = UIColor(integralRed: 233, green: 231, blue: 228)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(view)
+        return view
+    }
+    
+    func makeLockView() -> UIImageView {
+        let view = UIImageView()
+        view.image = UIImage(named: "MeditationCourse.Lock")
+        view.contentMode = .scaleAspectFit
         view.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(view)
         return view

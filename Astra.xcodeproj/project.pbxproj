@@ -263,6 +263,8 @@
 		96F0675226E8C07E00CD9F0A /* PaygateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F0675126E8C07E00CD9F0A /* PaygateView.swift */; };
 		96F0675626E8DE6200CD9F0A /* Onboarding.Women.json in Resources */ = {isa = PBXBuildFile; fileRef = 96F0675526E8DE6200CD9F0A /* Onboarding.Women.json */; };
 		96F0675826E8DE7600CD9F0A /* Onboarding.Men.json in Resources */ = {isa = PBXBuildFile; fileRef = 96F0675726E8DE7600CD9F0A /* Onboarding.Men.json */; };
+		96F0675A26E9080900CD9F0A /* MeditationDashboardCollectionDailyElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F0675926E9080900CD9F0A /* MeditationDashboardCollectionDailyElement.swift */; };
+		96F0675C26E916F600CD9F0A /* MeditationDashboardCollectionAudioElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F0675B26E916F600CD9F0A /* MeditationDashboardCollectionAudioElement.swift */; };
 		D447459426E274940025601E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D447459326E274940025601E /* GoogleService-Info.plist */; };
 		EA80E75864467FD58E75C2BA /* Pods_Astra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70F58ABE9BC2B6805D15295E /* Pods_Astra.framework */; };
 /* End PBXBuildFile section */
@@ -529,6 +531,8 @@
 		96F0675126E8C07E00CD9F0A /* PaygateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaygateView.swift; sourceTree = "<group>"; };
 		96F0675526E8DE6200CD9F0A /* Onboarding.Women.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Onboarding.Women.json; sourceTree = "<group>"; };
 		96F0675726E8DE7600CD9F0A /* Onboarding.Men.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Onboarding.Men.json; sourceTree = "<group>"; };
+		96F0675926E9080900CD9F0A /* MeditationDashboardCollectionDailyElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationDashboardCollectionDailyElement.swift; sourceTree = "<group>"; };
+		96F0675B26E916F600CD9F0A /* MeditationDashboardCollectionAudioElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationDashboardCollectionAudioElement.swift; sourceTree = "<group>"; };
 		C46B19553E947FBD72888998 /* Pods-Astra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Astra.debug.xcconfig"; path = "Target Support Files/Pods-Astra/Pods-Astra.debug.xcconfig"; sourceTree = "<group>"; };
 		D447459326E274940025601E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D4CA69F726E2740A00B983BF /* Astra.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Astra.entitlements; sourceTree = "<group>"; };
@@ -1596,6 +1600,8 @@
 				96BFF88E26D56AEA00B8D8CC /* MeditationDashboardCollectionElement.swift */,
 				96BFF89D26D6649F00B8D8CC /* MeditationDashboardCollectionSection.swift */,
 				96BFF89F26D66C3300B8D8CC /* MeditationDashboardTappedElement.swift */,
+				96F0675926E9080900CD9F0A /* MeditationDashboardCollectionDailyElement.swift */,
+				96F0675B26E916F600CD9F0A /* MeditationDashboardCollectionAudioElement.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -2038,6 +2044,8 @@
 				96BFF5EF26D3F71900B8D8CC /* CompatibilityViewController.swift in Sources */,
 				96059F2026CEEA1500BD9A0A /* TagView.swift in Sources */,
 				96059ED026CD264500BD9A0A /* LunarView.swift in Sources */,
+				96F0675C26E916F600CD9F0A /* MeditationDashboardCollectionAudioElement.swift in Sources */,
+				96F0675A26E9080900CD9F0A /* MeditationDashboardCollectionDailyElement.swift in Sources */,
 				96059ED326CD26E400BD9A0A /* LunarTableView.swift in Sources */,
 				96059E7026C9A43400BD9A0A /* HoroFilterCellDelegate.swift in Sources */,
 				96059E6326C84FF000BD9A0A /* MainTableViewDelegate.swift in Sources */,

@@ -41,12 +41,22 @@ final class MeditationsDashboardViewController: UIViewController {
         mainView.dashboardView.didSelect
             .subscribe(onNext: { [weak self] element in
                 switch element {
-                case .daily(let daily):
-                    let vc = MeditationAudioViewController.make(audio: daily.audio)
-                    UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true)
-                case .audio(let audio):
-                    let vc = MeditationAudioViewController.make(audio: audio)
-                    UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true)
+                case .daily(let element):
+                    if element.needPayment {
+                        let vc = PaygateViewController.make()
+                        UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true)
+                    } else {
+                        let vc = MeditationAudioViewController.make(audio: element.daily.audio)
+                        UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true)
+                    }
+                case .audio(let element):
+                    if element.needPayment {
+                        let vc = PaygateViewController.make()
+                        UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true)
+                    } else {
+                        let vc = MeditationAudioViewController.make(audio: element.audio)
+                        UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true)
+                    }
                 case .course(let course):
                     let vc = MeditationCourseViewController.make(courseId: course.id)
                     self?.navigationController?.pushViewController(vc, animated: true)

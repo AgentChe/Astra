@@ -9,7 +9,7 @@ import UIKit
 import RxCocoa
 
 final class MeditationCourseTableView: UITableView {
-    lazy var didSelect = PublishRelay<MeditationAudio>()
+    lazy var didSelect = PublishRelay<MeditationCourseAudioElement>()
     
     private var elements = [MeditationCourseTableElement]()
     
@@ -77,11 +77,11 @@ extension MeditationCourseTableView: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard case let .audio(audio) = elements[indexPath.row] else {
+        guard case let .audio(element) = elements[indexPath.row] else {
             return
         }
         
-        didSelect.accept(audio.audio)
+        didSelect.accept(element)
     }
 }
 

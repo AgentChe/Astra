@@ -13,13 +13,16 @@ final class MeditationCourseViewModel {
     
     lazy var courseId = BehaviorRelay<Int?>(value: nil)
     
+    private lazy var activeSubscription = makeActiveSubscription()
+    
     private lazy var meditationManager = MeditationManagerCore()
+    private lazy var sessionManager = SessionManagerCore()
 }
 
 // MARK: Private
 private extension MeditationCourseViewModel {
     func makeElements() -> Driver<[MeditationCourseTableElement]> {
-        courseId
+        let course = courseId
             .compactMap { $0 }
             .flatMapLatest { [weak self] courseId -> Single<MeditationCourseDetails?> in
                 guard let self = self else {
@@ -30,7 +33,9 @@ private extension MeditationCourseViewModel {
                     .obtainCourseDetails(courseId: courseId)
             }
             .asDriver(onErrorJustReturn: nil)
-            .map { course -> [MeditationCourseTableElement] in
+            
+        return Driver.combineLatest(course, activeSubscription)
+            .map { course, activeSubscription -> [MeditationCourseTableElement] in
                 guard let course = course else {
                     return []
                 }
@@ -47,7 +52,8 @@ private extension MeditationCourseViewModel {
                 
                 course.audios.enumerated().forEach { index, audio in
                     let element = MeditationCourseAudioElement(audio: audio,
-                                                               number: index + 1)
+                                                               number: index + 1,
+                                                               needPayment: activeSubscription ? false : audio.paid)
                     result.append(.audio(element))
                     
                     if index != (course.audios.count - 1) {
@@ -57,5 +63,27 @@ private extension MeditationCourseViewModel {
                 
                 return result
             }
+    }
+    
+    func makeActiveSubscription() -> Driver<Bool> {
+        let updated = SDKStorage.shared
+            .purchaseMediator
+            .rxPurchaseMediatorDidValidateReceipt
+            .compactMap { $0?.activeSubscription }
+            .asDriver(onErrorJustReturn: false)
+        
+        let initial = Driver<Bool>
+            .deferred { [weak self] in
+                guard let this = self else {
+                    return .never()
+                }
+                
+                let activeSubscription = this.sessionManager.getSession()?.activeSubscription ?? false
+                
+                return .just(activeSubscription)
+            }
+        
+        return Driver
+            .merge(initial, updated)
     }
 }

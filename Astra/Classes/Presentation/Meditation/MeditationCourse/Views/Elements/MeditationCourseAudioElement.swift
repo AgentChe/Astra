@@ -8,4 +8,5 @@
 struct MeditationCourseAudioElement {
     let audio: MeditationAudio
     let number: Int
+    let needPayment: Bool
 }

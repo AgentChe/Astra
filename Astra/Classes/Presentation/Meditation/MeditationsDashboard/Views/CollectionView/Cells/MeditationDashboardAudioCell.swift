@@ -11,6 +11,7 @@ import Kingfisher
 final class MeditationDashboardAudioCell: UICollectionViewCell {
     lazy var pictureImageView = makeImageView()
     lazy var titleLabel = makeLabel()
+    lazy var lockView = makeLockView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -26,16 +27,18 @@ final class MeditationDashboardAudioCell: UICollectionViewCell {
 
 // MARK: Public
 extension MeditationDashboardAudioCell {
-    func setup(element: MeditationAudio) {
+    func setup(element: MeditationDashboardCollectionAudioElement) {
         pictureImageView.image = nil
         pictureImageView.kf.cancelDownloadTask()
         
-        if let url = URL(string: element.imageUrl) {
+        lockView.isHidden = !element.needPayment
+        
+        if let url = URL(string: element.audio.imageUrl) {
             pictureImageView.kf.setImage(with: url)
         }
         
         titleLabel.attributedText = element
-            .title
+            .audio.title
             .attributed(with: TextAttributes()
                             .textColor(UIColor.white)
                             .font(Fonts.Qanelas.bold(size: 17.scale))
@@ -70,6 +73,13 @@ private extension MeditationDashboardAudioCell {
             titleLabel.trailingAnchor.constraint(equalTo: pictureImageView.trailingAnchor, constant: -12.scale),
             titleLabel.bottomAnchor.constraint(equalTo: pictureImageView.bottomAnchor, constant: -20.scale)
         ])
+        
+        NSLayoutConstraint.activate([
+            lockView.widthAnchor.constraint(equalToConstant: 34.scale),
+            lockView.heightAnchor.constraint(equalToConstant: 34.scale),
+            lockView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16.scale),
+            lockView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16.scale)
+        ])
     }
 }
 
@@ -90,5 +100,15 @@ private extension MeditationDashboardAudioCell {
         view.numberOfLines = 0
         view.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(view)
-        return view    }
+        return view
+    }
+    
+    func makeLockView() -> UIImageView {
+        let view = UIImageView()
+        view.image = UIImage(named: "Meditation.Lock")
+        view.contentMode = .scaleAspectFit
+        view.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(view)
+        return view
+    }
 }

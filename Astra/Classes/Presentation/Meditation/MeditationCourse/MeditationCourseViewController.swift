@@ -29,9 +29,14 @@ final class MeditationCourseViewController: UIViewController {
             .disposed(by: disposeBag)
         
         mainView.tableView.didSelect
-            .subscribe(onNext: { audio in
-                let vc = MeditationAudioViewController.make(audio: audio)
-                UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true)
+            .subscribe(onNext: { element in
+                if element.needPayment {
+                    let vc = PaygateViewController.make()
+                    UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true)
+                } else {
+                    let vc = MeditationAudioViewController.make(audio: element.audio)
+                    UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true)
+                }
             })
             .disposed(by: disposeBag)
     }

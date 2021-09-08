@@ -6,7 +6,7 @@
 //
 
 enum MeditationDashboardTappedElement {
-    case daily(DailyMeditation)
+    case daily(MeditationDashboardCollectionDailyElement)
     case course(MeditationCourse)
-    case audio(MeditationAudio)
+    case audio(MeditationDashboardCollectionAudioElement)
 }
