@@ -265,6 +265,9 @@
 		96F0675826E8DE7600CD9F0A /* Onboarding.Men.json in Resources */ = {isa = PBXBuildFile; fileRef = 96F0675726E8DE7600CD9F0A /* Onboarding.Men.json */; };
 		96F0675A26E9080900CD9F0A /* MeditationDashboardCollectionDailyElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F0675926E9080900CD9F0A /* MeditationDashboardCollectionDailyElement.swift */; };
 		96F0675C26E916F600CD9F0A /* MeditationDashboardCollectionAudioElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F0675B26E916F600CD9F0A /* MeditationDashboardCollectionAudioElement.swift */; };
+		96F069FA26EA400100CD9F0A /* PaygateReviewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F069F926EA400100CD9F0A /* PaygateReviewsView.swift */; };
+		96F069FC26EA45D700CD9F0A /* PaygateInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F069FB26EA45D700CD9F0A /* PaygateInfoCell.swift */; };
+		96F069FE26EA4A1D00CD9F0A /* PaygateOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F069FD26EA4A1D00CD9F0A /* PaygateOptionView.swift */; };
 		D447459426E274940025601E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D447459326E274940025601E /* GoogleService-Info.plist */; };
 		EA80E75864467FD58E75C2BA /* Pods_Astra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70F58ABE9BC2B6805D15295E /* Pods_Astra.framework */; };
 /* End PBXBuildFile section */
@@ -533,6 +536,9 @@
 		96F0675726E8DE7600CD9F0A /* Onboarding.Men.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Onboarding.Men.json; sourceTree = "<group>"; };
 		96F0675926E9080900CD9F0A /* MeditationDashboardCollectionDailyElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationDashboardCollectionDailyElement.swift; sourceTree = "<group>"; };
 		96F0675B26E916F600CD9F0A /* MeditationDashboardCollectionAudioElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationDashboardCollectionAudioElement.swift; sourceTree = "<group>"; };
+		96F069F926EA400100CD9F0A /* PaygateReviewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaygateReviewsView.swift; sourceTree = "<group>"; };
+		96F069FB26EA45D700CD9F0A /* PaygateInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaygateInfoCell.swift; sourceTree = "<group>"; };
+		96F069FD26EA4A1D00CD9F0A /* PaygateOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaygateOptionView.swift; sourceTree = "<group>"; };
 		C46B19553E947FBD72888998 /* Pods-Astra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Astra.debug.xcconfig"; path = "Target Support Files/Pods-Astra/Pods-Astra.debug.xcconfig"; sourceTree = "<group>"; };
 		D447459326E274940025601E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D4CA69F726E2740A00B983BF /* Astra.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Astra.entitlements; sourceTree = "<group>"; };
@@ -1671,11 +1677,30 @@
 		96F0674C26E8BFE200CD9F0A /* Paygate */ = {
 			isa = PBXGroup;
 			children = (
+				96F069F726EA3C6400CD9F0A /* Views */,
 				96F0674D26E8BFF100CD9F0A /* PaygateViewController.swift */,
 				96F0674F26E8C05600CD9F0A /* PaygateViewModel.swift */,
 				96F0675126E8C07E00CD9F0A /* PaygateView.swift */,
 			);
 			path = Paygate;
+			sourceTree = "<group>";
+		};
+		96F069F726EA3C6400CD9F0A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				96F069F826EA3FDB00CD9F0A /* Reviews */,
+				96F069FB26EA45D700CD9F0A /* PaygateInfoCell.swift */,
+				96F069FD26EA4A1D00CD9F0A /* PaygateOptionView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		96F069F826EA3FDB00CD9F0A /* Reviews */ = {
+			isa = PBXGroup;
+			children = (
+				96F069F926EA400100CD9F0A /* PaygateReviewsView.swift */,
+			);
+			path = Reviews;
 			sourceTree = "<group>";
 		};
 		A4B089CC1A71FAC485D4124C /* Frameworks */ = {
@@ -1829,6 +1854,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96059EEC26CDADE700BD9A0A /* NumbersLunarTableCell.swift in Sources */,
+				96F069FC26EA45D700CD9F0A /* PaygateInfoCell.swift in Sources */,
 				9605019F26E3CEA4004E0F11 /* AddCityResponse.swift in Sources */,
 				96BFF5DF26D2B04500B8D8CC /* CompatibilitySignsViewController.swift in Sources */,
 				96BFF86426D5241000B8D8CC /* MeditationCourse.swift in Sources */,
@@ -1937,6 +1963,7 @@
 				968FD3FE26C3CB0D00C01D2A /* NavigationControllerSettings.swift in Sources */,
 				96059EC926CD21F600BD9A0A /* RateUs.swift in Sources */,
 				968FD41726C3E02A00C01D2A /* SplashViewModel.swift in Sources */,
+				96F069FE26EA4A1D00CD9F0A /* PaygateOptionView.swift in Sources */,
 				96059E1E26C6855900BD9A0A /* PaddingTextField.swift in Sources */,
 				96BFF86A26D5260800B8D8CC /* MeditationDashboard.swift in Sources */,
 				96059E8226CA5DF200BD9A0A /* ChartOpenedMainTableCell.swift in Sources */,
@@ -1998,6 +2025,7 @@
 				968FD47826C460AC00C01D2A /* OGoalCell.swift in Sources */,
 				96059E0B26C6632A00BD9A0A /* SessionManager.swift in Sources */,
 				96059E1426C66F0F00BD9A0A /* SetRequest.swift in Sources */,
+				96F069FA26EA400100CD9F0A /* PaygateReviewsView.swift in Sources */,
 				96059EB826CC2D7300BD9A0A /* HoroFullArticle.swift in Sources */,
 				96059EC426CD06DA00BD9A0A /* SettingsTableElement.swift in Sources */,
 				96BFF88726D54B1800B8D8CC /* MeditationsFilterCollectionElement.swift in Sources */,

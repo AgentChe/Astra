@@ -163,3 +163,14 @@
 // MARK: MeditationCourse
 "MeditationCourse.Course" = "COURSE";
 "MeditationCourse.Min" = "%i MIN";
+
+// MARK: Paygate
+"Paygate.RestorePurchases" = "Restore purchases";
+"Paygate.Title" = "Start your free trial today";
+"Paygate.Info1" = "Analyze  personality and see the limits of your growth";
+"Paygate.Info2" = "Explore unique birth chart and improve yourself";
+"Paygate.Secured" = "Secured with iTunes. Cancel anytime.";
+"Paygate.TryAndSubscribe" = "TRY FREE AND SUBSCRIBE";
+"Paygate.TermsOfUse" = "Terms of use";
+"Paygate.And" = " and ";
+"Paygate.PrivacyPolicy" = "Privacy Policy";
