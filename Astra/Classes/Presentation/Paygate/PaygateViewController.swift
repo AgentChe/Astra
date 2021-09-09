@@ -50,6 +50,20 @@ final class PaygateViewController: UIViewController {
                 }
             })
             .disposed(by: disposeBag)
+        
+        addOptionActions()
+        
+        // TODO: удалить
+        mainView.optionView1.isSelected = true
+        mainView.optionView2.isSelected = false
+        
+        mainView.optionView1.option = PaygateOption(title: "$49.99 Annual ($0.99/week)",
+                                                    subTitle: "first 7 days free",
+                                                    save: "SAVE 84%")
+        
+        mainView.optionView2.option = PaygateOption(title: "$24.99 Monthly ",
+                                                    subTitle: "first 3 days free",
+                                                    save: nil)
     }
 }
 
@@ -59,5 +73,32 @@ extension PaygateViewController {
         let vc = PaygateViewController(complete: complete)
         vc.modalPresentationStyle = .fullScreen
         return vc
+    }
+}
+
+// MARK: Private
+private extension PaygateViewController {
+    func addOptionActions() {
+        let option1TapGesture = UITapGestureRecognizer()
+        mainView.optionView1.isUserInteractionEnabled = true
+        mainView.optionView1.addGestureRecognizer(option1TapGesture)
+        
+        let option2TapGesture = UITapGestureRecognizer()
+        mainView.optionView2.isUserInteractionEnabled = true
+        mainView.optionView2.addGestureRecognizer(option2TapGesture)
+        
+        Observable
+            .merge(
+                option1TapGesture.rx.event
+                    .map { _ in (true, false) },
+                
+                option2TapGesture.rx.event
+                    .map { _ in (false, true) }
+            )
+            .subscribe(onNext: { [weak self] opt1, opt2 in
+                self?.mainView.optionView1.isSelected = opt1
+                self?.mainView.optionView2.isSelected = opt2
+            })
+            .disposed(by: disposeBag)
     }
 }

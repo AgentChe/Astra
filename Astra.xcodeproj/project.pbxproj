@@ -268,6 +268,7 @@
 		96F069FA26EA400100CD9F0A /* PaygateReviewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F069F926EA400100CD9F0A /* PaygateReviewsView.swift */; };
 		96F069FC26EA45D700CD9F0A /* PaygateInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F069FB26EA45D700CD9F0A /* PaygateInfoCell.swift */; };
 		96F069FE26EA4A1D00CD9F0A /* PaygateOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F069FD26EA4A1D00CD9F0A /* PaygateOptionView.swift */; };
+		96F06A0226EA5C2600CD9F0A /* PaygateOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F06A0126EA5C2600CD9F0A /* PaygateOption.swift */; };
 		D447459426E274940025601E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D447459326E274940025601E /* GoogleService-Info.plist */; };
 		EA80E75864467FD58E75C2BA /* Pods_Astra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70F58ABE9BC2B6805D15295E /* Pods_Astra.framework */; };
 /* End PBXBuildFile section */
@@ -539,6 +540,7 @@
 		96F069F926EA400100CD9F0A /* PaygateReviewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaygateReviewsView.swift; sourceTree = "<group>"; };
 		96F069FB26EA45D700CD9F0A /* PaygateInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaygateInfoCell.swift; sourceTree = "<group>"; };
 		96F069FD26EA4A1D00CD9F0A /* PaygateOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaygateOptionView.swift; sourceTree = "<group>"; };
+		96F06A0126EA5C2600CD9F0A /* PaygateOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaygateOption.swift; sourceTree = "<group>"; };
 		C46B19553E947FBD72888998 /* Pods-Astra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Astra.debug.xcconfig"; path = "Target Support Files/Pods-Astra/Pods-Astra.debug.xcconfig"; sourceTree = "<group>"; };
 		D447459326E274940025601E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D4CA69F726E2740A00B983BF /* Astra.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Astra.entitlements; sourceTree = "<group>"; };
@@ -1371,6 +1373,7 @@
 		968FD46E26C451EE00C01D2A /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				96F069FF26EA5C0500CD9F0A /* Paygate */,
 				96BFF60526D4E09B00B8D8CC /* Meditation */,
 				96BFF5CB26D2160000B8D8CC /* Compatibility */,
 				96059EF526CE3D6B00BD9A0A /* Tarot */,
@@ -1701,6 +1704,22 @@
 				96F069F926EA400100CD9F0A /* PaygateReviewsView.swift */,
 			);
 			path = Reviews;
+			sourceTree = "<group>";
+		};
+		96F069FF26EA5C0500CD9F0A /* Paygate */ = {
+			isa = PBXGroup;
+			children = (
+				96F06A0026EA5C1700CD9F0A /* Model */,
+			);
+			path = Paygate;
+			sourceTree = "<group>";
+		};
+		96F06A0026EA5C1700CD9F0A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				96F06A0126EA5C2600CD9F0A /* PaygateOption.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		A4B089CC1A71FAC485D4124C /* Frameworks */ = {
@@ -2039,6 +2058,7 @@
 				96059F0A26CE84AA00BD9A0A /* TarotViewModel.swift in Sources */,
 				96BFF88526D54AAA00B8D8CC /* MeditationsFilterCollectionView.swift in Sources */,
 				968FD45F26C41F0500C01D2A /* OnboardingViewModel.swift in Sources */,
+				96F06A0226EA5C2600CD9F0A /* PaygateOption.swift in Sources */,
 				96059E2B26C6CD2700BD9A0A /* TabCoordinator.swift in Sources */,
 				960501A926E4D525004E0F11 /* CitySearchTableView.swift in Sources */,
 				968FD47C26C4736500C01D2A /* OEnjoyingCell.swift in Sources */,
