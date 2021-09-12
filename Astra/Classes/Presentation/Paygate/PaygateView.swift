@@ -74,7 +74,7 @@ private extension PaygateView {
             closeButton.widthAnchor.constraint(equalToConstant: 24.scale),
             closeButton.heightAnchor.constraint(equalToConstant: 24.scale),
             closeButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16.scale),
-            closeButton.topAnchor.constraint(equalTo: topAnchor, constant: 64.scale)
+            closeButton.topAnchor.constraint(equalTo: topAnchor, constant: ScreenSize.isIphoneXFamily ? 64.scale : 30.scale)
         ])
         
         NSLayoutConstraint.activate([
@@ -92,14 +92,14 @@ private extension PaygateView {
         NSLayoutConstraint.activate([
             reviewsView.leadingAnchor.constraint(equalTo: leadingAnchor),
             reviewsView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            reviewsView.heightAnchor.constraint(equalToConstant: 136.scale),
-            reviewsView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20.scale)
+            reviewsView.heightAnchor.constraint(equalToConstant: ScreenSize.isIphoneXFamily ? 136.scale : 118.scale),
+            reviewsView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: ScreenSize.isIphoneXFamily ? 20.scale : 12.scale)
         ])
         
         NSLayoutConstraint.activate([
             infoCell1.leadingAnchor.constraint(equalTo: leadingAnchor),
             infoCell1.trailingAnchor.constraint(equalTo: trailingAnchor),
-            infoCell1.topAnchor.constraint(equalTo: reviewsView.bottomAnchor, constant: 18.scale)
+            infoCell1.topAnchor.constraint(equalTo: reviewsView.bottomAnchor, constant:  ScreenSize.isIphoneXFamily ? 18.scale : 16.scale)
         ])
         
         NSLayoutConstraint.activate([
@@ -112,7 +112,7 @@ private extension PaygateView {
             optionView1.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16.scale),
             optionView1.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16.scale),
             optionView1.heightAnchor.constraint(equalToConstant: 76.scale),
-            optionView1.topAnchor.constraint(equalTo: infoCell2.bottomAnchor, constant: 30.scale)
+            optionView1.topAnchor.constraint(equalTo: infoCell2.bottomAnchor, constant: ScreenSize.isIphoneXFamily ? 30.scale : 14.scale)
         ])
         
         NSLayoutConstraint.activate([
@@ -123,10 +123,10 @@ private extension PaygateView {
         ])
         
         NSLayoutConstraint.activate([
-            lockImageView.widthAnchor.constraint(equalToConstant: 17.scale),
-            lockImageView.heightAnchor.constraint(equalToConstant: 17.scale),
-            lockImageView.bottomAnchor.constraint(equalTo: subscribeButton.topAnchor, constant: -9.scale),
-            lockImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 65.scale)
+            lockImageView.widthAnchor.constraint(equalToConstant: ScreenSize.isIphoneXFamily ? 17.scale : 14.scale),
+            lockImageView.heightAnchor.constraint(equalToConstant: ScreenSize.isIphoneXFamily ? 17.scale : 14.scale),
+            lockImageView.bottomAnchor.constraint(equalTo: subscribeButton.topAnchor,  constant: ScreenSize.isIphoneXFamily ? -9.scale : -8.scale),
+            lockImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: ScreenSize.isIphoneXFamily ? 65.scale : 83.scale)
         ])
         
         NSLayoutConstraint.activate([
@@ -138,12 +138,12 @@ private extension PaygateView {
             subscribeButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16.scale),
             subscribeButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16.scale),
             subscribeButton.heightAnchor.constraint(equalToConstant: 51.scale),
-            subscribeButton.bottomAnchor.constraint(equalTo: termsAndPolicyLabel.topAnchor, constant: -38.scale)
+            subscribeButton.bottomAnchor.constraint(equalTo: termsAndPolicyLabel.topAnchor, constant: ScreenSize.isIphoneXFamily ? -38.scale : -17.scale)
         ])
         
         NSLayoutConstraint.activate([
             termsAndPolicyLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            termsAndPolicyLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -30.scale)
+            termsAndPolicyLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: ScreenSize.isIphoneXFamily ? -30.scale : -12.scale)
         ])
     }
 }
@@ -198,7 +198,7 @@ private extension PaygateView {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         layout.minimumInteritemSpacing = 0
-        layout.minimumLineSpacing = 21.scale
+        layout.minimumLineSpacing = ScreenSize.isIphoneXFamily ? 21.scale : 12.scale
         
         let view = PaygateReviewsView(frame: .zero, collectionViewLayout: layout)
         view.backgroundColor = UIColor.clear
@@ -239,8 +239,8 @@ private extension PaygateView {
     func makeSecuredLabel() -> UILabel {
         let attrs = TextAttributes()
             .textColor(UIColor(integralRed: 252, green: 252, blue: 252))
-            .font(Fonts.Qanelas.regular(size: 14.scale))
-            .lineHeight(16.scale)
+            .font(Fonts.Qanelas.regular(size: ScreenSize.isIphoneXFamily ? 14.scale : 12.scale))
+            .lineHeight(ScreenSize.isIphoneXFamily ? 16.scale : 14.scale)
         
         let view = UILabel()
         view.attributedText = "Paygate.Secured".localized.attributed(with: attrs)

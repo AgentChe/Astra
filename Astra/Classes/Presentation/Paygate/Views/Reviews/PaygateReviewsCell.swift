@@ -33,14 +33,14 @@ extension PaygateReviewsCell {
         textLabel.attributedText = element.text
             .attributed(with: TextAttributes()
                             .textColor(UIColor(integralRed: 63, green: 63, blue: 63))
-                            .font(Fonts.Qanelas.regular(size: 17.scale))
-                            .lineHeight(23.8.scale))
+                            .font(Fonts.Qanelas.regular(size: ScreenSize.isIphoneXFamily ? 17.scale : 15.scale))
+                            .lineHeight(ScreenSize.isIphoneXFamily ? 23.8.scale : 21.scale))
         
         cityLabel.attributedText = element.city
             .attributed(with: TextAttributes()
                             .textColor(UIColor(integralRed: 31, green: 31, blue: 31))
                             .font(Fonts.Qanelas.regular(size: 12.scale))
-                            .lineHeight(16.8.scale))
+                            .lineHeight(ScreenSize.isIphoneXFamily ? 16.8.scale : 14.4.scale))
     }
 }
 
@@ -67,22 +67,22 @@ private extension PaygateReviewsCell {
         ])
         
         NSLayoutConstraint.activate([
-            iconView.widthAnchor.constraint(equalToConstant: 32.scale),
-            iconView.heightAnchor.constraint(equalToConstant: 32.scale),
+            iconView.widthAnchor.constraint(equalToConstant: ScreenSize.isIphoneXFamily ? 32.scale : 28.scale),
+            iconView.heightAnchor.constraint(equalToConstant: ScreenSize.isIphoneXFamily ? 32.scale : 28.scale),
             iconView.topAnchor.constraint(equalTo: container.topAnchor, constant: 10.scale),
-            iconView.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 18.scale)
+            iconView.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: ScreenSize.isIphoneXFamily ? 18.scale : 10.scale)
         ])
         
         NSLayoutConstraint.activate([
-            textLabel.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 18.scale),
-            textLabel.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -18.scale),
-            textLabel.topAnchor.constraint(equalTo: container.topAnchor, constant: 50.scale)
+            textLabel.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: ScreenSize.isIphoneXFamily ? 18.scale : 12.scale),
+            textLabel.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: ScreenSize.isIphoneXFamily ? -18.scale : -12.scale),
+            textLabel.topAnchor.constraint(equalTo: container.topAnchor, constant: ScreenSize.isIphoneXFamily ? 50.scale : 46.scale)
         ])
         
         NSLayoutConstraint.activate([
-            cityLabel.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 18.scale),
-            cityLabel.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -18.scale),
-            cityLabel.topAnchor.constraint(equalTo: container.topAnchor, constant: 105.scale)
+            cityLabel.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: ScreenSize.isIphoneXFamily ? 18.scale : 12.scale),
+            cityLabel.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: ScreenSize.isIphoneXFamily ? 18.scale : -12.scale),
+            cityLabel.topAnchor.constraint(equalTo: container.topAnchor, constant: ScreenSize.isIphoneXFamily ? 105.scale : 94.scale)
         ])
     }
 }

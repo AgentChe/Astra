@@ -37,7 +37,7 @@ extension PaygateReviewsView: UICollectionViewDataSource {
 // MARK: UICollectionViewDelegateFlowLayout
 extension PaygateReviewsView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: 249.scale, height: 136.scale)
+        CGSize(width: 249.scale, height: ScreenSize.isIphoneXFamily ? 136.scale : 118.scale)
     }
 }
 
