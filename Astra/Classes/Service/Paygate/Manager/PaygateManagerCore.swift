@@ -33,10 +33,7 @@ extension PaygateManagerCore {
                 source.second.productId
             ])
             .map { iapProducts -> [ProductPrice] in
-//                iapProducts.map { ProductPrice(product: $0.product) }
-                
-                // TODO
-                [ProductPrice(code: 1), ProductPrice(type: 2)]
+                iapProducts.map { ProductPrice(product: $0.product) }
             }
             .map { productPrices -> Paygate? in
                 PreparePaygatePricesMapper.map(source: source, prices: productPrices)

@@ -194,3 +194,4 @@
 "Paygate.Review.9.City" = "New York";
 "Paygate.Review.10.Text" = "Nothing has been a more useful tool than APP";
 "Paygate.Review.10.City" = "New York";
+"Paygate.Error" = "Failure at purchase";

@@ -57,6 +57,43 @@ final class PaygateViewController: UIViewController {
         })
         .disposed(by: disposeBag)
         
+        viewModel.step
+            .drive(onNext: { [weak self] step in
+                self?.handle(step: step)
+            })
+            .disposed(by: disposeBag)
+        
+        mainView.restoreButton.rx.tap
+            .bind(to: viewModel.restore)
+            .disposed(by: disposeBag)
+        
+        mainView.subscribeButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                guard let self = self else {
+                    return
+                }
+                
+                let option = [self.mainView.optionView1, self.mainView.optionView2]
+                    .first(where: { $0.isSelected })?
+                    .option
+                
+                guard let option = option else {
+                    return
+                }
+                
+                self.viewModel.buy.accept(option.productId)
+            })
+            .disposed(by: disposeBag)
+        
+        viewModel.activityIndicator
+            .drive(onNext: { [weak self] activity in
+                self?.mainView.restoreButton.isHidden = activity
+                self?.mainView.subscribeButton.isHidden = activity
+                self?.mainView.optionView1.isHidden = activity
+                self?.mainView.optionView2.isHidden = activity
+            })
+            .disposed(by: disposeBag)
+        
         mainView.optionView1.isSelected = true
         mainView.optionView2.isSelected = false
         
@@ -76,6 +113,19 @@ extension PaygateViewController {
 
 // MARK: Private
 private extension PaygateViewController {
+    func handle(step: PaygateViewModel.Step) {
+        switch step {
+        case .buyed, .restored:
+            self.dismiss(animated: true) {
+                self.complete?(.bought)
+            }
+        case .error:
+            Toast.notify(with: "Paygate.Error".localized, style: .danger)
+        case .canceled:
+            break
+        }
+    }
+    
     func animateScrollReviews() {
         let no = mainView.reviewsView.contentOffset.x + 1
         

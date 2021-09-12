@@ -24,20 +24,4 @@ extension ProductPrice {
         priceLocale = product.priceLocale
         currency = product.priceLocale.currencyCode ?? ""
     }
-    
-    // TODO
-    init(code: Int) {
-        id = "app.astra.forever"
-        priceLocalized = "$44.99"
-        priceValue = 44.99
-        priceLocale = Locale.current
-        currency = Locale.current.currencyCode ?? ""
-    }
-    init(type: Int) {
-        id = "app.astra.month"
-        priceLocalized = "$24.99"
-        priceValue = 24.99
-        priceLocale = Locale.current
-        currency = Locale.current.currencyCode ?? ""
-    }
 }
