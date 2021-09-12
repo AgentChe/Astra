@@ -52,6 +52,7 @@ final class PaygateViewController: UIViewController {
             .disposed(by: disposeBag)
         
         addOptionActions()
+        animateScrollReviews()
         
         // TODO: удалить
         mainView.optionView1.isSelected = true
@@ -78,6 +79,16 @@ extension PaygateViewController {
 
 // MARK: Private
 private extension PaygateViewController {
+    func animateScrollReviews() {
+        let no = mainView.reviewsView.contentOffset.x + 1
+        
+        UIView.animate(withDuration: 0.001, delay: 0, options: [.curveEaseInOut], animations: { [weak self] in
+            self?.mainView.reviewsView.contentOffset = CGPoint(x: no, y: 0)
+        }, completion: { [weak self] _ in
+            self?.animateScrollReviews()
+        })
+    }
+    
     func addOptionActions() {
         let option1TapGesture = UITapGestureRecognizer()
         mainView.optionView1.isUserInteractionEnabled = true

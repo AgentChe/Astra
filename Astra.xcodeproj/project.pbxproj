@@ -269,6 +269,8 @@
 		96F069FC26EA45D700CD9F0A /* PaygateInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F069FB26EA45D700CD9F0A /* PaygateInfoCell.swift */; };
 		96F069FE26EA4A1D00CD9F0A /* PaygateOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F069FD26EA4A1D00CD9F0A /* PaygateOptionView.swift */; };
 		96F06A0226EA5C2600CD9F0A /* PaygateOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F06A0126EA5C2600CD9F0A /* PaygateOption.swift */; };
+		96F06A0426EBF15600CD9F0A /* PaygateReviewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F06A0326EBF15600CD9F0A /* PaygateReviewsCell.swift */; };
+		96F06A0626EBF1BF00CD9F0A /* PaygateReviewsElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F06A0526EBF1BF00CD9F0A /* PaygateReviewsElement.swift */; };
 		D447459426E274940025601E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D447459326E274940025601E /* GoogleService-Info.plist */; };
 		EA80E75864467FD58E75C2BA /* Pods_Astra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70F58ABE9BC2B6805D15295E /* Pods_Astra.framework */; };
 /* End PBXBuildFile section */
@@ -541,6 +543,8 @@
 		96F069FB26EA45D700CD9F0A /* PaygateInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaygateInfoCell.swift; sourceTree = "<group>"; };
 		96F069FD26EA4A1D00CD9F0A /* PaygateOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaygateOptionView.swift; sourceTree = "<group>"; };
 		96F06A0126EA5C2600CD9F0A /* PaygateOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaygateOption.swift; sourceTree = "<group>"; };
+		96F06A0326EBF15600CD9F0A /* PaygateReviewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaygateReviewsCell.swift; sourceTree = "<group>"; };
+		96F06A0526EBF1BF00CD9F0A /* PaygateReviewsElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaygateReviewsElement.swift; sourceTree = "<group>"; };
 		C46B19553E947FBD72888998 /* Pods-Astra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Astra.debug.xcconfig"; path = "Target Support Files/Pods-Astra/Pods-Astra.debug.xcconfig"; sourceTree = "<group>"; };
 		D447459326E274940025601E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D4CA69F726E2740A00B983BF /* Astra.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Astra.entitlements; sourceTree = "<group>"; };
@@ -1702,6 +1706,8 @@
 			isa = PBXGroup;
 			children = (
 				96F069F926EA400100CD9F0A /* PaygateReviewsView.swift */,
+				96F06A0326EBF15600CD9F0A /* PaygateReviewsCell.swift */,
+				96F06A0526EBF1BF00CD9F0A /* PaygateReviewsElement.swift */,
 			);
 			path = Reviews;
 			sourceTree = "<group>";
@@ -1986,6 +1992,7 @@
 				96059E1E26C6855900BD9A0A /* PaddingTextField.swift in Sources */,
 				96BFF86A26D5260800B8D8CC /* MeditationDashboard.swift in Sources */,
 				96059E8226CA5DF200BD9A0A /* ChartOpenedMainTableCell.swift in Sources */,
+				96F06A0426EBF15600CD9F0A /* PaygateReviewsCell.swift in Sources */,
 				96059E1A26C6707C00BD9A0A /* UserManagerCore.swift in Sources */,
 				96059E4126C7AF1300BD9A0A /* HoroContent.swift in Sources */,
 				96059E6526C90E2C00BD9A0A /* TitleMainTableCell.swift in Sources */,
@@ -2063,6 +2070,7 @@
 				960501A926E4D525004E0F11 /* CitySearchTableView.swift in Sources */,
 				968FD47C26C4736500C01D2A /* OEnjoyingCell.swift in Sources */,
 				96059EBD26CD020300BD9A0A /* SettingsViewModel.swift in Sources */,
+				96F06A0626EBF1BF00CD9F0A /* PaygateReviewsElement.swift in Sources */,
 				96059EE826CDA36B00BD9A0A /* TitleLunarTableCell.swift in Sources */,
 				96059E1C26C6819D00BD9A0A /* ONameView.swift in Sources */,
 				96BFF86626D5246100B8D8CC /* MeditationAudio.swift in Sources */,

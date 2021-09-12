@@ -195,8 +195,16 @@ private extension PaygateView {
     }
     
     func makeReviewsView() -> PaygateReviewsView {
-        let view = PaygateReviewsView()
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 21.scale
+        
+        let view = PaygateReviewsView(frame: .zero, collectionViewLayout: layout)
         view.backgroundColor = UIColor.clear
+        view.isScrollEnabled = false
+        view.showsHorizontalScrollIndicator = false
+        view.contentInset = UIEdgeInsets(top: 0, left: 10.scale, bottom: 0, right: 10.scale)
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view

@@ -7,11 +7,13 @@
 
 import UIKit
 
-final class PaygateReviewsView: UIView {
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+final class PaygateReviewsView: UICollectionView {
+    private lazy var elements = PaygateReviewsElement.makeCollection()
+    
+    override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
+        super.init(frame: frame, collectionViewLayout: layout)
         
-        makeConstraints()
+        initialize()
     }
     
     required init?(coder: NSCoder) {
@@ -19,14 +21,32 @@ final class PaygateReviewsView: UIView {
     }
 }
 
-// MARK: Make constraints
-private extension PaygateReviewsView {
-    func makeConstraints() {
-        
+// MARK: UICollectionViewDataSource
+extension PaygateReviewsView: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        1000000
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = dequeueReusableCell(withReuseIdentifier: String(describing: PaygateReviewsCell.self), for: indexPath) as! PaygateReviewsCell
+        cell.setup(element: elements[indexPath.row % elements.count])
+        return cell
     }
 }
 
-// MARK: Lazy initialization
+// MARK: UICollectionViewDelegateFlowLayout
+extension PaygateReviewsView: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        CGSize(width: 249.scale, height: 136.scale)
+    }
+}
+
+// MARK: Private
 private extension PaygateReviewsView {
-    
+    func initialize() {
+        register(PaygateReviewsCell.self, forCellWithReuseIdentifier: String(describing: PaygateReviewsCell.self))
+        
+        dataSource = self
+        delegate = self
+    }
 }
