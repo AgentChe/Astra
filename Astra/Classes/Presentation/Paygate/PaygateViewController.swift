@@ -51,20 +51,17 @@ final class PaygateViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
-        addOptionActions()
-        animateScrollReviews()
+        viewModel.paygate.drive(onNext: { [weak self] paygate in
+            self?.mainView.optionView1.option = paygate.first
+            self?.mainView.optionView2.option = paygate.second
+        })
+        .disposed(by: disposeBag)
         
-        // TODO: удалить
         mainView.optionView1.isSelected = true
         mainView.optionView2.isSelected = false
         
-        mainView.optionView1.option = PaygateOption(title: "$49.99 Annual ($0.99/week)",
-                                                    subTitle: "first 7 days free",
-                                                    save: "SAVE 84%")
-        
-        mainView.optionView2.option = PaygateOption(title: "$24.99 Monthly ",
-                                                    subTitle: "first 3 days free",
-                                                    save: nil)
+        addOptionActions()
+        animateScrollReviews()
     }
 }
 

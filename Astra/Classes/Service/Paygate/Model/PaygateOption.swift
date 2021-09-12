@@ -6,6 +6,7 @@
 //
 
 struct PaygateOption {
+    let productId: String
     let title: String
     let subTitle: String
     let save: String?

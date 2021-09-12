@@ -271,6 +271,15 @@
 		96F06A0226EA5C2600CD9F0A /* PaygateOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F06A0126EA5C2600CD9F0A /* PaygateOption.swift */; };
 		96F06A0426EBF15600CD9F0A /* PaygateReviewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F06A0326EBF15600CD9F0A /* PaygateReviewsCell.swift */; };
 		96F06A0626EBF1BF00CD9F0A /* PaygateReviewsElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F06A0526EBF1BF00CD9F0A /* PaygateReviewsElement.swift */; };
+		96F06A0926EE07B200CD9F0A /* PaygateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F06A0826EE07B200CD9F0A /* PaygateManager.swift */; };
+		96F06A0B26EE07EA00CD9F0A /* Paygate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F06A0A26EE07EA00CD9F0A /* Paygate.swift */; };
+		96F06A0D26EE094400CD9F0A /* PaygateOptionSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F06A0C26EE094400CD9F0A /* PaygateOptionSource.swift */; };
+		96F06A0F26EE09A700CD9F0A /* PaygateSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F06A0E26EE09A700CD9F0A /* PaygateSource.swift */; };
+		96F06A1126EE0AD500CD9F0A /* PaygateManagerCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F06A1026EE0AD500CD9F0A /* PaygateManagerCore.swift */; };
+		96F06A1526EE101700CD9F0A /* GetPaygateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F06A1426EE101700CD9F0A /* GetPaygateRequest.swift */; };
+		96F06A1726EE108700CD9F0A /* GetPaygateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F06A1626EE108700CD9F0A /* GetPaygateResponse.swift */; };
+		96F06A1926EE16A200CD9F0A /* PreparePaygatePricesMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F06A1826EE16A200CD9F0A /* PreparePaygatePricesMapper.swift */; };
+		96F06A1B26EE16F400CD9F0A /* ProductPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F06A1A26EE16F400CD9F0A /* ProductPrice.swift */; };
 		D447459426E274940025601E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D447459326E274940025601E /* GoogleService-Info.plist */; };
 		EA80E75864467FD58E75C2BA /* Pods_Astra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70F58ABE9BC2B6805D15295E /* Pods_Astra.framework */; };
 /* End PBXBuildFile section */
@@ -545,6 +554,15 @@
 		96F06A0126EA5C2600CD9F0A /* PaygateOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaygateOption.swift; sourceTree = "<group>"; };
 		96F06A0326EBF15600CD9F0A /* PaygateReviewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaygateReviewsCell.swift; sourceTree = "<group>"; };
 		96F06A0526EBF1BF00CD9F0A /* PaygateReviewsElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaygateReviewsElement.swift; sourceTree = "<group>"; };
+		96F06A0826EE07B200CD9F0A /* PaygateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaygateManager.swift; sourceTree = "<group>"; };
+		96F06A0A26EE07EA00CD9F0A /* Paygate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paygate.swift; sourceTree = "<group>"; };
+		96F06A0C26EE094400CD9F0A /* PaygateOptionSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaygateOptionSource.swift; sourceTree = "<group>"; };
+		96F06A0E26EE09A700CD9F0A /* PaygateSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaygateSource.swift; sourceTree = "<group>"; };
+		96F06A1026EE0AD500CD9F0A /* PaygateManagerCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaygateManagerCore.swift; sourceTree = "<group>"; };
+		96F06A1426EE101700CD9F0A /* GetPaygateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPaygateRequest.swift; sourceTree = "<group>"; };
+		96F06A1626EE108700CD9F0A /* GetPaygateResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPaygateResponse.swift; sourceTree = "<group>"; };
+		96F06A1826EE16A200CD9F0A /* PreparePaygatePricesMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreparePaygatePricesMapper.swift; sourceTree = "<group>"; };
+		96F06A1A26EE16F400CD9F0A /* ProductPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPrice.swift; sourceTree = "<group>"; };
 		C46B19553E947FBD72888998 /* Pods-Astra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Astra.debug.xcconfig"; path = "Target Support Files/Pods-Astra/Pods-Astra.debug.xcconfig"; sourceTree = "<group>"; };
 		D447459326E274940025601E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D4CA69F726E2740A00B983BF /* Astra.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Astra.entitlements; sourceTree = "<group>"; };
@@ -1715,6 +1733,8 @@
 		96F069FF26EA5C0500CD9F0A /* Paygate */ = {
 			isa = PBXGroup;
 			children = (
+				96F06A1226EE100100CD9F0A /* Request */,
+				96F06A0726EE07A200CD9F0A /* Manager */,
 				96F06A0026EA5C1700CD9F0A /* Model */,
 			);
 			path = Paygate;
@@ -1724,8 +1744,39 @@
 			isa = PBXGroup;
 			children = (
 				96F06A0126EA5C2600CD9F0A /* PaygateOption.swift */,
+				96F06A0A26EE07EA00CD9F0A /* Paygate.swift */,
+				96F06A0C26EE094400CD9F0A /* PaygateOptionSource.swift */,
+				96F06A0E26EE09A700CD9F0A /* PaygateSource.swift */,
+				96F06A1A26EE16F400CD9F0A /* ProductPrice.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		96F06A0726EE07A200CD9F0A /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				96F06A0826EE07B200CD9F0A /* PaygateManager.swift */,
+				96F06A1026EE0AD500CD9F0A /* PaygateManagerCore.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		96F06A1226EE100100CD9F0A /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				96F06A1326EE100700CD9F0A /* GetPaygate */,
+				96F06A1826EE16A200CD9F0A /* PreparePaygatePricesMapper.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		96F06A1326EE100700CD9F0A /* GetPaygate */ = {
+			isa = PBXGroup;
+			children = (
+				96F06A1426EE101700CD9F0A /* GetPaygateRequest.swift */,
+				96F06A1626EE108700CD9F0A /* GetPaygateResponse.swift */,
+			);
+			path = GetPaygate;
 			sourceTree = "<group>";
 		};
 		A4B089CC1A71FAC485D4124C /* Frameworks */ = {
@@ -1904,6 +1955,7 @@
 				9654D0E526E13BF700179E40 /* OPalmView.swift in Sources */,
 				96059E3B26C7AC5700BD9A0A /* Sign.swift in Sources */,
 				96059E2226C6CBB900BD9A0A /* TabController.swift in Sources */,
+				96F06A1526EE101700CD9F0A /* GetPaygateRequest.swift in Sources */,
 				96BFF8B726D6A1F000B8D8CC /* MeditationCourseAudioCell.swift in Sources */,
 				96059E2526C6CBE800BD9A0A /* TabView.swift in Sources */,
 				96059E8C26CA7EE700BD9A0A /* LunarButtonMainTableCell.swift in Sources */,
@@ -1929,6 +1981,7 @@
 				96059E7226C9AC0D00BD9A0A /* HoroImageMainCell.swift in Sources */,
 				96059EB626CBE40A00BD9A0A /* GetHoroFullResponse.swift in Sources */,
 				968FD3FA26C3CB0D00C01D2A /* Weak.swift in Sources */,
+				96F06A0B26EE07EA00CD9F0A /* Paygate.swift in Sources */,
 				96059E8626CA683300BD9A0A /* ChartClosedMainTableCell.swift in Sources */,
 				9654D0D826DFCB2B00179E40 /* OMaritalView.swift in Sources */,
 				96BFF5D326D21A7A00B8D8CC /* GetCompatibilitiesRequest.swift in Sources */,
@@ -1949,6 +2002,7 @@
 				968FD47426C45BED00C01D2A /* OBirthdateView.swift in Sources */,
 				968FD40726C3CB0D00C01D2A /* UIViewRxExtension.swift in Sources */,
 				96BFF8B526D6A1C200B8D8CC /* MeditationCourseAudioElement.swift in Sources */,
+				96F06A1126EE0AD500CD9F0A /* PaygateManagerCore.swift in Sources */,
 				96059E5726C7CEAB00BD9A0A /* MainTableView.swift in Sources */,
 				96059F0F26CE952300BD9A0A /* TarotTableView.swift in Sources */,
 				96059EF826CE3D7F00BD9A0A /* TarotType.swift in Sources */,
@@ -1993,6 +2047,7 @@
 				96BFF86A26D5260800B8D8CC /* MeditationDashboard.swift in Sources */,
 				96059E8226CA5DF200BD9A0A /* ChartOpenedMainTableCell.swift in Sources */,
 				96F06A0426EBF15600CD9F0A /* PaygateReviewsCell.swift in Sources */,
+				96F06A1926EE16A200CD9F0A /* PreparePaygatePricesMapper.swift in Sources */,
 				96059E1A26C6707C00BD9A0A /* UserManagerCore.swift in Sources */,
 				96059E4126C7AF1300BD9A0A /* HoroContent.swift in Sources */,
 				96059E6526C90E2C00BD9A0A /* TitleMainTableCell.swift in Sources */,
@@ -2003,6 +2058,7 @@
 				968FD41926C3E0CB00C01D2A /* SplashView.swift in Sources */,
 				968FD45E26C41F0500C01D2A /* OnboardingView.swift in Sources */,
 				96BFF88126D53F9500B8D8CC /* MeditationsDashboardView.swift in Sources */,
+				96F06A0F26EE09A700CD9F0A /* PaygateSource.swift in Sources */,
 				96059E2926C6CC5B00BD9A0A /* TabMainView.swift in Sources */,
 				9654D0E326E0DB9800179E40 /* OPrePalmView.swift in Sources */,
 				96F0675026E8C05600CD9F0A /* PaygateViewModel.swift in Sources */,
@@ -2097,6 +2153,7 @@
 				96059E5926C7CF4A00BD9A0A /* MainTableElement.swift in Sources */,
 				968FD46326C42ED300C01D2A /* OWelcomeView.swift in Sources */,
 				96059E7426C9AFF900BD9A0A /* HoroContentMainTableCell.swift in Sources */,
+				96F06A1B26EE16F400CD9F0A /* ProductPrice.swift in Sources */,
 				96BFF5EF26D3F71900B8D8CC /* CompatibilityViewController.swift in Sources */,
 				96059F2026CEEA1500BD9A0A /* TagView.swift in Sources */,
 				96059ED026CD264500BD9A0A /* LunarView.swift in Sources */,
@@ -2119,7 +2176,9 @@
 				96BFF5C826D17E5A00B8D8CC /* ImageLoader.swift in Sources */,
 				96BFF8AF26D68E5200B8D8CC /* MeditationCourseTableElement.swift in Sources */,
 				96BFF5E326D2B0E600B8D8CC /* CompatibilitySignsView.swift in Sources */,
+				96F06A0926EE07B200CD9F0A /* PaygateManager.swift in Sources */,
 				96BFF5D826D21E3F00B8D8CC /* CompatibilityManager.swift in Sources */,
+				96F06A0D26EE094400CD9F0A /* PaygateOptionSource.swift in Sources */,
 				9654D0DD26DFE43B00179E40 /* PartnerSignCollectionCell.swift in Sources */,
 				96059F0826CE845800BD9A0A /* TarotViewController.swift in Sources */,
 				968FD40626C3CB0D00C01D2A /* RxActivityIndicator.swift in Sources */,
@@ -2132,6 +2191,7 @@
 				9654D0E126DFE78E00179E40 /* PartnerSignCollectionView.swift in Sources */,
 				96059F2226CEEA2B00BD9A0A /* TagsView.swift in Sources */,
 				96059F0326CE72DA00BD9A0A /* GetTarotRequest.swift in Sources */,
+				96F06A1726EE108700CD9F0A /* GetPaygateResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
