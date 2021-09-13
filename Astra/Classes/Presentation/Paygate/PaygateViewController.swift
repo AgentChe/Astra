@@ -91,6 +91,8 @@ final class PaygateViewController: UIViewController {
                 self?.mainView.subscribeButton.isHidden = activity
                 self?.mainView.optionView1.isHidden = activity
                 self?.mainView.optionView2.isHidden = activity
+                
+                activity ? self?.mainView.preloader.startAnimating() : self?.mainView.preloader.stopAnimating()
             })
             .disposed(by: disposeBag)
         

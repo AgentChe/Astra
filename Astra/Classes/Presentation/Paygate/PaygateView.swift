@@ -21,6 +21,7 @@ final class PaygateView: GradientView {
     lazy var securedLabel = makeSecuredLabel()
     lazy var subscribeButton = makeSubscribeButton()
     lazy var termsAndPolicyLabel = makeTermsAndPolicyLabel()
+    lazy var preloader = makePreloader()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -144,6 +145,11 @@ private extension PaygateView {
         NSLayoutConstraint.activate([
             termsAndPolicyLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             termsAndPolicyLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: ScreenSize.isIphoneXFamily ? -30.scale : -12.scale)
+        ])
+        
+        NSLayoutConstraint.activate([
+            preloader.centerXAnchor.constraint(equalTo: subscribeButton.centerXAnchor),
+            preloader.centerYAnchor.constraint(equalTo: subscribeButton.centerYAnchor)
         ])
     }
 }
@@ -290,6 +296,15 @@ private extension PaygateView {
         view.attributedText = attributedText
         view.addGestureRecognizer(tapGesture)
         view.isUserInteractionEnabled = true
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        return view
+    }
+    
+    func makePreloader() -> UIActivityIndicatorView {
+        let view = UIActivityIndicatorView()
+        view.style = .whiteLarge
+        view.hidesWhenStopped = true
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view
