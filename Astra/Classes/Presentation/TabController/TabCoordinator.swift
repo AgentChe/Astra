@@ -13,6 +13,7 @@ final class TabCoordinator {
     lazy var horoVC = NavigationController(rootViewController: MainViewController.make())
     lazy var meditationsVC = NavigationController(rootViewController: MeditationsDashboardViewController.make())
     lazy var compatibilityVC = NavigationController(rootViewController: CompatibilitySignsViewController.make())
+    lazy var biorhythmsVC = NavigationController(rootViewController: BiorhythmsViewController.make())
     
     private var previousVC: UIViewController?
     
@@ -30,6 +31,8 @@ final class TabCoordinator {
             changeVC(on: meditationsVC)
         case .compatibility:
             changeVC(on: compatibilityVC)
+        case .biorhythms:
+            changeVC(on: biorhythmsVC)
         }
     }
 }

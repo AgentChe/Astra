@@ -56,11 +56,16 @@ private extension TabController {
         mainView.tabView.compatibilityItem.isUserInteractionEnabled = true
         mainView.tabView.compatibilityItem.addGestureRecognizer(compatibilityGesture)
         
+        let biorhythmsGesture = UITapGestureRecognizer()
+        mainView.tabView.biorhythmsItem.isUserInteractionEnabled = true
+        mainView.tabView.biorhythmsItem.addGestureRecognizer(biorhythmsGesture)
+        
         Observable
             .merge([
                 horoGesture.rx.event.map { _ in TabView.Tab.horo },
                 meditationsGesture.rx.event.map { _ in TabView.Tab.meditations },
-                compatibilityGesture.rx.event.map { _ in TabView.Tab.compatibility }
+                compatibilityGesture.rx.event.map { _ in TabView.Tab.compatibility },
+                biorhythmsGesture.rx.event.map { _ in TabView.Tab.biorhythms }
             ])
             .subscribe(onNext: { [weak self] tab in
                 self?.update(selectedTab: tab)
