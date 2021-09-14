@@ -198,3 +198,8 @@
 
 // MARK: Biorhythms
 "Biorhythms.Title" = "BIORHYTHMS";
+"Biorhythms.Button" = "WHAT ARE BIORHYTHMS?";
+"Biorhythms.Percent" = "%.2f%%";
+"Biorhythms.Physical" = "Physical";
+"Biorhythms.Emotional" = "Emotional";
+"Biorhythms.Intellectual" = "Intellectual";

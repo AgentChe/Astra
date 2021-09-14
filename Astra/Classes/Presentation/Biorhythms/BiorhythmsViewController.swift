@@ -18,6 +18,15 @@ final class BiorhythmsViewController: UIViewController {
     override func loadView() {
         view = mainView
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        viewModel.elements.drive(onNext: { [weak self] elements in
+            self?.mainView.tableView.setup(elements: elements)
+        })
+        .disposed(by: disposeBag)
+    }
 }
 
 // MARK: Make
