@@ -8,6 +8,7 @@ target 'Astra' do
   pod 'NotificationBannerSwift'
   pod 'lottie-ios'
   pod 'Kingfisher'
+  pod 'Charts'
   
   pod 'RushSDK', :git => "https://github.com/AgentChe/RushSDK.git"
 end

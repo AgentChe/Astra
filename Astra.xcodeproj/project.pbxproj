@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		9605018E26E39B1F004E0F11 /* OQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605018D26E39B1F004E0F11 /* OQuestionView.swift */; };
 		9605019026E3A4C1004E0F11 /* OPreloaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605018F26E3A4C1004E0F11 /* OPreloaderView.swift */; };
-		9605019326E3A902004E0F11 /* Onboarding.Preloader.json in Resources */ = {isa = PBXBuildFile; fileRef = 9605019226E3A902004E0F11 /* Onboarding.Preloader.json */; };
 		9605019526E3CCC0004E0F11 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605019426E3CCC0004E0F11 /* City.swift */; };
 		9605019826E3CD4A004E0F11 /* GetCitiesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605019726E3CD4A004E0F11 /* GetCitiesRequest.swift */; };
 		9605019A26E3CDD5004E0F11 /* GetCitiesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605019926E3CDD5004E0F11 /* GetCitiesResponse.swift */; };
@@ -211,6 +210,10 @@
 		96A7795E26F0CA0700CA6033 /* BiorhythmsTableButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A7795D26F0CA0700CA6033 /* BiorhythmsTableButtonCell.swift */; };
 		96A7796026F0CA1D00CA6033 /* BiorhythmsTableComponentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A7795F26F0CA1D00CA6033 /* BiorhythmsTableComponentCell.swift */; };
 		96A7796226F0CB5F00CA6033 /* BiorhythmsTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A7796126F0CB5F00CA6033 /* BiorhythmsTableViewDelegate.swift */; };
+		96A7796426F12C9200CA6033 /* BiorhythmsTableChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A7796326F12C9200CA6033 /* BiorhythmsTableChartCell.swift */; };
+		96A7796626F12DFA00CA6033 /* BiorhythmsTableChartElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A7796526F12DFA00CA6033 /* BiorhythmsTableChartElement.swift */; };
+		96A7796826F12EFC00CA6033 /* BiorhythmsInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A7796726F12EFC00CA6033 /* BiorhythmsInfoView.swift */; };
+		96A7796A26F1D25E00CA6033 /* Onboarding.Preloader.json in Resources */ = {isa = PBXBuildFile; fileRef = 96A7796926F1D25E00CA6033 /* Onboarding.Preloader.json */; };
 		96BFF5C826D17E5A00B8D8CC /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF5C726D17E5A00B8D8CC /* ImageLoader.swift */; };
 		96BFF5CA26D1810400B8D8CC /* TarotTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF5C926D1810400B8D8CC /* TarotTableViewDelegate.swift */; };
 		96BFF5CE26D2161C00B8D8CC /* Compatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF5CD26D2161C00B8D8CC /* Compatibility.swift */; };
@@ -304,7 +307,6 @@
 		70F58ABE9BC2B6805D15295E /* Pods_Astra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Astra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9605018D26E39B1F004E0F11 /* OQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OQuestionView.swift; sourceTree = "<group>"; };
 		9605018F26E3A4C1004E0F11 /* OPreloaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPreloaderView.swift; sourceTree = "<group>"; };
-		9605019226E3A902004E0F11 /* Onboarding.Preloader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Onboarding.Preloader.json; sourceTree = "<group>"; };
 		9605019426E3CCC0004E0F11 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		9605019726E3CD4A004E0F11 /* GetCitiesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCitiesRequest.swift; sourceTree = "<group>"; };
 		9605019926E3CDD5004E0F11 /* GetCitiesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCitiesResponse.swift; sourceTree = "<group>"; };
@@ -509,6 +511,10 @@
 		96A7795D26F0CA0700CA6033 /* BiorhythmsTableButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiorhythmsTableButtonCell.swift; sourceTree = "<group>"; };
 		96A7795F26F0CA1D00CA6033 /* BiorhythmsTableComponentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiorhythmsTableComponentCell.swift; sourceTree = "<group>"; };
 		96A7796126F0CB5F00CA6033 /* BiorhythmsTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiorhythmsTableViewDelegate.swift; sourceTree = "<group>"; };
+		96A7796326F12C9200CA6033 /* BiorhythmsTableChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiorhythmsTableChartCell.swift; sourceTree = "<group>"; };
+		96A7796526F12DFA00CA6033 /* BiorhythmsTableChartElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiorhythmsTableChartElement.swift; sourceTree = "<group>"; };
+		96A7796726F12EFC00CA6033 /* BiorhythmsInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiorhythmsInfoView.swift; sourceTree = "<group>"; };
+		96A7796926F1D25E00CA6033 /* Onboarding.Preloader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Onboarding.Preloader.json; sourceTree = "<group>"; };
 		96BFF5C726D17E5A00B8D8CC /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		96BFF5C926D1810400B8D8CC /* TarotTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotTableViewDelegate.swift; sourceTree = "<group>"; };
 		96BFF5CD26D2161C00B8D8CC /* Compatibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compatibility.swift; sourceTree = "<group>"; };
@@ -622,9 +628,9 @@
 		9605019126E3A898004E0F11 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				96A7796926F1D25E00CA6033 /* Onboarding.Preloader.json */,
 				96F0675726E8DE7600CD9F0A /* Onboarding.Men.json */,
 				96F0675526E8DE6200CD9F0A /* Onboarding.Women.json */,
-				9605019226E3A902004E0F11 /* Onboarding.Preloader.json */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -1517,6 +1523,7 @@
 			isa = PBXGroup;
 			children = (
 				96A7795426F0C8DE00CA6033 /* TableView */,
+				96A7796726F12EFC00CA6033 /* BiorhythmsInfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1537,6 +1544,7 @@
 			children = (
 				96A7795826F0C95A00CA6033 /* BiorhythmsTableElement.swift */,
 				96A7795A26F0C9B300CA6033 /* BiorhythmsTableComponentElement.swift */,
+				96A7796526F12DFA00CA6033 /* BiorhythmsTableChartElement.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -1546,6 +1554,7 @@
 			children = (
 				96A7795D26F0CA0700CA6033 /* BiorhythmsTableButtonCell.swift */,
 				96A7795F26F0CA1D00CA6033 /* BiorhythmsTableComponentCell.swift */,
+				96A7796326F12C9200CA6033 /* BiorhythmsTableChartCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1972,8 +1981,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9605019326E3A902004E0F11 /* Onboarding.Preloader.json in Resources */,
 				968FD46926C4320700C01D2A /* Qanelas-Bold.ttf in Resources */,
+				96A7796A26F1D25E00CA6033 /* Onboarding.Preloader.json in Resources */,
 				968FD46A26C4320700C01D2A /* Qanelas-Regular.ttf in Resources */,
 				968FD46B26C4320700C01D2A /* Qanelas-SemiBold.ttf in Resources */,
 				968FD40F26C3CE5400C01D2A /* LaunchScreen.storyboard in Resources */,
@@ -2124,6 +2133,7 @@
 				9605019A26E3CDD5004E0F11 /* GetCitiesResponse.swift in Sources */,
 				96658E6826DF6AC90020FD9B /* OSignView.swift in Sources */,
 				96BFF5EA26D3D47E00B8D8CC /* SignsPickerElement.swift in Sources */,
+				96A7796426F12C9200CA6033 /* BiorhythmsTableChartCell.swift in Sources */,
 				96A7794926F0C1B500CA6033 /* BiorhythmsManagerCore.swift in Sources */,
 				96059EE226CD9C1400BD9A0A /* GetLunarFullRequest.swift in Sources */,
 				9654D0D626DFC33800179E40 /* OFeelTodayView.swift in Sources */,
@@ -2186,6 +2196,7 @@
 				96F06A1926EE16A200CD9F0A /* PreparePaygatePricesMapper.swift in Sources */,
 				96059E1A26C6707C00BD9A0A /* UserManagerCore.swift in Sources */,
 				96059E4126C7AF1300BD9A0A /* HoroContent.swift in Sources */,
+				96A7796826F12EFC00CA6033 /* BiorhythmsInfoView.swift in Sources */,
 				96059E6526C90E2C00BD9A0A /* TitleMainTableCell.swift in Sources */,
 				96059EA426CBBFCF00BD9A0A /* HoroTableView.swift in Sources */,
 				96BFF5E626D3913600B8D8CC /* AKPickerView.swift in Sources */,
@@ -2288,6 +2299,7 @@
 				96BFF5F626D3F80300B8D8CC /* CompatibilityTableView.swift in Sources */,
 				968FD3FB26C3CB0D00C01D2A /* ImagePicker.swift in Sources */,
 				96059ED626CD275C00BD9A0A /* LunarTableElement.swift in Sources */,
+				96A7796626F12DFA00CA6033 /* BiorhythmsTableChartElement.swift in Sources */,
 				96059E5926C7CF4A00BD9A0A /* MainTableElement.swift in Sources */,
 				968FD46326C42ED300C01D2A /* OWelcomeView.swift in Sources */,
 				96059E7426C9AFF900BD9A0A /* HoroContentMainTableCell.swift in Sources */,

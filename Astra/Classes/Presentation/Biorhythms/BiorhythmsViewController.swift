@@ -26,6 +26,14 @@ final class BiorhythmsViewController: UIViewController {
             self?.mainView.tableView.setup(elements: elements)
         })
         .disposed(by: disposeBag)
+        
+        mainView.infoView.closeButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.hideInfo()
+            })
+            .disposed(by: disposeBag)
+        
+        mainView.tableView.mainDelegate = self
     }
 }
 
@@ -36,5 +44,31 @@ extension BiorhythmsViewController {
         vc.navigationItem.backButtonTitle = " "
         vc.navigationItem.title = "Biorhythms.Title".localized
         return vc
+    }
+}
+
+// MARK: BiorhythmsTableViewDelegate
+extension BiorhythmsViewController: BiorhythmsTableViewDelegate {
+    func biorhythmsTableDidTappedWhatAre() {
+        showInfo()
+    }
+}
+
+// MARK: Private
+private extension BiorhythmsViewController {
+    func showInfo() {
+        mainView.infoView.isHidden = false
+        
+        UIView.animate(withDuration: 0.5, animations: { [weak self] in
+            self?.mainView.infoView.alpha = 1
+        })
+    }
+    
+    func hideInfo() {
+        UIView.animate(withDuration: 0.5, animations: { [weak self] in
+            self?.mainView.infoView.alpha = 0
+        }, completion: { [weak self] _ in
+            self?.mainView.infoView.isHidden = true
+        })
     }
 }

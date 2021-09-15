@@ -46,6 +46,10 @@ extension BiorhythmsTableView: UITableViewDataSource {
             cell.contentView.backgroundColor = UIColor.clear
             cell.selectionStyle = .none
             return cell
+        case .chart(let element):
+            let cell = dequeueReusableCell(withIdentifier: String(describing: BiorhythmsTableChartCell.self)) as! BiorhythmsTableChartCell
+            cell.setup(element: element)
+            return cell
         case .whatAreButton:
             let cell = dequeueReusableCell(withIdentifier: String(describing: BiorhythmsTableButtonCell.self)) as! BiorhythmsTableButtonCell
             cell.delegate = mainDelegate
@@ -64,6 +68,8 @@ extension BiorhythmsTableView: UITableViewDelegate {
         switch elements[indexPath.row] {
         case .offset(let offset):
             return offset
+        case .chart:
+            return 244.scale
         case .whatAreButton:
             return 52.scale
         default:
@@ -76,6 +82,7 @@ extension BiorhythmsTableView: UITableViewDelegate {
 private extension BiorhythmsTableView {
     func initialize() {
         register(UITableViewCell.self, forCellReuseIdentifier: "OffsetTableCell")
+        register(BiorhythmsTableChartCell.self, forCellReuseIdentifier: String(describing: BiorhythmsTableChartCell.self))
         register(BiorhythmsTableButtonCell.self, forCellReuseIdentifier: String(describing: BiorhythmsTableButtonCell.self))
         register(BiorhythmsTableComponentCell.self, forCellReuseIdentifier: String(describing: BiorhythmsTableComponentCell.self))
         

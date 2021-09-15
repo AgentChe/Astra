@@ -7,6 +7,7 @@
 
 enum BiorhythmsTableElement {
     case offset(CGFloat)
+    case chart(BiorhythmsTableChartElement)
     case whatAreButton
     case component(BiorhythmsTableComponentElement)
 }

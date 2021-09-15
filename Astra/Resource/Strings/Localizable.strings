@@ -203,3 +203,5 @@
 "Biorhythms.Physical" = "Physical";
 "Biorhythms.Emotional" = "Emotional";
 "Biorhythms.Intellectual" = "Intellectual";
+"Biorhythms.Info.Title" = "What are biorhythms?";
+"Biorhythms.Info.Text" = "Biorhythm charts provide you with a graphic representation of your high and low energy levels throughout a specific time period. Knowing your biological cycles can help you plan your activites for the period. As an example by knowing your intellectual cycle you can schedule activites requiring mental prowess for times when you are at the apex of your intellectual cycle.";

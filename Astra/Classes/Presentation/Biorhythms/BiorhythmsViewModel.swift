@@ -25,6 +25,14 @@ private extension BiorhythmsViewModel {
                 
                 var result = [BiorhythmsTableElement]()
                 
+                result.append(.offset(23.scale))
+                
+                let chart = BiorhythmsTableChartElement(physical: biorhythms.physical.percentsGraph,
+                                                        emotional: biorhythms.emotional.percentsGraph,
+                                                        intellectual: biorhythms.intellectual.percentsGraph)
+                result.append(.chart(chart))
+                result.append(.offset(24.scale))
+                
                 result.append(.whatAreButton)
                 result.append(.offset(24.scale))
                 

@@ -9,6 +9,7 @@ import UIKit
 
 final class BiorhythmsView: UIView {
     lazy var tableView = makeTableView()
+    lazy var infoView = makeInfoView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -38,6 +39,13 @@ private extension BiorhythmsView {
             tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             tableView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
+        
+        NSLayoutConstraint.activate([
+            infoView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            infoView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            infoView.topAnchor.constraint(equalTo: topAnchor),
+            infoView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
     }
 }
 
@@ -49,6 +57,15 @@ private extension BiorhythmsView {
         view.separatorStyle = .none
         view.showsVerticalScrollIndicator = false
         view.contentInset = UIEdgeInsets(top: 0.scale, left: 0, bottom: 16.scale, right: 0)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        return view
+    }
+    
+    func makeInfoView() -> BiorhythmsInfoView {
+        let view = BiorhythmsInfoView()
+        view.isHidden = true
+        view.alpha = 0
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view
