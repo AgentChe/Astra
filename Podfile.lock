@@ -5,9 +5,6 @@ PODS:
     - AppsFlyerFramework/Main (= 6.3.4)
   - AppsFlyerFramework/Main (6.3.4)
   - Branch (1.39.4)
-  - Charts (3.6.0):
-    - Charts/Core (= 3.6.0)
-  - Charts/Core (3.6.0)
   - FacebookSDK (11.0.1):
     - FacebookSDK/Basics (= 11.0.1)
     - FacebookSDK/CoreKit (= 11.0.1)
@@ -155,14 +152,15 @@ PODS:
     - RxSwift (= 6.2.0)
   - RxSwift (6.2.0)
   - SnapKit (5.0.1)
+  - SwiftCharts (0.6.5)
   - SwiftyStoreKit (0.16.1)
 
 DEPENDENCIES:
-  - Charts
   - Kingfisher
   - lottie-ios
   - NotificationBannerSwift
   - RushSDK (from `https://github.com/AgentChe/RushSDK.git`)
+  - SwiftCharts (~> 0.6.5)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -170,7 +168,6 @@ SPEC REPOS:
     - Amplitude-iOS
     - AppsFlyerFramework
     - Branch
-    - Charts
     - FacebookSDK
     - FBSDKCoreKit
     - FBSDKCoreKit_Basics
@@ -194,6 +191,7 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
     - SnapKit
+    - SwiftCharts
     - SwiftyStoreKit
 
 EXTERNAL SOURCES:
@@ -210,7 +208,6 @@ SPEC CHECKSUMS:
   Amplitude-iOS: 7d8cdc3408ba35c2e68368fc7c692cd104606b94
   AppsFlyerFramework: df3920affb393748b111cd8b686584508f2193f5
   Branch: d21c40c47b5c15c6ab709cdf7d965a50059e0546
-  Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
   FacebookSDK: 7193c934c71b7be5b28009d2fd2547807969f2c3
   FBSDKCoreKit: 38c9e29a3f1436362acacff6486d3a28628c288f
   FBSDKCoreKit_Basics: 06780a4a12e16596bde8406add02c6aa1bf38616
@@ -235,8 +232,9 @@ SPEC CHECKSUMS:
   RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
   RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftCharts: 2e755ea292f0b87d3e4b2c1eb5afc080a20cdc15
   SwiftyStoreKit: 6b9c08810269f030586dac1fae8e75871a82e84a
 
-PODFILE CHECKSUM: 7ae74f8df3abde7f7286a9e6505c0057423c7a17
+PODFILE CHECKSUM: 33b3433e8cbede716f9ad4692893e7755be2a9ed
 
 COCOAPODS: 1.10.1

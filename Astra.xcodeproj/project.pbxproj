@@ -214,6 +214,8 @@
 		96A7796626F12DFA00CA6033 /* BiorhythmsTableChartElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A7796526F12DFA00CA6033 /* BiorhythmsTableChartElement.swift */; };
 		96A7796826F12EFC00CA6033 /* BiorhythmsInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A7796726F12EFC00CA6033 /* BiorhythmsInfoView.swift */; };
 		96A7796A26F1D25E00CA6033 /* Onboarding.Preloader.json in Resources */ = {isa = PBXBuildFile; fileRef = 96A7796926F1D25E00CA6033 /* Onboarding.Preloader.json */; };
+		96A7797026F3846500CA6033 /* BiorhythmsChartLegendItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A7796F26F3846500CA6033 /* BiorhythmsChartLegendItemView.swift */; };
+		96A7797226F385D000CA6033 /* BiorhythmsChartLegendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A7797126F385D000CA6033 /* BiorhythmsChartLegendView.swift */; };
 		96BFF5C826D17E5A00B8D8CC /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF5C726D17E5A00B8D8CC /* ImageLoader.swift */; };
 		96BFF5CA26D1810400B8D8CC /* TarotTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF5C926D1810400B8D8CC /* TarotTableViewDelegate.swift */; };
 		96BFF5CE26D2161C00B8D8CC /* Compatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFF5CD26D2161C00B8D8CC /* Compatibility.swift */; };
@@ -515,6 +517,8 @@
 		96A7796526F12DFA00CA6033 /* BiorhythmsTableChartElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiorhythmsTableChartElement.swift; sourceTree = "<group>"; };
 		96A7796726F12EFC00CA6033 /* BiorhythmsInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiorhythmsInfoView.swift; sourceTree = "<group>"; };
 		96A7796926F1D25E00CA6033 /* Onboarding.Preloader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Onboarding.Preloader.json; sourceTree = "<group>"; };
+		96A7796F26F3846500CA6033 /* BiorhythmsChartLegendItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiorhythmsChartLegendItemView.swift; sourceTree = "<group>"; };
+		96A7797126F385D000CA6033 /* BiorhythmsChartLegendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiorhythmsChartLegendView.swift; sourceTree = "<group>"; };
 		96BFF5C726D17E5A00B8D8CC /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		96BFF5C926D1810400B8D8CC /* TarotTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotTableViewDelegate.swift; sourceTree = "<group>"; };
 		96BFF5CD26D2161C00B8D8CC /* Compatibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compatibility.swift; sourceTree = "<group>"; };
@@ -1531,6 +1535,7 @@
 		96A7795426F0C8DE00CA6033 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				96A7796E26F3844A00CA6033 /* Atoms */,
 				96A7795C26F0C9F000CA6033 /* Cells */,
 				96A7795726F0C90A00CA6033 /* Elements */,
 				96A7795526F0C8EC00CA6033 /* BiorhythmsTableView.swift */,
@@ -1557,6 +1562,15 @@
 				96A7796326F12C9200CA6033 /* BiorhythmsTableChartCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		96A7796E26F3844A00CA6033 /* Atoms */ = {
+			isa = PBXGroup;
+			children = (
+				96A7796F26F3846500CA6033 /* BiorhythmsChartLegendItemView.swift */,
+				96A7797126F385D000CA6033 /* BiorhythmsChartLegendView.swift */,
+			);
+			path = Atoms;
 			sourceTree = "<group>";
 		};
 		96BFF5CB26D2160000B8D8CC /* Compatibility */ = {
@@ -2089,6 +2103,7 @@
 				96A7795E26F0CA0700CA6033 /* BiorhythmsTableButtonCell.swift in Sources */,
 				9654D0E526E13BF700179E40 /* OPalmView.swift in Sources */,
 				96059E3B26C7AC5700BD9A0A /* Sign.swift in Sources */,
+				96A7797226F385D000CA6033 /* BiorhythmsChartLegendView.swift in Sources */,
 				96059E2226C6CBB900BD9A0A /* TabController.swift in Sources */,
 				96F06A1526EE101700CD9F0A /* GetPaygateRequest.swift in Sources */,
 				96BFF8B726D6A1F000B8D8CC /* MeditationCourseAudioCell.swift in Sources */,
@@ -2105,6 +2120,7 @@
 				96059E5326C7C8A600BD9A0A /* ContentManagerCore.swift in Sources */,
 				96BFF89426D585B800B8D8CC /* MeditationDashboardDailyCell.swift in Sources */,
 				9605019D26E3CE73004E0F11 /* AddCityRequest.swift in Sources */,
+				96A7797026F3846500CA6033 /* BiorhythmsChartLegendItemView.swift in Sources */,
 				96059E3126C7093800BD9A0A /* MainViewController.swift in Sources */,
 				96A7795626F0C8EC00CA6033 /* BiorhythmsTableView.swift in Sources */,
 				96F0674E26E8BFF100CD9F0A /* PaygateViewController.swift in Sources */,
