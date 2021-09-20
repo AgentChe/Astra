@@ -87,6 +87,8 @@ private extension OCityView {
         
         tableView.didSelect
             .subscribe(onNext: { [weak self] city in
+                self?.searchView.textField.resignFirstResponder()
+                
                 self?.searchView.setup(name: city.name)
                 self?.selectedCity = city
             })
