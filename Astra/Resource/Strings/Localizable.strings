@@ -19,7 +19,8 @@
 "Onboarding.Skip" = "skip";
 "Onboarding.FailedToSave" = "Failed to save";
 "Onboarding.Welcome.Text1" = "Astra";
-"Onboarding.Welcome.Text2" = " is your handy\nwellbeing assistant, which\nwill help you understand\nhow the Universe affects\nyour everyday life.\n\nWe’ll need just a few\nanswers to know you\nbetter.";
+"Onboarding.Welcome.Text2" = " is your handy\nwellbeing assistant, which\nwill help you understand\nhow the Universe affects\nyour everyday life.";
+"Onboarding.Welcome.Text3" = "\nWe’ll need just a few\nanswers to know you\nbetter.";
 "Onboarding.Gender.Title" = "Nice to meet you, %@!\nWhat’s your gender?";
 "Onboarding.Gender.SubTitle" = "Swipe to choose";
 "Onboarding.Birthdate.Title" = "When were you born?";
