@@ -23,9 +23,13 @@ final class OFindMoreView: OSlideView {
     override func moveToThis() {
         super.moveToThis()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
-            self?.onNext()
-        }
+        UIView.animate(withDuration: 1, animations: { [weak self] in
+            self?.label.alpha = 1
+        }, completion: { [weak self] _ in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
+                self?.onNext()
+            }
+        })
     }
 }
 
@@ -49,6 +53,7 @@ private extension OFindMoreView {
             .textAlignment(.center)
         
         let view = UILabel()
+        view.alpha = 0
         view.numberOfLines = 0
         view.attributedText = "Onboarding.FindMore.Text".localized.attributed(with: attrs)
         view.translatesAutoresizingMaskIntoConstraints = false
