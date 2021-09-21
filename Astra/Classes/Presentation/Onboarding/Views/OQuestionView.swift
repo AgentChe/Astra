@@ -11,6 +11,7 @@ final class OQuestionView: OSlideView {
     lazy var titleLabel = makeTitleLabel()
     lazy var questionLabel = makeQuestionLabel()
     lazy var imageView = makeImageView()
+    lazy var cloudView = makeCloudView()
     lazy var yesButton = makeYesButton()
     lazy var noButton = makeNoButton()
     
@@ -22,6 +23,8 @@ final class OQuestionView: OSlideView {
         super.init(step: step)
         
         makeConstraints()
+        
+        layer.masksToBounds = true
     }
     
     required init?(coder: NSCoder) {
@@ -39,16 +42,23 @@ private extension OQuestionView {
         ])
         
         NSLayoutConstraint.activate([
-            imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            imageView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            imageView.heightAnchor.constraint(equalToConstant: ScreenSize.isIphoneXFamily ? 413.scale : 380.scale),
-            imageView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 6.scale)
+            cloudView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            cloudView.widthAnchor.constraint(equalToConstant: 254.scale),
+            cloudView.heightAnchor.constraint(equalToConstant: ScreenSize.isIphoneXFamily ? 233.scale : 200.scale),
+            cloudView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 14.scale)
         ])
         
         NSLayoutConstraint.activate([
-            questionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 108.scale),
-            questionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -55.scale),
-            questionLabel.topAnchor.constraint(equalTo: imageView.topAnchor, constant: ScreenSize.isIphoneXFamily ? 80.scale : 60.scale)
+            questionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 148.scale),
+            questionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -28.scale),
+            questionLabel.topAnchor.constraint(equalTo: cloudView.topAnchor, constant: ScreenSize.isIphoneXFamily ? 78.scale : 58.scale)
+        ])
+        
+        NSLayoutConstraint.activate([
+            imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            imageView.widthAnchor.constraint(equalToConstant: 251.scale),
+            imageView.heightAnchor.constraint(equalToConstant: ScreenSize.isIphoneXFamily ? 256.scale : 223.scale),
+            imageView.topAnchor.constraint(equalTo: cloudView.bottomAnchor, constant: 1.scale)
         ])
         
         NSLayoutConstraint.activate([
@@ -62,7 +72,7 @@ private extension OQuestionView {
             noButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16.scale),
             noButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16.scale),
             noButton.heightAnchor.constraint(equalToConstant: 51.scale),
-            noButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: ScreenSize.isIphoneXFamily ? -60.scale : -20.scale)
+            noButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: ScreenSize.isIphoneXFamily ? -40.scale : -20.scale)
         ])
     }
 }
@@ -101,8 +111,17 @@ private extension OQuestionView {
     
     func makeImageView() -> UIImageView {
         let view = UIImageView()
-        view.image = UIImage(named: "Onboarding.Question")
-        view.contentMode = .scaleAspectFit
+        view.image = UIImage(named: "Onboarding.Question1")
+        view.contentMode = .scaleAspectFill
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        return view
+    }
+    
+    func makeCloudView() -> UIImageView {
+        let view = UIImageView()
+        view.image = UIImage(named: "Onboarding.Question.Cloud1")
+        view.contentMode = .scaleAspectFill
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view

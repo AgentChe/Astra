@@ -130,6 +130,8 @@
 		96059F1C26CE9C1300BD9A0A /* TarotTextTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059F1B26CE9C1300BD9A0A /* TarotTextTableCell.swift */; };
 		96059F2026CEEA1500BD9A0A /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059F1F26CEEA1500BD9A0A /* TagView.swift */; };
 		96059F2226CEEA2B00BD9A0A /* TagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059F2126CEEA2B00BD9A0A /* TagsView.swift */; };
+		9605E4F726F9C7CD00F92398 /* OQuestion2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605E4F626F9C7CD00F92398 /* OQuestion2View.swift */; };
+		9605E4F926F9FDAA00F92398 /* OQuestion3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605E4F826F9FDAA00F92398 /* OQuestion3View.swift */; };
 		9654D0D426DFBE8A00179E40 /* OFindMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9654D0D326DFBE8A00179E40 /* OFindMoreView.swift */; };
 		9654D0D626DFC33800179E40 /* OFeelTodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9654D0D526DFC33800179E40 /* OFeelTodayView.swift */; };
 		9654D0D826DFCB2B00179E40 /* OMaritalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9654D0D726DFCB2B00179E40 /* OMaritalView.swift */; };
@@ -430,6 +432,8 @@
 		96059F1B26CE9C1300BD9A0A /* TarotTextTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotTextTableCell.swift; sourceTree = "<group>"; };
 		96059F1F26CEEA1500BD9A0A /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		96059F2126CEEA2B00BD9A0A /* TagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsView.swift; sourceTree = "<group>"; };
+		9605E4F626F9C7CD00F92398 /* OQuestion2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OQuestion2View.swift; sourceTree = "<group>"; };
+		9605E4F826F9FDAA00F92398 /* OQuestion3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OQuestion3View.swift; sourceTree = "<group>"; };
 		9654D0D326DFBE8A00179E40 /* OFindMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OFindMoreView.swift; sourceTree = "<group>"; };
 		9654D0D526DFC33800179E40 /* OFeelTodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OFeelTodayView.swift; sourceTree = "<group>"; };
 		9654D0D726DFCB2B00179E40 /* OMaritalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMaritalView.swift; sourceTree = "<group>"; };
@@ -1396,9 +1400,11 @@
 				9654D0D926DFCF5100179E40 /* OPartnerSignView.swift */,
 				9654D0E226E0DB9800179E40 /* OPrePalmView.swift */,
 				9654D0E426E13BF700179E40 /* OPalmView.swift */,
-				9605018D26E39B1F004E0F11 /* OQuestionView.swift */,
 				9605018F26E3A4C1004E0F11 /* OPreloaderView.swift */,
 				960501A026E3CFC6004E0F11 /* OCityView.swift */,
+				9605018D26E39B1F004E0F11 /* OQuestionView.swift */,
+				9605E4F626F9C7CD00F92398 /* OQuestion2View.swift */,
+				9605E4F826F9FDAA00F92398 /* OQuestion3View.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -2181,6 +2187,7 @@
 				96059F1A26CE9BD500BD9A0A /* TarotTagsTableCell.swift in Sources */,
 				96059ED926CD2A3C00BD9A0A /* LunarCalendarTableCell.swift in Sources */,
 				96059F1426CE98C900BD9A0A /* TarotImageTableCell.swift in Sources */,
+				9605E4F926F9FDAA00F92398 /* OQuestion3View.swift in Sources */,
 				968FD3F826C3CB0D00C01D2A /* Fonts.swift in Sources */,
 				96A7795926F0C95A00CA6033 /* BiorhythmsTableElement.swift in Sources */,
 				96059E0926C662C700BD9A0A /* Session.swift in Sources */,
@@ -2296,6 +2303,7 @@
 				96059E1C26C6819D00BD9A0A /* ONameView.swift in Sources */,
 				96BFF86626D5246100B8D8CC /* MeditationAudio.swift in Sources */,
 				96059E4326C7B1B500BD9A0A /* Chart.swift in Sources */,
+				9605E4F726F9C7CD00F92398 /* OQuestion2View.swift in Sources */,
 				9654D0DA26DFCF5100179E40 /* OPartnerSignView.swift in Sources */,
 				96059EBB26CD01C700BD9A0A /* SettingsViewController.swift in Sources */,
 				968FD46D26C4334C00C01D2A /* OGenderView.swift in Sources */,
