@@ -58,20 +58,31 @@ private extension OGenderView {
     func initialize() {
         layer.masksToBounds = true
         
-        let maleGesture = UISwipeGestureRecognizer()
-        maleGesture.direction = .right
         maleImageView.isUserInteractionEnabled = true
-        maleImageView.addGestureRecognizer(maleGesture)
-        let male = maleGesture.rx.event.map { _ in Gender.male }
-        
-        let femaleGesture = UISwipeGestureRecognizer()
-        femaleGesture.direction = .left
         femaleImageView.isUserInteractionEnabled = true
-        femaleImageView.addGestureRecognizer(femaleGesture)
-        let female = femaleGesture.rx.event.map { _ in Gender.female }
+        
+        let maleRightGesture = UISwipeGestureRecognizer()
+        maleRightGesture.direction = .right
+        maleImageView.addGestureRecognizer(maleRightGesture)
+        let maleRight = maleRightGesture.rx.event.map { _ in Gender.male }
+        
+        let maleLeftGesture = UISwipeGestureRecognizer()
+        maleLeftGesture.direction = .left
+        maleImageView.addGestureRecognizer(maleLeftGesture)
+        let maleLeft = maleLeftGesture.rx.event.map { _ in Gender.female }
+        
+        let femaleLeftGesture = UISwipeGestureRecognizer()
+        femaleLeftGesture.direction = .left
+        femaleImageView.addGestureRecognizer(femaleLeftGesture)
+        let femaleLeft = femaleLeftGesture.rx.event.map { _ in Gender.female }
+        
+        let femaleRightGesture = UISwipeGestureRecognizer()
+        femaleRightGesture.direction = .right
+        femaleImageView.addGestureRecognizer(femaleRightGesture)
+        let femaleRight = femaleRightGesture.rx.event.map { _ in Gender.male }
         
         Observable
-            .merge(male, female)
+            .merge(maleRight, maleLeft, femaleLeft, femaleRight)
             .subscribe(onNext: { [weak self] gender in
                 self?.selectedGender = gender
                 
