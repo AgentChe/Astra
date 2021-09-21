@@ -132,6 +132,8 @@
 		96059F2226CEEA2B00BD9A0A /* TagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059F2126CEEA2B00BD9A0A /* TagsView.swift */; };
 		9605E4F726F9C7CD00F92398 /* OQuestion2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605E4F626F9C7CD00F92398 /* OQuestion2View.swift */; };
 		9605E4F926F9FDAA00F92398 /* OQuestion3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605E4F826F9FDAA00F92398 /* OQuestion3View.swift */; };
+		9605E4FC26FA219C00F92398 /* GetZodiacQuoteRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605E4FB26FA219C00F92398 /* GetZodiacQuoteRequest.swift */; };
+		9605E4FE26FA21F700F92398 /* GetZodiacQuoteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605E4FD26FA21F700F92398 /* GetZodiacQuoteResponse.swift */; };
 		9654D0D426DFBE8A00179E40 /* OFindMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9654D0D326DFBE8A00179E40 /* OFindMoreView.swift */; };
 		9654D0D626DFC33800179E40 /* OFeelTodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9654D0D526DFC33800179E40 /* OFeelTodayView.swift */; };
 		9654D0D826DFCB2B00179E40 /* OMaritalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9654D0D726DFCB2B00179E40 /* OMaritalView.swift */; };
@@ -434,6 +436,8 @@
 		96059F2126CEEA2B00BD9A0A /* TagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsView.swift; sourceTree = "<group>"; };
 		9605E4F626F9C7CD00F92398 /* OQuestion2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OQuestion2View.swift; sourceTree = "<group>"; };
 		9605E4F826F9FDAA00F92398 /* OQuestion3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OQuestion3View.swift; sourceTree = "<group>"; };
+		9605E4FB26FA219C00F92398 /* GetZodiacQuoteRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetZodiacQuoteRequest.swift; sourceTree = "<group>"; };
+		9605E4FD26FA21F700F92398 /* GetZodiacQuoteResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetZodiacQuoteResponse.swift; sourceTree = "<group>"; };
 		9654D0D326DFBE8A00179E40 /* OFindMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OFindMoreView.swift; sourceTree = "<group>"; };
 		9654D0D526DFC33800179E40 /* OFeelTodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OFeelTodayView.swift; sourceTree = "<group>"; };
 		9654D0D726DFCB2B00179E40 /* OMaritalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMaritalView.swift; sourceTree = "<group>"; };
@@ -797,6 +801,7 @@
 		96059E4A26C7B97100BD9A0A /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				9605E4FA26FA218600F92398 /* GetZodiacQuote */,
 				96059EE026CD9BFF00BD9A0A /* GetLunarFull */,
 				96059EB026CBE2AD00BD9A0A /* GetHoroFull */,
 				96059EAF26CBE2A100BD9A0A /* GetDashboard */,
@@ -1145,6 +1150,15 @@
 				96059F2126CEEA2B00BD9A0A /* TagsView.swift */,
 			);
 			path = Tags;
+			sourceTree = "<group>";
+		};
+		9605E4FA26FA218600F92398 /* GetZodiacQuote */ = {
+			isa = PBXGroup;
+			children = (
+				9605E4FB26FA219C00F92398 /* GetZodiacQuoteRequest.swift */,
+				9605E4FD26FA21F700F92398 /* GetZodiacQuoteResponse.swift */,
+			);
+			path = GetZodiacQuote;
 			sourceTree = "<group>";
 		};
 		9654D0DB26DFE42100179E40 /* PartnerSign */ = {
@@ -2194,6 +2208,7 @@
 				968FD3F426C3CB0D00C01D2A /* Scalable.swift in Sources */,
 				96059E3D26C7AE1100BD9A0A /* Dashboard.swift in Sources */,
 				96059E6E26C968D800BD9A0A /* HoroFilterCollectionView.swift in Sources */,
+				9605E4FC26FA219C00F92398 /* GetZodiacQuoteRequest.swift in Sources */,
 				96059EB426CBE40300BD9A0A /* GetHoroFullRequest.swift in Sources */,
 				96059E8F26CA817C00BD9A0A /* LunarCalendarMainTableCell.swift in Sources */,
 				96059F1826CE9B2C00BD9A0A /* TarotNameTableCell.swift in Sources */,
@@ -2364,6 +2379,7 @@
 				96059EB226CBE37B00BD9A0A /* HoroFull.swift in Sources */,
 				96059E1826C6703500BD9A0A /* UserManager.swift in Sources */,
 				968F63A526D7827400C61474 /* AudioPlayer.swift in Sources */,
+				9605E4FE26FA21F700F92398 /* GetZodiacQuoteResponse.swift in Sources */,
 				9654D0E126DFE78E00179E40 /* PartnerSignCollectionView.swift in Sources */,
 				96059F2226CEEA2B00BD9A0A /* TagsView.swift in Sources */,
 				96059F0326CE72DA00BD9A0A /* GetTarotRequest.swift in Sources */,

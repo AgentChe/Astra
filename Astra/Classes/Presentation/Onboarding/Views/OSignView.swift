@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RxSwift
 
 final class OSignView: OSlideView {
     lazy var titleLabel = makeLabel()
@@ -17,6 +18,8 @@ final class OSignView: OSlideView {
     
     private var selectedGender: Gender?
     
+    private lazy var disposeBag = DisposeBag()
+    
     override init(step: OnboardingView.Step) {
         super.init(step: step)
         
@@ -25,6 +28,26 @@ final class OSignView: OSlideView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func moveToThis() {
+        super.moveToThis()
+        
+        contentManager.obtainZodiacQuote()
+            .asDriver(onErrorJustReturn: "")
+            .drive(onNext: { [weak self] quote in
+                guard let self = self, let quote = quote else {
+                    return
+                }
+                
+                self.textLabel.attributedText = quote
+                    .attributed(with: TextAttributes()
+                                    .textColor(UIColor(integralRed: 31, green: 31, blue: 31))
+                                    .font(Fonts.Qanelas.regular(size: 24.scale))
+                                    .lineHeight(31.2.scale)
+                                    .textAlignment(.center))
+            })
+            .disposed(by: disposeBag)
     }
 }
 
@@ -43,13 +66,6 @@ extension OSignView: OBirthdateViewDelegate {
                             .textAlignment(.center))
         
         signImageView.image = image(at: code)
-        
-        textLabel.attributedText = String(format: "Onboarding.Sign.Text".localized, name(at: code))
-            .attributed(with: TextAttributes()
-                            .textColor(UIColor(integralRed: 31, green: 31, blue: 31))
-                            .font(Fonts.Qanelas.regular(size: 24.scale))
-                            .lineHeight(31.2.scale)
-                            .textAlignment(.center))
     }
 }
 

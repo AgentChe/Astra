@@ -47,7 +47,6 @@
 "Onboarding.Name.SubTitle" = "Your name please";
 "Onboarding.Name.Button" = "let’s go";
 "Onboarding.Sign.Title" = "So, you are %@";
-"Onboarding.Sign.Text" = "Some say that %@ love to be number one, is it true?";
 "Onboarding.Birthtime.Title" = "Do you now the time of your birth?";
 "Onboarding.Birthtime.Subtitle" = "For more precise reports";
 "Onboarding.Birthtime.DontKnow" = "I DON'T KNOW";

@@ -15,4 +15,5 @@ protocol ContentManager {
     // MARK: Sign
     func signsDates() -> [SignDate]
     func signDate(at date: Date) -> SignDate?
+    func obtainZodiacQuote() -> Single<String?>
 }

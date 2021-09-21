@@ -87,4 +87,18 @@ extension ContentManagerCore {
 
         return nil
     }
+    
+    func obtainZodiacQuote() -> Single<String?> {
+        guard let userToken = SessionManagerCore().getSession()?.userToken else {
+            return .error(SignError.tokenNotFound)
+        }
+        
+        let request = GetZodiacQuoteRequest(userToken: userToken,
+                                            locale: UIDevice.deviceLanguageCode ?? "en")
+        
+        return SDKStorage.shared
+            .restApiTransport
+            .callServerApi(requestBody: request)
+            .map { GetZodiacQuoteResponse.map(from: $0) }
+    }
 }
