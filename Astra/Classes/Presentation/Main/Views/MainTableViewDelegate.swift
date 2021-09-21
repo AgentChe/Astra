@@ -8,6 +8,7 @@
 protocol MainTableViewDelegate: AnyObject {
     func mainTableViewSettingsDidTapped()
     func mainTableViewHoroDidTapped()
+    func mainTableViewBiorhythmsTapped()
     func mainTableViewLunarDidTapped()
     func mainTableViewTarotDidTapped(code: Int)
 }

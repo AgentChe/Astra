@@ -53,6 +53,11 @@ extension MainViewController: MainTableViewDelegate {
         navigationController?.pushViewController(vc, animated: true)
     }
     
+    func mainTableViewBiorhythmsTapped() {
+        let vc = BiorhythmsViewController.make()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     func mainTableViewLunarDidTapped() {
         let vc = LunarViewController.make()
         UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true)

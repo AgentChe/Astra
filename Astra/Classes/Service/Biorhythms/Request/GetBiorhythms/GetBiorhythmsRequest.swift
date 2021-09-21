@@ -12,7 +12,7 @@ struct GetBiorhythmsRequest: APIRequestBody {
     let locale: String
     
     var url: String {
-        GlobalDefinitions.domainUrl + "/api/payments/paygate"
+        GlobalDefinitions.domainUrl + "/api/content/biorhythms"
     }
     
     var method: HTTPMethod {

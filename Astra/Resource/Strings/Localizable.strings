@@ -93,6 +93,8 @@
 "Main.Tarot.Love.Title" = "Love tarot";
 "Main.Tarot.Career.Title" = "Career tarot";
 "Main.Tarot.Money.Title" = "Money tarot";
+"Main.Biorhythms.Title" = "Biorhythms";
+"Main.BiorhythmsButton.Text" = "YOUR WELL-BEING DYNAMICS";
 
 // MARK: Horo
 "Horo.Title" = "INSIGHTS";

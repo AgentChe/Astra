@@ -84,6 +84,14 @@ extension MainTableView: UITableViewDataSource {
             }
         case .separator:
             return dequeueReusableCell(withIdentifier: String(describing: SeparatorMainTableCell.self), for: indexPath)
+        case .biorhythms(let biorhythms):
+            let cell = dequeueReusableCell(withIdentifier: String(describing: MainBiorhythmsCell.self)) as! MainBiorhythmsCell
+            cell.setup(element: biorhythms)
+            return cell
+        case .biorhythmsButton:
+            let cell = dequeueReusableCell(withIdentifier: String(describing: MainBiorhythmsButtonCell.self), for: indexPath) as! MainBiorhythmsButtonCell
+            cell.mainDelegate = mainDelegate
+            return cell
         case .lunarCalendar(let days):
             let cell = dequeueReusableCell(withIdentifier: String(describing: LunarCalendarMainTableCell.self)) as! LunarCalendarMainTableCell
             cell.setup(element: days)
@@ -144,10 +152,12 @@ extension MainTableView: UITableViewDelegate {
             return 34.scale
         case .horoImage:
             return 292.scale
-        case .horoButton, .lunarButton:
+        case .horoButton, .lunarButton, .biorhythmsButton:
             return 77.scale
         case .separator:
             return 1.scale
+        case .biorhythms:
+            return 212.scale
         case .lunarCalendar:
             return 100.scale
         default:
@@ -180,6 +190,9 @@ private extension MainTableView {
         register(ChartOpenedMainTableCell.self, forCellReuseIdentifier: String(describing: ChartOpenedMainTableCell.self))
         register(ChartClosedMainTableCell.self, forCellReuseIdentifier: String(describing: ChartClosedMainTableCell.self))
         register(SeparatorMainTableCell.self, forCellReuseIdentifier: String(describing: SeparatorMainTableCell.self))
+        register(MainBiorhythmsCell.self, forCellReuseIdentifier: String(describing: MainBiorhythmsCell.self))
+        register(MainBiorhythmsButtonCell.self, forCellReuseIdentifier: String(describing: MainBiorhythmsButtonCell.self))
+        register(MainBiorhythmsButtonCell.self, forCellReuseIdentifier: String(describing: MainBiorhythmsButtonCell.self))
         register(LunarArticleMainTableCell.self, forCellReuseIdentifier: String(describing: LunarArticleMainTableCell.self))
         register(LunarButtonMainTableCell.self, forCellReuseIdentifier: String(describing: LunarButtonMainTableCell.self))
         register(LunarCalendarMainTableCell.self, forCellReuseIdentifier: String(describing: LunarCalendarMainTableCell.self))

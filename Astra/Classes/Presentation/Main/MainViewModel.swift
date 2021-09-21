@@ -70,6 +70,17 @@ private extension MainViewModel {
                 result.append(.separator)
                 result.append(.offset(24.scale))
                 
+                result.append(.title("Main.Biorhythms.Title".localized))
+                result.append(.offset(16.scale))
+                
+                result.append(.biorhythms(BiorhythmsTableChartElement(physical: dashboard.biorhythmsPhysical,
+                                                                      emotional: dashboard.biorhythmsEmotional,
+                                                                      intellectual: dashboard.biorhythmsIntellectual)))
+                result.append(.offset(16.scale))
+                
+                result.append(.biorhythmsButton)
+                result.append(.offset(24.scale))
+                
                 result.append(.title("Main.Lunar.Title".localized))
                 result.append(.offset(16.scale))
                 

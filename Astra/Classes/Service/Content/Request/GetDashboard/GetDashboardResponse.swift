@@ -24,6 +24,11 @@ final class GetDashboardResponse {
         
         let charts = mapCharts(json: dashboardJSON)
         
+        let biorhythmsJSON = dashboardJSON["biorhythms"] as? [String: Any] ?? [:]
+        let biorhythmsPhysical = biorhythmsJSON["physical"] as? [Double] ?? []
+        let biorhythmsEmotional = biorhythmsJSON["emotional"] as? [Double] ?? []
+        let biorhythmsIntellectual = biorhythmsJSON["intellectual"] as? [Double] ?? []
+        
         let lunar = mapLunar(json: dashboardJSON)
         
         return Dashboard(name: name,
@@ -32,6 +37,9 @@ final class GetDashboardResponse {
                          horoImage: horoImage,
                          horos: horos,
                          charts: charts,
+                         biorhythmsPhysical: biorhythmsPhysical,
+                         biorhythmsEmotional: biorhythmsEmotional,
+                         biorhythmsIntellectual: biorhythmsIntellectual,
                          lunar: lunar)
     }
 }

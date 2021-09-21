@@ -15,6 +15,10 @@ struct Dashboard {
     
     let charts: [Chart]
     
+    let biorhythmsPhysical: [Double]
+    let biorhythmsEmotional: [Double]
+    let biorhythmsIntellectual: [Double]
+    
     let lunar: Lunar?
 }
 
