@@ -9,13 +9,12 @@ import UIKit
 
 final class TabView: UIView {
     enum Tab {
-        case horo, meditations, compatibility, biorhythms
+        case horo, meditations, compatibility
     }
     
     lazy var horoItem = makeItem(image: "Tab.Horo")
     lazy var meditationsItem = makeItem(image: "Tab.Meditations")
     lazy var compatibilityItem = makeItem(image: "Tab.Compatibility")
-    lazy var biorhythmsItem = makeItem(image: "Tab.Biorhythms")
     
     var selectedTab = Tab.horo {
         didSet {
@@ -40,8 +39,7 @@ private extension TabView {
         [
             horoItem,
             meditationsItem,
-            compatibilityItem,
-            biorhythmsItem
+            compatibilityItem
         ]
         .forEach {
             $0.state = .deselected
@@ -54,8 +52,6 @@ private extension TabView {
             meditationsItem.state = .selected
         case .compatibility:
             compatibilityItem.state = .selected
-        case .biorhythms:
-            biorhythmsItem.state = .selected
         }
     }
 }
@@ -81,14 +77,7 @@ private extension TabView {
             compatibilityItem.leadingAnchor.constraint(equalTo: meditationsItem.trailingAnchor),
             compatibilityItem.bottomAnchor.constraint(equalTo: bottomAnchor),
             compatibilityItem.topAnchor.constraint(equalTo: topAnchor),
-            compatibilityItem.widthAnchor.constraint(equalTo: biorhythmsItem.widthAnchor)
-        ])
-        
-        NSLayoutConstraint.activate([
-            biorhythmsItem.leadingAnchor.constraint(equalTo: compatibilityItem.trailingAnchor),
-            biorhythmsItem.bottomAnchor.constraint(equalTo: bottomAnchor),
-            biorhythmsItem.topAnchor.constraint(equalTo: topAnchor),
-            biorhythmsItem.trailingAnchor.constraint(equalTo: trailingAnchor)
+            compatibilityItem.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
     }
 }
