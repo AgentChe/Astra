@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Aries.png",
+      "filename" : "image-from-rawpixel-id-2847742-original 5.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Aries@2x.png",
+      "filename" : "image-from-rawpixel-id-2847742-original 5@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Aries@3x.png",
+      "filename" : "image-from-rawpixel-id-2847742-original 5@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

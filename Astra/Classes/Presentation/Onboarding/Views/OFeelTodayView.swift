@@ -89,16 +89,16 @@ private extension OFeelTodayView {
         ])
         
         NSLayoutConstraint.activate([
-            imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            imageView.heightAnchor.constraint(equalToConstant: 312.scale),
-            imageView.topAnchor.constraint(equalTo: topAnchor, constant: ScreenSize.isIphoneXFamily ? 242.scale : 157.scale),
-            imageView.widthAnchor.constraint(equalToConstant: 322.scale)
+            imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            imageView.heightAnchor.constraint(equalToConstant: ScreenSize.isIphoneXFamily ? 347.scale : 310.scale),
+            imageView.topAnchor.constraint(equalTo: topAnchor, constant: ScreenSize.isIphoneXFamily ? 242.scale : 157.scale)
         ])
         
         NSLayoutConstraint.activate([
             slider.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32.scale),
             slider.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32.scale),
-            slider.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 62.scale)
+            slider.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: ScreenSize.isIphoneXFamily ? 62.scale : 30.scale)
         ])
         
         NSLayoutConstraint.activate([

@@ -169,8 +169,8 @@ private extension OCityView {
         ])
         
         NSLayoutConstraint.activate([
-            imageView.widthAnchor.constraint(equalToConstant: 338.scale),
-            imageView.heightAnchor.constraint(equalToConstant: 270.scale),
+            imageView.widthAnchor.constraint(equalToConstant: 312.scale),
+            imageView.heightAnchor.constraint(equalToConstant: 324.scale),
             imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
             imageView.topAnchor.constraint(equalTo: searchView.bottomAnchor, constant: 45.scale)
         ])

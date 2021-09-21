@@ -68,9 +68,9 @@ private extension OPrePalmView {
         
         NSLayoutConstraint.activate([
             imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            imageView.widthAnchor.constraint(equalToConstant: 362.scale),
-            imageView.heightAnchor.constraint(equalToConstant: 357.scale),
-            imageView.topAnchor.constraint(equalTo: subTitleLabel.bottomAnchor, constant: 40.scale)
+            imageView.widthAnchor.constraint(equalToConstant: 317.scale),
+            imageView.heightAnchor.constraint(equalToConstant: 317.scale),
+            imageView.topAnchor.constraint(equalTo: subTitleLabel.bottomAnchor, constant: 32.scale)
         ])
         
         NSLayoutConstraint.activate([
