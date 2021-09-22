@@ -44,6 +44,36 @@ extension PaygateManagerCore {
             }
     }
     
+    func obtainSource2() -> Single<PaygateSource2?> {
+        guard let userToken = SessionManagerCore().getSession()?.userToken else {
+            return .error(SignError.tokenNotFound)
+        }
+        
+        let request = GetPaygate2Request(userToken: userToken,
+                                         locale: UIDevice.deviceLanguageCode ?? "en")
+        
+        return SDKStorage.shared
+            .restApiTransport
+            .callServerApi(requestBody: request)
+            .map { GetPaygate2Response.map(from: $0) }
+    }
+    
+    func preparePrices2(for source: PaygateSource2) -> Single<Paygate2?> {
+        SDKStorage.shared
+            .iapManager
+            .obtainProducts(ids: [
+                source.first.productId,
+                source.second.productId,
+                source.third.productId
+            ])
+            .map { iapProducts -> [ProductPrice] in
+                iapProducts.map { ProductPrice(product: $0.product) }
+            }
+            .map { productPrices -> Paygate2? in
+                PreparePaygate2PricesMapper.map(source: source, prices: productPrices)
+            }
+    }
+    
     func retrieveConfig(forceUpdate: Bool) -> Single<PaygateConfig?> {
         guard let userToken = SessionManagerCore().getSession()?.userToken else {
             return .error(SignError.tokenNotFound)

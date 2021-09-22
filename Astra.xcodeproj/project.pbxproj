@@ -139,6 +139,11 @@
 		9605E50426FB0F6F00F92398 /* PaygateConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605E50326FB0F6F00F92398 /* PaygateConfig.swift */; };
 		9605E50726FB103500F92398 /* GetPaygateConfigRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605E50626FB103500F92398 /* GetPaygateConfigRequest.swift */; };
 		9605E50926FB10BC00F92398 /* GetPaygateConfigResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605E50826FB10BC00F92398 /* GetPaygateConfigResponse.swift */; };
+		9605E50C26FB449100F92398 /* Paygate2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605E50B26FB449100F92398 /* Paygate2.swift */; };
+		9605E50F26FB468200F92398 /* GetPaygate2Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605E50E26FB468200F92398 /* GetPaygate2Request.swift */; };
+		9605E51126FB471100F92398 /* GetPaygate2Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605E51026FB471100F92398 /* GetPaygate2Response.swift */; };
+		9605E51326FB476B00F92398 /* PaygateSource2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605E51226FB476B00F92398 /* PaygateSource2.swift */; };
+		9605E51526FB4A1C00F92398 /* PreparePaygate2PricesMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605E51426FB4A1C00F92398 /* PreparePaygate2PricesMapper.swift */; };
 		9654D0D426DFBE8A00179E40 /* OFindMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9654D0D326DFBE8A00179E40 /* OFindMoreView.swift */; };
 		9654D0D626DFC33800179E40 /* OFeelTodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9654D0D526DFC33800179E40 /* OFeelTodayView.swift */; };
 		9654D0D826DFCB2B00179E40 /* OMaritalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9654D0D726DFCB2B00179E40 /* OMaritalView.swift */; };
@@ -448,6 +453,11 @@
 		9605E50326FB0F6F00F92398 /* PaygateConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaygateConfig.swift; sourceTree = "<group>"; };
 		9605E50626FB103500F92398 /* GetPaygateConfigRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPaygateConfigRequest.swift; sourceTree = "<group>"; };
 		9605E50826FB10BC00F92398 /* GetPaygateConfigResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPaygateConfigResponse.swift; sourceTree = "<group>"; };
+		9605E50B26FB449100F92398 /* Paygate2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paygate2.swift; sourceTree = "<group>"; };
+		9605E50E26FB468200F92398 /* GetPaygate2Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPaygate2Request.swift; sourceTree = "<group>"; };
+		9605E51026FB471100F92398 /* GetPaygate2Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPaygate2Response.swift; sourceTree = "<group>"; };
+		9605E51226FB476B00F92398 /* PaygateSource2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaygateSource2.swift; sourceTree = "<group>"; };
+		9605E51426FB4A1C00F92398 /* PreparePaygate2PricesMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreparePaygate2PricesMapper.swift; sourceTree = "<group>"; };
 		9654D0D326DFBE8A00179E40 /* OFindMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OFindMoreView.swift; sourceTree = "<group>"; };
 		9654D0D526DFC33800179E40 /* OFeelTodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OFeelTodayView.swift; sourceTree = "<group>"; };
 		9654D0D726DFCB2B00179E40 /* OMaritalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMaritalView.swift; sourceTree = "<group>"; };
@@ -1180,6 +1190,25 @@
 				9605E50826FB10BC00F92398 /* GetPaygateConfigResponse.swift */,
 			);
 			path = GetPaygateConfig;
+			sourceTree = "<group>";
+		};
+		9605E50A26FB442000F92398 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				96F06A0E26EE09A700CD9F0A /* PaygateSource.swift */,
+				96F06A0C26EE094400CD9F0A /* PaygateOptionSource.swift */,
+				9605E51226FB476B00F92398 /* PaygateSource2.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		9605E50D26FB467200F92398 /* GetPaygate2 */ = {
+			isa = PBXGroup;
+			children = (
+				9605E50E26FB468200F92398 /* GetPaygate2Request.swift */,
+				9605E51026FB471100F92398 /* GetPaygate2Response.swift */,
+			);
+			path = GetPaygate2;
 			sourceTree = "<group>";
 		};
 		9654D0DB26DFE42100179E40 /* PartnerSign */ = {
@@ -1932,12 +1961,12 @@
 		96F06A0026EA5C1700CD9F0A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9605E50A26FB442000F92398 /* Source */,
 				96F06A0126EA5C2600CD9F0A /* PaygateOption.swift */,
 				96F06A0A26EE07EA00CD9F0A /* Paygate.swift */,
-				96F06A0C26EE094400CD9F0A /* PaygateOptionSource.swift */,
-				96F06A0E26EE09A700CD9F0A /* PaygateSource.swift */,
 				96F06A1A26EE16F400CD9F0A /* ProductPrice.swift */,
 				9605E50326FB0F6F00F92398 /* PaygateConfig.swift */,
+				9605E50B26FB449100F92398 /* Paygate2.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1954,9 +1983,11 @@
 		96F06A1226EE100100CD9F0A /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				9605E50D26FB467200F92398 /* GetPaygate2 */,
 				9605E50526FB102300F92398 /* GetPaygateConfig */,
 				96F06A1326EE100700CD9F0A /* GetPaygate */,
 				96F06A1826EE16A200CD9F0A /* PreparePaygatePricesMapper.swift */,
+				9605E51426FB4A1C00F92398 /* PreparePaygate2PricesMapper.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -2167,6 +2198,7 @@
 				96059E3126C7093800BD9A0A /* MainViewController.swift in Sources */,
 				96A7795626F0C8EC00CA6033 /* BiorhythmsTableView.swift in Sources */,
 				96F0674E26E8BFF100CD9F0A /* PaygateViewController.swift in Sources */,
+				9605E50F26FB468200F92398 /* GetPaygate2Request.swift in Sources */,
 				96BFF5D526D21C0E00B8D8CC /* GetCompatibilitiesResponse.swift in Sources */,
 				96059EDF26CD9B1800BD9A0A /* LunarFull.swift in Sources */,
 				968FD3F526C3CB0D00C01D2A /* TextAttributes.swift in Sources */,
@@ -2348,6 +2380,7 @@
 				96059E4326C7B1B500BD9A0A /* Chart.swift in Sources */,
 				9605E4F726F9C7CD00F92398 /* OQuestion2View.swift in Sources */,
 				9654D0DA26DFCF5100179E40 /* OPartnerSignView.swift in Sources */,
+				9605E51326FB476B00F92398 /* PaygateSource2.swift in Sources */,
 				96059EBB26CD01C700BD9A0A /* SettingsViewController.swift in Sources */,
 				968FD46D26C4334C00C01D2A /* OGenderView.swift in Sources */,
 				96059EA826CBD53800BD9A0A /* HoroTableElement.swift in Sources */,
@@ -2360,12 +2393,14 @@
 				96059EF426CE3BD300BD9A0A /* ChooseTarotView.swift in Sources */,
 				96059EF226CE3BBA00BD9A0A /* ChooseTarotViewModel.swift in Sources */,
 				96059E4726C7B27500BD9A0A /* LunarArticle.swift in Sources */,
+				9605E51126FB471100F92398 /* GetPaygate2Response.swift in Sources */,
 				968FD45426C41F0500C01D2A /* OSlideView.swift in Sources */,
 				96059EE626CDA24600BD9A0A /* SeparatorLunarTableCell.swift in Sources */,
 				9605018E26E39B1F004E0F11 /* OQuestionView.swift in Sources */,
 				96BFF5F626D3F80300B8D8CC /* CompatibilityTableView.swift in Sources */,
 				968FD3FB26C3CB0D00C01D2A /* ImagePicker.swift in Sources */,
 				96059ED626CD275C00BD9A0A /* LunarTableElement.swift in Sources */,
+				9605E50C26FB449100F92398 /* Paygate2.swift in Sources */,
 				96A7796626F12DFA00CA6033 /* BiorhythmsTableChartElement.swift in Sources */,
 				96059E5926C7CF4A00BD9A0A /* MainTableElement.swift in Sources */,
 				968FD46326C42ED300C01D2A /* OWelcomeView.swift in Sources */,
@@ -2383,6 +2418,7 @@
 				968FD40426C3CB0D00C01D2A /* GradientView.swift in Sources */,
 				96BFF87826D53AFD00B8D8CC /* GetMeditationCourseDetailsRequest.swift in Sources */,
 				96BFF5F926D3F88700B8D8CC /* CompatibilitySignsImagesTableCell.swift in Sources */,
+				9605E51526FB4A1C00F92398 /* PreparePaygate2PricesMapper.swift in Sources */,
 				96BFF89C26D6602F00B8D8CC /* MeditationDashboardAudioCell.swift in Sources */,
 				96059EDD26CD9AC300BD9A0A /* LunarFavorable.swift in Sources */,
 				968FD3EF26C3CB0D00C01D2A /* UITapGestureRecognizerExtension.swift in Sources */,
