@@ -23,7 +23,7 @@ final class PaygateViewController: UIViewController {
         case 2:
             return Paygate2View()
         case 3:
-            return Paygate1View()
+            return Paygate3View()
         case 4:
             return Paygate1View()
         default:
@@ -135,9 +135,20 @@ private extension PaygateViewController {
                 view.optionView2.option = paygate.second
             })
             .disposed(by: disposeBag)
-        case 2, 3, 4:
+        case 2:
             viewModel.paygate2.drive(onNext: { [weak self] paygate in
                 guard let view = self?.mainView as? Paygate2View else {
+                    return
+                }
+                
+                view.firstOptionView.option = paygate.first
+                view.secondOptionView.option = paygate.second
+                view.thirdOptionView.option = paygate.third
+            })
+            .disposed(by: disposeBag)
+        case 3:
+            viewModel.paygate2.drive(onNext: { [weak self] paygate in
+                guard let view = self?.mainView as? Paygate3View else {
                     return
                 }
                 
