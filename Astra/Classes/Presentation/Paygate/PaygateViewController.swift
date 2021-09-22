@@ -14,7 +14,22 @@ final class PaygateViewController: UIViewController {
         case bought, canceled
     }
     
-    lazy var mainView = PaygateView()
+    lazy var mainView: PaygateView = {
+        let config = PaygateManagerCore().cachedConfig() ?? PaygateConfig.default()
+        
+        switch config.variant {
+        case 1:
+            return Paygate1View()
+        case 2:
+            return Paygate2View()
+        case 3:
+            return Paygate1View()
+        case 4:
+            return Paygate1View()
+        default:
+            return Paygate1View()
+        }
+    }()
     
     private lazy var disposeBag = DisposeBag()
     
@@ -39,7 +54,7 @@ final class PaygateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mainView.closeButton.rx.tap
+        mainView.didCloseTapped
             .subscribe(onNext: { [weak self] in
                 guard let self = self else {
                     return
@@ -51,56 +66,34 @@ final class PaygateViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
-        viewModel.paygate.drive(onNext: { [weak self] paygate in
-            self?.mainView.optionView1.option = paygate.first
-            self?.mainView.optionView2.option = paygate.second
-        })
-        .disposed(by: disposeBag)
-        
         viewModel.step
             .drive(onNext: { [weak self] step in
                 self?.handle(step: step)
             })
             .disposed(by: disposeBag)
         
-        mainView.restoreButton.rx.tap
+        mainView.didRestoreTapped
             .bind(to: viewModel.restore)
             .disposed(by: disposeBag)
         
-        mainView.subscribeButton.rx.tap
-            .subscribe(onNext: { [weak self] in
+        mainView.didSubscribeTapped
+            .subscribe(onNext: { [weak self] productId in
                 guard let self = self else {
                     return
                 }
                 
-                let option = [self.mainView.optionView1, self.mainView.optionView2]
-                    .first(where: { $0.isSelected })?
-                    .option
-                
-                guard let option = option else {
-                    return
-                }
-                
-                self.viewModel.buy.accept(option.productId)
+                self.viewModel.buy.accept(productId)
             })
             .disposed(by: disposeBag)
         
         viewModel.activityIndicator
             .drive(onNext: { [weak self] activity in
-                self?.mainView.restoreButton.isHidden = activity
-                self?.mainView.subscribeButton.isHidden = activity
-                self?.mainView.optionView1.isHidden = activity
-                self?.mainView.optionView2.isHidden = activity
-                
-                activity ? self?.mainView.preloader.startAnimating() : self?.mainView.preloader.stopAnimating()
+                self?.mainView.activity(activity)
             })
             .disposed(by: disposeBag)
         
-        mainView.optionView1.isSelected = true
-        mainView.optionView2.isSelected = false
-        
-        addOptionActions()
-        animateScrollReviews()
+        mainView.viewDidLoad()
+        downloadPaygate()
     }
 }
 
@@ -128,37 +121,33 @@ private extension PaygateViewController {
         }
     }
     
-    func animateScrollReviews() {
-        let no = mainView.reviewsView.contentOffset.x + 1
+    func downloadPaygate() {
+        let config = PaygateManagerCore().cachedConfig() ?? PaygateConfig.default()
         
-        UIView.animate(withDuration: 0.001, delay: 0, options: [.curveEaseInOut], animations: { [weak self] in
-            self?.mainView.reviewsView.contentOffset = CGPoint(x: no, y: 0)
-        }, completion: { [weak self] _ in
-            self?.animateScrollReviews()
-        })
-    }
-    
-    func addOptionActions() {
-        let option1TapGesture = UITapGestureRecognizer()
-        mainView.optionView1.isUserInteractionEnabled = true
-        mainView.optionView1.addGestureRecognizer(option1TapGesture)
-        
-        let option2TapGesture = UITapGestureRecognizer()
-        mainView.optionView2.isUserInteractionEnabled = true
-        mainView.optionView2.addGestureRecognizer(option2TapGesture)
-        
-        Observable
-            .merge(
-                option1TapGesture.rx.event
-                    .map { _ in (true, false) },
+        switch config.variant {
+        case 1:
+            viewModel.paygate.drive(onNext: { [weak self] paygate in
+                guard let view = self?.mainView as? Paygate1View else {
+                    return
+                }
                 
-                option2TapGesture.rx.event
-                    .map { _ in (false, true) }
-            )
-            .subscribe(onNext: { [weak self] opt1, opt2 in
-                self?.mainView.optionView1.isSelected = opt1
-                self?.mainView.optionView2.isSelected = opt2
+                view.optionView1.option = paygate.first
+                view.optionView2.option = paygate.second
             })
             .disposed(by: disposeBag)
+        case 2, 3, 4:
+            viewModel.paygate2.drive(onNext: { [weak self] paygate in
+                guard let view = self?.mainView as? Paygate2View else {
+                    return
+                }
+                
+                view.firstOptionView.option = paygate.first
+                view.secondOptionView.option = paygate.second
+                view.thirdOptionView.option = paygate.third
+            })
+            .disposed(by: disposeBag)
+        default:
+            break
+        }
     }
 }

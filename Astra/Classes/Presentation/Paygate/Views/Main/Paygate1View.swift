@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import RxSwift
 
-final class PaygateView: GradientView {
-    lazy var backgroundImageView = makeBackgroundImageView()
+final class Paygate1View: PaygateView {
     lazy var closeButton = makeCloseButton()
+    lazy var backgroundImageView = makeBackgroundImageView()
     lazy var restoreButton = makeRestoreButton()
     lazy var titleLabel = makeTitleLabel()
     lazy var reviewsView = makeReviewsView()
@@ -23,21 +24,94 @@ final class PaygateView: GradientView {
     lazy var termsAndPolicyLabel = makeTermsAndPolicyLabel()
     lazy var preloader = makePreloader()
     
+    private lazy var disposeBag = DisposeBag()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         makeConstraints()
+        initialize()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    override func activity(_ isActivity: Bool) {
+        restoreButton.isHidden = isActivity
+        subscribeButton.isHidden = isActivity
+        optionView1.isHidden = isActivity
+        optionView2.isHidden = isActivity
+        
+        isActivity ? preloader.startAnimating() : preloader.stopAnimating()
+    }
+    
+    override func viewDidLoad() {
+        animateScrollReviews()
+    }
 }
 
 // MARK: Private
-private extension PaygateView {
+private extension Paygate1View {
+    func initialize() {
+        closeButton.rx.tap
+            .bind(to: didCloseTapped)
+            .disposed(by: disposeBag)
+        
+        restoreButton.rx.tap
+            .bind(to: didRestoreTapped)
+            .disposed(by: disposeBag)
+        
+        subscribeButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                guard let self = self else {
+                    return
+                }
+                
+                let option = [self.optionView1, self.optionView2]
+                    .first(where: { $0.isSelected })?
+                    .option
+                
+                guard let option = option else {
+                    return
+                }
+                
+                self.didSubscribeTapped.accept(option.productId)
+            })
+            .disposed(by: disposeBag)
+        
+        optionView1.isSelected = true
+        optionView2.isSelected = false
+        
+        addOptionActions()
+    }
+    
+    func addOptionActions() {
+        let option1TapGesture = UITapGestureRecognizer()
+        optionView1.isUserInteractionEnabled = true
+        optionView1.addGestureRecognizer(option1TapGesture)
+        
+        let option2TapGesture = UITapGestureRecognizer()
+        optionView2.isUserInteractionEnabled = true
+        optionView2.addGestureRecognizer(option2TapGesture)
+        
+        Observable
+            .merge(
+                option1TapGesture.rx.event
+                    .map { _ in (true, false) },
+                
+                option2TapGesture.rx.event
+                    .map { _ in (false, true) }
+            )
+            .subscribe(onNext: { [weak self] opt1, opt2 in
+                self?.optionView1.isSelected = opt1
+                self?.optionView2.isSelected = opt2
+            })
+            .disposed(by: disposeBag)
+    }
+    
     @objc
-    private func termsAndPolicyTapped(sender: UITapGestureRecognizer) {
+    func termsAndPolicyTapped(sender: UITapGestureRecognizer) {
         guard let label = sender.view as? UILabel, let text = label.text as NSString? else {
             return
         }
@@ -59,10 +133,20 @@ private extension PaygateView {
         
         UIApplication.shared.open(openUrl, options: [:])
     }
+    
+    func animateScrollReviews() {
+        let no = reviewsView.contentOffset.x + 1
+        
+        UIView.animate(withDuration: 0.001, delay: 0, options: [.curveEaseInOut], animations: { [weak self] in
+            self?.reviewsView.contentOffset = CGPoint(x: no, y: 0)
+        }, completion: { [weak self] _ in
+            self?.animateScrollReviews()
+        })
+    }
 }
 
 // MARK: Make constraints
-private extension PaygateView {
+private extension Paygate1View {
     func makeConstraints() {
         NSLayoutConstraint.activate([
             backgroundImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
@@ -155,19 +239,19 @@ private extension PaygateView {
 }
 
 // MARK: Lazy initialization
-private extension PaygateView {
-    func makeBackgroundImageView() -> UIImageView {
-        let view = UIImageView()
-        view.contentMode = .scaleAspectFill
-        view.image = UIImage(named: "Paygate.Background")
+private extension Paygate1View {
+    func makeCloseButton() -> UIButton {
+        let view = UIButton()
+        view.setImage(UIImage(named: "Paygate.Close"), for: .normal)
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view
     }
     
-    func makeCloseButton() -> UIButton {
-        let view = UIButton()
-        view.setImage(UIImage(named: "Paygate.Close"), for: .normal)
+    func makeBackgroundImageView() -> UIImageView {
+        let view = UIImageView()
+        view.contentMode = .scaleAspectFill
+        view.image = UIImage(named: "Paygate.Background")
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view

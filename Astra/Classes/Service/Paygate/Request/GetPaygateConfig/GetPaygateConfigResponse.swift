@@ -16,7 +16,8 @@ final class GetPaygateConfigResponse {
         
         let tarotJSON = data["tarot"] as? [String: Any] ?? [:]
         
-        return PaygateConfig(variant: data["paygate_variant"] as? Int ?? 1,
+        // TODO
+        return PaygateConfig(variant: 2, //data["paygate_variant"] as? Int ?? 1,
                              afterOnboarding: data["after_onboarding"] as? Bool ?? false,
                              blockEverything: data["block_everything"] as? Bool ?? false,
                              horoscopes: data["horoscopes"] as? Bool ?? false,

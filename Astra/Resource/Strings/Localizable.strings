@@ -197,6 +197,18 @@
 "Paygate.Review.10.Text" = "Nothing has been a more useful tool than APP";
 "Paygate.Review.10.City" = "New York";
 "Paygate.Error" = "Failure at purchase";
+"Paygate2.Title" = "Get full access";
+"Paygate2.SubTitle" = "Analyze  personality and see the limits of your growth";
+"Paygate2.Info1" = "Daily insights";
+"Paygate2.Info2" = "Compatibility";
+"Paygate2.Info3" = "Tarot";
+"Paygate2.Info4" = "Meditation";
+"Paygate2.Info5" = "Lunar calendar";
+"Paygate2.Info6" = "Biorhythms";
+"Paygate2.Subscribe" = "SUBSCRIBE";
+"Paygate2.Restore" = "Restore";
+"Paygate2.Terms" = "Terms";
+"Paygate2.Privacy" = "Privacy";
 
 // MARK: Biorhythms
 "Biorhythms.Title" = "BIORHYTHMS";

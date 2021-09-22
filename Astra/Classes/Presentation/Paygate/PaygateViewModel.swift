@@ -17,6 +17,7 @@ final class PaygateViewModel {
     let restore = PublishRelay<Void>()
     
     lazy var paygate = makePaygate()
+    lazy var paygate2 = makePaygate2()
     lazy var step = Driver.merge(makeBuyed(), makeRestored())
     lazy var activityIndicator = RxActivityIndicator()
     
@@ -35,6 +36,22 @@ private extension PaygateViewModel {
                 
                 return self.paygateManager
                     .preparePrices(for: source)
+                    .trackActivity(self.activityIndicator)
+                    .asSingle()
+            }
+            .compactMap { $0 }
+            .asDriver(onErrorDriveWith: .empty())
+    }
+    
+    func makePaygate2() -> Driver<Paygate2> {
+        return paygateManager.obtainSource2()
+            .flatMap { [weak self] source -> Single<Paygate2?> in
+                guard let self = self, let source = source else {
+                    return .never()
+                }
+                
+                return self.paygateManager
+                    .preparePrices2(for: source)
                     .trackActivity(self.activityIndicator)
                     .asSingle()
             }

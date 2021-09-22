@@ -58,20 +58,42 @@ extension PaygateManagerCore {
             .map { GetPaygate2Response.map(from: $0) }
     }
     
+    // TODO
     func preparePrices2(for source: PaygateSource2) -> Single<Paygate2?> {
-        SDKStorage.shared
-            .iapManager
-            .obtainProducts(ids: [
-                source.first.productId,
-                source.second.productId,
-                source.third.productId
-            ])
-            .map { iapProducts -> [ProductPrice] in
-                iapProducts.map { ProductPrice(product: $0.product) }
-            }
-            .map { productPrices -> Paygate2? in
-                PreparePaygate2PricesMapper.map(source: source, prices: productPrices)
-            }
+        let o1 = PaygateOption(productId: "",
+                               title: "Monthly",
+                               subTitle: "$24.99/month\nWEEK FREE TRIAL",
+                               save: nil)
+            
+        let o2 = PaygateOption(productId: "",
+                               title: "Annually",
+                               subTitle: "$49.99/year\ncancel anytime",
+                               save: "SAVE 84%")
+            
+        let o3 = PaygateOption(productId: "",
+                               title: "Forever",
+                               subTitle: "$39.99\none time payment",
+                               save: nil)
+        
+        return .deferred {
+            .just(Paygate2(first: o1,
+                           second: o2,
+                           third: o3))
+        }
+        
+//        SDKStorage.shared
+//            .iapManager
+//            .obtainProducts(ids: [
+//                source.first.productId,
+//                source.second.productId,
+//                source.third.productId
+//            ])
+//            .map { iapProducts -> [ProductPrice] in
+//                iapProducts.map { ProductPrice(product: $0.product) }
+//            }
+//            .map { productPrices -> Paygate2? in
+//                PreparePaygate2PricesMapper.map(source: source, prices: productPrices)
+//            }
     }
     
     func retrieveConfig(forceUpdate: Bool) -> Single<PaygateConfig?> {

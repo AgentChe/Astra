@@ -23,6 +23,6 @@ final class OnboardingViewModel {
         
         let config = paygateManager.cachedConfig() ?? PaygateConfig.default()
         
-        return config.afterOnboarding ? .paygate : .main
+        return (config.afterOnboarding || config.blockEverything) ? .paygate : .main
     }
 }
