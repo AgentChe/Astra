@@ -7,7 +7,11 @@
 
 import RxSwift
 
-final class PaygateManagerCore: PaygateManager {}
+final class PaygateManagerCore: PaygateManager {
+    enum Constants {
+        static let configKey = "paygate_manager_core_config_key"
+    }
+}
 
 // MARK: Public
 extension PaygateManagerCore {
@@ -38,5 +42,69 @@ extension PaygateManagerCore {
             .map { productPrices -> Paygate? in
                 PreparePaygatePricesMapper.map(source: source, prices: productPrices)
             }
+    }
+    
+    func retrieveConfig(forceUpdate: Bool) -> Single<PaygateConfig?> {
+        guard let userToken = SessionManagerCore().getSession()?.userToken else {
+            return .error(SignError.tokenNotFound)
+        }
+        
+        guard forceUpdate else {
+            return getCachedConfig()
+        }
+        
+        let request = GetPaygateConfigRequest(userToken: userToken,
+                                              locale: UIDevice.deviceLanguageCode ?? "en")
+        
+        return SDKStorage.shared
+            .restApiTransport
+            .callServerApi(requestBody: request)
+            .map { GetPaygateConfigResponse.map(from: $0) }
+            .flatMap { [weak self] config in
+                guard let self = self, let config = config else {
+                    return .just(config)
+                }
+                
+                return self.cache(config: config)
+            }
+    }
+    
+    func cachedConfig() -> PaygateConfig? {
+        guard let data = UserDefaults.standard.data(forKey: Constants.configKey) else {
+            return nil
+        }
+        
+        return try? JSONDecoder().decode(PaygateConfig.self, from: data)
+    }
+}
+
+// MARK: Private
+private extension PaygateManagerCore {
+    func getCachedConfig() -> Single<PaygateConfig?> {
+        Single<PaygateConfig?>.create { [weak self] event in
+            guard let self = self, let config = self.cachedConfig() else {
+                event(.success(nil))
+                return Disposables.create()
+            }
+            
+            event(.success(config))
+            
+            return Disposables.create()
+        }
+    }
+    
+    func cache(config: PaygateConfig) -> Single<PaygateConfig?> {
+        Single<PaygateConfig?>.create { event in
+            guard let data = try? JSONEncoder().encode(config) else {
+                event(.success(nil))
+                return Disposables.create()
+            }
+            
+            UserDefaults.standard.setValue(data, forKey: Constants.configKey)
+            
+            event(.success(config))
+            
+            return Disposables.create()
+        }
     }
 }

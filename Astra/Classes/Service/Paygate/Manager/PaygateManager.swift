@@ -10,4 +10,7 @@ import RxSwift
 protocol PaygateManager {
     func obtainSource() -> Single<PaygateSource?>
     func preparePrices(for source: PaygateSource) -> Single<Paygate?>
+    
+    func retrieveConfig(forceUpdate: Bool) -> Single<PaygateConfig?>
+    func cachedConfig() -> PaygateConfig?
 }

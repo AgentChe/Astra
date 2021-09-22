@@ -18,15 +18,22 @@ final class SplashViewModel {
         .asDriver(onErrorDriveWith: .empty())
     
     private lazy var compatibilityManager = CompatibilityManagerCore()
+    private lazy var paygateManager = PaygateManagerCore()
     private lazy var sessionManager = SessionManagerCore()
 }
 
 // MARK: Private
 private extension SplashViewModel {
     func library() -> Completable {
-        compatibilityManager
+        let compatibilities = compatibilityManager
             .obtainCompatibilities(forceUpdate: true)
             .asCompletable()
+        
+        let paygateConfig = paygateManager
+            .retrieveConfig(forceUpdate: true)
+            .asCompletable()
+        
+        return Completable.zip(compatibilities, paygateConfig)
     }
     
     func makeStep() -> Single<Step> {

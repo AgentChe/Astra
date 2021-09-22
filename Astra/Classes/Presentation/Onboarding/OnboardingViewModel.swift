@@ -14,12 +14,15 @@ final class OnboardingViewModel {
     }
     
     private lazy var sessionManager = SessionManagerCore()
+    private lazy var paygateManager = PaygateManagerCore()
     
     func whatNext() -> Step {
         if let session = sessionManager.getSession(), session.activeSubscription {
             return .main
         }
         
-        return .paygate
+        let config = paygateManager.cachedConfig() ?? PaygateConfig.default()
+        
+        return config.afterOnboarding ? .paygate : .main
     }
 }

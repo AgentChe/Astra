@@ -49,18 +49,48 @@ extension MainViewController: MainTableViewDelegate {
     }
     
     func mainTableViewHoroDidTapped() {
-        let vc = HoroViewController.make()
-        navigationController?.pushViewController(vc, animated: true)
+        let config = PaygateManagerCore().cachedConfig() ?? PaygateConfig.default()
+        let activeSubscription = SessionManagerCore().getSession()?.activeSubscription ?? false
+        
+        let needPayment = config.horoscopes && !activeSubscription
+        
+        if needPayment {
+            let vc = PaygateViewController.make()
+            UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true)
+        } else {
+            let vc = HoroViewController.make()
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     func mainTableViewBiorhythmsTapped() {
-        let vc = BiorhythmsViewController.make()
-        navigationController?.pushViewController(vc, animated: true)
+        let config = PaygateManagerCore().cachedConfig() ?? PaygateConfig.default()
+        let activeSubscription = SessionManagerCore().getSession()?.activeSubscription ?? false
+        
+        let needPayment = config.biorhythms && !activeSubscription
+        
+        if needPayment {
+            let vc = PaygateViewController.make()
+            UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true)
+        } else {
+            let vc = BiorhythmsViewController.make()
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     func mainTableViewLunarDidTapped() {
-        let vc = LunarViewController.make()
-        UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true)
+        let config = PaygateManagerCore().cachedConfig() ?? PaygateConfig.default()
+        let activeSubscription = SessionManagerCore().getSession()?.activeSubscription ?? false
+        
+        let needPayment = config.lunar && !activeSubscription
+        
+        if needPayment {
+            let vc = PaygateViewController.make()
+            UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true)
+        } else {
+            let vc = LunarViewController.make()
+            UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true)
+        }
     }
     
     func mainTableViewTarotDidTapped(code: Int) {
@@ -68,7 +98,28 @@ extension MainViewController: MainTableViewDelegate {
             return
         }
         
-        if TarotManagerCore().hasTarotOnToday(with: type) {
+        let config = PaygateManagerCore().cachedConfig() ?? PaygateConfig.default()
+        let activeSubscription = SessionManagerCore().getSession()?.activeSubscription ?? false
+        
+        var needPayment: Bool
+        
+        switch type {
+        case .daily:
+            needPayment = config.tarotDaily
+        case .love:
+            needPayment = config.tarotLove
+        case .career:
+            needPayment = config.tarotCareer
+        case .money:
+            needPayment = config.tarotMoney
+        }
+        
+        needPayment = needPayment && !activeSubscription
+        
+        if needPayment {
+            let vc = PaygateViewController.make()
+            UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true)
+        } else if TarotManagerCore().hasTarotOnToday(with: type) {
             let vc = TarotViewController.make(type: type)
             UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true)
         } else {
