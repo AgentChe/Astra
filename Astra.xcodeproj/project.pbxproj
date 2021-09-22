@@ -151,6 +151,9 @@
 		9605E52226FBD97800F92398 /* Paygate3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605E52126FBD97800F92398 /* Paygate3View.swift */; };
 		9605E52526FBDAD700F92398 /* Paygate3OptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605E52426FBDAD700F92398 /* Paygate3OptionView.swift */; };
 		9605E52726FBDF9C00F92398 /* Paygate3InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605E52626FBDF9C00F92398 /* Paygate3InfoCell.swift */; };
+		9605E52A26FBE1FB00F92398 /* Paygate4OptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605E52926FBE1FB00F92398 /* Paygate4OptionView.swift */; };
+		9605E52E26FBE22600F92398 /* Paygate4InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605E52D26FBE22600F92398 /* Paygate4InfoCell.swift */; };
+		9605E53026FBE24300F92398 /* Paygate4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605E52F26FBE24300F92398 /* Paygate4View.swift */; };
 		9654D0D426DFBE8A00179E40 /* OFindMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9654D0D326DFBE8A00179E40 /* OFindMoreView.swift */; };
 		9654D0D626DFC33800179E40 /* OFeelTodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9654D0D526DFC33800179E40 /* OFeelTodayView.swift */; };
 		9654D0D826DFCB2B00179E40 /* OMaritalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9654D0D726DFCB2B00179E40 /* OMaritalView.swift */; };
@@ -472,6 +475,9 @@
 		9605E52126FBD97800F92398 /* Paygate3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paygate3View.swift; sourceTree = "<group>"; };
 		9605E52426FBDAD700F92398 /* Paygate3OptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paygate3OptionView.swift; sourceTree = "<group>"; };
 		9605E52626FBDF9C00F92398 /* Paygate3InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paygate3InfoCell.swift; sourceTree = "<group>"; };
+		9605E52926FBE1FB00F92398 /* Paygate4OptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paygate4OptionView.swift; sourceTree = "<group>"; };
+		9605E52D26FBE22600F92398 /* Paygate4InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paygate4InfoCell.swift; sourceTree = "<group>"; };
+		9605E52F26FBE24300F92398 /* Paygate4View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paygate4View.swift; sourceTree = "<group>"; };
 		9654D0D326DFBE8A00179E40 /* OFindMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OFindMoreView.swift; sourceTree = "<group>"; };
 		9654D0D526DFC33800179E40 /* OFeelTodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OFeelTodayView.swift; sourceTree = "<group>"; };
 		9654D0D726DFCB2B00179E40 /* OMaritalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMaritalView.swift; sourceTree = "<group>"; };
@@ -1242,6 +1248,7 @@
 				96F0675126E8C07E00CD9F0A /* Paygate1View.swift */,
 				9605E51626FB5FA800F92398 /* Paygate2View.swift */,
 				9605E52126FBD97800F92398 /* Paygate3View.swift */,
+				9605E52F26FBE24300F92398 /* Paygate4View.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -1262,6 +1269,15 @@
 				9605E52626FBDF9C00F92398 /* Paygate3InfoCell.swift */,
 			);
 			path = 3;
+			sourceTree = "<group>";
+		};
+		9605E52826FBE1CA00F92398 /* 4 */ = {
+			isa = PBXGroup;
+			children = (
+				9605E52926FBE1FB00F92398 /* Paygate4OptionView.swift */,
+				9605E52D26FBE22600F92398 /* Paygate4InfoCell.swift */,
+			);
+			path = 4;
 			sourceTree = "<group>";
 		};
 		9654D0DB26DFE42100179E40 /* PartnerSign */ = {
@@ -1983,6 +1999,7 @@
 		96F069F726EA3C6400CD9F0A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9605E52826FBE1CA00F92398 /* 4 */,
 				9605E52326FBDAC800F92398 /* 3 */,
 				9605E51C26FBA4AE00F92398 /* 2 */,
 				9605E51926FB603E00F92398 /* Main */,
@@ -2289,6 +2306,7 @@
 				968FD47426C45BED00C01D2A /* OBirthdateView.swift in Sources */,
 				968FD40726C3CB0D00C01D2A /* UIViewRxExtension.swift in Sources */,
 				96BFF8B526D6A1C200B8D8CC /* MeditationCourseAudioElement.swift in Sources */,
+				9605E53026FBE24300F92398 /* Paygate4View.swift in Sources */,
 				96F06A1126EE0AD500CD9F0A /* PaygateManagerCore.swift in Sources */,
 				96059E5726C7CEAB00BD9A0A /* MainTableView.swift in Sources */,
 				96059F0F26CE952300BD9A0A /* TarotTableView.swift in Sources */,
@@ -2414,6 +2432,7 @@
 				96BFF88726D54B1800B8D8CC /* MeditationsFilterCollectionElement.swift in Sources */,
 				96BFF5F326D3F7AB00B8D8CC /* CompatibilityView.swift in Sources */,
 				968FD40A26C3CDDC00C01D2A /* UIEdgeInsets+Extension.swift in Sources */,
+				9605E52E26FBE22600F92398 /* Paygate4InfoCell.swift in Sources */,
 				968F639F26D7619800C61474 /* MeditationAudioView.swift in Sources */,
 				968FD47226C4520700C01D2A /* Gender.swift in Sources */,
 				96BFF5E126D2B0C300B8D8CC /* CompatibilitySignsViewModel.swift in Sources */,
@@ -2426,6 +2445,7 @@
 				96059E2B26C6CD2700BD9A0A /* TabCoordinator.swift in Sources */,
 				9605E52026FBAD3700F92398 /* Paygate2OptionView.swift in Sources */,
 				960501A926E4D525004E0F11 /* CitySearchTableView.swift in Sources */,
+				9605E52A26FBE1FB00F92398 /* Paygate4OptionView.swift in Sources */,
 				968FD47C26C4736500C01D2A /* OEnjoyingCell.swift in Sources */,
 				96059EBD26CD020300BD9A0A /* SettingsViewModel.swift in Sources */,
 				96F06A0626EBF1BF00CD9F0A /* PaygateReviewsElement.swift in Sources */,

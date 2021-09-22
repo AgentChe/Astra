@@ -87,14 +87,14 @@ private extension Paygate2OptionView {
         ])
         
         NSLayoutConstraint.activate([
-            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: ScreenSize.isIphoneXFamily ? 8.scale : 6.scale),
-            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: ScreenSize.isIphoneXFamily ? -8.scale : -6.scale),
+            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: ScreenSize.isIphoneXFamily ? 6.scale : 4.scale),
+            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: ScreenSize.isIphoneXFamily ? -6.scale : -4.scale),
             titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 17.scale)
         ])
         
         NSLayoutConstraint.activate([
-            subtitleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: ScreenSize.isIphoneXFamily ? 8.scale : 6.scale),
-            subtitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: ScreenSize.isIphoneXFamily ? -8.scale : -6.scale),
+            subtitleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: ScreenSize.isIphoneXFamily ? 6.scale : 4.scale),
+            subtitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: ScreenSize.isIphoneXFamily ? -6.scale : -4.scale),
             subtitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 7.scale)
         ])
         

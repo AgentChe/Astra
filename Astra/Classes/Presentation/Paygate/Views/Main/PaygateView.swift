@@ -9,6 +9,8 @@ import UIKit
 import RxCocoa
 
 class PaygateView: UIView {
+    lazy var config = PaygateManagerCore().cachedConfig() ?? PaygateConfig.default()
+    
     lazy var didCloseTapped = PublishRelay<Void>()
     lazy var didRestoreTapped = PublishRelay<Void>()
     lazy var didSubscribeTapped = PublishRelay<String>()

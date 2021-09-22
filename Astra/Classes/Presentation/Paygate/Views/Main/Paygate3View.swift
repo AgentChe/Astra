@@ -81,7 +81,27 @@ private extension Paygate3View {
             })
             .disposed(by: disposeBag)
         
+        subscribeButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                guard let self = self else {
+                    return
+                }
+                
+                let option = [self.firstOptionView, self.secondOptionView, self.thirdOptionView]
+                    .first(where: { $0.isSelected })?
+                    .option
+                
+                guard let option = option else {
+                    return
+                }
+                
+                self.didSubscribeTapped.accept(option.productId)
+            })
+            .disposed(by: disposeBag)
+        
         backgroundColor = UIColor(integralRed: 252, green: 252, blue: 252)
+        
+        closeButton.isHidden = config.blockEverything
         
         firstOptionView.isSelected = false
         secondOptionView.isSelected = true

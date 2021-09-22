@@ -80,6 +80,8 @@ private extension Paygate1View {
             })
             .disposed(by: disposeBag)
         
+        closeButton.isHidden = config.blockEverything
+        
         optionView1.isSelected = true
         optionView2.isSelected = false
         
