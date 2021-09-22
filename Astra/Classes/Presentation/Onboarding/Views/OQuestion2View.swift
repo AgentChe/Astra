@@ -30,6 +30,14 @@ final class OQuestion2View: OSlideView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    override func moveToThis() {
+        super.moveToThis()
+        
+        SDKStorage.shared
+            .amplitudeManager
+            .logEvent(name: "Statement 2 Scren", parameters: [:])
+    }
 }
 
 // MARK: Make constraints

@@ -44,6 +44,10 @@ final class OPalmView: OSlideView {
     override func moveToThis() {
         super.moveToThis()
         
+        SDKStorage.shared
+            .amplitudeManager
+            .logEvent(name: "Palmistry Camera Scren", parameters: [:])
+        
         showCamera()
     }
 }

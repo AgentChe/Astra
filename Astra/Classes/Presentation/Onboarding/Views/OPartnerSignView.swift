@@ -29,6 +29,14 @@ final class OPartnerSignView: OSlideView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    override func moveToThis() {
+        super.moveToThis()
+        
+        SDKStorage.shared
+            .amplitudeManager
+            .logEvent(name: "Partner Zodiac Scren", parameters: [:])
+    }
 }
 
 // MARK: Private

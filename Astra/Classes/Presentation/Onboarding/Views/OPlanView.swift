@@ -27,6 +27,10 @@ final class OPlanView: OSlideView {
     override func moveToThis() {
         super.moveToThis()
         
+        SDKStorage.shared
+            .amplitudeManager
+            .logEvent(name: "Plan Ready Scren", parameters: [:])
+        
         animationView.play()
     }
 }

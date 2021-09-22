@@ -30,6 +30,10 @@ final class OPreloaderView: OSlideView {
     override func moveToThis() {
         super.moveToThis()
         
+        SDKStorage.shared
+            .amplitudeManager
+            .logEvent(name: "Plan Preparation Scren", parameters: [:])
+        
         animationView.play()
         calculatePercent()
     }

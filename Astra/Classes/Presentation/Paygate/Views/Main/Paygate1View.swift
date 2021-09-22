@@ -47,6 +47,10 @@ final class Paygate1View: PaygateView {
     }
     
     override func viewDidLoad() {
+        SDKStorage.shared
+            .amplitudeManager
+            .logEvent(name: "Paygate Scren", parameters: ["variant": 1])
+        
         animateScrollReviews()
     }
 }

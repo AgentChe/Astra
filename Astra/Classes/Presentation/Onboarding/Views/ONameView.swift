@@ -38,6 +38,10 @@ final class ONameView: OSlideView {
     override func moveToThis() {
         super.moveToThis()
         
+        SDKStorage.shared
+            .amplitudeManager
+            .logEvent(name: "Name Scren", parameters: [:])
+        
         textField.becomeFirstResponder()
     }
 }

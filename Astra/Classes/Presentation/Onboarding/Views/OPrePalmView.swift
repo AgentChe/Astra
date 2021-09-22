@@ -31,6 +31,14 @@ final class OPrePalmView: OSlideView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func moveToThis() {
+        super.moveToThis()
+        
+        SDKStorage.shared
+            .amplitudeManager
+            .logEvent(name: "Palmistry Scren", parameters: [:])
+    }
+    
     override func onNext() {
         switch AVCaptureDevice.authorizationStatus(for: .video) {
         case .notDetermined:

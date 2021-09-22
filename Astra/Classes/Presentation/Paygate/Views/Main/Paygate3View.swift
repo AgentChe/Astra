@@ -51,6 +51,12 @@ final class Paygate3View: PaygateView {
         
         isActivity ? preloader.startAnimating() : preloader.stopAnimating()
     }
+    
+    override func viewDidLoad() {
+        SDKStorage.shared
+            .amplitudeManager
+            .logEvent(name: "Paygate Scren", parameters: ["variant": 3])
+    }
 }
 
 // MARK: Private

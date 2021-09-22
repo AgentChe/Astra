@@ -33,6 +33,10 @@ final class OSignView: OSlideView {
     override func moveToThis() {
         super.moveToThis()
         
+        SDKStorage.shared
+            .amplitudeManager
+            .logEvent(name: "Zodiac Scren", parameters: [:])
+        
         contentManager.obtainZodiacQuote()
             .asDriver(onErrorJustReturn: "")
             .drive(onNext: { [weak self] quote in
