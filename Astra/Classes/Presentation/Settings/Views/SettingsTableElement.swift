@@ -9,4 +9,6 @@ enum SettingsTableElement {
     case offset(CGFloat)
     case link(title: String, path: String)
     case rateUs(title: String)
+    case buy
+    case premium
 }

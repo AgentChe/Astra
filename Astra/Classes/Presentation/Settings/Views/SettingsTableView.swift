@@ -8,6 +8,8 @@
 import UIKit
 
 final class SettingsTableView: UITableView {
+    weak var mainDelegate: SettingsTableViewDelegate?
+    
     private var elements = [SettingsTableElement]()
     
     override init(frame: CGRect, style: UITableView.Style) {
@@ -52,6 +54,12 @@ extension SettingsTableView: UITableViewDataSource {
             let cell = dequeueReusableCell(withIdentifier: String(describing: SettingsLinkTableCell.self)) as! SettingsLinkTableCell
             cell.setup(title: title)
             return cell
+        case .buy:
+            let cell = dequeueReusableCell(withIdentifier: String(describing: SettingsBuyCell.self)) as! SettingsBuyCell
+            cell.delegate = mainDelegate
+            return cell
+        case .premium:
+            return dequeueReusableCell(withIdentifier: String(describing: SettingsPremiumCell.self)) as! SettingsPremiumCell
         }
     }
 }
@@ -62,6 +70,10 @@ extension SettingsTableView: UITableViewDelegate {
         switch elements[indexPath.row] {
         case .offset(let offset):
             return offset
+        case .buy:
+            return 182.scale
+        case .premium:
+            return 118.scale
         default:
             return UITableView.automaticDimension
         }
@@ -88,6 +100,8 @@ private extension SettingsTableView {
     func initialize() {
         register(UITableViewCell.self, forCellReuseIdentifier: "OffsetTableCell")
         register(SettingsLinkTableCell.self, forCellReuseIdentifier: String(describing: SettingsLinkTableCell.self))
+        register(SettingsBuyCell.self, forCellReuseIdentifier: String(describing: SettingsBuyCell.self))
+        register(SettingsPremiumCell.self, forCellReuseIdentifier: String(describing: SettingsPremiumCell.self))
         
         dataSource = self
         delegate = self

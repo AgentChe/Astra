@@ -27,6 +27,8 @@ final class SettingsViewController: UIViewController {
                 self?.mainView.tableView.setup(elements: elements)
             })
             .disposed(by: disposeBag)
+        
+        mainView.tableView.mainDelegate = self
     }
 }
 
@@ -36,5 +38,13 @@ extension SettingsViewController {
         let vc = SettingsViewController()
         vc.navigationItem.backButtonTitle = " "
         return vc
+    }
+}
+
+// MARK: SettingsTableViewDelegate
+extension SettingsViewController: SettingsTableViewDelegate {
+    func settingsTableBuyTapped() {
+        let vc = PaygateViewController.make()
+        UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true)
     }
 }
