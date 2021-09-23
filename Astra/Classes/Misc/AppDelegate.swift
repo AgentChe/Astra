@@ -18,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private lazy var sdkProvider = SDKProvider()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        NumberLaunches().launch()
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         let vc = SplashViewController.make(generateStep: generateStepInSplash.asSignal())
         window?.rootViewController = vc

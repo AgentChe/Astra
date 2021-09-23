@@ -35,6 +35,43 @@ final class SplashViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if NumberLaunches().isFirstLaunch() {
+            print("forFirstRun")
+            forFirstRun()
+        } else {
+            print("forSecondRun")
+            forSecondRun()
+        }
+    }
+}
+
+// MARK: Make
+extension SplashViewController {
+    static func make(generateStep: Signal<Void>) -> SplashViewController {
+        SplashViewController(generateStep: generateStep)
+    }
+}
+
+// MARK: Private
+private extension SplashViewController {
+    func forFirstRun() {
+        mainView.animationView.loopMode = .loop
+        mainView.animationView.play()
+        
+        generateStep
+            .delay(RxTimeInterval.seconds(1))
+            .flatMap { [weak self] in
+                self?.viewModel.step ?? .empty()
+            }
+            .drive(onNext: { [weak self] step in
+                self?.handle(step: step)
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    func forSecondRun() {
+        mainView.animationView.loopMode = .playOnce
+        
         let animation = generateStep
             .flatMapLatest { _ -> Driver<Void> in
                 Single<Void>
@@ -66,17 +103,7 @@ final class SplashViewController: UIViewController {
             })
             .disposed(by: disposeBag)
     }
-}
-
-// MARK: Make
-extension SplashViewController {
-    static func make(generateStep: Signal<Void>) -> SplashViewController {
-        SplashViewController(generateStep: generateStep)
-    }
-}
-
-// MARK: Private
-private extension SplashViewController {
+    
     func handle(step: SplashViewModel.Step) {
         switch step {
         case .onboarding:
