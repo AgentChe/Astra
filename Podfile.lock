@@ -5,26 +5,18 @@ PODS:
     - AppsFlyerFramework/Main (= 6.4.0)
   - AppsFlyerFramework/Main (6.4.0)
   - Branch (1.39.4)
-  - FacebookSDK (11.0.1):
-    - FacebookSDK/Basics (= 11.0.1)
-    - FacebookSDK/CoreKit (= 11.0.1)
-    - FacebookSDK/LoginKit (= 11.0.1)
-    - FacebookSDK/ShareKit (= 11.0.1)
-    - FacebookSDK/TVOSKit (= 11.0.1)
-  - FacebookSDK/Basics (11.0.1)
-  - FacebookSDK/CoreKit (11.0.1):
-    - FacebookSDK/Basics
-  - FacebookSDK/LoginKit (11.0.1):
-    - FacebookSDK/CoreKit
-  - FacebookSDK/ShareKit (11.0.1):
-    - FacebookSDK/CoreKit
-  - FBSDKCoreKit (11.0.1):
-    - FBSDKCoreKit/Core (= 11.0.1)
-  - FBSDKCoreKit/Core (11.0.1):
-    - FBSDKCoreKit_Basics (~> 11.0.1)
-  - FBSDKCoreKit_Basics (11.0.1):
-    - FBSDKCoreKit_Basics/Basics (= 11.0.1)
-  - FBSDKCoreKit_Basics/Basics (11.0.1)
+  - FBAEMKit (11.2.1):
+    - FBAEMKit/AEM (= 11.2.1)
+  - FBAEMKit/AEM (11.2.1):
+    - FBSDKCoreKit_Basics (~> 11.2.1)
+  - FBSDKCoreKit (11.2.1):
+    - FBSDKCoreKit/Core (= 11.2.1)
+  - FBSDKCoreKit/Core (11.2.1):
+    - FBAEMKit (~> 11.2.1)
+    - FBSDKCoreKit_Basics (~> 11.2.1)
+  - FBSDKCoreKit_Basics (11.2.1):
+    - FBSDKCoreKit_Basics/Basics (= 11.2.1)
+  - FBSDKCoreKit_Basics/Basics (11.2.1)
   - Firebase/Analytics (8.7.0):
     - Firebase/Core
   - Firebase/Core (8.7.0):
@@ -134,13 +126,12 @@ PODS:
     - MarqueeLabel (~> 4.0.5)
     - SnapKit (~> 5.0.1)
   - PromisesObjC (2.0.0)
-  - RushSDK (2.8.6):
+  - RushSDK (2.8.7):
     - Alamofire
     - Amplitude-iOS
     - AppsFlyerFramework
     - Branch
-    - FacebookSDK (= 11.0.1)
-    - FBSDKCoreKit (= 11.0.1)
+    - FBSDKCoreKit
     - Firebase/Analytics
     - Firebase/Crashlytics
     - Firebase/Messaging
@@ -170,7 +161,7 @@ SPEC REPOS:
     - Amplitude-iOS
     - AppsFlyerFramework
     - Branch
-    - FacebookSDK
+    - FBAEMKit
     - FBSDKCoreKit
     - FBSDKCoreKit_Basics
     - Firebase
@@ -202,7 +193,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   RushSDK:
-    :commit: 3dfaf607b6da3688d071d0247c3c82d1a93ae3f5
+    :commit: 0ad983bb064ed75aa675086322c9935b8359e7c9
     :git: https://github.com/AgentChe/RushSDK.git
 
 SPEC CHECKSUMS:
@@ -210,9 +201,9 @@ SPEC CHECKSUMS:
   Amplitude-iOS: 7d8cdc3408ba35c2e68368fc7c692cd104606b94
   AppsFlyerFramework: 9c37252d3edce38257afc065ad48a48c0f004000
   Branch: d21c40c47b5c15c6ab709cdf7d965a50059e0546
-  FacebookSDK: 7193c934c71b7be5b28009d2fd2547807969f2c3
-  FBSDKCoreKit: 38c9e29a3f1436362acacff6486d3a28628c288f
-  FBSDKCoreKit_Basics: 06780a4a12e16596bde8406add02c6aa1bf38616
+  FBAEMKit: 5de0a7aaa854eec69bb5be20795952a63d38a5f6
+  FBSDKCoreKit: bf655f808b040ed66a72b9922911b39d703e64f4
+  FBSDKCoreKit_Basics: 73ebe3a27eb688ac5b5aa7e99f68992993042115
   Firebase: bc9325d5ee2041524bac78a5213d0e530c651309
   FirebaseAnalytics: 52768800c2add1d84b751420cb4caaf8195f2c41
   FirebaseCore: f4804c1d3f4bbbefc88904d15653038f2c99ddf7
@@ -229,7 +220,7 @@ SPEC CHECKSUMS:
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   NotificationBannerSwift: 7021be2338f8f29cf424b0aca43da462bf9e2a1a
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
-  RushSDK: 893e1f6d8cc5b3ef8943c45279619d121029d4d1
+  RushSDK: bf4912426dd71e4633b59487e9308ab2139f1ee4
   RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
   RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
   RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
