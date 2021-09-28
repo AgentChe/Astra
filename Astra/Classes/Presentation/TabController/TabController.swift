@@ -14,8 +14,6 @@ final class TabController: UIViewController {
     
     private lazy var coordinator = TabCoordinator(parentVC: self)
     
-    private var player: AudioPlayer?
-    
     override func loadView() {
         super.loadView()
         
@@ -50,11 +48,13 @@ extension TabController {
 extension TabController: MeditationAudioViewControllerMediatorDelegate {
     func meditationAudioViewControllerDidAppear(with audio: MeditationAudio) {
         mainView.showPlayer(show: false)
+        mainView.playerView.resignControlOnPlayer()
         mainView.playerView.fill(audio: audio)
     }
     
     func meditationAudioViewControllerDidDisappear() {
         mainView.showPlayer(show: true)
+        mainView.playerView.becomeControlOnPlayer()
     }
 }
  
