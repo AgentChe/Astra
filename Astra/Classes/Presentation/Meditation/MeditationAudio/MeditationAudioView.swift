@@ -9,11 +9,13 @@ import UIKit
 import Kingfisher
 import AVFoundation
 
-final class MeditationAudioView: GradientView {
+final class MeditationAudioView: UIView {
     lazy var backButton = makeBackButton()
     lazy var imageView = makeImageView()
+    lazy var shadowView = makeShadowView()
     lazy var nameLabel = makeLabel()
     lazy var playPauseButton = makePlayPauseButton()
+    lazy var preloaderView = makePreloaderView()
     lazy var playerBackButton = makePlayerBackButton()
     lazy var playerForwardButton = makePlayerForwardButton()
     lazy var slider = makeSlider()
@@ -24,7 +26,6 @@ final class MeditationAudioView: GradientView {
         super.init(frame: frame)
         
         makeConstraints()
-        initialize()
     }
     
     required init?(coder: NSCoder) {
@@ -41,7 +42,7 @@ extension MeditationAudioView {
         
         nameLabel.attributedText = audio.title
             .attributed(with: TextAttributes()
-                            .textColor(UIColor(integralRed: 31, green: 31, blue: 31))
+                            .textColor(UIColor.white)
                             .font(Fonts.Qanelas.bold(size: 24.scale))
                             .lineHeight(28.8.scale)
                             .textAlignment(.center))
@@ -53,7 +54,7 @@ extension MeditationAudioView {
         
         totalTimeLabel.attributedText = string(from: totalDuration)
             .attributed(with: TextAttributes()
-                            .textColor(UIColor(integralRed: 31, green: 31, blue: 31))
+                            .textColor(UIColor.white)
                             .font(Fonts.Qanelas.regular(size: 14.scale))
                             .lineHeight(19.6.scale))
     }
@@ -63,7 +64,7 @@ extension MeditationAudioView {
         
         currentTimeLabel.attributedText = string(from: currentTime)
             .attributed(with: TextAttributes()
-                            .textColor(UIColor(integralRed: 31, green: 31, blue: 31))
+                            .textColor(UIColor.white)
                             .font(Fonts.Qanelas.regular(size: 14.scale))
                             .lineHeight(19.6.scale))
     }
@@ -71,15 +72,6 @@ extension MeditationAudioView {
 
 // MARK: Private
 private extension MeditationAudioView {
-    func initialize() {
-        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
-        gradientLayer.endPoint = CGPoint(x: 0, y: 1)
-        gradientLayer.colors = [
-            UIColor(integralRed: 241, green: 204, blue: 195).cgColor,
-            UIColor(integralRed: 226, green: 101, blue: 123).cgColor
-        ]
-    }
-    
     func string(from interval: TimeInterval) -> String {
         let interval = Int(interval)
         let seconds = interval % 60
@@ -92,6 +84,20 @@ private extension MeditationAudioView {
 private extension MeditationAudioView {
     func makeConstraints() {
         NSLayoutConstraint.activate([
+            imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            imageView.topAnchor.constraint(equalTo: topAnchor),
+            imageView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            shadowView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            shadowView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            shadowView.topAnchor.constraint(equalTo: topAnchor),
+            shadowView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
             backButton.widthAnchor.constraint(equalToConstant: 24.scale),
             backButton.heightAnchor.constraint(equalToConstant: 24.scale),
             backButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8.scale),
@@ -99,23 +105,23 @@ private extension MeditationAudioView {
         ])
         
         NSLayoutConstraint.activate([
-            imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            imageView.widthAnchor.constraint(equalToConstant: 343.scale),
-            imageView.heightAnchor.constraint(equalToConstant: 271.scale),
-            imageView.topAnchor.constraint(equalTo: topAnchor, constant: ScreenSize.isIphoneXFamily ? 120.scale : 70.scale)
-        ])
-        
-        NSLayoutConstraint.activate([
             nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16.scale),
             nameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16.scale),
-            nameLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 32.scale)
+            nameLabel.topAnchor.constraint(equalTo: topAnchor, constant: ScreenSize.isIphoneXFamily ? 292.scale : 222.scale)
         ])
         
         NSLayoutConstraint.activate([
             playPauseButton.centerXAnchor.constraint(equalTo: centerXAnchor),
             playPauseButton.widthAnchor.constraint(equalToConstant: 109.scale),
             playPauseButton.heightAnchor.constraint(equalToConstant: 109.scale),
-            playPauseButton.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 32.scale)
+            playPauseButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: ScreenSize.isIphoneXFamily ? -100.scale : -70.scale)
+        ])
+        
+        NSLayoutConstraint.activate([
+            preloaderView.widthAnchor.constraint(equalToConstant: 109.scale),
+            preloaderView.heightAnchor.constraint(equalToConstant: 109.scale),
+            preloaderView.centerXAnchor.constraint(equalTo: playPauseButton.centerXAnchor),
+            preloaderView.centerYAnchor.constraint(equalTo: playPauseButton.centerYAnchor)
         ])
         
         NSLayoutConstraint.activate([
@@ -136,7 +142,7 @@ private extension MeditationAudioView {
             slider.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20.scale),
             slider.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20.scale),
             slider.heightAnchor.constraint(equalToConstant: 17.scale),
-            slider.topAnchor.constraint(equalTo: playPauseButton.bottomAnchor, constant: 34.scale)
+            slider.bottomAnchor.constraint(equalTo: playPauseButton.topAnchor, constant: -40.scale)
         ])
         
         NSLayoutConstraint.activate([
@@ -163,9 +169,20 @@ private extension MeditationAudioView {
     
     func makeImageView() -> UIImageView {
         let view = UIImageView()
-        view.layer.cornerRadius = 10.scale
-        view.clipsToBounds = true
         view.contentMode = .scaleAspectFill
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        return view
+    }
+    
+    func makeShadowView() -> GradientView {
+        let view = GradientView()
+        view.gradientLayer.startPoint = CGPoint(x: 0.5, y: 0)
+        view.gradientLayer.endPoint = CGPoint(x: 0.5, y: 1)
+        view.gradientLayer.colors = [
+            UIColor.black.withAlphaComponent(0).cgColor,
+            UIColor.black.withAlphaComponent(0.5).cgColor
+        ]
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view
@@ -182,6 +199,17 @@ private extension MeditationAudioView {
     func makePlayPauseButton() -> PlayPauseButton {
         let view = PlayPauseButton()
         view.stateCode = .pause
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        return view
+    }
+    
+    func makePreloaderView() -> AudioPreloaderView {
+        let view = AudioPreloaderView(frame: .zero)
+        view.backgroundColor = UIColor.clear
+        view.image = UIImage(named: "MeditationAudio.Player.Preloader.Background")
+        view.contentMode = .scaleAspectFit
+        view.stop()
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view

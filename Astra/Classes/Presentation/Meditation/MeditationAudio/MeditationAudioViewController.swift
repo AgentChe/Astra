@@ -68,13 +68,17 @@ final class MeditationAudioViewController: UIViewController {
         
         mainView.playerBackButton.rx.tap
             .subscribe(onNext: { [weak self] in
-                self?.audioPlayer?.back()
+//                self?.audioPlayer?.back()
+                self?.mainView.preloaderView.start()
+                self?.mainView.playPauseButton.isHidden = true
             })
             .disposed(by: disposeBag)
         
         mainView.playerForwardButton.rx.tap
             .subscribe(onNext: { [weak self] in
-                self?.audioPlayer?.forward()
+//                self?.audioPlayer?.forward()
+                self?.mainView.preloaderView.stop()
+                self?.mainView.playPauseButton.isHidden = false
             })
             .disposed(by: disposeBag)
         
