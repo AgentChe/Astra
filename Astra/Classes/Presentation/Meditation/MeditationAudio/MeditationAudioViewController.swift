@@ -9,17 +9,13 @@ import UIKit
 import RxSwift
 
 final class MeditationAudioViewController: UIViewController {
-    deinit {
-        audioPlayer?.clear()
-    }
-    
     lazy var mainView = MeditationAudioView()
     
     private lazy var disposeBag = DisposeBag()
     
     private lazy var viewModel = MeditationAudioViewModel()
     
-    private lazy var audioPlayer = AudioPlayer(audio: audio)
+    private lazy var audioPlayer = AudioPlayerManager.shared.makePlayerIfNeeded(audio: audio)
     
     private let audio: MeditationAudio
     
@@ -39,9 +35,6 @@ final class MeditationAudioViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        audioPlayer?.delegate = self
-        mainView.fill(audio: audio)
         
         mainView.backButton.rx.tap
             .subscribe(onNext: { [weak self] in
@@ -68,17 +61,13 @@ final class MeditationAudioViewController: UIViewController {
         
         mainView.playerBackButton.rx.tap
             .subscribe(onNext: { [weak self] in
-//                self?.audioPlayer?.back()
-                self?.mainView.preloaderView.start()
-                self?.mainView.playPauseButton.isHidden = true
+                self?.audioPlayer?.back()
             })
             .disposed(by: disposeBag)
         
         mainView.playerForwardButton.rx.tap
             .subscribe(onNext: { [weak self] in
-//                self?.audioPlayer?.forward()
-                self?.mainView.preloaderView.stop()
-                self?.mainView.playPauseButton.isHidden = false
+                self?.audioPlayer?.forward()
             })
             .disposed(by: disposeBag)
         
@@ -91,6 +80,21 @@ final class MeditationAudioViewController: UIViewController {
                 self?.audioPlayer?.seek(to: value)
             })
             .disposed(by: disposeBag)
+        
+        audioPlayer?.delegate = self
+        mainView.fill(audio: audio)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        MeditationAudioViewControllerMediator.shared.notifyAboutAppear(with: audio)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        MeditationAudioViewControllerMediator.shared.notifyAboutDisappear()
     }
 }
 
@@ -112,6 +116,10 @@ extension MeditationAudioViewController: AudioPlayerDelegate {
     
     func audioPlayer(currentTime: Float64) {
         mainView.setup(currentTime: currentTime)
+        
+        if currentTime > 0 && audioPlayer?.isPlaying() == true {
+            mainView.playPauseButton.stateCode = .play
+        }
     }
     
     func audioPlayerFinished() {

@@ -159,6 +159,10 @@
 		9605E53626FBF1C600F92398 /* SettingsTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605E53526FBF1C600F92398 /* SettingsTableViewDelegate.swift */; };
 		9605E53826FC565600F92398 /* NumberLaunches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605E53726FC565600F92398 /* NumberLaunches.swift */; };
 		960DE39427035A9300D00EA6 /* AudioPreloaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE39327035A9300D00EA6 /* AudioPreloaderView.swift */; };
+		960DE397270370BA00D00EA6 /* TabPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE396270370BA00D00EA6 /* TabPlayerView.swift */; };
+		960DE399270373FF00D00EA6 /* TabPlayerPlayPauseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE398270373FF00D00EA6 /* TabPlayerPlayPauseView.swift */; };
+		960DE39D2703953400D00EA6 /* AudioPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE39C2703953400D00EA6 /* AudioPlayerManager.swift */; };
+		960DE3A12703BF2000D00EA6 /* MeditationAudioViewControllerMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE3A02703BF2000D00EA6 /* MeditationAudioViewControllerMediator.swift */; };
 		9654D0D426DFBE8A00179E40 /* OFindMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9654D0D326DFBE8A00179E40 /* OFindMoreView.swift */; };
 		9654D0D626DFC33800179E40 /* OFeelTodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9654D0D526DFC33800179E40 /* OFeelTodayView.swift */; };
 		9654D0D826DFCB2B00179E40 /* OMaritalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9654D0D726DFCB2B00179E40 /* OMaritalView.swift */; };
@@ -488,6 +492,10 @@
 		9605E53526FBF1C600F92398 /* SettingsTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewDelegate.swift; sourceTree = "<group>"; };
 		9605E53726FC565600F92398 /* NumberLaunches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberLaunches.swift; sourceTree = "<group>"; };
 		960DE39327035A9300D00EA6 /* AudioPreloaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPreloaderView.swift; sourceTree = "<group>"; };
+		960DE396270370BA00D00EA6 /* TabPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPlayerView.swift; sourceTree = "<group>"; };
+		960DE398270373FF00D00EA6 /* TabPlayerPlayPauseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPlayerPlayPauseView.swift; sourceTree = "<group>"; };
+		960DE39C2703953400D00EA6 /* AudioPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerManager.swift; sourceTree = "<group>"; };
+		960DE3A02703BF2000D00EA6 /* MeditationAudioViewControllerMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationAudioViewControllerMediator.swift; sourceTree = "<group>"; };
 		9654D0D326DFBE8A00179E40 /* OFindMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OFindMoreView.swift; sourceTree = "<group>"; };
 		9654D0D526DFC33800179E40 /* OFeelTodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OFeelTodayView.swift; sourceTree = "<group>"; };
 		9654D0D726DFCB2B00179E40 /* OMaritalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMaritalView.swift; sourceTree = "<group>"; };
@@ -801,6 +809,7 @@
 		96059E2326C6CBDA00BD9A0A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				960DE395270370AE00D00EA6 /* Player */,
 				96059E2426C6CBE800BD9A0A /* TabView.swift */,
 				96059E2626C6CBFB00BD9A0A /* TabItemView.swift */,
 			);
@@ -1293,6 +1302,15 @@
 			path = 4;
 			sourceTree = "<group>";
 		};
+		960DE395270370AE00D00EA6 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				960DE396270370BA00D00EA6 /* TabPlayerView.swift */,
+				960DE398270373FF00D00EA6 /* TabPlayerPlayPauseView.swift */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
 		9654D0DB26DFE42100179E40 /* PartnerSign */ = {
 			isa = PBXGroup;
 			children = (
@@ -1311,6 +1329,7 @@
 				968F639A26D7612D00C61474 /* MeditationAudioViewController.swift */,
 				968F639C26D7617E00C61474 /* MeditationAudioViewModel.swift */,
 				968F639E26D7619800C61474 /* MeditationAudioView.swift */,
+				960DE3A02703BF2000D00EA6 /* MeditationAudioViewControllerMediator.swift */,
 			);
 			path = MeditationAudio;
 			sourceTree = "<group>";
@@ -1329,6 +1348,7 @@
 			children = (
 				968F63A426D7827400C61474 /* AudioPlayer.swift */,
 				968F63A726D7CA0A00C61474 /* AudioPlayerDelegate.swift */,
+				960DE39C2703953400D00EA6 /* AudioPlayerManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -2277,6 +2297,7 @@
 				968FD47626C45F7F00C01D2A /* OGoalsView.swift in Sources */,
 				96059EAC26CBD8AF00BD9A0A /* HoroArticleOpenedTableCell.swift in Sources */,
 				968FD3FF26C3CB0D00C01D2A /* TapAreaButton.swift in Sources */,
+				960DE397270370BA00D00EA6 /* TabPlayerView.swift in Sources */,
 				96BFF86D26D5280600B8D8CC /* GetMeditationDashboardRequest.swift in Sources */,
 				96059E0D26C6634400BD9A0A /* SessionManagerCore.swift in Sources */,
 				96059E5326C7C8A600BD9A0A /* ContentManagerCore.swift in Sources */,
@@ -2296,6 +2317,7 @@
 				96A7794C26F0C23400CA6033 /* BiorhythmsViewController.swift in Sources */,
 				96059E7226C9AC0D00BD9A0A /* HoroImageMainCell.swift in Sources */,
 				96059EB626CBE40A00BD9A0A /* GetHoroFullResponse.swift in Sources */,
+				960DE39D2703953400D00EA6 /* AudioPlayerManager.swift in Sources */,
 				968FD3FA26C3CB0D00C01D2A /* Weak.swift in Sources */,
 				96F06A0B26EE07EA00CD9F0A /* Paygate.swift in Sources */,
 				960DE39427035A9300D00EA6 /* AudioPreloaderView.swift in Sources */,
@@ -2325,6 +2347,7 @@
 				968FD47426C45BED00C01D2A /* OBirthdateView.swift in Sources */,
 				968FD40726C3CB0D00C01D2A /* UIViewRxExtension.swift in Sources */,
 				96BFF8B526D6A1C200B8D8CC /* MeditationCourseAudioElement.swift in Sources */,
+				960DE399270373FF00D00EA6 /* TabPlayerPlayPauseView.swift in Sources */,
 				9605E53026FBE24300F92398 /* Paygate4View.swift in Sources */,
 				96F06A1126EE0AD500CD9F0A /* PaygateManagerCore.swift in Sources */,
 				96059E5726C7CEAB00BD9A0A /* MainTableView.swift in Sources */,
@@ -2448,6 +2471,7 @@
 				9605E52226FBD97800F92398 /* Paygate3View.swift in Sources */,
 				96059EB826CC2D7300BD9A0A /* HoroFullArticle.swift in Sources */,
 				96059EC426CD06DA00BD9A0A /* SettingsTableElement.swift in Sources */,
+				960DE3A12703BF2000D00EA6 /* MeditationAudioViewControllerMediator.swift in Sources */,
 				96BFF88726D54B1800B8D8CC /* MeditationsFilterCollectionElement.swift in Sources */,
 				96BFF5F326D3F7AB00B8D8CC /* CompatibilityView.swift in Sources */,
 				968FD40A26C3CDDC00C01D2A /* UIEdgeInsets+Extension.swift in Sources */,

@@ -21,7 +21,8 @@ final class AudioPlayer: NSObject {
         }
     }
     
-    private let audio: MeditationAudio
+    let audio: MeditationAudio
+    
     private let url: URL
     
     private lazy var item = AVPlayerItem(url: url)
@@ -29,13 +30,16 @@ final class AudioPlayer: NSObject {
     
     private var playerTimeObserver: Any?
     
+    deinit {
+        clear()
+    }
+    
     init?(audio: MeditationAudio) {
-        self.audio = audio
-        
         guard let url = URL(string: audio.audioUrl) else {
             return nil
         }
         
+        self.audio = audio
         self.url = url
         
         super.init()
@@ -64,6 +68,10 @@ final class AudioPlayer: NSObject {
 
 // MARK: Public
 extension AudioPlayer {
+    func isPlaying() -> Bool {
+        player.timeControlStatus == .playing
+    }
+    
     func play() {
         player.play()
     }
@@ -120,13 +128,6 @@ extension AudioPlayer {
         }
     }
     
-    @objc
-    func didFinished() {
-        player.pause()
-        
-        delegate?.audioPlayerFinished()
-    }
-    
     func clear() {
         player.pause()
         
@@ -135,5 +136,15 @@ extension AudioPlayer {
         }
         
         NotificationCenter.default.removeObserver(self)
+    }
+}
+
+// MARK: Private
+private extension AudioPlayer {
+    @objc
+    func didFinished() {
+        player.pause()
+        
+        delegate?.audioPlayerFinished()
     }
 }

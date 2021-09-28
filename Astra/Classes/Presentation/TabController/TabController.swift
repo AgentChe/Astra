@@ -14,6 +14,8 @@ final class TabController: UIViewController {
     
     private lazy var coordinator = TabCoordinator(parentVC: self)
     
+    private var player: AudioPlayer?
+    
     override func loadView() {
         super.loadView()
         
@@ -23,21 +25,36 @@ final class TabController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addActionsToTabs()
-        
         rx.methodInvoked(#selector(UIViewController.viewDidLayoutSubviews))
             .take(1)
             .subscribe(onNext: { [weak self] _ in
                 self?.update(selectedTab: .horo)
             })
             .disposed(by: disposeBag)
+        
+        addActionsToTabs()
+        mainView.showPlayer(show: false)
     }
 }
 
 // MARK: Make
 extension TabController {
     static func make() -> TabController {
-        TabController()
+        let vc = TabController()
+        MeditationAudioViewControllerMediator.shared.add(delegate: vc)
+        return vc
+    }
+}
+
+// MARK: AudioPlayerManagerDelegate
+extension TabController: MeditationAudioViewControllerMediatorDelegate {
+    func meditationAudioViewControllerDidAppear(with audio: MeditationAudio) {
+        mainView.showPlayer(show: false)
+        mainView.playerView.fill(audio: audio)
+    }
+    
+    func meditationAudioViewControllerDidDisappear() {
+        mainView.showPlayer(show: true)
     }
 }
  
