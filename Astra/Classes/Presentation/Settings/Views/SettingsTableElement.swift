@@ -10,5 +10,5 @@ enum SettingsTableElement {
     case link(title: String, path: String)
     case rateUs(title: String)
     case buy
-    case premium
+    case premium(date: String)
 }

@@ -29,11 +29,13 @@ extension SessionManagerCore {
         if let cachedSession = getSession() {
             session = Session(userId: cachedSession.userId,
                               userToken: userToken,
-                              activeSubscription: cachedSession.activeSubscription)
+                              activeSubscription: cachedSession.activeSubscription,
+                              accessValidTill: cachedSession.accessValidTill)
         } else {
             session = Session(userId: nil,
                               userToken: userToken,
-                              activeSubscription: false)
+                              activeSubscription: false,
+                              accessValidTill: nil)
         }
         
         store(session: session)

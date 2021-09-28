@@ -26,6 +26,19 @@ final class SettingsPremiumCell: UITableViewCell {
     }
 }
 
+// MARK: Public
+extension SettingsPremiumCell {
+    func setup(date: String) {
+        let attrs = TextAttributes()
+            .textColor(UIColor.white)
+            .font(Fonts.Qanelas.bold(size: 17.scale))
+            .lineHeight(23.8.scale)
+            .textAlignment(.center)
+        let string = String(format: "Settings.Premium.Text2".localized, date)
+        label.attributedText = string.attributed(with: attrs)
+    }
+}
+
 // MARK: Private
 private extension SettingsPremiumCell {
     func initialize() {
@@ -117,14 +130,8 @@ private extension SettingsPremiumCell {
     }
     
     func makeTextLabel() -> UILabel {
-        let attrs = TextAttributes()
-            .textColor(UIColor.white)
-            .font(Fonts.Qanelas.bold(size: 17.scale))
-            .lineHeight(23.8.scale)
-            .textAlignment(.center)
-        
         let view = UILabel()
-        view.attributedText = "Settings.Premium.Text2".localized.attributed(with: attrs)
+        view.numberOfLines = 0
         view.translatesAutoresizingMaskIntoConstraints = false
         container.addSubview(view)
         return view

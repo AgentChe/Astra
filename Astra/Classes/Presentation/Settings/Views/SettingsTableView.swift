@@ -58,8 +58,10 @@ extension SettingsTableView: UITableViewDataSource {
             let cell = dequeueReusableCell(withIdentifier: String(describing: SettingsBuyCell.self)) as! SettingsBuyCell
             cell.delegate = mainDelegate
             return cell
-        case .premium:
-            return dequeueReusableCell(withIdentifier: String(describing: SettingsPremiumCell.self)) as! SettingsPremiumCell
+        case .premium(let date):
+            let cell = dequeueReusableCell(withIdentifier: String(describing: SettingsPremiumCell.self)) as! SettingsPremiumCell
+            cell.setup(date: date)
+            return cell
         }
     }
 }

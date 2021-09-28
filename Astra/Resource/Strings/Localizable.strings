@@ -107,7 +107,7 @@
 "Settings.PrivacyPolicy" = "Privacy Policy";
 "Settings.Premium.Title" = "ASTRA PREMIUM";
 "Settings.Premium.Text1" = "HARMONY WITH ONESELF IS THE\nHARMONY WITH THE WORLD";
-"Settings.Premium.Text2" = "YOU HAVE A PAID ACCESS TILL";
+"Settings.Premium.Text2" = "YOU HAVE A PAID ACCESS TILL\n%@";
 "Settings.Premium.Button" = "LEARN MORE";
 
 // MARK: Lunar

@@ -9,6 +9,7 @@ struct Session: Codable {
     let userId: Int?
     let userToken: String?
     let activeSubscription: Bool
+    let accessValidTill: String?
 }
 
 // MARK: Make
@@ -17,5 +18,6 @@ extension Session {
         self.userId = response.userId
         self.userToken = response.userToken
         self.activeSubscription = response.activeSubscription
+        self.accessValidTill = response.accessValidTill
     }
 }

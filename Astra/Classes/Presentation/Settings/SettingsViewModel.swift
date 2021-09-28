@@ -17,7 +17,7 @@ final class SettingsViewModel {
 // MARK: Private
 private extension SettingsViewModel {
     func makeElements() -> Driver<[SettingsTableElement]> {
-        let activeSubscription = makeActiveSubscription()
+        let session = makeSession()
         
         let main = Driver<[SettingsTableElement]>.deferred {
             return .just([
@@ -33,29 +33,38 @@ private extension SettingsViewModel {
         }
         
         return Driver
-            .combineLatest(activeSubscription, main) { activeSubscription, main -> [SettingsTableElement] in
-                let subscription = activeSubscription ? [SettingsTableElement.premium] : [SettingsTableElement.buy]
+            .combineLatest(session, main) { session, main -> [SettingsTableElement] in
+                let activeSubscription = session?.activeSubscription ?? false
+                let accessValidTill = session?.accessValidTill ?? ""
+                
+                let subscription = activeSubscription ? [SettingsTableElement.premium(date: accessValidTill)] : [SettingsTableElement.buy]
                 
                 return subscription + main
             }
     }
     
-    func makeActiveSubscription() -> Driver<Bool> {
+    func makeSession() -> Driver<Session?> {
         let updated = SDKStorage.shared
             .purchaseMediator
             .rxPurchaseMediatorDidValidateReceipt
-            .compactMap { $0?.activeSubscription }
-            .asDriver(onErrorJustReturn: false)
+            .map { response -> Session? in
+                guard let response = response else {
+                    return nil
+                }
+                
+                return Session(response: response)
+            }
+            .asDriver(onErrorJustReturn: nil)
         
-        let initial = Driver<Bool>
+        let initial = Driver<Session?>
             .deferred { [weak self] in
                 guard let this = self else {
                     return .never()
                 }
                 
-                let activeSubscription = this.sessionManager.getSession()?.activeSubscription ?? false
+                let session = this.sessionManager.getSession()
                 
-                return .just(activeSubscription)
+                return .just(session)
             }
         
         return Driver
