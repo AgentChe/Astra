@@ -64,7 +64,7 @@ private extension OQuestion2View {
         NSLayoutConstraint.activate([
             imageView.trailingAnchor.constraint(equalTo: trailingAnchor),
             imageView.widthAnchor.constraint(equalToConstant: 253.scale),
-            imageView.heightAnchor.constraint(equalToConstant: ScreenSize.isIphoneXFamily ? 276.scale : 243.scale),
+            imageView.heightAnchor.constraint(equalToConstant: ScreenSize.isIphoneXFamily ? 279.scale : 246.scale),
             imageView.bottomAnchor.constraint(equalTo: yesButton.topAnchor, constant: -1.scale)
         ])
         
