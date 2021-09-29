@@ -17,6 +17,7 @@ struct PaygateConfig {
     let lunar: Bool
     let biorhythms: Bool
     let compatibility: Bool
+    let natal: Bool
 }
 
 // MARK: Codable
@@ -38,6 +39,7 @@ extension PaygateConfig {
                       tarotMoney: false,
                       lunar: false,
                       biorhythms: false,
-                      compatibility: false)
+                      compatibility: false,
+                      natal: false)
     }
 }

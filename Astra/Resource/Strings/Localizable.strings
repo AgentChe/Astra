@@ -225,3 +225,9 @@
 "Biorhythms.Info.Title" = "What are biorhythms?";
 "Biorhythms.Info.Text" = "Biorhythm charts provide you with a graphic representation of your high and low energy levels throughout a specific time period. Knowing your biological cycles can help you plan your activites for the period. As an example by knowing your intellectual cycle you can schedule activites requiring mental prowess for times when you are at the apex of your intellectual cycle.";
 "Biorhythms.Today" = "Today";
+
+// MARK: Natal
+"Natal.Title" = "NATAL CHART";
+"Natal.Button" = "WHAT IS NATAL CHART?";
+"Natal.Info.Title" = "What is Natal chart?";
+"Natal.Info.Text" = "It is a map of where all the planets were in their journey around the Sun (from our vantage point on earth) at the exact moment you were born. An astrology chart reading can reveal your strengths and weaknesses, your opportunities for soul growth, the best timing for your most important moves.";

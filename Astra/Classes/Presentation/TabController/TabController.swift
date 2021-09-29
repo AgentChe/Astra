@@ -73,11 +73,16 @@ private extension TabController {
         mainView.tabView.compatibilityItem.isUserInteractionEnabled = true
         mainView.tabView.compatibilityItem.addGestureRecognizer(compatibilityGesture)
         
+        let natalGesture = UITapGestureRecognizer()
+        mainView.tabView.natalItem.isUserInteractionEnabled = true
+        mainView.tabView.natalItem.addGestureRecognizer(natalGesture)
+        
         Observable
             .merge([
                 horoGesture.rx.event.map { _ in TabView.Tab.horo },
                 meditationsGesture.rx.event.map { _ in TabView.Tab.meditations },
-                compatibilityGesture.rx.event.map { _ in TabView.Tab.compatibility }
+                compatibilityGesture.rx.event.map { _ in TabView.Tab.compatibility },
+                natalGesture.rx.event.map { _ in TabView.Tab.natal }
             ])
             .subscribe(onNext: { [weak self] tab in
                 self?.update(selectedTab: tab)

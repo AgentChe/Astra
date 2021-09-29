@@ -9,12 +9,13 @@ import UIKit
 
 final class TabView: UIView {
     enum Tab {
-        case horo, meditations, compatibility
+        case horo, meditations, compatibility, natal
     }
     
     lazy var horoItem = makeItem(image: "Tab.Horo")
     lazy var meditationsItem = makeItem(image: "Tab.Meditations")
     lazy var compatibilityItem = makeItem(image: "Tab.Compatibility")
+    lazy var natalItem = makeItem(image: "Tab.Natal")
     
     var selectedTab = Tab.horo {
         didSet {
@@ -39,7 +40,8 @@ private extension TabView {
         [
             horoItem,
             meditationsItem,
-            compatibilityItem
+            compatibilityItem,
+            natalItem
         ]
         .forEach {
             $0.state = .deselected
@@ -52,6 +54,8 @@ private extension TabView {
             meditationsItem.state = .selected
         case .compatibility:
             compatibilityItem.state = .selected
+        case .natal:
+            natalItem.state = .selected
         }
     }
 }
@@ -77,7 +81,14 @@ private extension TabView {
             compatibilityItem.leadingAnchor.constraint(equalTo: meditationsItem.trailingAnchor),
             compatibilityItem.bottomAnchor.constraint(equalTo: bottomAnchor),
             compatibilityItem.topAnchor.constraint(equalTo: topAnchor),
-            compatibilityItem.trailingAnchor.constraint(equalTo: trailingAnchor)
+            compatibilityItem.widthAnchor.constraint(equalTo: natalItem.widthAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            natalItem.leadingAnchor.constraint(equalTo: compatibilityItem.trailingAnchor),
+            natalItem.bottomAnchor.constraint(equalTo: bottomAnchor),
+            natalItem.topAnchor.constraint(equalTo: topAnchor),
+            natalItem.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
     }
 }

@@ -163,6 +163,29 @@
 		960DE399270373FF00D00EA6 /* TabPlayerPlayPauseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE398270373FF00D00EA6 /* TabPlayerPlayPauseView.swift */; };
 		960DE39D2703953400D00EA6 /* AudioPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE39C2703953400D00EA6 /* AudioPlayerManager.swift */; };
 		960DE3A12703BF2000D00EA6 /* MeditationAudioViewControllerMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE3A02703BF2000D00EA6 /* MeditationAudioViewControllerMediator.swift */; };
+		960DE3A52704523600D00EA6 /* NatalArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE3A42704523600D00EA6 /* NatalArticle.swift */; };
+		960DE3A7270453D800D00EA6 /* Natal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE3A6270453D800D00EA6 /* Natal.swift */; };
+		960DE3AB270455E800D00EA6 /* GetNatalRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE3AA270455E800D00EA6 /* GetNatalRequest.swift */; };
+		960DE3AD270457CA00D00EA6 /* GetNatalResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE3AC270457CA00D00EA6 /* GetNatalResponse.swift */; };
+		960DE3B027045A1400D00EA6 /* NatalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE3AF27045A1400D00EA6 /* NatalManager.swift */; };
+		960DE3B227045A3A00D00EA6 /* NatalManagerCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE3B127045A3A00D00EA6 /* NatalManagerCore.swift */; };
+		960DE3B527045AC600D00EA6 /* NatalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE3B427045AC600D00EA6 /* NatalViewController.swift */; };
+		960DE3B727045AD600D00EA6 /* NatalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE3B627045AD600D00EA6 /* NatalViewModel.swift */; };
+		960DE3B927045AE400D00EA6 /* NatalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE3B827045AE400D00EA6 /* NatalView.swift */; };
+		960DE3BF27045DCE00D00EA6 /* NatalTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE3BE27045DCE00D00EA6 /* NatalTableElement.swift */; };
+		960DE3C227045E8A00D00EA6 /* NatalTableButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE3C127045E8A00D00EA6 /* NatalTableButtonCell.swift */; };
+		960DE3C427045EEA00D00EA6 /* NatalTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE3C327045EEA00D00EA6 /* NatalTableViewDelegate.swift */; };
+		960DE3C62704603D00D00EA6 /* NatalTableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE3C52704603D00D00EA6 /* NatalTableImageView.swift */; };
+		960DE3C82704629300D00EA6 /* NatalTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE3C72704629300D00EA6 /* NatalTableView.swift */; };
+		960DE3CA2704639A00D00EA6 /* NatalTableArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE3C92704639A00D00EA6 /* NatalTableArticleCell.swift */; };
+		960DE3CC2704647700D00EA6 /* NatalInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE3CB2704647700D00EA6 /* NatalInfoView.swift */; };
+		960DE3CF27046A8D00D00EA6 /* NatalDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE3CE27046A8D00D00EA6 /* NatalDetailsViewController.swift */; };
+		960DE3D127046AAF00D00EA6 /* NatalDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE3D027046AAF00D00EA6 /* NatalDetailsView.swift */; };
+		960DE3D427046BB600D00EA6 /* NatalDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE3D327046BB600D00EA6 /* NatalDetailsViewModel.swift */; };
+		960DE3D727046CEE00D00EA6 /* NatalDetailsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE3D627046CEE00D00EA6 /* NatalDetailsTableView.swift */; };
+		960DE3D927046CFC00D00EA6 /* NatalDetailsTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE3D827046CFC00D00EA6 /* NatalDetailsTableElement.swift */; };
+		960DE3DC27046D1500D00EA6 /* NatalDetailsTableTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE3DB27046D1500D00EA6 /* NatalDetailsTableTitleCell.swift */; };
+		960DE3DE27046D2400D00EA6 /* NatalDetailsTableTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE3DD27046D2400D00EA6 /* NatalDetailsTableTextCell.swift */; };
 		9654D0D426DFBE8A00179E40 /* OFindMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9654D0D326DFBE8A00179E40 /* OFindMoreView.swift */; };
 		9654D0D626DFC33800179E40 /* OFeelTodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9654D0D526DFC33800179E40 /* OFeelTodayView.swift */; };
 		9654D0D826DFCB2B00179E40 /* OMaritalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9654D0D726DFCB2B00179E40 /* OMaritalView.swift */; };
@@ -496,6 +519,29 @@
 		960DE398270373FF00D00EA6 /* TabPlayerPlayPauseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPlayerPlayPauseView.swift; sourceTree = "<group>"; };
 		960DE39C2703953400D00EA6 /* AudioPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerManager.swift; sourceTree = "<group>"; };
 		960DE3A02703BF2000D00EA6 /* MeditationAudioViewControllerMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationAudioViewControllerMediator.swift; sourceTree = "<group>"; };
+		960DE3A42704523600D00EA6 /* NatalArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatalArticle.swift; sourceTree = "<group>"; };
+		960DE3A6270453D800D00EA6 /* Natal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Natal.swift; sourceTree = "<group>"; };
+		960DE3AA270455E800D00EA6 /* GetNatalRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetNatalRequest.swift; sourceTree = "<group>"; };
+		960DE3AC270457CA00D00EA6 /* GetNatalResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetNatalResponse.swift; sourceTree = "<group>"; };
+		960DE3AF27045A1400D00EA6 /* NatalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatalManager.swift; sourceTree = "<group>"; };
+		960DE3B127045A3A00D00EA6 /* NatalManagerCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatalManagerCore.swift; sourceTree = "<group>"; };
+		960DE3B427045AC600D00EA6 /* NatalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatalViewController.swift; sourceTree = "<group>"; };
+		960DE3B627045AD600D00EA6 /* NatalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatalViewModel.swift; sourceTree = "<group>"; };
+		960DE3B827045AE400D00EA6 /* NatalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatalView.swift; sourceTree = "<group>"; };
+		960DE3BE27045DCE00D00EA6 /* NatalTableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatalTableElement.swift; sourceTree = "<group>"; };
+		960DE3C127045E8A00D00EA6 /* NatalTableButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatalTableButtonCell.swift; sourceTree = "<group>"; };
+		960DE3C327045EEA00D00EA6 /* NatalTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatalTableViewDelegate.swift; sourceTree = "<group>"; };
+		960DE3C52704603D00D00EA6 /* NatalTableImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatalTableImageView.swift; sourceTree = "<group>"; };
+		960DE3C72704629300D00EA6 /* NatalTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatalTableView.swift; sourceTree = "<group>"; };
+		960DE3C92704639A00D00EA6 /* NatalTableArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatalTableArticleCell.swift; sourceTree = "<group>"; };
+		960DE3CB2704647700D00EA6 /* NatalInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatalInfoView.swift; sourceTree = "<group>"; };
+		960DE3CE27046A8D00D00EA6 /* NatalDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatalDetailsViewController.swift; sourceTree = "<group>"; };
+		960DE3D027046AAF00D00EA6 /* NatalDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatalDetailsView.swift; sourceTree = "<group>"; };
+		960DE3D327046BB600D00EA6 /* NatalDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatalDetailsViewModel.swift; sourceTree = "<group>"; };
+		960DE3D627046CEE00D00EA6 /* NatalDetailsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatalDetailsTableView.swift; sourceTree = "<group>"; };
+		960DE3D827046CFC00D00EA6 /* NatalDetailsTableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatalDetailsTableElement.swift; sourceTree = "<group>"; };
+		960DE3DB27046D1500D00EA6 /* NatalDetailsTableTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatalDetailsTableTitleCell.swift; sourceTree = "<group>"; };
+		960DE3DD27046D2400D00EA6 /* NatalDetailsTableTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatalDetailsTableTextCell.swift; sourceTree = "<group>"; };
 		9654D0D326DFBE8A00179E40 /* OFindMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OFindMoreView.swift; sourceTree = "<group>"; };
 		9654D0D526DFC33800179E40 /* OFeelTodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OFeelTodayView.swift; sourceTree = "<group>"; };
 		9654D0D726DFCB2B00179E40 /* OMaritalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMaritalView.swift; sourceTree = "<group>"; };
@@ -1311,6 +1357,147 @@
 			path = Player;
 			sourceTree = "<group>";
 		};
+		960DE3A2270451DD00D00EA6 /* Natal */ = {
+			isa = PBXGroup;
+			children = (
+				960DE3AE27045A0700D00EA6 /* Manager */,
+				960DE3A8270455C300D00EA6 /* Request */,
+				960DE3A3270451E200D00EA6 /* Models */,
+			);
+			path = Natal;
+			sourceTree = "<group>";
+		};
+		960DE3A3270451E200D00EA6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				960DE3A42704523600D00EA6 /* NatalArticle.swift */,
+				960DE3A6270453D800D00EA6 /* Natal.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		960DE3A8270455C300D00EA6 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				960DE3A9270455D000D00EA6 /* GetNatal */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		960DE3A9270455D000D00EA6 /* GetNatal */ = {
+			isa = PBXGroup;
+			children = (
+				960DE3AA270455E800D00EA6 /* GetNatalRequest.swift */,
+				960DE3AC270457CA00D00EA6 /* GetNatalResponse.swift */,
+			);
+			path = GetNatal;
+			sourceTree = "<group>";
+		};
+		960DE3AE27045A0700D00EA6 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				960DE3AF27045A1400D00EA6 /* NatalManager.swift */,
+				960DE3B127045A3A00D00EA6 /* NatalManagerCore.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		960DE3B327045AB800D00EA6 /* Natal */ = {
+			isa = PBXGroup;
+			children = (
+				960DE3CD27046A7700D00EA6 /* Details */,
+				960DE3BA27045BBF00D00EA6 /* Dashboard */,
+			);
+			path = Natal;
+			sourceTree = "<group>";
+		};
+		960DE3BA27045BBF00D00EA6 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				960DE3BB27045DA800D00EA6 /* Views */,
+				960DE3B427045AC600D00EA6 /* NatalViewController.swift */,
+				960DE3B627045AD600D00EA6 /* NatalViewModel.swift */,
+				960DE3B827045AE400D00EA6 /* NatalView.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		960DE3BB27045DA800D00EA6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				960DE3BC27045DAC00D00EA6 /* TableView */,
+				960DE3CB2704647700D00EA6 /* NatalInfoView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		960DE3BC27045DAC00D00EA6 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				960DE3C027045E7000D00EA6 /* Cells */,
+				960DE3BD27045DB500D00EA6 /* Elements */,
+				960DE3C327045EEA00D00EA6 /* NatalTableViewDelegate.swift */,
+				960DE3C72704629300D00EA6 /* NatalTableView.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		960DE3BD27045DB500D00EA6 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				960DE3BE27045DCE00D00EA6 /* NatalTableElement.swift */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
+		960DE3C027045E7000D00EA6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				960DE3C127045E8A00D00EA6 /* NatalTableButtonCell.swift */,
+				960DE3C52704603D00D00EA6 /* NatalTableImageView.swift */,
+				960DE3C92704639A00D00EA6 /* NatalTableArticleCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		960DE3CD27046A7700D00EA6 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				960DE3D227046B0600D00EA6 /* Views */,
+				960DE3CE27046A8D00D00EA6 /* NatalDetailsViewController.swift */,
+				960DE3D327046BB600D00EA6 /* NatalDetailsViewModel.swift */,
+				960DE3D027046AAF00D00EA6 /* NatalDetailsView.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		960DE3D227046B0600D00EA6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				960DE3D527046CDB00D00EA6 /* TableView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		960DE3D527046CDB00D00EA6 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				960DE3DA27046D0200D00EA6 /* Cells */,
+				960DE3D627046CEE00D00EA6 /* NatalDetailsTableView.swift */,
+				960DE3D827046CFC00D00EA6 /* NatalDetailsTableElement.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		960DE3DA27046D0200D00EA6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				960DE3DB27046D1500D00EA6 /* NatalDetailsTableTitleCell.swift */,
+				960DE3DD27046D2400D00EA6 /* NatalDetailsTableTextCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		9654D0DB26DFE42100179E40 /* PartnerSign */ = {
 			isa = PBXGroup;
 			children = (
@@ -1508,6 +1695,7 @@
 		968FD41126C3CF3600C01D2A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				960DE3B327045AB800D00EA6 /* Natal */,
 				96A7794A26F0C22700CA6033 /* Biorhythms */,
 				96F0674C26E8BFE200CD9F0A /* Paygate */,
 				96BFF8A126D67B1400B8D8CC /* Meditation */,
@@ -1610,6 +1798,7 @@
 		968FD46E26C451EE00C01D2A /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				960DE3A2270451DD00D00EA6 /* Natal */,
 				96A7793926F09E0D00CA6033 /* Biorhythms */,
 				96F069FF26EA5C0500CD9F0A /* Paygate */,
 				96BFF60526D4E09B00B8D8CC /* Meditation */,
@@ -2258,6 +2447,7 @@
 			files = (
 				9605E51B26FB60CC00F92398 /* PaygateView.swift in Sources */,
 				96059EEC26CDADE700BD9A0A /* NumbersLunarTableCell.swift in Sources */,
+				960DE3DE27046D2400D00EA6 /* NatalDetailsTableTextCell.swift in Sources */,
 				96F069FC26EA45D700CD9F0A /* PaygateInfoCell.swift in Sources */,
 				9605E53626FBF1C600F92398 /* SettingsTableViewDelegate.swift in Sources */,
 				9605019F26E3CEA4004E0F11 /* AddCityResponse.swift in Sources */,
@@ -2327,11 +2517,13 @@
 				968FD46126C426A100C01D2A /* OStepView.swift in Sources */,
 				96BFF86F26D5283E00B8D8CC /* GetMeditationDashboardResponse.swift in Sources */,
 				96A7794726F0C19500CA6033 /* BiorhythmsManager.swift in Sources */,
+				960DE3A52704523600D00EA6 /* NatalArticle.swift in Sources */,
 				96059EE426CD9C4100BD9A0A /* GetLunarFullResponse.swift in Sources */,
 				960501AB26E4D5EC004E0F11 /* CitySearchTableCell.swift in Sources */,
 				9605019826E3CD4A004E0F11 /* GetCitiesRequest.swift in Sources */,
 				96BFF5D026D2166400B8D8CC /* Compatibilities.swift in Sources */,
 				96A7795B26F0C9B300CA6033 /* BiorhythmsTableComponentElement.swift in Sources */,
+				960DE3C427045EEA00D00EA6 /* NatalTableViewDelegate.swift in Sources */,
 				9605019A26E3CDD5004E0F11 /* GetCitiesResponse.swift in Sources */,
 				96658E6826DF6AC90020FD9B /* OSignView.swift in Sources */,
 				96BFF5EA26D3D47E00B8D8CC /* SignsPickerElement.swift in Sources */,
@@ -2367,6 +2559,7 @@
 				96BFF60026D42DBB00B8D8CC /* CompatibilityValuesTableCell.swift in Sources */,
 				96BFF87526D53A5400B8D8CC /* MeditationCourseDetails.swift in Sources */,
 				96BFF87A26D53B4B00B8D8CC /* GetMeditationCourseDetailsResponse.swift in Sources */,
+				960DE3BF27045DCE00D00EA6 /* NatalTableElement.swift in Sources */,
 				96BFF60426D42F7700B8D8CC /* CompatibilityTextTableCelll.swift in Sources */,
 				968FD40526C3CB0D00C01D2A /* AppDelegate.swift in Sources */,
 				96059F1A26CE9BD500BD9A0A /* TarotTagsTableCell.swift in Sources */,
@@ -2384,12 +2577,14 @@
 				96059E8F26CA817C00BD9A0A /* LunarCalendarMainTableCell.swift in Sources */,
 				96059F1826CE9B2C00BD9A0A /* TarotNameTableCell.swift in Sources */,
 				96059E9F26CBBF3A00BD9A0A /* HoroViewModel.swift in Sources */,
+				960DE3B927045AE400D00EA6 /* NatalView.swift in Sources */,
 				96BFF86826D5257A00B8D8CC /* MeditationGroup.swift in Sources */,
 				96A7796026F0CA1D00CA6033 /* BiorhythmsTableComponentCell.swift in Sources */,
 				96BFF5E826D3C73000B8D8CC /* SignsPickerView.swift in Sources */,
 				96BFF8B326D69F9B00B8D8CC /* MeditationCourseDescriptionCell.swift in Sources */,
 				96A7796226F0CB5F00CA6033 /* BiorhythmsTableViewDelegate.swift in Sources */,
 				96059ECE26CD262E00BD9A0A /* LunarViewModel.swift in Sources */,
+				960DE3D127046AAF00D00EA6 /* NatalDetailsView.swift in Sources */,
 				96059E7F26C9CFEF00BD9A0A /* HoroButtonMainTableCell.swift in Sources */,
 				96A7793E26F0AA9F00CA6033 /* Biorhythm.swift in Sources */,
 				96059E6726C9485C00BD9A0A /* HoroFilterMainTableCell.swift in Sources */,
@@ -2397,10 +2592,13 @@
 				968FD3FE26C3CB0D00C01D2A /* NavigationControllerSettings.swift in Sources */,
 				96059EC926CD21F600BD9A0A /* RateUs.swift in Sources */,
 				968FD41726C3E02A00C01D2A /* SplashViewModel.swift in Sources */,
+				960DE3CC2704647700D00EA6 /* NatalInfoView.swift in Sources */,
 				96F069FE26EA4A1D00CD9F0A /* PaygateOptionView.swift in Sources */,
 				96059E1E26C6855900BD9A0A /* PaddingTextField.swift in Sources */,
+				960DE3AD270457CA00D00EA6 /* GetNatalResponse.swift in Sources */,
 				96BFF86A26D5260800B8D8CC /* MeditationDashboard.swift in Sources */,
 				9605E50726FB103500F92398 /* GetPaygateConfigRequest.swift in Sources */,
+				960DE3C82704629300D00EA6 /* NatalTableView.swift in Sources */,
 				96059E8226CA5DF200BD9A0A /* ChartOpenedMainTableCell.swift in Sources */,
 				96F06A0426EBF15600CD9F0A /* PaygateReviewsCell.swift in Sources */,
 				96F06A1926EE16A200CD9F0A /* PreparePaygatePricesMapper.swift in Sources */,
@@ -2429,12 +2627,15 @@
 				96BFF8A826D67B8000B8D8CC /* MeditationCourseView.swift in Sources */,
 				96BFF89826D63F7800B8D8CC /* MeditationDashboardSubTitleCell.swift in Sources */,
 				96BFF5FE26D406C700B8D8CC /* CompatibilitySignsNamesTableCell.swift in Sources */,
+				960DE3CF27046A8D00D00EA6 /* NatalDetailsViewController.swift in Sources */,
 				96658E6C26DF7D1B0020FD9B /* OBirthtimeView.swift in Sources */,
 				9605E50026FA35D400F92398 /* MainBiorhythmsCell.swift in Sources */,
 				96BFF89E26D6649F00B8D8CC /* MeditationDashboardCollectionSection.swift in Sources */,
 				9605019526E3CCC0004E0F11 /* City.swift in Sources */,
 				96059E3326C70B1900BD9A0A /* MainViewModel.swift in Sources */,
+				960DE3B527045AC600D00EA6 /* NatalViewController.swift in Sources */,
 				968FD3EC26C3CB0D00C01D2A /* UIColorExtension.swift in Sources */,
+				960DE3A7270453D800D00EA6 /* Natal.swift in Sources */,
 				9654D0DF26DFE6A400179E40 /* PartnerSignCollectionElement.swift in Sources */,
 				96059E9126CA82C600BD9A0A /* LunarDayView.swift in Sources */,
 				96059E4926C7B2AA00BD9A0A /* LunarCalendarDay.swift in Sources */,
@@ -2462,13 +2663,16 @@
 				96BFF88F26D56AEA00B8D8CC /* MeditationDashboardCollectionElement.swift in Sources */,
 				96BFF87326D536A600B8D8CC /* MeditationManagerCore.swift in Sources */,
 				96059E5D26C7D36B00BD9A0A /* MainProfileCell.swift in Sources */,
+				960DE3B027045A1400D00EA6 /* NatalManager.swift in Sources */,
 				96A7795026F0C24C00CA6033 /* BiorhythmsView.swift in Sources */,
 				96F0675226E8C07E00CD9F0A /* Paygate1View.swift in Sources */,
 				968FD47826C460AC00C01D2A /* OGoalCell.swift in Sources */,
 				96059E0B26C6632A00BD9A0A /* SessionManager.swift in Sources */,
+				960DE3CA2704639A00D00EA6 /* NatalTableArticleCell.swift in Sources */,
 				96059E1426C66F0F00BD9A0A /* SetRequest.swift in Sources */,
 				96F069FA26EA400100CD9F0A /* PaygateReviewsView.swift in Sources */,
 				9605E52226FBD97800F92398 /* Paygate3View.swift in Sources */,
+				960DE3DC27046D1500D00EA6 /* NatalDetailsTableTitleCell.swift in Sources */,
 				96059EB826CC2D7300BD9A0A /* HoroFullArticle.swift in Sources */,
 				96059EC426CD06DA00BD9A0A /* SettingsTableElement.swift in Sources */,
 				960DE3A12703BF2000D00EA6 /* MeditationAudioViewControllerMediator.swift in Sources */,
@@ -2482,6 +2686,7 @@
 				96BFF5CE26D2161C00B8D8CC /* Compatibility.swift in Sources */,
 				96059EFD26CE408100BD9A0A /* TarotManagerCore.swift in Sources */,
 				96059F0A26CE84AA00BD9A0A /* TarotViewModel.swift in Sources */,
+				960DE3D727046CEE00D00EA6 /* NatalDetailsTableView.swift in Sources */,
 				96BFF88526D54AAA00B8D8CC /* MeditationsFilterCollectionView.swift in Sources */,
 				968FD45F26C41F0500C01D2A /* OnboardingViewModel.swift in Sources */,
 				96F06A0226EA5C2600CD9F0A /* PaygateOption.swift in Sources */,
@@ -2493,12 +2698,14 @@
 				96059EBD26CD020300BD9A0A /* SettingsViewModel.swift in Sources */,
 				96F06A0626EBF1BF00CD9F0A /* PaygateReviewsElement.swift in Sources */,
 				96A7794226F0B9BF00CA6033 /* GetBiorhythmsRequest.swift in Sources */,
+				960DE3AB270455E800D00EA6 /* GetNatalRequest.swift in Sources */,
 				9605E50226FA35EF00F92398 /* MainBiorhythmsButtonCell.swift in Sources */,
 				96059EE826CDA36B00BD9A0A /* TitleLunarTableCell.swift in Sources */,
 				96059E1C26C6819D00BD9A0A /* ONameView.swift in Sources */,
 				96BFF86626D5246100B8D8CC /* MeditationAudio.swift in Sources */,
 				96059E4326C7B1B500BD9A0A /* Chart.swift in Sources */,
 				9605E4F726F9C7CD00F92398 /* OQuestion2View.swift in Sources */,
+				960DE3D427046BB600D00EA6 /* NatalDetailsViewModel.swift in Sources */,
 				9654D0DA26DFCF5100179E40 /* OPartnerSignView.swift in Sources */,
 				9605E51326FB476B00F92398 /* PaygateSource2.swift in Sources */,
 				96059EBB26CD01C700BD9A0A /* SettingsViewController.swift in Sources */,
@@ -2520,6 +2727,7 @@
 				968FD45426C41F0500C01D2A /* OSlideView.swift in Sources */,
 				96059EE626CDA24600BD9A0A /* SeparatorLunarTableCell.swift in Sources */,
 				9605018E26E39B1F004E0F11 /* OQuestionView.swift in Sources */,
+				960DE3B227045A3A00D00EA6 /* NatalManagerCore.swift in Sources */,
 				96BFF5F626D3F80300B8D8CC /* CompatibilityTableView.swift in Sources */,
 				968FD3FB26C3CB0D00C01D2A /* ImagePicker.swift in Sources */,
 				96059ED626CD275C00BD9A0A /* LunarTableElement.swift in Sources */,
@@ -2555,13 +2763,16 @@
 				96BFF8AF26D68E5200B8D8CC /* MeditationCourseTableElement.swift in Sources */,
 				96BFF5E326D2B0E600B8D8CC /* CompatibilitySignsView.swift in Sources */,
 				96F06A0926EE07B200CD9F0A /* PaygateManager.swift in Sources */,
+				960DE3C227045E8A00D00EA6 /* NatalTableButtonCell.swift in Sources */,
 				96BFF5D826D21E3F00B8D8CC /* CompatibilityManager.swift in Sources */,
 				96F06A0D26EE094400CD9F0A /* PaygateOptionSource.swift in Sources */,
 				9654D0DD26DFE43B00179E40 /* PartnerSignCollectionCell.swift in Sources */,
+				960DE3C62704603D00D00EA6 /* NatalTableImageView.swift in Sources */,
 				96059F0826CE845800BD9A0A /* TarotViewController.swift in Sources */,
 				96A7793C26F0AA2800CA6033 /* Biorhythms.swift in Sources */,
 				968FD40626C3CB0D00C01D2A /* RxActivityIndicator.swift in Sources */,
 				968FD3F326C3CB0D00C01D2A /* GlobalDefinitions.swift in Sources */,
+				960DE3D927046CFC00D00EA6 /* NatalDetailsTableElement.swift in Sources */,
 				96059F1626CE9A9800BD9A0A /* TarotReservedTableCell.swift in Sources */,
 				96059ECC26CD253200BD9A0A /* LunarViewController.swift in Sources */,
 				96059EB226CBE37B00BD9A0A /* HoroFull.swift in Sources */,
@@ -2572,6 +2783,7 @@
 				96059F2226CEEA2B00BD9A0A /* TagsView.swift in Sources */,
 				96059F0326CE72DA00BD9A0A /* GetTarotRequest.swift in Sources */,
 				96F06A1726EE108700CD9F0A /* GetPaygateResponse.swift in Sources */,
+				960DE3B727045AD600D00EA6 /* NatalViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

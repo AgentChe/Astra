@@ -26,6 +26,7 @@ final class GetPaygateConfigResponse {
                              tarotMoney: tarotJSON["money"] as? Bool ?? false,
                              lunar: data["lunar"] as? Bool ?? false,
                              biorhythms: data["biorhythms"] as? Bool ?? false,
-                             compatibility: data["compatibility"] as? Bool ?? false)
+                             compatibility: data["compatibility"] as? Bool ?? false,
+                             natal: data["natal"] as? Bool ?? false)
     }
 }
