@@ -176,7 +176,6 @@
 "Paygate.Info1" = "Daily insights based on your personal traits";
 "Paygate.Info2" = "Meditations, natal chart, compatibility reports and much more";
 "Paygate.Secured" = "Secured with iTunes. Cancel anytime.";
-"Paygate.TryAndSubscribe" = "SUBSCRIBE";
 "Paygate.TermsOfUse" = "Terms of use";
 "Paygate.And" = " and ";
 "Paygate.PrivacyPolicy" = "Privacy Policy";
@@ -196,6 +195,8 @@
 "Paygate.Review.7.City" = "Chicago";
 "Paygate.Review.8.Text" = "Strangely Accurate and Thought-Provoking. Love it!";
 "Paygate.Review.8.City" = "Phoenix";
+"Paygate.Subscribe" = "SUBSCRIBE";
+"Paygate.Purchase" = "PURCHASE";
 "Paygate.Error" = "Failure at purchase";
 "Paygate2.Title" = "Unlock it all";
 "Paygate2.SubTitle" = "Strangely accurate and thought-provoking every time";
@@ -205,7 +206,6 @@
 "Paygate2.Info4" = "Meditations";
 "Paygate2.Info5" = "Lunar calendar";
 "Paygate2.Info6" = "Biorhythms";
-"Paygate2.Subscribe" = "SUBSCRIBE";
 "Paygate2.Restore" = "Restore";
 "Paygate2.Terms" = "Terms";
 "Paygate2.Privacy" = "Privacy";

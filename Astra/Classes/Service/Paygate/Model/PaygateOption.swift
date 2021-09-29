@@ -10,6 +10,7 @@ struct PaygateOption {
     let title: String
     let subTitle: String
     let save: String?
+    let isSubscription: Bool
 }
 
 // MARK: Codable

@@ -41,6 +41,7 @@ private extension GetPaygate2Response {
                                    title: title,
                                    caption: String(format: "%@\n%@", caption, subcaption),
                                    div: optionJSON["div"] as? Int ?? 1,
-                                   save: optionJSON["save"] as? String)
+                                   save: optionJSON["save"] as? String,
+                                   isSubscription: optionJSON["is_subscription"] as? Bool ?? false)
     }
 }

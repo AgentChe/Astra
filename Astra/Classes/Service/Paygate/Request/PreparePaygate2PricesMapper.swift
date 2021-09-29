@@ -56,6 +56,7 @@ private extension PreparePaygate2PricesMapper {
         return PaygateOption(productId: source.productId,
                              title: title,
                              subTitle: subTitle,
-                             save: source.save)
+                             save: source.save,
+                             isSubscription: source.isSubscription)
     }
 }

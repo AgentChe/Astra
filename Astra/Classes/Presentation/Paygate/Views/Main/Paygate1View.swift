@@ -53,6 +53,14 @@ final class Paygate1View: PaygateView {
         
         animateScrollReviews()
     }
+    
+    override func updateButtontTextAfterSetupOptions() {
+        guard let option = [optionView1, optionView2].first(where: { $0.isSelected })?.option else {
+            return
+        }
+        
+        changeButtonText(at: option.isSubscription)
+    }
 }
 
 // MARK: Private
@@ -104,6 +112,24 @@ private extension Paygate1View {
         Observable
             .merge(
                 option1TapGesture.rx.event
+                    .map { [weak self] _ -> PaygateOption? in
+                        self?.optionView1.option
+                    },
+                
+                option2TapGesture.rx.event
+                    .map { [weak self] _ -> PaygateOption? in
+                        self?.optionView2.option
+                    }
+            )
+            .compactMap { $0 }
+            .subscribe(onNext: { [weak self] opt in
+                self?.changeButtonText(at: opt.isSubscription)
+            })
+            .disposed(by: disposeBag)
+        
+        Observable
+            .merge(
+                option1TapGesture.rx.event
                     .map { _ in (true, false) },
                 
                 option2TapGesture.rx.event
@@ -114,6 +140,16 @@ private extension Paygate1View {
                 self?.optionView2.isSelected = opt2
             })
             .disposed(by: disposeBag)
+    }
+    
+    func changeButtonText(at optionIsSubscription: Bool) {
+        let attrs = TextAttributes()
+            .textColor(UIColor(integralRed: 252, green: 252, blue: 252))
+            .font(Fonts.Qanelas.bold(size: 18.scale))
+        
+        let string = optionIsSubscription ? "Paygate.Subscribe".localized : "Paygate.Purchase".localized
+        
+        subscribeButton.setAttributedTitle(string.attributed(with: attrs), for: .normal)
     }
     
     @objc
@@ -346,12 +382,7 @@ private extension Paygate1View {
     }
     
     func makeSubscribeButton() -> UIButton {
-        let attrs = TextAttributes()
-            .textColor(UIColor(integralRed: 252, green: 252, blue: 252))
-            .font(Fonts.Qanelas.bold(size: 18.scale))
-        
         let view = UIButton()
-        view.setAttributedTitle("Paygate.TryAndSubscribe".localized.attributed(with: attrs), for: .normal)
         view.backgroundColor = UIColor(integralRed: 132, green: 214, blue: 218)
         view.layer.cornerRadius = 7.scale
         view.layer.masksToBounds = true

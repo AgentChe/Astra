@@ -133,6 +133,8 @@ private extension PaygateViewController {
                 
                 view.optionView1.option = paygate.first
                 view.optionView2.option = paygate.second
+                
+                view.updateButtontTextAfterSetupOptions()
             })
             .disposed(by: disposeBag)
         case 2:
@@ -144,6 +146,8 @@ private extension PaygateViewController {
                 view.firstOptionView.option = paygate.first
                 view.secondOptionView.option = paygate.second
                 view.thirdOptionView.option = paygate.third
+                
+                view.updateButtontTextAfterSetupOptions()
             })
             .disposed(by: disposeBag)
         case 3:
@@ -155,6 +159,8 @@ private extension PaygateViewController {
                 view.firstOptionView.option = paygate.first
                 view.secondOptionView.option = paygate.second
                 view.thirdOptionView.option = paygate.third
+                
+                view.updateButtontTextAfterSetupOptions()
             })
             .disposed(by: disposeBag)
         case 4:
@@ -166,6 +172,8 @@ private extension PaygateViewController {
                 view.firstOptionView.option = paygate.first
                 view.secondOptionView.option = paygate.second
                 view.thirdOptionView.option = paygate.third
+                
+                view.updateButtontTextAfterSetupOptions()
             })
             .disposed(by: disposeBag)
         default:

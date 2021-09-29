@@ -17,4 +17,6 @@ class PaygateView: UIView {
     
     func activity(_ isActivity: Bool) {}
     func viewDidLoad() {}
+    
+    func updateButtontTextAfterSetupOptions() {}
 }

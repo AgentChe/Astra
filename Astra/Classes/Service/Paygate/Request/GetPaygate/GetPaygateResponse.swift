@@ -38,6 +38,7 @@ private extension GetPaygateResponse {
                                    title: title,
                                    caption: caption,
                                    div: optionJSON["div"] as? Int ?? 1,
-                                   save: optionJSON["save"] as? String)
+                                   save: optionJSON["save"] as? String,
+                                   isSubscription: optionJSON["is_subscription"] as? Bool ?? false)
     }
 }

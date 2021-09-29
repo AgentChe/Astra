@@ -11,6 +11,7 @@ struct PaygateOptionSource {
     let caption: String
     let div: Int
     let save: String?
+    let isSubscription: Bool
 }
 
 // MARK: Codable

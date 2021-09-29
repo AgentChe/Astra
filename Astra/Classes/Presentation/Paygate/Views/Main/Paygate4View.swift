@@ -57,6 +57,14 @@ final class Paygate4View: PaygateView {
             .amplitudeManager
             .logEvent(name: "Paygate Screen", parameters: ["variant": 4])
     }
+    
+    override func updateButtontTextAfterSetupOptions() {
+        guard let option = [firstOptionView, secondOptionView, thirdOptionView].first(where: { $0.isSelected })?.option else {
+            return
+        }
+        
+        changeButtonText(at: option.isSubscription)
+    }
 }
 
 // MARK: Private
@@ -132,6 +140,29 @@ private extension Paygate4View {
         Observable
             .merge(
                 firstTapGesture.rx.event
+                    .map { [weak self] _ -> PaygateOption? in
+                        self?.firstOptionView.option
+                    },
+                
+                secondTapGesture.rx.event
+                    .map { [weak self] _ -> PaygateOption? in
+                        self?.secondOptionView.option
+                    },
+                
+                thirdTapGesture.rx.event
+                    .map { [weak self] _ -> PaygateOption? in
+                        self?.thirdOptionView.option
+                    }
+            )
+            .compactMap { $0 }
+            .subscribe(onNext: { [weak self] opt in
+                self?.changeButtonText(at: opt.isSubscription)
+            })
+            .disposed(by: disposeBag)
+        
+        Observable
+            .merge(
+                firstTapGesture.rx.event
                     .map { _ in (true, false, false) },
                 
                 secondTapGesture.rx.event
@@ -146,6 +177,16 @@ private extension Paygate4View {
                 self?.thirdOptionView.isSelected = opt3
             })
             .disposed(by: disposeBag)
+    }
+    
+    func changeButtonText(at optionIsSubscription: Bool) {
+        let attrs = TextAttributes()
+            .textColor(UIColor(integralRed: 252, green: 252, blue: 252))
+            .font(Fonts.Qanelas.bold(size: 18.scale))
+        
+        let string = optionIsSubscription ? "Paygate.Subscribe".localized : "Paygate.Purchase".localized
+        
+        subscribeButton.setAttributedTitle(string.attributed(with: attrs), for: .normal)
     }
 }
 
@@ -350,10 +391,6 @@ private extension Paygate4View {
     }
     
     func makeSubscribeButton() -> GradientButton {
-        let attrs = TextAttributes()
-            .textColor(UIColor(integralRed: 252, green: 252, blue: 252))
-            .font(Fonts.Qanelas.bold(size: 18.scale))
-        
         let view = GradientButton()
         view.gradientLayer.startPoint = CGPoint(x: 0, y: 0.5)
         view.gradientLayer.endPoint = CGPoint(x: 1, y: 0.5)
@@ -361,7 +398,6 @@ private extension Paygate4View {
             UIColor(integralRed: 128, green: 221, blue: 216).cgColor,
             UIColor(integralRed: 176, green: 160, blue: 233).cgColor,
         ]
-        view.setAttributedTitle("Paygate2.Subscribe".localized.attributed(with: attrs), for: .normal)
         view.layer.cornerRadius = 7.scale
         view.layer.masksToBounds = true
         view.translatesAutoresizingMaskIntoConstraints = false
