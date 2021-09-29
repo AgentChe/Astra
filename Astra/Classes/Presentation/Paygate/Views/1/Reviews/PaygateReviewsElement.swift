@@ -45,15 +45,7 @@ extension PaygateReviewsElement {
             
             PaygateReviewsElement(image: "Paygate.Icon.8",
                                   text: "Paygate.Review.8.Text".localized,
-                                  city: "Paygate.Review.8.City".localized),
-            
-            PaygateReviewsElement(image: "Paygate.Icon.9",
-                                  text: "Paygate.Review.9.Text".localized,
-                                  city: "Paygate.Review.9.City".localized),
-            
-            PaygateReviewsElement(image: "Paygate.Icon.10",
-                                  text: "Paygate.Review.10.Text".localized,
-                                  city: "Paygate.Review.10.City".localized),
+                                  city: "Paygate.Review.8.City".localized)
         ]
     }
 }

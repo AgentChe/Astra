@@ -41,7 +41,7 @@ final class OFeelTodayView: OSlideView {
         
         SDKStorage.shared
             .amplitudeManager
-            .logEvent(name: "Feel Scren", parameters: [:])
+            .logEvent(name: "Feel Screen", parameters: [:])
     }
 }
 

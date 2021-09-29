@@ -32,7 +32,7 @@ final class OPreloaderView: OSlideView {
         
         SDKStorage.shared
             .amplitudeManager
-            .logEvent(name: "Plan Preparation Scren", parameters: [:])
+            .logEvent(name: "Plan Preparation Screen", parameters: [:])
         
         animationView.play()
         calculatePercent()

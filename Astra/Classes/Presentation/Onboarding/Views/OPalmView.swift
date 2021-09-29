@@ -46,7 +46,7 @@ final class OPalmView: OSlideView {
         
         SDKStorage.shared
             .amplitudeManager
-            .logEvent(name: "Palmistry Camera Scren", parameters: [:])
+            .logEvent(name: "Palmistry Camera Screen", parameters: [:])
         
         showCamera()
     }

@@ -40,7 +40,7 @@ final class OMaritalView: OSlideView {
         
         SDKStorage.shared
             .amplitudeManager
-            .logEvent(name: "Marital Scren", parameters: [:])
+            .logEvent(name: "Marital Screen", parameters: [:])
     }
 }
 

@@ -25,7 +25,7 @@ final class OFindMoreView: OSlideView {
         
         SDKStorage.shared
             .amplitudeManager
-            .logEvent(name: "Character Scren", parameters: [:])
+            .logEvent(name: "Character Screen", parameters: [:])
         
         UIView.animate(withDuration: 1, animations: { [weak self] in
             self?.label.alpha = 1

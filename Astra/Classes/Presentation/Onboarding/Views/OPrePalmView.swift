@@ -36,7 +36,7 @@ final class OPrePalmView: OSlideView {
         
         SDKStorage.shared
             .amplitudeManager
-            .logEvent(name: "Palmistry Scren", parameters: [:])
+            .logEvent(name: "Palmistry Screen", parameters: [:])
     }
     
     override func onNext() {

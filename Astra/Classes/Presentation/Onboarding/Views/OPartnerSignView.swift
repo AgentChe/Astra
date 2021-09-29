@@ -35,7 +35,7 @@ final class OPartnerSignView: OSlideView {
         
         SDKStorage.shared
             .amplitudeManager
-            .logEvent(name: "Partner Zodiac Scren", parameters: [:])
+            .logEvent(name: "Partner Zodiac Screen", parameters: [:])
     }
 }
 

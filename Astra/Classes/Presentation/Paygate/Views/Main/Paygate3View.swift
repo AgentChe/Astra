@@ -55,7 +55,7 @@ final class Paygate3View: PaygateView {
     override func viewDidLoad() {
         SDKStorage.shared
             .amplitudeManager
-            .logEvent(name: "Paygate Scren", parameters: ["variant": 3])
+            .logEvent(name: "Paygate Screen", parameters: ["variant": 3])
     }
 }
 

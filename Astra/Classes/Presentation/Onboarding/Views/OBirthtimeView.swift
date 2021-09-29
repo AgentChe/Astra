@@ -35,7 +35,7 @@ final class OBirthtimeView: OSlideView {
         
         SDKStorage.shared
             .amplitudeManager
-            .logEvent(name: "Birthtime Scren", parameters: [:])
+            .logEvent(name: "Birthtime Screen", parameters: [:])
     }
 }
 

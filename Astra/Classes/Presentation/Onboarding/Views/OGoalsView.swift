@@ -38,7 +38,7 @@ final class OGoalsView: OSlideView {
         
         SDKStorage.shared
             .amplitudeManager
-            .logEvent(name: "Goal Scren", parameters: [:])
+            .logEvent(name: "Goal Screen", parameters: [:])
     }
 }
 

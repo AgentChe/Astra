@@ -40,7 +40,7 @@ final class ONameView: OSlideView {
         
         SDKStorage.shared
             .amplitudeManager
-            .logEvent(name: "Name Scren", parameters: [:])
+            .logEvent(name: "Name Screen", parameters: [:])
         
         textField.becomeFirstResponder()
     }

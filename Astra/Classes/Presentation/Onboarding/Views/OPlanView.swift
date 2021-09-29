@@ -29,7 +29,7 @@ final class OPlanView: OSlideView {
         
         SDKStorage.shared
             .amplitudeManager
-            .logEvent(name: "Plan Ready Scren", parameters: [:])
+            .logEvent(name: "Plan Ready Screen", parameters: [:])
         
         animationView.play()
     }

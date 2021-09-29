@@ -36,7 +36,7 @@ final class OQuestion3View: OSlideView {
         
         SDKStorage.shared
             .amplitudeManager
-            .logEvent(name: "Statement 3 Scren", parameters: [:])
+            .logEvent(name: "Statement 3 Screen", parameters: [:])
     }
 }
 

@@ -35,7 +35,7 @@ final class OSignView: OSlideView {
         
         SDKStorage.shared
             .amplitudeManager
-            .logEvent(name: "Zodiac Scren", parameters: [:])
+            .logEvent(name: "Zodiac Screen", parameters: [:])
         
         contentManager.obtainZodiacQuote()
             .asDriver(onErrorJustReturn: "")

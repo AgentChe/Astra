@@ -43,7 +43,7 @@ final class OGenderView: OSlideView {
         
         SDKStorage.shared
             .amplitudeManager
-            .logEvent(name: "Gender Scren", parameters: [:])
+            .logEvent(name: "Gender Screen", parameters: [:])
     }
 }
 

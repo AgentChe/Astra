@@ -28,15 +28,15 @@ private extension OWelcomeView {
     func initialize() {
         SDKStorage.shared
             .amplitudeManager
-            .logEvent(name: "Welcome Scren", parameters: [:])
+            .logEvent(name: "Welcome Screen", parameters: [:])
         
         UIView.animate(withDuration: 1, animations: { [weak self] in
             self?.label1.alpha = 1
         }, completion: { _ in
-            UIView.animate(withDuration: 1, delay: 2, animations: { [weak self] in
+            UIView.animate(withDuration: 1, delay: 3, animations: { [weak self] in
                 self?.label2.alpha = 1
             }, completion: { [weak self] _ in
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
                     self?.onNext()
                 }
             })

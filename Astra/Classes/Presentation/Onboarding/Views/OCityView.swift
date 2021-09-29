@@ -37,7 +37,7 @@ final class OCityView: OSlideView {
         
         SDKStorage.shared
             .amplitudeManager
-            .logEvent(name: "City Scren", parameters: [:])
+            .logEvent(name: "City Screen", parameters: [:])
     }
 }
 

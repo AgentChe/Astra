@@ -40,7 +40,7 @@ final class OBirthdateView: OSlideView {
         
         SDKStorage.shared
             .amplitudeManager
-            .logEvent(name: "Birthdate Scren", parameters: [:])
+            .logEvent(name: "Birthdate Screen", parameters: [:])
     }
 }
 

@@ -42,7 +42,7 @@ final class OEnjoyingView: OSlideView {
         
         SDKStorage.shared
             .amplitudeManager
-            .logEvent(name: "Enjoy Scren", parameters: [:])
+            .logEvent(name: "Enjoy Screen", parameters: [:])
     }
 }
 
