@@ -87,6 +87,7 @@ private extension MeditationDashboardAudioCell {
 private extension MeditationDashboardAudioCell {
     func makeImageView() -> UIImageView {
         let view = UIImageView()
+        view.backgroundColor = UIColor(integralRed: 227, green: 225, blue: 221)
         view.clipsToBounds = true
         view.layer.cornerRadius = 12.scale
         view.contentMode = .scaleAspectFill

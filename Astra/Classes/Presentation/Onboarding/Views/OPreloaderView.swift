@@ -52,7 +52,7 @@ private extension OPreloaderView {
             .lineHeight(36.scale)
             .textAlignment(.center)
         
-        let duration = Double(7)
+        let duration = Double(12)
         var seconds = Double(0)
         
         timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { [weak self] timer in
