@@ -52,15 +52,27 @@ private extension Paygate3OptionView {
             .title
             .attributed(with: TextAttributes()
                             .textColor(isSelected ? UIColor.white : UIColor(integralRed: 31, green: 31, blue: 31))
-                            .font(Fonts.Qanelas.bold(size: 21.scale))
+                            .font(Fonts.Qanelas.regular(size: 21.scale))
                             .lineHeight(25.2.scale))
         
-        subtitleLabel.attributedText = option
-            .subTitle
+        let subtitleParts = option.subTitle.split(separator: "\n")
+        let subtitlePart1String = String(subtitleParts.first ?? "")
+        let subtitlePart1AttrsString = subtitlePart1String
+            .attributed(with: TextAttributes()
+                            .textColor(isSelected ? UIColor.white : UIColor(integralRed: 31, green: 31, blue: 31))
+                            .font(Fonts.Qanelas.bold(size: 12.scale))
+                            .lineHeight(15.scale))
+        let subtitlePart2String = String(subtitleParts.last ?? "")
+        let subtitlePart2AttrsString = subtitlePart2String
             .attributed(with: TextAttributes()
                             .textColor(isSelected ? UIColor.white.withAlphaComponent(0.7) : UIColor(integralRed: 31, green: 31, blue: 31, alpha: 0.7))
-                            .font(Fonts.Qanelas.semiBold(size: 12.scale))
-                            .lineHeight(17.7.scale))
+                            .font(Fonts.Qanelas.regular(size: 12.scale))
+                            .lineHeight(17.scale))
+        let subtitle = NSMutableAttributedString()
+        subtitle.append(subtitlePart1AttrsString)
+        subtitle.append(NSAttributedString(string: "\n"))
+        subtitle.append(subtitlePart2AttrsString)
+        subtitleLabel.attributedText = subtitle
         
         saveLabel.attributedText = (option.save ?? "")
             .attributed(with: TextAttributes()
@@ -77,10 +89,28 @@ private extension Paygate3OptionView {
         backgroundView.layer.borderColor = isSelected ? UIColor.white.cgColor : UIColor.clear.cgColor
         
         titleLabel.textColor = isSelected ? UIColor.white : UIColor(integralRed: 31, green: 31, blue: 31)
-        subtitleLabel.textColor = isSelected ? UIColor.white.withAlphaComponent(0.7) : UIColor(integralRed: 31, green: 31, blue: 31, alpha: 0.7)
         
         saveLabel.backgroundColor = isSelected ? UIColor(integralRed: 252, green: 252, blue: 252) : UIColor(integralRed: 232, green: 139, blue: 141)
         saveLabel.textColor = isSelected ? UIColor(integralRed: 31, green: 31, blue: 31) : UIColor.white
+        
+        let subtitleParts = option?.subTitle.split(separator: "\n")
+        let subtitlePart1String = String(subtitleParts?.first ?? "")
+        let subtitlePart1AttrsString = subtitlePart1String
+            .attributed(with: TextAttributes()
+                            .textColor(isSelected ? UIColor.white : UIColor(integralRed: 31, green: 31, blue: 31))
+                            .font(Fonts.Qanelas.bold(size: 12.scale))
+                            .lineHeight(15.scale))
+        let subtitlePart2String = String(subtitleParts?.last ?? "")
+        let subtitlePart2AttrsString = subtitlePart2String
+            .attributed(with: TextAttributes()
+                            .textColor(isSelected ? UIColor.white.withAlphaComponent(0.7) : UIColor(integralRed: 31, green: 31, blue: 31, alpha: 0.7))
+                            .font(Fonts.Qanelas.regular(size: 12.scale))
+                            .lineHeight(17.scale))
+        let subtitle = NSMutableAttributedString()
+        subtitle.append(subtitlePart1AttrsString)
+        subtitle.append(NSAttributedString(string: "\n"))
+        subtitle.append(subtitlePart2AttrsString)
+        subtitleLabel.attributedText = subtitle
     }
 }
 

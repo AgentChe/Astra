@@ -52,15 +52,27 @@ private extension Paygate2OptionView {
             .title
             .attributed(with: TextAttributes()
                             .textColor(UIColor.white)
-                            .font(Fonts.Qanelas.bold(size: 21.scale))
+                            .font(Fonts.Qanelas.regular(size: 21.scale))
                             .lineHeight(25.2.scale))
         
-        subtitleLabel.attributedText = option
-            .subTitle
+        let subtitleParts = option.subTitle.split(separator: "\n")
+        let subtitlePart1String = String(subtitleParts.first ?? "")
+        let subtitlePart1AttrsString = subtitlePart1String
             .attributed(with: TextAttributes()
                             .textColor(UIColor.white)
-                            .font(Fonts.Qanelas.semiBold(size: 12.scale))
+                            .font(Fonts.Qanelas.regular(size: 12.scale))
+                            .lineHeight(18.scale))
+        let subtitlePart2String = String(subtitleParts.last ?? "")
+        let subtitlePart2AttrsString = subtitlePart2String
+            .attributed(with: TextAttributes()
+                            .textColor(UIColor.white.withAlphaComponent(0.4))
+                            .font(Fonts.Qanelas.bold(size: 12.scale))
                             .lineHeight(17.7.scale))
+        let subtitle = NSMutableAttributedString()
+        subtitle.append(subtitlePart1AttrsString)
+        subtitle.append(NSAttributedString(string: "\n"))
+        subtitle.append(subtitlePart2AttrsString)
+        subtitleLabel.attributedText = subtitle
         
         saveLabel.attributedText = (option.save ?? "")
             .attributed(with: TextAttributes()

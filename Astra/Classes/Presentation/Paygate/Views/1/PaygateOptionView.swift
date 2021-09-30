@@ -51,13 +51,13 @@ private extension PaygateOptionView {
             .title
             .attributed(with: TextAttributes()
                             .textColor(isSelected ? UIColor(integralRed: 252, green: 252, blue: 252) : UIColor(integralRed: 31, green: 31, blue: 31))
-                            .font(Fonts.Qanelas.bold(size: 20.scale)))
+                            .font(Fonts.Qanelas.regular(size: 20.scale)))
         
         subtitleLabel.attributedText = option
             .subTitle
             .attributed(with: TextAttributes()
-                            .textColor(isSelected ? UIColor(integralRed: 252, green: 252, blue: 252, alpha: 0.8) : UIColor(integralRed: 31, green: 31, blue: 31, alpha: 0.8))
-                            .font(Fonts.Qanelas.semiBold(size: 14.scale)))
+                            .textColor(isSelected ? UIColor(integralRed: 252, green: 252, blue: 252) : UIColor(integralRed: 31, green: 31, blue: 31))
+                            .font(Fonts.Qanelas.bold(size: 17.scale)))
         
         saveLabel.attributedText = (option.save ?? "")
             .attributed(with: TextAttributes()
@@ -69,7 +69,7 @@ private extension PaygateOptionView {
         backgroundColor = isSelected ? UIColor(integralRed: 171, green: 165, blue: 231) : UIColor(integralRed: 252, green: 252, blue: 252)
         imageView.image = UIImage(named: isSelected ? "Paygate.Checked" : "Paygate.Unchecked")
         titleLabel.textColor = isSelected ? UIColor(integralRed: 252, green: 252, blue: 252) : UIColor(integralRed: 31, green: 31, blue: 31)
-        subtitleLabel.textColor = isSelected ? UIColor(integralRed: 252, green: 252, blue: 252, alpha: 0.8) : UIColor(integralRed: 31, green: 31, blue: 31, alpha: 0.8)
+        subtitleLabel.textColor = isSelected ? UIColor(integralRed: 252, green: 252, blue: 252) : UIColor(integralRed: 31, green: 31, blue: 31)
     }
 }
 
