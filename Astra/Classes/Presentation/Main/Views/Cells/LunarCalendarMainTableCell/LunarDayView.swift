@@ -6,18 +6,6 @@
 //
 
 final class LunarDayView: UIView {
-    lazy var circle1Color: UIColor = UIColor(integralRed: 241, green: 240, blue: 238) {
-        didSet {
-            circle1View.backgroundColor = circle1Color
-        }
-    }
-    
-    lazy var circle2Color: UIColor = UIColor(integralRed: 63, green: 63, blue: 63) {
-        didSet {
-            circle2View.backgroundColor = circle2Color
-        }
-    }
-    
     lazy var textColorHighlighted: UIColor = UIColor.white {
         didSet {
             update()
@@ -38,8 +26,7 @@ final class LunarDayView: UIView {
     
     lazy var dayLabel = makeLabel()
     lazy var numberLabel = makeLabel()
-    lazy var circle1View = makeCircle1View()
-    lazy var circle2View = makeCircle2View()
+    lazy var iconView = makeIconView()
     
     var day: LunarCalendarDay? {
         didSet {
@@ -67,9 +54,6 @@ final class LunarDayView: UIView {
 private extension LunarDayView {
     func initialize() {
         layer.masksToBounds = true
-        
-        circle1View.backgroundColor = circle1Color
-        circle2View.backgroundColor = circle2Color
     }
     
     func update() {
@@ -90,10 +74,9 @@ private extension LunarDayView {
                             .textColor(day.highlighted ? textColorHighlighted : numberColor)
                             .font(Fonts.Qanelas.regular(size: 14.scale))
                             .lineHeight(19.6.scale))
-
-        let one = 24.scale / 15
-        let x = CGFloat(day.offset) * one 
-        circle2View.frame.origin.x = x
+        
+        let imageName = String(format: "Lunar.Offset.%i", day.offset)
+        iconView.image = UIImage(named: imageName)
     }
 }
 
@@ -109,6 +92,13 @@ private extension LunarDayView {
             numberLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             numberLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8.scale)
         ])
+        
+        NSLayoutConstraint.activate([
+            iconView.widthAnchor.constraint(equalToConstant: 24.scale),
+            iconView.heightAnchor.constraint(equalToConstant: 24.scale),
+            iconView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            iconView.topAnchor.constraint(equalTo: topAnchor, constant: 36.scale)
+        ])
     }
 }
 
@@ -121,20 +111,12 @@ private extension LunarDayView {
         return view
     }
     
-    func makeCircle1View() -> CircleView {
-        let view = CircleView()
-        view.layer.masksToBounds = true
-        view.frame.origin = CGPoint(x: 5.scale, y: 36.scale)
-        view.frame.size = CGSize(width: 24.scale, height: 24.scale)
+    func makeIconView() -> UIImageView {
+        let view = UIImageView()
+        view.contentMode = .scaleAspectFill
+        view.clipsToBounds = true
+        view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
-        return view
-    }
-    
-    func makeCircle2View() -> CircleView {
-        let view = CircleView()
-        view.frame.origin = CGPoint(x: 0.scale, y: 0.scale)
-        view.frame.size = CGSize(width: 24.scale, height: 24.scale)
-        circle1View.addSubview(view)
         return view
     }
 }

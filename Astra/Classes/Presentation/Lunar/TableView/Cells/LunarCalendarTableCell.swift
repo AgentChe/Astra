@@ -82,8 +82,6 @@ private extension LunarCalendarTableCell {
     
     func makeDayView() -> LunarDayView {
         let view = LunarDayView()
-        view.circle1Color = UIColor(integralRed: 252, green: 252, blue: 252)
-        view.circle2Color = UIColor(integralRed: 31, green: 31, blue: 31)
         view.dayColor = UIColor.white
         view.numberColor = UIColor.white
         view.layer.cornerRadius = 4.scale
