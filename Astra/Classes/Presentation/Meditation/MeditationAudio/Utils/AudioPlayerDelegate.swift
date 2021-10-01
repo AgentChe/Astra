@@ -9,4 +9,5 @@ protocol AudioPlayerDelegate: AnyObject {
     func audioPlayer(totalDuration: Float64)
     func audioPlayer(currentTime: Float64)
     func audioPlayerFinished()
+    func audioPlayerDidStartPlay()
 }

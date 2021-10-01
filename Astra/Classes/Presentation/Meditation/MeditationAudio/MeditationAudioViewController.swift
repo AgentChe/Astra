@@ -52,6 +52,7 @@ final class MeditationAudioViewController: UIViewController {
                 case .play:
                     self.audioPlayer?.pause()
                 case .pause:
+                    self.showPreloaderIfNeeded()
                     self.audioPlayer?.play()
                 }
                 
@@ -124,5 +125,27 @@ extension MeditationAudioViewController: AudioPlayerDelegate {
     
     func audioPlayerFinished() {
         mainView.playPauseButton.stateCode = .pause
+    }
+    
+    func audioPlayerDidStartPlay() {
+        audio(isDownloading: false)
+    }
+}
+
+// MARK: Private
+private extension MeditationAudioViewController {
+    func showPreloaderIfNeeded() {
+        guard let player = audioPlayer else {
+            return
+        }
+        
+        let isDownloading = !player.isPlaying() && (player.currentSeconds() == 0)
+        
+        audio(isDownloading: isDownloading)
+    }
+    
+    func audio(isDownloading: Bool) {
+        mainView.playPauseButton.isHidden = isDownloading
+        isDownloading ? mainView.preloaderView.start() : mainView.preloaderView.stop()
     }
 }

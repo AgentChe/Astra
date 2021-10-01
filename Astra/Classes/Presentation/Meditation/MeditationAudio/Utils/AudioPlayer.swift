@@ -63,11 +63,19 @@ final class AudioPlayer: NSObject {
             
             self.delegate?.audioPlayer(currentTime: currentSeconds)
         }
+        
+        player.addBoundaryTimeObserver(forTimes: [NSValue(time: CMTime(seconds: 1, preferredTimescale: 1000))], queue: DispatchQueue.main) { [weak self] in
+            self?.delegate?.audioPlayerDidStartPlay()
+        }
     }
 }
 
 // MARK: Public
 extension AudioPlayer {
+    func currentSeconds() -> Float64 {
+        CMTimeGetSeconds(player.currentTime())
+    }
+    
     func isPlaying() -> Bool {
         player.timeControlStatus == .playing
     }

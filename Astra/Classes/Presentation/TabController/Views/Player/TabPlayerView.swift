@@ -58,6 +58,7 @@ extension TabPlayerView {
 // MARK: AudioPlayerDelegate
 extension TabPlayerView: AudioPlayerDelegate {
     func audioPlayer(totalDuration: Float64) {}
+    func audioPlayerDidStartPlay() {}
     
     func audioPlayer(currentTime: Float64) {
         if currentTime > 0 && audioPlayer?.isPlaying() == true {
