@@ -13,7 +13,7 @@ struct SetRequest: APIRequestBody {
     private let name: String?
     private let birthDate: String?
     private let birthTime: String?
-    private let city: String?
+    private let cityId: Int?
     private let feelToday: Int?
     private let marital: Int?
     private let partnerZodiac: Int?
@@ -26,7 +26,7 @@ struct SetRequest: APIRequestBody {
          name: String? = nil,
          birthDate: String? = nil,
          birthTime: String? = nil,
-         city: String? = nil,
+         cityId: Int? = nil,
          feelToday: Int? = nil,
          marital: Int? = nil,
          partnerZodiac: Int? = nil,
@@ -38,7 +38,7 @@ struct SetRequest: APIRequestBody {
         self.name = name
         self.birthDate = birthDate
         self.birthTime = birthTime
-        self.city = city
+        self.cityId = cityId
         self.feelToday = feelToday
         self.marital = marital
         self.partnerZodiac = partnerZodiac
@@ -74,11 +74,11 @@ struct SetRequest: APIRequestBody {
         }
         
         if let birthTime = self.birthTime {
-            params["birthTime"] = birthTime
+            params["birth_time"] = birthTime
         }
         
-        if let city = self.city {
-            params["city"] = city
+        if let cityId = self.cityId {
+            params["city_id"] = cityId
         }
         
         if let feelToday = self.feelToday {

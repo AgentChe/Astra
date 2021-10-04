@@ -130,7 +130,7 @@ private extension OCityView {
                 
                 if let selectedCity = self.selectedCity {
                     return self.userManager
-                        .set(city: selectedCity.name)
+                        .set(cityId: selectedCity.id)
                         .map { true }
                         .catchAndReturn(false)
                 } else {
@@ -142,7 +142,7 @@ private extension OCityView {
                             }
                             
                             return self.userManager
-                                .set(city: city.name)
+                                .set(cityId: city.id)
                                 .map { true }
                                 .catchAndReturn(false)
                         }

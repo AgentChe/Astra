@@ -12,7 +12,7 @@ protocol UserManager {
              name: String?,
              birthDate: String?,
              birthTime: String?,
-             city: String?,
+             cityId: Int?,
              feelToday: Int?,
              marital: Int?,
              partnerZodiac: Int?,
