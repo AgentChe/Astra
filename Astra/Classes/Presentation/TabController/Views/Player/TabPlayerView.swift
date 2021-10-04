@@ -8,14 +8,16 @@
 import UIKit
 import RxSwift
 
-final class TabPlayerView: GradientView {
-    lazy var imageView = makeImageView()
+final class TabPlayerView: GradientButton {
+    lazy var iconView = makeImageView()
     lazy var label = makeLabel()
     lazy var playPauseButton = makePlayPauseView()
     
     private var audioPlayer: AudioPlayer?
     
     private lazy var disposeBag = DisposeBag()
+    
+    private var audio: MeditationAudio?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -32,8 +34,10 @@ final class TabPlayerView: GradientView {
 // MARK: Public
 extension TabPlayerView {
     func fill(audio: MeditationAudio) {
+        self.audio = audio
+        
         if let url = URL(string: audio.imageUrl) {
-            imageView.kf.setImage(with: url)
+            iconView.kf.setImage(with: url)
         }
         
         label.attributedText = audio.title
@@ -97,6 +101,17 @@ private extension TabPlayerView {
                 self.playPauseButton.invertedState()
             })
             .disposed(by: disposeBag)
+        
+        rx.tap
+            .subscribe(onNext: { [weak self] in
+                guard let self = self, let audio = self.audio else {
+                    return
+                }
+            
+                let vc = MeditationAudioViewController.make(audio: audio)
+                UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true)
+            })
+            .disposed(by: disposeBag)
     }
 }
 
@@ -104,10 +119,10 @@ private extension TabPlayerView {
 private extension TabPlayerView {
     func makeConstraints() {
         NSLayoutConstraint.activate([
-            imageView.widthAnchor.constraint(equalToConstant: 51.scale),
-            imageView.heightAnchor.constraint(equalToConstant: 40.scale),
-            imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16.scale),
-            imageView.centerYAnchor.constraint(equalTo: centerYAnchor)
+            iconView.widthAnchor.constraint(equalToConstant: 51.scale),
+            iconView.heightAnchor.constraint(equalToConstant: 40.scale),
+            iconView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16.scale),
+            iconView.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
         
         NSLayoutConstraint.activate([
