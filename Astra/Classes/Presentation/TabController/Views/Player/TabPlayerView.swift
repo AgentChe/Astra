@@ -9,9 +9,12 @@ import UIKit
 import RxSwift
 
 final class TabPlayerView: GradientButton {
+    weak var delegate: TabPlayerViewDelegate?
+    
     lazy var iconView = makeImageView()
     lazy var label = makeLabel()
     lazy var playPauseButton = makePlayPauseView()
+    lazy var closeButton = makeCloseButton()
     
     private var audioPlayer: AudioPlayer?
     
@@ -54,6 +57,7 @@ extension TabPlayerView {
     
     func resignControlOnPlayer() {
         audioPlayer = nil
+        audio = nil
         
         playPauseButton.stateCode = .pause
     }
@@ -112,6 +116,12 @@ private extension TabPlayerView {
                 UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true)
             })
             .disposed(by: disposeBag)
+        
+        closeButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.delegate?.tabPlayerDidCloseTapped()
+            })
+            .disposed(by: disposeBag)
     }
 }
 
@@ -128,14 +138,21 @@ private extension TabPlayerView {
         NSLayoutConstraint.activate([
             label.centerYAnchor.constraint(equalTo: centerYAnchor),
             label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 79.scale),
-            label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -60.scale)
+            label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -84.scale)
         ])
         
         NSLayoutConstraint.activate([
             playPauseButton.widthAnchor.constraint(equalToConstant: 40.scale),
             playPauseButton.heightAnchor.constraint(equalToConstant: 40.scale),
             playPauseButton.centerYAnchor.constraint(equalTo: centerYAnchor),
-            playPauseButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16.scale)
+            playPauseButton.trailingAnchor.constraint(equalTo: closeButton.leadingAnchor, constant: -8.scale)
+        ])
+        
+        NSLayoutConstraint.activate([
+            closeButton.widthAnchor.constraint(equalToConstant: 24.scale),
+            closeButton.heightAnchor.constraint(equalToConstant: 24.scale),
+            closeButton.centerYAnchor.constraint(equalTo: centerYAnchor),
+            closeButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12.scale)
         ])
     }
 }
@@ -163,6 +180,14 @@ private extension TabPlayerView {
     func makePlayPauseView() -> TabPlayerPlayPauseView {
         let view = TabPlayerPlayPauseView()
         view.stateCode = .pause
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        return view
+    }
+    
+    func makeCloseButton() -> TapAreaButton {
+        let view = TapAreaButton()
+        view.setImage(UIImage(named: "Tab.Player.Close"), for: .normal)
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view

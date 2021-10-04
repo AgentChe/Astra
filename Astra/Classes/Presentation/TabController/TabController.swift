@@ -30,6 +30,8 @@ final class TabController: UIViewController {
             })
             .disposed(by: disposeBag)
         
+        mainView.playerView.delegate = self
+        
         addActionsToTabs()
         mainView.showPlayer(show: false)
     }
@@ -55,6 +57,16 @@ extension TabController: MeditationAudioViewControllerMediatorDelegate {
     func meditationAudioViewControllerDidDisappear() {
         mainView.showPlayer(show: true)
         mainView.playerView.becomeControlOnPlayer()
+    }
+}
+
+// MARK: TabPlayerViewDelegate
+extension TabController: TabPlayerViewDelegate {
+    func tabPlayerDidCloseTapped() {
+        mainView.showPlayer(show: false)
+        mainView.playerView.resignControlOnPlayer()
+        
+        AudioPlayerManager.shared.clear()
     }
 }
  

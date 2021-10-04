@@ -141,6 +141,7 @@ extension AudioPlayer {
         
         if let observer = playerTimeObserver {
             player.removeTimeObserver(observer)
+            playerTimeObserver = nil
         }
         
         NotificationCenter.default.removeObserver(self)

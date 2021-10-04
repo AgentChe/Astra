@@ -29,4 +29,9 @@ extension AudioPlayerManager {
         
         return player
     }
+    
+    func clear() {
+        player?.clear()
+        player = nil
+    }
 }
