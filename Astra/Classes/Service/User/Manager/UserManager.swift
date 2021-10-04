@@ -20,6 +20,8 @@ protocol UserManager {
              enjoy: [Int]?,
              notificationKey: String?) -> Single<Void>
     
+    func onboarded() -> Single<Void>
+    
     // MARK: City
     func searchCities(with name: String) -> Single<[City]>
     func add(city name: String) -> Single<City?>

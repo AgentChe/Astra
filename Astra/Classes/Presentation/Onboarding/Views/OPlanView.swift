@@ -7,6 +7,7 @@
 
 import UIKit
 import Lottie
+import RxSwift
 
 final class OPlanView: OSlideView {
     lazy var titleLabel = makeTitleLabel()
@@ -14,10 +15,15 @@ final class OPlanView: OSlideView {
     lazy var animationView = makeAnimationView()
     lazy var button = makeButton()
     
+    private lazy var disposeBag = DisposeBag()
+    
+    private lazy var userManager = UserManagerCore()
+    
     override init(step: OnboardingView.Step) {
         super.init(step: step)
         
         makeConstraints()
+        initialize()
     }
     
     required init?(coder: NSCoder) {
@@ -48,6 +54,25 @@ extension OPlanView: OGenderViewDelegate {
         }
         
         animationView.animation = Animation.named(name)
+    }
+}
+
+// MARK: Private
+private extension OPlanView {
+    func initialize() {
+        button.rx.tap
+            .flatMapLatest { [weak self] _ -> Single<Void> in
+                guard let self = self else {
+                    return .never()
+                }
+                
+                return self.userManager
+                    .onboarded()
+            }
+            .subscribe(onNext: { [weak self] in
+                self?.onNext()
+            })
+            .disposed(by: disposeBag)
     }
 }
 
@@ -134,7 +159,6 @@ private extension OPlanView {
         view.backgroundColor = UIColor(integralRed: 255, green: 141, blue: 91)
         view.setAttributedTitle("Onboarding.Plan.Button".localized.uppercased().attributed(with: attrs), for: .normal)
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.addTarget(self, action: #selector(onNext), for: .touchUpInside)
         addSubview(view)
         return view
     }

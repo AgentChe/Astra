@@ -186,6 +186,7 @@
 		960DE3D927046CFC00D00EA6 /* NatalDetailsTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE3D827046CFC00D00EA6 /* NatalDetailsTableElement.swift */; };
 		960DE3DC27046D1500D00EA6 /* NatalDetailsTableTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE3DB27046D1500D00EA6 /* NatalDetailsTableTitleCell.swift */; };
 		960DE3DE27046D2400D00EA6 /* NatalDetailsTableTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE3DD27046D2400D00EA6 /* NatalDetailsTableTextCell.swift */; };
+		960DE418270AEF3600D00EA6 /* OnboardedRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE417270AEF3600D00EA6 /* OnboardedRequest.swift */; };
 		9654D0D426DFBE8A00179E40 /* OFindMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9654D0D326DFBE8A00179E40 /* OFindMoreView.swift */; };
 		9654D0D626DFC33800179E40 /* OFeelTodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9654D0D526DFC33800179E40 /* OFeelTodayView.swift */; };
 		9654D0D826DFCB2B00179E40 /* OMaritalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9654D0D726DFCB2B00179E40 /* OMaritalView.swift */; };
@@ -542,6 +543,7 @@
 		960DE3D827046CFC00D00EA6 /* NatalDetailsTableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatalDetailsTableElement.swift; sourceTree = "<group>"; };
 		960DE3DB27046D1500D00EA6 /* NatalDetailsTableTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatalDetailsTableTitleCell.swift; sourceTree = "<group>"; };
 		960DE3DD27046D2400D00EA6 /* NatalDetailsTableTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatalDetailsTableTextCell.swift; sourceTree = "<group>"; };
+		960DE417270AEF3600D00EA6 /* OnboardedRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardedRequest.swift; sourceTree = "<group>"; };
 		9654D0D326DFBE8A00179E40 /* OFindMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OFindMoreView.swift; sourceTree = "<group>"; };
 		9654D0D526DFC33800179E40 /* OFeelTodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OFeelTodayView.swift; sourceTree = "<group>"; };
 		9654D0D726DFCB2B00179E40 /* OMaritalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMaritalView.swift; sourceTree = "<group>"; };
@@ -828,6 +830,7 @@
 				9605019B26E3CE65004E0F11 /* AddCity */,
 				9605019626E3CD3B004E0F11 /* GetCities */,
 				96059E1326C66F0F00BD9A0A /* SetRequest.swift */,
+				960DE417270AEF3600D00EA6 /* OnboardedRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -2609,6 +2612,7 @@
 				96059EA426CBBFCF00BD9A0A /* HoroTableView.swift in Sources */,
 				96BFF5E626D3913600B8D8CC /* AKPickerView.swift in Sources */,
 				96059E3526C70B3900BD9A0A /* MainView.swift in Sources */,
+				960DE418270AEF3600D00EA6 /* OnboardedRequest.swift in Sources */,
 				968FD44026C41F0500C01D2A /* OnboardingViewController.swift in Sources */,
 				968FD41926C3E0CB00C01D2A /* SplashView.swift in Sources */,
 				968FD45E26C41F0500C01D2A /* OnboardingView.swift in Sources */,

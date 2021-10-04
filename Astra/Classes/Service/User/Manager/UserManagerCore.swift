@@ -45,6 +45,19 @@ extension UserManagerCore {
             .map { _ in Void() }
     }
     
+    func onboarded() -> Single<Void> {
+        guard let userToken = SessionManagerCore().getSession()?.userToken else {
+            return .error(SignError.tokenNotFound)
+        }
+        
+        let request = OnboardedRequest(userToken: userToken)
+        
+        return SDKStorage.shared
+            .restApiTransport
+            .callServerApi(requestBody: request)
+            .map { _ in Void() }
+    }
+    
     func searchCities(with name: String) -> Single<[City]> {
         SDKStorage.shared
             .restApiTransport
