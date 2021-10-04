@@ -163,7 +163,7 @@
 "MeditationsDashboard.Filter.Courses" = "Courses";
 "MeditationsDashboard.Daily.Title" = "Daily meditation";
 "MeditationsDashboard.Courses.Title" = "Courses";
-"MeditationsDashboard.Courses.SubTitle" = "We have selected courses based on your personal data";
+"MeditationsDashboard.Courses.SubTitle" = "We have selected these courses based on your personal traits";
 "MeditationsDashboard.Courses.Count" = "%i MEDITATIONS";
 
 // MARK: MeditationCourse
