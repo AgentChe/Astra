@@ -11,6 +11,7 @@ import Kingfisher
 final class MeditationDashboardCourseCell: UICollectionViewCell {
     lazy var container = makeContainer()
     lazy var pictureImageView = makeImageView()
+    lazy var shadowView = makeShadowView()
     lazy var countLabel = makeCountLabel()
     lazy var titleLabel = makeLabel()
     lazy var infoLabel = makeLabel()
@@ -117,6 +118,13 @@ private extension MeditationDashboardCourseCell {
         ])
         
         NSLayoutConstraint.activate([
+            shadowView.leadingAnchor.constraint(equalTo: pictureImageView.leadingAnchor),
+            shadowView.trailingAnchor.constraint(equalTo: pictureImageView.trailingAnchor),
+            shadowView.topAnchor.constraint(equalTo: pictureImageView.topAnchor),
+            shadowView.bottomAnchor.constraint(equalTo: pictureImageView.bottomAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
             countLabel.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -16.scale),
             countLabel.topAnchor.constraint(equalTo: container.topAnchor, constant: 16.scale)
         ])
@@ -159,6 +167,22 @@ private extension MeditationDashboardCourseCell {
         view.contentMode = .scaleAspectFill
         view.translatesAutoresizingMaskIntoConstraints = false
         container.addSubview(view)
+        return view
+    }
+    
+    func makeShadowView() -> GradientView {
+        let view = GradientView()
+        view.gradientLayer.startPoint = CGPoint(x: 0.5, y: 0)
+        view.gradientLayer.endPoint = CGPoint(x: 0.5, y: 1)
+        view.gradientLayer.colors = [
+            UIColor.black.withAlphaComponent(0.2).cgColor,
+            UIColor.black.withAlphaComponent(0.4).cgColor
+        ]
+        view.layer.cornerRadius = 10.scale
+        view.layer.masksToBounds = true
+        view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        view.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(view)
         return view
     }
     

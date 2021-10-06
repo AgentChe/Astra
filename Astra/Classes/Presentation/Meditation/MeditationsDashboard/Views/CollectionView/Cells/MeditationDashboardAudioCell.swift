@@ -10,6 +10,7 @@ import Kingfisher
 
 final class MeditationDashboardAudioCell: UICollectionViewCell {
     lazy var pictureImageView = makeImageView()
+    lazy var shadowView = makeShadowView()
     lazy var titleLabel = makeLabel()
     lazy var lockView = makeLockView()
     
@@ -69,6 +70,13 @@ private extension MeditationDashboardAudioCell {
         ])
         
         NSLayoutConstraint.activate([
+            shadowView.leadingAnchor.constraint(equalTo: pictureImageView.leadingAnchor),
+            shadowView.trailingAnchor.constraint(equalTo: pictureImageView.trailingAnchor),
+            shadowView.topAnchor.constraint(equalTo: pictureImageView.topAnchor),
+            shadowView.bottomAnchor.constraint(equalTo: pictureImageView.bottomAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
             titleLabel.leadingAnchor.constraint(equalTo: pictureImageView.leadingAnchor, constant: 12.scale),
             titleLabel.trailingAnchor.constraint(equalTo: pictureImageView.trailingAnchor, constant: -12.scale),
             titleLabel.bottomAnchor.constraint(equalTo: pictureImageView.bottomAnchor, constant: -20.scale)
@@ -91,6 +99,21 @@ private extension MeditationDashboardAudioCell {
         view.clipsToBounds = true
         view.layer.cornerRadius = 12.scale
         view.contentMode = .scaleAspectFill
+        view.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(view)
+        return view
+    }
+    
+    func makeShadowView() -> GradientView {
+        let view = GradientView()
+        view.gradientLayer.startPoint = CGPoint(x: 0.5, y: 0)
+        view.gradientLayer.endPoint = CGPoint(x: 0.5, y: 1)
+        view.gradientLayer.colors = [
+            UIColor.black.withAlphaComponent(0.2).cgColor,
+            UIColor.black.withAlphaComponent(0.4).cgColor
+        ]
+        view.layer.cornerRadius = 10.scale
+        view.layer.masksToBounds = true
         view.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(view)
         return view

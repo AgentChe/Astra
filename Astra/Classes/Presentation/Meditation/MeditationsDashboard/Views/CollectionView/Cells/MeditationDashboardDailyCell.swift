@@ -10,6 +10,7 @@ import Kingfisher
 
 final class MeditationDashboardDailyCell: UICollectionViewCell {
     lazy var pictureImageView = makeImageView()
+    lazy var shadowView = makeShadowView()
     lazy var titleLabel = makeLabel()
     lazy var infoLabel = makeLabel()
     lazy var lockView = makeLockView()
@@ -79,6 +80,13 @@ private extension MeditationDashboardDailyCell {
         ])
         
         NSLayoutConstraint.activate([
+            shadowView.leadingAnchor.constraint(equalTo: pictureImageView.leadingAnchor),
+            shadowView.trailingAnchor.constraint(equalTo: pictureImageView.trailingAnchor),
+            shadowView.topAnchor.constraint(equalTo: pictureImageView.topAnchor),
+            shadowView.bottomAnchor.constraint(equalTo: pictureImageView.bottomAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
             titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 13.scale),
             titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -13.scale),
             titleLabel.bottomAnchor.constraint(equalTo: infoLabel.topAnchor, constant: -2.scale)
@@ -107,6 +115,21 @@ private extension MeditationDashboardDailyCell {
         view.clipsToBounds = true
         view.layer.cornerRadius = 10.scale
         view.contentMode = .scaleAspectFill
+        view.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(view)
+        return view
+    }
+    
+    func makeShadowView() -> GradientView {
+        let view = GradientView()
+        view.gradientLayer.startPoint = CGPoint(x: 0.5, y: 0)
+        view.gradientLayer.endPoint = CGPoint(x: 0.5, y: 1)
+        view.gradientLayer.colors = [
+            UIColor.black.withAlphaComponent(0.2).cgColor,
+            UIColor.black.withAlphaComponent(0.4).cgColor
+        ]
+        view.layer.cornerRadius = 10.scale
+        view.layer.masksToBounds = true
         view.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(view)
         return view

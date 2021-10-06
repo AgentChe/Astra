@@ -95,6 +95,7 @@ private extension MeditationCourseHeaderCell {
     func makeImageView() -> UIImageView {
         let view = UIImageView()
         view.contentMode = .scaleAspectFill
+        view.clipsToBounds = true
         view.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(view)
         return view
@@ -105,7 +106,7 @@ private extension MeditationCourseHeaderCell {
         view.gradientLayer.startPoint = CGPoint(x: 0.5, y: 0)
         view.gradientLayer.endPoint = CGPoint(x: 0.5, y: 1)
         view.gradientLayer.colors = [
-            UIColor.black.withAlphaComponent(0).cgColor,
+            UIColor.black.withAlphaComponent(0.2).cgColor,
             UIColor.black.withAlphaComponent(0.4).cgColor
         ]
         view.translatesAutoresizingMaskIntoConstraints = false
