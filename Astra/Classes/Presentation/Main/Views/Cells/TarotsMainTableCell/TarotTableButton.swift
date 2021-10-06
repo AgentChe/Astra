@@ -24,7 +24,7 @@ final class TarotTableButton: UIButton {
     }
     
     override var intrinsicContentSize: CGSize {
-        CGSize(width: 123.scale, height: 168.scale)
+        CGSize(width: 106.scale, height: 150.scale)
     }
 }
 
@@ -35,12 +35,12 @@ private extension TarotTableButton {
             pictureView.leadingAnchor.constraint(equalTo: leadingAnchor),
             pictureView.trailingAnchor.constraint(equalTo: trailingAnchor),
             pictureView.topAnchor.constraint(equalTo: topAnchor),
-            pictureView.heightAnchor.constraint(equalToConstant: 136.scale)
+            pictureView.heightAnchor.constraint(equalToConstant: 110.scale)
         ])
         
         NSLayoutConstraint.activate([
             textLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            textLabel.topAnchor.constraint(equalTo: pictureView.bottomAnchor, constant: 4.scale)
+            textLabel.topAnchor.constraint(equalTo: pictureView.bottomAnchor, constant: 8.scale)
         ])
     }
 }

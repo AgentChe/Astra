@@ -10,7 +10,6 @@ import UIKit
 final class TarotsMainTableCell: UITableViewCell {
     weak var mainDelegate: MainTableViewDelegate?
     
-    lazy var scrollView = makeScrollView()
     lazy var loveButton = makeButton(code: 1,
                                      image: "Main.Tarot.Love",
                                      title: "Main.Tarot.Love.Title")
@@ -55,45 +54,28 @@ private extension TarotsMainTableCell {
 private extension TarotsMainTableCell {
     func makeConstraints() {
         NSLayoutConstraint.activate([
-            scrollView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16.scale),
-            scrollView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16.scale),
-            scrollView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            scrollView.heightAnchor.constraint(equalToConstant: 172.scale)
-        ])
-        
-        NSLayoutConstraint.activate([
-            loveButton.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
-            loveButton.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 2.scale),
-            loveButton.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -2.scale)
+            loveButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16.scale),
+            loveButton.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 2.scale),
+            loveButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -2.scale)
         ])
         
         NSLayoutConstraint.activate([
             careerButton.leadingAnchor.constraint(equalTo: loveButton.trailingAnchor, constant: 12.scale),
-            careerButton.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 2.scale),
-            careerButton.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -2.scale)
+            careerButton.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 2.scale),
+            careerButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -2.scale)
         ])
         
         NSLayoutConstraint.activate([
             moneyButton.leadingAnchor.constraint(equalTo: careerButton.trailingAnchor, constant: 12.scale),
-            moneyButton.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
-            moneyButton.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 2.scale),
-            moneyButton.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -2.scale)
+            moneyButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16.scale),
+            moneyButton.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 2.scale),
+            moneyButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -2.scale)
         ])
     }
 }
 
 // MARK: Lazy initialization
 private extension TarotsMainTableCell {
-    func makeScrollView() -> UIScrollView {
-        let view = UIScrollView()
-        view.backgroundColor = UIColor.clear
-        view.showsHorizontalScrollIndicator = false
-        view.translatesAutoresizingMaskIntoConstraints = false
-        contentView.addSubview(view)
-        return view
-    }
-    
     func makeButton(code: Int, image: String, title: String) -> TarotTableButton {
         let attrs = TextAttributes()
             .textColor(UIColor(integralRed: 31, green: 31, blue: 31))
@@ -112,7 +94,7 @@ private extension TarotsMainTableCell {
         view.layer.shadowRadius = 4.scale
         view.addTarget(self, action: #selector(tapped(sender:)), for: .touchUpInside)
         view.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.addSubview(view)
+        contentView.addSubview(view)
         return view
     }
 }
