@@ -76,7 +76,7 @@ private extension MeditationCourseAudioCell {
         
         NSLayoutConstraint.activate([
             titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 80.scale),
-            titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20.scale),
+            titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -50.scale),
             titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor)
         ])
         
