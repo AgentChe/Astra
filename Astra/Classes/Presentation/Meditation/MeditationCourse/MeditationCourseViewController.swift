@@ -39,6 +39,14 @@ final class MeditationCourseViewController: UIViewController {
                 }
             })
             .disposed(by: disposeBag)
+        
+        mainView.tableView.rx.contentOffset
+            .subscribe(onNext: { [weak self] offset in
+                self?.updateTopView(at: offset.y)
+            })
+            .disposed(by: disposeBag)
+        
+        updateTopView(at: 0)
     }
 }
 
@@ -49,5 +57,25 @@ extension MeditationCourseViewController {
         vc.viewModel.courseId.accept(courseId)
         vc.navigationItem.backButtonTitle = " "
         return vc
+    }
+}
+
+// MARK: Private
+private extension MeditationCourseViewController {
+    func updateTopView(at offset: CGFloat) {
+        var height = offset * (88.scale / 301.scale)
+        height = min(height, 88.scale)
+        height = max(height, 0)
+        mainView.topView.frame.size.height = height
+        
+        let k = CGFloat(221) / CGFloat(302)
+        var integral = CGFloat(252) - (k * offset)
+        if integral < 31 {
+            integral = 31
+        } else if integral > 252 {
+            integral = 252
+        }
+        let color = UIColor(integralRed: integral, green: integral, blue: integral)
+        navigationController?.navigationBar.tintColor = color
     }
 }

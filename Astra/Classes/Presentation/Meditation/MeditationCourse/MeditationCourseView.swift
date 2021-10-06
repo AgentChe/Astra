@@ -10,6 +10,16 @@ import UIKit
 final class MeditationCourseView: UIView {
     lazy var tableView = makeTableView()
     
+    lazy var topView: UIView = {
+        let view = UIView()
+        view.isUserInteractionEnabled = false
+        view.frame.size = CGSize(width: 375.scale, height: 88.scale)
+        view.frame.origin = CGPoint(x: 0, y: 0)
+        view.backgroundColor = UIColor(integralRed: 252, green: 252, blue: 252)
+        addSubview(view)
+        return view
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
