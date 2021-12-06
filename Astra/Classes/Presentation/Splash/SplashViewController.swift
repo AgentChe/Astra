@@ -36,10 +36,8 @@ final class SplashViewController: UIViewController {
         super.viewDidLoad()
         
         if NumberLaunches().isFirstLaunch() {
-            print("forFirstRun")
             forFirstRun()
         } else {
-            print("forSecondRun")
             forSecondRun()
         }
     }

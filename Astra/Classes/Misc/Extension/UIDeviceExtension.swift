@@ -17,7 +17,11 @@ extension UIDevice {
         return Locale(identifier: mainPreferredLanguage).languageCode
     }
     
-    static var appVersion: String? {
-        Bundle.main.infoDictionary?["CFBundleVersion"] as? String
+    static var appVersion: Int? {
+        guard let string = Bundle.main.infoDictionary?["CFBundleVersion"] as? String else {
+            return nil
+        }
+        
+        return Int(string)
     }
 }

@@ -21,7 +21,8 @@ extension PaygateManagerCore {
         }
         
         let request = GetPaygateRequest(userToken: userToken,
-                                        locale: UIDevice.deviceLanguageCode ?? "en")
+                                        locale: UIDevice.deviceLanguageCode ?? "en",
+                                        version: UIDevice.appVersion ?? 1)
         
         return SDKStorage.shared
             .restApiTransport
@@ -50,7 +51,8 @@ extension PaygateManagerCore {
         }
         
         let request = GetPaygate2Request(userToken: userToken,
-                                         locale: UIDevice.deviceLanguageCode ?? "en")
+                                         locale: UIDevice.deviceLanguageCode ?? "en",
+                                         version: UIDevice.appVersion ?? 1)
         
         return SDKStorage.shared
             .restApiTransport

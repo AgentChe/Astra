@@ -10,6 +10,7 @@ import Alamofire
 struct GetPaygate2Request: APIRequestBody {
     let userToken: String
     let locale: String
+    let version: Int
     
     var url: String {
         GlobalDefinitions.domainUrl + "/api/payments/paygate_alt"
@@ -24,6 +25,7 @@ struct GetPaygate2Request: APIRequestBody {
             "_api_key": GlobalDefinitions.apiKey,
             "_user_token": userToken,
             "locale": locale,
+            "version": version
         ]
     }
 }
