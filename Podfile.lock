@@ -1,6 +1,8 @@
 PODS:
+  - Adapty (1.16.7)
   - Alamofire (5.4.4)
   - Amplitude-iOS (4.10.0)
+  - ApphudSDK (2.4.4)
   - AppsFlyerFramework (6.4.0):
     - AppsFlyerFramework/Main (= 6.4.0)
   - AppsFlyerFramework/Main (6.4.0)
@@ -126,6 +128,13 @@ PODS:
     - MarqueeLabel (~> 4.0.5)
     - SnapKit (~> 5.0.1)
   - PromisesObjC (2.0.0)
+  - Purchasely (2.7.4)
+  - Purchases (3.13.0):
+    - PurchasesCoreSwift (= 3.13.0)
+  - PurchasesCoreSwift (3.13.0)
+  - Qonversion (2.18.0):
+    - Qonversion/Main (= 2.18.0)
+  - Qonversion/Main (2.18.0)
   - RushSDK (2.8.7):
     - Alamofire
     - Amplitude-iOS
@@ -149,16 +158,23 @@ PODS:
   - SwiftyStoreKit (0.16.1)
 
 DEPENDENCIES:
+  - Adapty (~> 1.15)
+  - ApphudSDK
   - Kingfisher
   - lottie-ios
   - NotificationBannerSwift
+  - Purchasely
+  - Purchases
+  - Qonversion
   - RushSDK (from `https://github.com/AgentChe/RushSDK.git`)
   - SwiftCharts (~> 0.6.5)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - Adapty
     - Alamofire
     - Amplitude-iOS
+    - ApphudSDK
     - AppsFlyerFramework
     - Branch
     - FBAEMKit
@@ -180,6 +196,10 @@ SPEC REPOS:
     - nanopb
     - NotificationBannerSwift
     - PromisesObjC
+    - Purchasely
+    - Purchases
+    - PurchasesCoreSwift
+    - Qonversion
     - RxCocoa
     - RxRelay
     - RxSwift
@@ -197,8 +217,10 @@ CHECKOUT OPTIONS:
     :git: https://github.com/AgentChe/RushSDK.git
 
 SPEC CHECKSUMS:
+  Adapty: 18f1f771344546c99d1801af124cac459697e712
   Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
   Amplitude-iOS: 7d8cdc3408ba35c2e68368fc7c692cd104606b94
+  ApphudSDK: 6633d84ca17c0a61d00f9ac7c280179ac258cd8f
   AppsFlyerFramework: 9c37252d3edce38257afc065ad48a48c0f004000
   Branch: d21c40c47b5c15c6ab709cdf7d965a50059e0546
   FBAEMKit: 5de0a7aaa854eec69bb5be20795952a63d38a5f6
@@ -220,6 +242,10 @@ SPEC CHECKSUMS:
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   NotificationBannerSwift: 7021be2338f8f29cf424b0aca43da462bf9e2a1a
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
+  Purchasely: da42290c3be9bdb5b525607d1a1a5ba8a4e06488
+  Purchases: a545d402454bc9395495cceaf0e893360670e0ad
+  PurchasesCoreSwift: e7f7267a6dc526da226baad19c61e8977fa664b4
+  Qonversion: f5c81a45e8be33a21f510b281c894543c60bf321
   RushSDK: bf4912426dd71e4633b59487e9308ab2139f1ee4
   RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
   RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
@@ -228,6 +254,6 @@ SPEC CHECKSUMS:
   SwiftCharts: 2e755ea292f0b87d3e4b2c1eb5afc080a20cdc15
   SwiftyStoreKit: 6b9c08810269f030586dac1fae8e75871a82e84a
 
-PODFILE CHECKSUM: 33b3433e8cbede716f9ad4692893e7755be2a9ed
+PODFILE CHECKSUM: 4e41ff21e1b61c0a18665e30ca5a2f4db6df3b39
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.2

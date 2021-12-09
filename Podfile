@@ -10,6 +10,12 @@ target 'Astra' do
   pod 'Kingfisher'
   pod 'SwiftCharts', '~> 0.6.5'
   
+  pod 'Purchases'
+  pod 'ApphudSDK'
+  pod 'Qonversion'
+  pod 'Adapty', '~> 1.15'
+  pod 'Purchasely'
+  
   pod 'RushSDK', :git => "https://github.com/AgentChe/RushSDK.git"
 end
 

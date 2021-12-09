@@ -8,6 +8,11 @@
 import UIKit
 import RxCocoa
 import Firebase
+import Purchases
+import ApphudSDK
+import Qonversion
+import Adapty
+import Purchasely
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -26,6 +31,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
         FirebaseApp.configure()
+        Purchases.configure(withAPIKey: GlobalDefinitions.revenueCatKey)
+        Apphud.start(apiKey: GlobalDefinitions.appHUDKey)
+        Qonversion.launch(withKey: GlobalDefinitions.qonversionKey)
+        Adapty.activate(GlobalDefinitions.adaptyKey)
         
         addDelegates()
         

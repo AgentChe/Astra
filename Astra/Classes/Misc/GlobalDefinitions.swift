@@ -16,6 +16,11 @@ final class GlobalDefinitions {
 
     static let amplitudeApiKey = "b503251969f4b1d7901d2f7d1388d476"
     static let appsFlyerApiKey = "DCciCfYXjMQ8QnkdCg8qzk"
+    static let revenueCatKey = "bJPjwvtzQftrgqtCLYzHrlKlcLfnIEZr"
+    static let appHUDKey = "app_zZDL4JMTStmMRNwjJWtd3QkQDJyTCF"
+    static let qonversionKey = "famAu2lGzxPnKvoBpIwhERk5eFKb5UCt"
+    static let adaptyKey = "public_live_GqiATgVG.MVzOLw6ce0Q6xiDXtHOM"
+    static let purchaselyKey = "dbd7b6a5-8265-4027-9a0f-0db9152cec4b"
 
     static let appleAppID = "1584340757"
 
