@@ -35,6 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Apphud.start(apiKey: GlobalDefinitions.appHUDKey)
         Qonversion.launch(withKey: GlobalDefinitions.qonversionKey)
         Adapty.activate(GlobalDefinitions.adaptyKey)
+        Purchasely.start(withAPIKey: GlobalDefinitions.purchaselyKey)
         
         addDelegates()
         
