@@ -34,8 +34,7 @@ final class OQuestion2View: OSlideView {
     override func moveToThis() {
         super.moveToThis()
         
-        SDKStorage.shared
-            .amplitudeManager
+        AmplitudeManager.shared
             .logEvent(name: "Statement 2 Screen", parameters: [:])
     }
 }

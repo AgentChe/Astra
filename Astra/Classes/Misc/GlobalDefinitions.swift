@@ -9,8 +9,8 @@ final class GlobalDefinitions {
     static let domainUrl = "https://astra.thinkaboutapps.com"
     static let apiKey = "SDUY1KMlGU7Z9Jzd"
 
-    static let sdkDomainUrl = "https://analytics.korrekted.com"
-    static let sdkApiKey = "hC6nVySzzfnbfwpy"
+    static let otterScaleHost = "https://api.korrekted.com"
+    static let otterScaleApiKey = "HUsPiw5CDkrtCjrW"
 
     static let applicationTag = "ASTRA"
 

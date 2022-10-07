@@ -7,18 +7,19 @@
 
 import RxSwift
 import RxCocoa
+import OtterScaleiOS
 
 final class SettingsViewModel {
     lazy var elements = makeElements()
     
-    private lazy var sessionManager = SessionManagerCore()
+    private lazy var activeSubscription = makeActiveSubscription()
+    
+    private lazy var sessionManager = SessionManager()
 }
 
 // MARK: Private
 private extension SettingsViewModel {
     func makeElements() -> Driver<[SettingsTableElement]> {
-        let session = makeSession()
-        
         let main = Driver<[SettingsTableElement]>.deferred {
             return .just([
                 .offset(24.scale),
@@ -33,9 +34,8 @@ private extension SettingsViewModel {
         }
         
         return Driver
-            .combineLatest(session, main) { session, main -> [SettingsTableElement] in
-                let activeSubscription = session?.activeSubscription ?? false
-                let accessValidTill = session?.accessValidTill ?? ""
+            .combineLatest(activeSubscription, main) { activeSubscription, main -> [SettingsTableElement] in
+                let accessValidTill = OtterScale.shared.getAccessValidTill() ?? ""
                 
                 let subscription = activeSubscription ? [SettingsTableElement.premium(date: accessValidTill)] : [SettingsTableElement.buy]
                 
@@ -43,31 +43,11 @@ private extension SettingsViewModel {
             }
     }
     
-    func makeSession() -> Driver<Session?> {
-        let updated = SDKStorage.shared
-            .purchaseMediator
-            .rxPurchaseMediatorDidValidateReceipt
-            .map { response -> Session? in
-                guard let response = response else {
-                    return nil
-                }
-                
-                return Session(response: response)
-            }
-            .asDriver(onErrorJustReturn: nil)
-        
-        let initial = Driver<Session?>
-            .deferred { [weak self] in
-                guard let this = self else {
-                    return .never()
-                }
-                
-                let session = this.sessionManager.getSession()
-                
-                return .just(session)
-            }
-        
-        return Driver
-            .merge(initial, updated)
+    func makeActiveSubscription() -> Driver<Bool> {
+        PurchaseValidationObserver.shared
+            .didValidatedWithActiveSubscription
+            .map { SessionManager().hasActiveSubscriptions() }
+            .asDriver(onErrorJustReturn: false)
+            .startWith(SessionManager().hasActiveSubscriptions())
     }
 }

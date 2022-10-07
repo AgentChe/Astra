@@ -48,7 +48,7 @@ final class ChooseTarotViewController: UIViewController {
                 
                 self.dismiss(animated: false) {
                     let vc = TarotViewController.make(type: self.type)
-                    UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true)
+                    UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController?.present(vc, animated: true)
                 }
             })
             .disposed(by: disposeBag)

@@ -47,8 +47,7 @@ final class Paygate1View: PaygateView {
     }
     
     override func viewDidLoad() {
-        SDKStorage.shared
-            .amplitudeManager
+        AmplitudeManager.shared
             .logEvent(name: "Paygate Screen", parameters: ["variant": 1])
         
         animateScrollReviews()
@@ -424,7 +423,8 @@ private extension Paygate1View {
     
     func makePreloader() -> UIActivityIndicatorView {
         let view = UIActivityIndicatorView()
-        view.style = .whiteLarge
+        view.style = .large
+        view.color = .white
         view.hidesWhenStopped = true
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)

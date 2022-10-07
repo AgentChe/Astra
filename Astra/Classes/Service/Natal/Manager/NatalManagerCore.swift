@@ -7,20 +7,21 @@
 
 import RxSwift
 
-final class NatalManagerCore: NatalManager {}
+final class NatalManagerCore: NatalManager {
+    private let defaultRequestWrapper = DefaultRequestWrapper()
+}
 
 // MARK: Public
 extension NatalManagerCore {
     func obtainNatal() -> Single<Natal?> {
-        guard let userToken = SessionManagerCore().getSession()?.userToken else {
+        guard let userToken = SessionManager().getSession()?.userToken else {
             return .error(SignError.tokenNotFound)
         }
         
         let request = GetNatalRequest(userToken: userToken,
                                       locale: UIDevice.deviceLanguageCode ?? "en")
         
-        return SDKStorage.shared
-            .restApiTransport
+        return defaultRequestWrapper
             .callServerApi(requestBody: request)
             .map { GetNatalResponse.map(from: $0) }
     }

@@ -5,6 +5,8 @@
 //  Created by Andrey Chernyshev on 16.08.2021.
 //
 
+import UIKit
+
 final class LunarDayView: UIView {
     lazy var textColorHighlighted: UIColor = UIColor.white {
         didSet {

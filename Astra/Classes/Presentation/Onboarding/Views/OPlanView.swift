@@ -33,8 +33,7 @@ final class OPlanView: OSlideView {
     override func moveToThis() {
         super.moveToThis()
         
-        SDKStorage.shared
-            .amplitudeManager
+        AmplitudeManager.shared
             .logEvent(name: "Plan Ready Screen", parameters: [:])
         
         animationView.play()

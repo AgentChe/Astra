@@ -33,8 +33,7 @@ final class OBirthtimeView: OSlideView {
     override func moveToThis() {
         super.moveToThis()
         
-        SDKStorage.shared
-            .amplitudeManager
+        AmplitudeManager.shared
             .logEvent(name: "Birthtime Screen", parameters: [:])
     }
 }

@@ -54,12 +54,12 @@ extension NatalViewController: NatalTableViewDelegate {
     }
     
     func natalTableDidTapped(article: NatalArticle) {
-        if SessionManagerCore().getSession()?.activeSubscription == true {
+        if SessionManager().hasActiveSubscriptions() {
             let vc = NatalDetailsViewController.make(article: article)
             navigationController?.pushViewController(vc, animated: true)
         } else {
             let vc = PaygateViewController.make()
-            UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true)
+            UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController?.present(vc, animated: true)
         }
     }
 }

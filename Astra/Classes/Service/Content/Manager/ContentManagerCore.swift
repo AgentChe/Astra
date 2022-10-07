@@ -7,48 +7,47 @@
 
 import RxSwift
 
-final class ContentManagerCore: ContentManager {}
+final class ContentManagerCore: ContentManager {
+    private let defaultRequestWrapper = DefaultRequestWrapper()
+}
 
 // MARK: Public
 extension ContentManagerCore {
     func obtainDashboard() -> Single<Dashboard?> {
-        guard let userToken = SessionManagerCore().getSession()?.userToken else {
+        guard let userToken = SessionManager().getSession()?.userToken else {
             return .error(SignError.tokenNotFound)
         }
         
         let request = GetDashboardRequest(userToken: userToken,
                                           locale: UIDevice.deviceLanguageCode ?? "en")
         
-        return SDKStorage.shared
-            .restApiTransport
+        return defaultRequestWrapper
             .callServerApi(requestBody: request)
             .map { GetDashboardResponse.map(from: $0) }
     }
     
     func obtainHoroFull() -> Single<HoroFull?> {
-        guard let userToken = SessionManagerCore().getSession()?.userToken else {
+        guard let userToken = SessionManager().getSession()?.userToken else {
             return .error(SignError.tokenNotFound)
         }
         
         let request = GetHoroFullRequest(userToken: userToken,
                                          locale: UIDevice.deviceLanguageCode ?? "en")
         
-        return SDKStorage.shared
-            .restApiTransport
+        return defaultRequestWrapper
             .callServerApi(requestBody: request)
             .map { GetHoroFullResponse.map(from: $0) }
     }
     
     func obtainLunarFull() -> Single<LunarFull?> {
-        guard let userToken = SessionManagerCore().getSession()?.userToken else {
+        guard let userToken = SessionManager().getSession()?.userToken else {
             return .error(SignError.tokenNotFound)
         }
         
         let request = GetLunarFullRequest(userToken: userToken,
                                           locale: UIDevice.deviceLanguageCode ?? "en")
         
-        return SDKStorage.shared
-            .restApiTransport
+        return defaultRequestWrapper
             .callServerApi(requestBody: request)
             .map { GetLunarFullResponse.map(from: $0) }
     }
@@ -89,15 +88,14 @@ extension ContentManagerCore {
     }
     
     func obtainZodiacQuote() -> Single<String?> {
-        guard let userToken = SessionManagerCore().getSession()?.userToken else {
+        guard let userToken = SessionManager().getSession()?.userToken else {
             return .error(SignError.tokenNotFound)
         }
         
         let request = GetZodiacQuoteRequest(userToken: userToken,
                                             locale: UIDevice.deviceLanguageCode ?? "en")
         
-        return SDKStorage.shared
-            .restApiTransport
+        return defaultRequestWrapper
             .callServerApi(requestBody: request)
             .map { GetZodiacQuoteResponse.map(from: $0) }
     }

@@ -53,8 +53,7 @@ final class Paygate3View: PaygateView {
     }
     
     override func viewDidLoad() {
-        SDKStorage.shared
-            .amplitudeManager
+        AmplitudeManager.shared
             .logEvent(name: "Paygate Screen", parameters: ["variant": 3])
     }
     
@@ -442,7 +441,8 @@ private extension Paygate3View {
     
     func makePreloader() -> UIActivityIndicatorView {
         let view = UIActivityIndicatorView()
-        view.style = .whiteLarge
+        view.style = .large
+        view.color = .white
         view.hidesWhenStopped = true
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)

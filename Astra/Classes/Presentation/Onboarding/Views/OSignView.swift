@@ -33,8 +33,7 @@ final class OSignView: OSlideView {
     override func moveToThis() {
         super.moveToThis()
         
-        SDKStorage.shared
-            .amplitudeManager
+        AmplitudeManager.shared
             .logEvent(name: "Zodiac Screen", parameters: [:])
         
         contentManager.obtainZodiacQuote()

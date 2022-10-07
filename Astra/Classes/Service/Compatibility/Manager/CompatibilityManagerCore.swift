@@ -12,12 +12,14 @@ final class CompatibilityManagerCore: CompatibilityManager {
         static let compatibilitiesKey = "compatibility_manager_core_comaptibilities_key"
         static let compatibilitySignsKey = "compatibility_manager_core_compatibility_signs_key"
     }
+    
+    private let defaultRequestWrapper = DefaultRequestWrapper()
 }
 
 // MARK: Public
 extension CompatibilityManagerCore {
     func obtainCompatibilities(forceUpdate: Bool) -> Single<[Compatibilities]> {
-        guard let userToken = SessionManagerCore().getSession()?.userToken else {
+        guard let userToken = SessionManager().getSession()?.userToken else {
             return .error(SignError.tokenNotFound)
         }
         
@@ -28,8 +30,7 @@ extension CompatibilityManagerCore {
         let request = GetCompatibilitiesRequest(userToken: userToken,
                                                 locale: UIDevice.deviceLanguageCode ?? "en")
         
-        return SDKStorage.shared
-            .restApiTransport
+        return defaultRequestWrapper
             .callServerApi(requestBody: request)
             .map { GetCompatibilitiesResponse.map(from: $0) }
             .flatMap { [weak self] compatibilities -> Single<[Compatibilities]> in

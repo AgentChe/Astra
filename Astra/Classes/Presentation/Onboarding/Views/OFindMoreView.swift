@@ -23,8 +23,7 @@ final class OFindMoreView: OSlideView {
     override func moveToThis() {
         super.moveToThis()
         
-        SDKStorage.shared
-            .amplitudeManager
+        AmplitudeManager.shared
             .logEvent(name: "Character Screen", parameters: [:])
         
         UIView.animate(withDuration: 1, animations: { [weak self] in

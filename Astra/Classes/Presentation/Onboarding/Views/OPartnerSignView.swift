@@ -33,8 +33,7 @@ final class OPartnerSignView: OSlideView {
     override func moveToThis() {
         super.moveToThis()
         
-        SDKStorage.shared
-            .amplitudeManager
+        AmplitudeManager.shared
             .logEvent(name: "Partner Zodiac Screen", parameters: [:])
     }
 }

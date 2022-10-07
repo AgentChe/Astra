@@ -30,8 +30,7 @@ final class OPreloaderView: OSlideView {
     override func moveToThis() {
         super.moveToThis()
         
-        SDKStorage.shared
-            .amplitudeManager
+        AmplitudeManager.shared
             .logEvent(name: "Plan Preparation Screen", parameters: [:])
         
         animationView.play()
@@ -128,7 +127,8 @@ private extension OPreloaderView {
     func makePreloader() -> UIActivityIndicatorView {
         let view = UIActivityIndicatorView()
         view.startAnimating()
-        view.style = .white
+        view.style = .medium
+        view.color = .white
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view

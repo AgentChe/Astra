@@ -7,26 +7,27 @@
 
 import RxSwift
 
-final class MeditationManagerCore: MeditationManager {}
+final class MeditationManagerCore: MeditationManager {
+    private let defaultRequestWrapper = DefaultRequestWrapper()
+}
 
 // MARK: Public
 extension MeditationManagerCore {
     func obtainDashboard() -> Single<MeditationDashboard?> {
-        guard let userToken = SessionManagerCore().getSession()?.userToken else {
+        guard let userToken = SessionManager().getSession()?.userToken else {
             return .error(SignError.tokenNotFound)
         }
         
         let request = GetMeditationDashboardRequest(userToken: userToken,
                                                     locale: UIDevice.deviceLanguageCode ?? "en")
         
-        return SDKStorage.shared
-            .restApiTransport
+        return defaultRequestWrapper
             .callServerApi(requestBody: request)
             .map { GetMeditationDashboardResponse.map(from: $0) }
     }
     
     func obtainCourseDetails(courseId: Int) -> Single<MeditationCourseDetails?> {
-        guard let userToken = SessionManagerCore().getSession()?.userToken else {
+        guard let userToken = SessionManager().getSession()?.userToken else {
             return .error(SignError.tokenNotFound)
         }
         
@@ -34,8 +35,7 @@ extension MeditationManagerCore {
                                                         locale: UIDevice.deviceLanguageCode ?? "en",
                                                         courseId: courseId)
         
-        return SDKStorage.shared
-            .restApiTransport
+        return defaultRequestWrapper
             .callServerApi(requestBody: request)
             .map { GetMeditationCourseDetailsResponse.map(from: $0) }
     }

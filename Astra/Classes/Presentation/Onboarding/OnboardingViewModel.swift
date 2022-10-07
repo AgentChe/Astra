@@ -13,11 +13,11 @@ final class OnboardingViewModel {
         case paygate, main
     }
     
-    private lazy var sessionManager = SessionManagerCore()
+    private lazy var sessionManager = SessionManager()
     private lazy var paygateManager = PaygateManagerCore()
     
     func whatNext() -> Step {
-        if let session = sessionManager.getSession(), session.activeSubscription {
+        if sessionManager.hasActiveSubscriptions() {
             return .main
         }
         

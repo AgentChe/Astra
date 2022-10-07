@@ -5,6 +5,8 @@
 //  Created by Andrey Chernyshev on 24.08.2021.
 //
 
+import CoreGraphics
+
 enum MeditationDashboardCollectionElement {
     case offset(CGFloat)
     case daily(MeditationDashboardCollectionDailyElement)

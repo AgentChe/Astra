@@ -22,7 +22,6 @@
 		960501AE26E6234F004E0F11 /* Splash.Animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 960501AD26E6234F004E0F11 /* Splash.Animation.json */; };
 		96059E0926C662C700BD9A0A /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E0826C662C700BD9A0A /* Session.swift */; };
 		96059E0B26C6632A00BD9A0A /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E0A26C6632A00BD9A0A /* SessionManager.swift */; };
-		96059E0D26C6634400BD9A0A /* SessionManagerCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E0C26C6634400BD9A0A /* SessionManagerCore.swift */; };
 		96059E1126C6665B00BD9A0A /* OPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E1026C6665B00BD9A0A /* OPlanView.swift */; };
 		96059E1426C66F0F00BD9A0A /* SetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E1326C66F0F00BD9A0A /* SetRequest.swift */; };
 		96059E1826C6703500BD9A0A /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96059E1726C6703500BD9A0A /* UserManager.swift */; };
@@ -359,6 +358,30 @@
 		96F06A1926EE16A200CD9F0A /* PreparePaygatePricesMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F06A1826EE16A200CD9F0A /* PreparePaygatePricesMapper.swift */; };
 		96F06A1B26EE16F400CD9F0A /* ProductPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F06A1A26EE16F400CD9F0A /* ProductPrice.swift */; };
 		D447459426E274940025601E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D447459326E274940025601E /* GoogleService-Info.plist */; };
+		DEC41B3328F024F100280990 /* DefaultRequestWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC41B2F28F024F100280990 /* DefaultRequestWrapper.swift */; };
+		DEC41B3528F024F100280990 /* APIRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC41B3128F024F100280990 /* APIRequestBody.swift */; };
+		DEC41B3628F024F100280990 /* RestAPITransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC41B3228F024F100280990 /* RestAPITransport.swift */; };
+		DEC41B3C28F0255D00280990 /* BranchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC41B3828F0255D00280990 /* BranchManager.swift */; };
+		DEC41B3D28F0255D00280990 /* AmplitudeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC41B3928F0255D00280990 /* AmplitudeManager.swift */; };
+		DEC41B3E28F0255D00280990 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC41B3A28F0255D00280990 /* FirebaseManager.swift */; };
+		DEC41B3F28F0255D00280990 /* FacebookManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC41B3B28F0255D00280990 /* FacebookManager.swift */; };
+		DEC41B4128F0259F00280990 /* Observable+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC41B4028F0259F00280990 /* Observable+Utils.swift */; };
+		DEC41B4328F025AD00280990 /* Single+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC41B4228F025AD00280990 /* Single+Utils.swift */; };
+		DEC41B4528F025BB00280990 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC41B4428F025BB00280990 /* Collection+Extension.swift */; };
+		DEC41B4728F025D700280990 /* URL+Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC41B4628F025D700280990 /* URL+Parameters.swift */; };
+		DEC41B4928F025F300280990 /* ContentError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC41B4828F025F300280990 /* ContentError.swift */; };
+		DEC41B4B28F0260800280990 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC41B4A28F0260800280990 /* NetworkError.swift */; };
+		DEC41B4D28F0265C00280990 /* ObservableRetrySingle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC41B4C28F0265C00280990 /* ObservableRetrySingle.swift */; };
+		DEC41B5728F0600300280990 /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC41B4F28F0600300280990 /* IAPManager.swift */; };
+		DEC41B5828F0600300280990 /* PurchaseValidationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC41B5028F0600300280990 /* PurchaseValidationObserver.swift */; };
+		DEC41B5928F0600300280990 /* IAPActionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC41B5228F0600300280990 /* IAPActionResult.swift */; };
+		DEC41B5A28F0600300280990 /* IAPProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC41B5328F0600300280990 /* IAPProduct.swift */; };
+		DEC41B5B28F0600300280990 /* IAPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC41B5528F0600300280990 /* IAPError.swift */; };
+		DEC41B5C28F0600300280990 /* IAPErrorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC41B5628F0600300280990 /* IAPErrorHelper.swift */; };
+		DEC41B5E28F0708E00280990 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC41B5D28F0708E00280990 /* LoginRequest.swift */; };
+		DEC41B6028F0709C00280990 /* SyncTokensRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC41B5F28F0709C00280990 /* SyncTokensRequest.swift */; };
+		DEC41B6328F0764900280990 /* SplashReceiptValidationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC41B6228F0764900280990 /* SplashReceiptValidationObserver.swift */; };
+		DEC41B6528F079AF00280990 /* PaygateInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC41B6428F079AF00280990 /* PaygateInteractor.swift */; };
 		EA80E75864467FD58E75C2BA /* Pods_Astra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70F58ABE9BC2B6805D15295E /* Pods_Astra.framework */; };
 /* End PBXBuildFile section */
 
@@ -380,7 +403,6 @@
 		960501AD26E6234F004E0F11 /* Splash.Animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Splash.Animation.json; sourceTree = "<group>"; };
 		96059E0826C662C700BD9A0A /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		96059E0A26C6632A00BD9A0A /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
-		96059E0C26C6634400BD9A0A /* SessionManagerCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManagerCore.swift; sourceTree = "<group>"; };
 		96059E1026C6665B00BD9A0A /* OPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPlanView.swift; sourceTree = "<group>"; };
 		96059E1326C66F0F00BD9A0A /* SetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRequest.swift; sourceTree = "<group>"; };
 		96059E1726C6703500BD9A0A /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
@@ -594,7 +616,6 @@
 		968FD40926C3CDDC00C01D2A /* UIEdgeInsets+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Extension.swift"; sourceTree = "<group>"; };
 		968FD40C26C3CE2800C01D2A /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		968FD40E26C3CE5400C01D2A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		968FD41026C3CF1F00C01D2A /* Astra-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Astra-Bridging-Header.h"; sourceTree = "<group>"; };
 		968FD41426C3DFC400C01D2A /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		968FD41626C3E02A00C01D2A /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		968FD41826C3E0CB00C01D2A /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
@@ -722,6 +743,30 @@
 		C46B19553E947FBD72888998 /* Pods-Astra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Astra.debug.xcconfig"; path = "Target Support Files/Pods-Astra/Pods-Astra.debug.xcconfig"; sourceTree = "<group>"; };
 		D447459326E274940025601E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D4CA69F726E2740A00B983BF /* Astra.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Astra.entitlements; sourceTree = "<group>"; };
+		DEC41B2F28F024F100280990 /* DefaultRequestWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultRequestWrapper.swift; sourceTree = "<group>"; };
+		DEC41B3128F024F100280990 /* APIRequestBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequestBody.swift; sourceTree = "<group>"; };
+		DEC41B3228F024F100280990 /* RestAPITransport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestAPITransport.swift; sourceTree = "<group>"; };
+		DEC41B3828F0255D00280990 /* BranchManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BranchManager.swift; sourceTree = "<group>"; };
+		DEC41B3928F0255D00280990 /* AmplitudeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmplitudeManager.swift; sourceTree = "<group>"; };
+		DEC41B3A28F0255D00280990 /* FirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		DEC41B3B28F0255D00280990 /* FacebookManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookManager.swift; sourceTree = "<group>"; };
+		DEC41B4028F0259F00280990 /* Observable+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Utils.swift"; sourceTree = "<group>"; };
+		DEC41B4228F025AD00280990 /* Single+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Single+Utils.swift"; sourceTree = "<group>"; };
+		DEC41B4428F025BB00280990 /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
+		DEC41B4628F025D700280990 /* URL+Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Parameters.swift"; sourceTree = "<group>"; };
+		DEC41B4828F025F300280990 /* ContentError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentError.swift; sourceTree = "<group>"; };
+		DEC41B4A28F0260800280990 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		DEC41B4C28F0265C00280990 /* ObservableRetrySingle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableRetrySingle.swift; sourceTree = "<group>"; };
+		DEC41B4F28F0600300280990 /* IAPManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPManager.swift; sourceTree = "<group>"; };
+		DEC41B5028F0600300280990 /* PurchaseValidationObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseValidationObserver.swift; sourceTree = "<group>"; };
+		DEC41B5228F0600300280990 /* IAPActionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPActionResult.swift; sourceTree = "<group>"; };
+		DEC41B5328F0600300280990 /* IAPProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPProduct.swift; sourceTree = "<group>"; };
+		DEC41B5528F0600300280990 /* IAPError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPError.swift; sourceTree = "<group>"; };
+		DEC41B5628F0600300280990 /* IAPErrorHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPErrorHelper.swift; sourceTree = "<group>"; };
+		DEC41B5D28F0708E00280990 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		DEC41B5F28F0709C00280990 /* SyncTokensRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncTokensRequest.swift; sourceTree = "<group>"; };
+		DEC41B6228F0764900280990 /* SplashReceiptValidationObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashReceiptValidationObserver.swift; sourceTree = "<group>"; };
+		DEC41B6428F079AF00280990 /* PaygateInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaygateInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -803,8 +848,8 @@
 		96059E0526C662A200BD9A0A /* Session */ = {
 			isa = PBXGroup;
 			children = (
-				96059E0726C662B000BD9A0A /* Manager */,
 				96059E0626C662AB00BD9A0A /* Model */,
+				96059E0A26C6632A00BD9A0A /* SessionManager.swift */,
 			);
 			path = Session;
 			sourceTree = "<group>";
@@ -817,15 +862,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		96059E0726C662B000BD9A0A /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-				96059E0A26C6632A00BD9A0A /* SessionManager.swift */,
-				96059E0C26C6634400BD9A0A /* SessionManagerCore.swift */,
-			);
-			path = Manager;
-			sourceTree = "<group>";
-		};
 		96059E1226C66F0600BD9A0A /* Request */ = {
 			isa = PBXGroup;
 			children = (
@@ -833,6 +869,8 @@
 				9605019626E3CD3B004E0F11 /* GetCities */,
 				96059E1326C66F0F00BD9A0A /* SetRequest.swift */,
 				960DE417270AEF3600D00EA6 /* OnboardedRequest.swift */,
+				DEC41B5D28F0708E00280990 /* LoginRequest.swift */,
+				DEC41B5F28F0709C00280990 /* SyncTokensRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -1582,7 +1620,6 @@
 				968FD3BF26C3C83100C01D2A /* Info.plist */,
 				D447459326E274940025601E /* GoogleService-Info.plist */,
 				968FD40E26C3CE5400C01D2A /* LaunchScreen.storyboard */,
-				968FD41026C3CF1F00C01D2A /* Astra-Bridging-Header.h */,
 				968FD3BA26C3C83100C01D2A /* Assets.xcassets */,
 			);
 			path = Resource;
@@ -1591,9 +1628,9 @@
 		968FD3C626C3C9ED00C01D2A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				968FD3C726C3CB0C00C01D2A /* Misc */,
 				968FD46E26C451EE00C01D2A /* Service */,
 				968FD41126C3CF3600C01D2A /* Presentation */,
-				968FD3C726C3CB0C00C01D2A /* Misc */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1601,13 +1638,14 @@
 		968FD3C726C3CB0C00C01D2A /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				DEC41B2D28F024F100280990 /* Network */,
+				DEC41B3728F0255D00280990 /* Analytics */,
 				968FD3C826C3CB0C00C01D2A /* Extension */,
-				968FD3D026C3CB0C00C01D2A /* GlobalDefinitions.swift */,
 				968FD3D126C3CB0C00C01D2A /* Utils */,
 				968FD3DA26C3CB0D00C01D2A /* Components */,
 				968FD3DD26C3CB0D00C01D2A /* CustomViews */,
 				968FD3E726C3CB0D00C01D2A /* AppDelegate.swift */,
-				968FD3E826C3CB0D00C01D2A /* Rx */,
+				968FD3D026C3CB0C00C01D2A /* GlobalDefinitions.swift */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -1620,6 +1658,11 @@
 				968FD3CC26C3CB0C00C01D2A /* UITapGestureRecognizerExtension.swift */,
 				968FD3CD26C3CB0C00C01D2A /* UIDeviceExtension.swift */,
 				968FD3CF26C3CB0C00C01D2A /* StringExtension.swift */,
+				968FD3EA26C3CB0D00C01D2A /* UIViewRxExtension.swift */,
+				DEC41B4028F0259F00280990 /* Observable+Utils.swift */,
+				DEC41B4228F025AD00280990 /* Single+Utils.swift */,
+				DEC41B4428F025BB00280990 /* Collection+Extension.swift */,
+				DEC41B4628F025D700280990 /* URL+Parameters.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1627,15 +1670,16 @@
 		968FD3D126C3CB0C00C01D2A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				968FD3D726C3CB0D00C01D2A /* Error */,
 				968FD3D226C3CB0C00C01D2A /* Scalable.swift */,
+				9605E53726FC565600F92398 /* NumberLaunches.swift */,
+				DEC41B4C28F0265C00280990 /* ObservableRetrySingle.swift */,
 				968FD3D326C3CB0D00C01D2A /* TextAttributes.swift */,
 				968FD3D426C3CB0D00C01D2A /* ScreenSize.swift */,
 				968FD3D626C3CB0D00C01D2A /* Fonts.swift */,
-				968FD3D726C3CB0D00C01D2A /* Error */,
 				968FD3D926C3CB0D00C01D2A /* Weak.swift */,
 				96059EC826CD21F600BD9A0A /* RateUs.swift */,
 				96BFF5C726D17E5A00B8D8CC /* ImageLoader.swift */,
-				9605E53726FC565600F92398 /* NumberLaunches.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1644,6 +1688,8 @@
 			isa = PBXGroup;
 			children = (
 				968FD3D826C3CB0D00C01D2A /* SignError.swift */,
+				DEC41B4828F025F300280990 /* ContentError.swift */,
+				DEC41B4A28F0260800280990 /* NetworkError.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -1653,6 +1699,7 @@
 			children = (
 				968FD3DB26C3CB0D00C01D2A /* ImagePicker.swift */,
 				968FD3DC26C3CB0D00C01D2A /* Toast.swift */,
+				968FD3E926C3CB0D00C01D2A /* RxActivityIndicator.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -1679,15 +1726,6 @@
 				968FD3E026C3CB0D00C01D2A /* NavigationControllerSettings.swift */,
 			);
 			path = NavigationController;
-			sourceTree = "<group>";
-		};
-		968FD3E826C3CB0D00C01D2A /* Rx */ = {
-			isa = PBXGroup;
-			children = (
-				968FD3E926C3CB0D00C01D2A /* RxActivityIndicator.swift */,
-				968FD3EA26C3CB0D00C01D2A /* UIViewRxExtension.swift */,
-			);
-			path = Rx;
 			sourceTree = "<group>";
 		};
 		968FD40B26C3CE2800C01D2A /* Strings */ = {
@@ -1722,6 +1760,7 @@
 		968FD41326C3DFAA00C01D2A /* Splash */ = {
 			isa = PBXGroup;
 			children = (
+				DEC41B6128F0728000280990 /* Utils */,
 				960501AC26E62346004E0F11 /* Source */,
 				968FD41426C3DFC400C01D2A /* SplashViewController.swift */,
 				968FD41626C3E02A00C01D2A /* SplashViewModel.swift */,
@@ -1804,6 +1843,7 @@
 		968FD46E26C451EE00C01D2A /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				DEC41B4E28F0600300280990 /* Purchase */,
 				960DE3A2270451DD00D00EA6 /* Natal */,
 				96A7793926F09E0D00CA6033 /* Biorhythms */,
 				96F069FF26EA5C0500CD9F0A /* Paygate */,
@@ -2222,6 +2262,7 @@
 				96F069F726EA3C6400CD9F0A /* Views */,
 				96F0674D26E8BFF100CD9F0A /* PaygateViewController.swift */,
 				96F0674F26E8C05600CD9F0A /* PaygateViewModel.swift */,
+				DEC41B6428F079AF00280990 /* PaygateInteractor.swift */,
 			);
 			path = Paygate;
 			sourceTree = "<group>";
@@ -2307,6 +2348,72 @@
 				70F58ABE9BC2B6805D15295E /* Pods_Astra.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DEC41B2D28F024F100280990 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DEC41B2E28F024F100280990 /* Wrapper */,
+				DEC41B3128F024F100280990 /* APIRequestBody.swift */,
+				DEC41B3228F024F100280990 /* RestAPITransport.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		DEC41B2E28F024F100280990 /* Wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				DEC41B2F28F024F100280990 /* DefaultRequestWrapper.swift */,
+			);
+			path = Wrapper;
+			sourceTree = "<group>";
+		};
+		DEC41B3728F0255D00280990 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				DEC41B3828F0255D00280990 /* BranchManager.swift */,
+				DEC41B3928F0255D00280990 /* AmplitudeManager.swift */,
+				DEC41B3A28F0255D00280990 /* FirebaseManager.swift */,
+				DEC41B3B28F0255D00280990 /* FacebookManager.swift */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
+		DEC41B4E28F0600300280990 /* Purchase */ = {
+			isa = PBXGroup;
+			children = (
+				DEC41B5428F0600300280990 /* Error */,
+				DEC41B5128F0600300280990 /* Model */,
+				DEC41B4F28F0600300280990 /* IAPManager.swift */,
+				DEC41B5028F0600300280990 /* PurchaseValidationObserver.swift */,
+			);
+			path = Purchase;
+			sourceTree = "<group>";
+		};
+		DEC41B5128F0600300280990 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DEC41B5228F0600300280990 /* IAPActionResult.swift */,
+				DEC41B5328F0600300280990 /* IAPProduct.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DEC41B5428F0600300280990 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				DEC41B5528F0600300280990 /* IAPError.swift */,
+				DEC41B5628F0600300280990 /* IAPErrorHelper.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		DEC41B6128F0728000280990 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DEC41B6228F0764900280990 /* SplashReceiptValidationObserver.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2464,6 +2571,7 @@
 				96BFF8B126D68F6E00B8D8CC /* MeditationCourseHeaderCell.swift in Sources */,
 				968F63A826D7CA0A00C61474 /* AudioPlayerDelegate.swift in Sources */,
 				96059E4E26C7BA5500BD9A0A /* GetDashboardResponse.swift in Sources */,
+				DEC41B5828F0600300280990 /* PurchaseValidationObserver.swift in Sources */,
 				968FD40326C3CB0D00C01D2A /* CircleView.swift in Sources */,
 				960501A426E405E8004E0F11 /* CitySearchView.swift in Sources */,
 				96059E6C26C963DD00BD9A0A /* HoroFilterCollectionCell.swift in Sources */,
@@ -2471,6 +2579,7 @@
 				96BFF89A26D651CB00B8D8CC /* MeditationDashboardCourseCell.swift in Sources */,
 				96658E6A26DF71000020FD9B /* SignDate.swift in Sources */,
 				96059E9D26CBBF0600BD9A0A /* HoroViewController.swift in Sources */,
+				DEC41B5E28F0708E00280990 /* LoginRequest.swift in Sources */,
 				96059EBF26CD021800BD9A0A /* SettingsView.swift in Sources */,
 				96059E2726C6CBFB00BD9A0A /* TabItemView.swift in Sources */,
 				96BFF8AB26D67D2D00B8D8CC /* MeditationCourseTableView.swift in Sources */,
@@ -2478,11 +2587,14 @@
 				96BFF87F26D53F7D00B8D8CC /* MeditationsDashboardViewModel.swift in Sources */,
 				9654D0D426DFBE8A00179E40 /* OFindMoreView.swift in Sources */,
 				968F63A326D7753A00C61474 /* PlayPauseButton.swift in Sources */,
+				DEC41B4328F025AD00280990 /* Single+Utils.swift in Sources */,
 				96A7795E26F0CA0700CA6033 /* BiorhythmsTableButtonCell.swift in Sources */,
 				9654D0E526E13BF700179E40 /* OPalmView.swift in Sources */,
+				DEC41B3328F024F100280990 /* DefaultRequestWrapper.swift in Sources */,
 				96059E3B26C7AC5700BD9A0A /* Sign.swift in Sources */,
 				96A7797226F385D000CA6033 /* BiorhythmsChartLegendView.swift in Sources */,
 				96059E2226C6CBB900BD9A0A /* TabController.swift in Sources */,
+				DEC41B3F28F0255D00280990 /* FacebookManager.swift in Sources */,
 				96F06A1526EE101700CD9F0A /* GetPaygateRequest.swift in Sources */,
 				96BFF8B726D6A1F000B8D8CC /* MeditationCourseAudioCell.swift in Sources */,
 				96059E2526C6CBE800BD9A0A /* TabView.swift in Sources */,
@@ -2495,11 +2607,11 @@
 				968FD3FF26C3CB0D00C01D2A /* TapAreaButton.swift in Sources */,
 				960DE397270370BA00D00EA6 /* TabPlayerView.swift in Sources */,
 				96BFF86D26D5280600B8D8CC /* GetMeditationDashboardRequest.swift in Sources */,
-				96059E0D26C6634400BD9A0A /* SessionManagerCore.swift in Sources */,
 				96059E5326C7C8A600BD9A0A /* ContentManagerCore.swift in Sources */,
 				96BFF89426D585B800B8D8CC /* MeditationDashboardDailyCell.swift in Sources */,
 				9605019D26E3CE73004E0F11 /* AddCityRequest.swift in Sources */,
 				96A7797026F3846500CA6033 /* BiorhythmsChartLegendItemView.swift in Sources */,
+				DEC41B5728F0600300280990 /* IAPManager.swift in Sources */,
 				96059E3126C7093800BD9A0A /* MainViewController.swift in Sources */,
 				96A7795626F0C8EC00CA6033 /* BiorhythmsTableView.swift in Sources */,
 				96F0674E26E8BFF100CD9F0A /* PaygateViewController.swift in Sources */,
@@ -2517,13 +2629,18 @@
 				968FD3FA26C3CB0D00C01D2A /* Weak.swift in Sources */,
 				96F06A0B26EE07EA00CD9F0A /* Paygate.swift in Sources */,
 				960DE39427035A9300D00EA6 /* AudioPreloaderView.swift in Sources */,
+				DEC41B4B28F0260800280990 /* NetworkError.swift in Sources */,
 				96059E8626CA683300BD9A0A /* ChartClosedMainTableCell.swift in Sources */,
 				9654D0D826DFCB2B00179E40 /* OMaritalView.swift in Sources */,
+				DEC41B3D28F0255D00280990 /* AmplitudeManager.swift in Sources */,
+				DEC41B3C28F0255D00280990 /* BranchManager.swift in Sources */,
 				96BFF5D326D21A7A00B8D8CC /* GetCompatibilitiesRequest.swift in Sources */,
 				968FD46126C426A100C01D2A /* OStepView.swift in Sources */,
 				96BFF86F26D5283E00B8D8CC /* GetMeditationDashboardResponse.swift in Sources */,
 				96A7794726F0C19500CA6033 /* BiorhythmsManager.swift in Sources */,
+				DEC41B5C28F0600300280990 /* IAPErrorHelper.swift in Sources */,
 				960DE3A52704523600D00EA6 /* NatalArticle.swift in Sources */,
+				DEC41B5928F0600300280990 /* IAPActionResult.swift in Sources */,
 				96059EE426CD9C4100BD9A0A /* GetLunarFullResponse.swift in Sources */,
 				960501AB26E4D5EC004E0F11 /* CitySearchTableCell.swift in Sources */,
 				9605019826E3CD4A004E0F11 /* GetCitiesRequest.swift in Sources */,
@@ -2537,6 +2654,7 @@
 				96A7794926F0C1B500CA6033 /* BiorhythmsManagerCore.swift in Sources */,
 				96059EE226CD9C1400BD9A0A /* GetLunarFullRequest.swift in Sources */,
 				9605E50426FB0F6F00F92398 /* PaygateConfig.swift in Sources */,
+				DEC41B3528F024F100280990 /* APIRequestBody.swift in Sources */,
 				9654D0D626DFC33800179E40 /* OFeelTodayView.swift in Sources */,
 				9605E53826FC565600F92398 /* NumberLaunches.swift in Sources */,
 				96059E8426CA633400BD9A0A /* ChartMainTableElement.swift in Sources */,
@@ -2559,6 +2677,7 @@
 				96BFF88926D54BD400B8D8CC /* MeditationsFilterCollectionCell.swift in Sources */,
 				96BFF87126D5364300B8D8CC /* MeditationManager.swift in Sources */,
 				9605E51726FB5FA800F92398 /* Paygate2View.swift in Sources */,
+				DEC41B4928F025F300280990 /* ContentError.swift in Sources */,
 				96059F0526CE732A00BD9A0A /* GetTarotResponse.swift in Sources */,
 				968FD47A26C46F6C00C01D2A /* OEnjoyingView.swift in Sources */,
 				960501A126E3CFC6004E0F11 /* OCityView.swift in Sources */,
@@ -2589,6 +2708,7 @@
 				96BFF5E826D3C73000B8D8CC /* SignsPickerView.swift in Sources */,
 				96BFF8B326D69F9B00B8D8CC /* MeditationCourseDescriptionCell.swift in Sources */,
 				96A7796226F0CB5F00CA6033 /* BiorhythmsTableViewDelegate.swift in Sources */,
+				DEC41B6028F0709C00280990 /* SyncTokensRequest.swift in Sources */,
 				96059ECE26CD262E00BD9A0A /* LunarViewModel.swift in Sources */,
 				960DE3D127046AAF00D00EA6 /* NatalDetailsView.swift in Sources */,
 				96059E7F26C9CFEF00BD9A0A /* HoroButtonMainTableCell.swift in Sources */,
@@ -2597,6 +2717,7 @@
 				96BFF8A426D67B5700B8D8CC /* MeditationCourseViewController.swift in Sources */,
 				968FD3FE26C3CB0D00C01D2A /* NavigationControllerSettings.swift in Sources */,
 				96059EC926CD21F600BD9A0A /* RateUs.swift in Sources */,
+				DEC41B5B28F0600300280990 /* IAPError.swift in Sources */,
 				968FD41726C3E02A00C01D2A /* SplashViewModel.swift in Sources */,
 				960DE3CC2704647700D00EA6 /* NatalInfoView.swift in Sources */,
 				96F069FE26EA4A1D00CD9F0A /* PaygateOptionView.swift in Sources */,
@@ -2606,6 +2727,7 @@
 				9605E50726FB103500F92398 /* GetPaygateConfigRequest.swift in Sources */,
 				960DE3C82704629300D00EA6 /* NatalTableView.swift in Sources */,
 				96059E8226CA5DF200BD9A0A /* ChartOpenedMainTableCell.swift in Sources */,
+				DEC41B4728F025D700280990 /* URL+Parameters.swift in Sources */,
 				96F06A0426EBF15600CD9F0A /* PaygateReviewsCell.swift in Sources */,
 				96F06A1926EE16A200CD9F0A /* PreparePaygatePricesMapper.swift in Sources */,
 				96059E1A26C6707C00BD9A0A /* UserManagerCore.swift in Sources */,
@@ -2613,6 +2735,7 @@
 				96A7796826F12EFC00CA6033 /* BiorhythmsInfoView.swift in Sources */,
 				96059E6526C90E2C00BD9A0A /* TitleMainTableCell.swift in Sources */,
 				96059EA426CBBFCF00BD9A0A /* HoroTableView.swift in Sources */,
+				DEC41B5A28F0600300280990 /* IAPProduct.swift in Sources */,
 				96BFF5E626D3913600B8D8CC /* AKPickerView.swift in Sources */,
 				96059E3526C70B3900BD9A0A /* MainView.swift in Sources */,
 				960DE418270AEF3600D00EA6 /* OnboardedRequest.swift in Sources */,
@@ -2700,6 +2823,7 @@
 				96059E2B26C6CD2700BD9A0A /* TabCoordinator.swift in Sources */,
 				9605E52026FBAD3700F92398 /* Paygate2OptionView.swift in Sources */,
 				960501A926E4D525004E0F11 /* CitySearchTableView.swift in Sources */,
+				DEC41B3628F024F100280990 /* RestAPITransport.swift in Sources */,
 				9605E52A26FBE1FB00F92398 /* Paygate4OptionView.swift in Sources */,
 				968FD47C26C4736500C01D2A /* OEnjoyingCell.swift in Sources */,
 				96059EBD26CD020300BD9A0A /* SettingsViewModel.swift in Sources */,
@@ -2712,6 +2836,7 @@
 				96BFF86626D5246100B8D8CC /* MeditationAudio.swift in Sources */,
 				96059E4326C7B1B500BD9A0A /* Chart.swift in Sources */,
 				9605E4F726F9C7CD00F92398 /* OQuestion2View.swift in Sources */,
+				DEC41B4528F025BB00280990 /* Collection+Extension.swift in Sources */,
 				960DE3D427046BB600D00EA6 /* NatalDetailsViewModel.swift in Sources */,
 				9654D0DA26DFCF5100179E40 /* OPartnerSignView.swift in Sources */,
 				9605E51326FB476B00F92398 /* PaygateSource2.swift in Sources */,
@@ -2737,10 +2862,13 @@
 				960DE3B227045A3A00D00EA6 /* NatalManagerCore.swift in Sources */,
 				96BFF5F626D3F80300B8D8CC /* CompatibilityTableView.swift in Sources */,
 				968FD3FB26C3CB0D00C01D2A /* ImagePicker.swift in Sources */,
+				DEC41B4D28F0265C00280990 /* ObservableRetrySingle.swift in Sources */,
 				96059ED626CD275C00BD9A0A /* LunarTableElement.swift in Sources */,
 				9605E50C26FB449100F92398 /* Paygate2.swift in Sources */,
 				96A7796626F12DFA00CA6033 /* BiorhythmsTableChartElement.swift in Sources */,
+				DEC41B6528F079AF00280990 /* PaygateInteractor.swift in Sources */,
 				96059E5926C7CF4A00BD9A0A /* MainTableElement.swift in Sources */,
+				DEC41B6328F0764900280990 /* SplashReceiptValidationObserver.swift in Sources */,
 				968FD46326C42ED300C01D2A /* OWelcomeView.swift in Sources */,
 				96059E7426C9AFF900BD9A0A /* HoroContentMainTableCell.swift in Sources */,
 				96F06A1B26EE16F400CD9F0A /* ProductPrice.swift in Sources */,
@@ -2773,6 +2901,7 @@
 				960DE3C227045E8A00D00EA6 /* NatalTableButtonCell.swift in Sources */,
 				960DE41A270AF83B00D00EA6 /* TabPlayerViewDelegate.swift in Sources */,
 				96BFF5D826D21E3F00B8D8CC /* CompatibilityManager.swift in Sources */,
+				DEC41B4128F0259F00280990 /* Observable+Utils.swift in Sources */,
 				96F06A0D26EE094400CD9F0A /* PaygateOptionSource.swift in Sources */,
 				9654D0DD26DFE43B00179E40 /* PartnerSignCollectionCell.swift in Sources */,
 				960DE3C62704603D00D00EA6 /* NatalTableImageView.swift in Sources */,
@@ -2782,6 +2911,7 @@
 				968FD3F326C3CB0D00C01D2A /* GlobalDefinitions.swift in Sources */,
 				960DE3D927046CFC00D00EA6 /* NatalDetailsTableElement.swift in Sources */,
 				96059F1626CE9A9800BD9A0A /* TarotReservedTableCell.swift in Sources */,
+				DEC41B3E28F0255D00280990 /* FirebaseManager.swift in Sources */,
 				96059ECC26CD253200BD9A0A /* LunarViewController.swift in Sources */,
 				96059EB226CBE37B00BD9A0A /* HoroFull.swift in Sources */,
 				96059E1826C6703500BD9A0A /* UserManager.swift in Sources */,
@@ -2923,20 +3053,20 @@
 				CODE_SIGN_ENTITLEMENTS = Astra/Astra.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = AY43JM5PH6;
 				INFOPLIST_FILE = "$(SRCROOT)/Astra/Resource/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.4;
+				MARKETING_VERSION = 1.6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = app.astra;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Astra Development";
-				SWIFT_OBJC_BRIDGING_HEADER = "Astra/Resource/Astra-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -2951,19 +3081,19 @@
 				CODE_SIGN_ENTITLEMENTS = Astra/Astra.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = AY43JM5PH6;
 				INFOPLIST_FILE = "$(SRCROOT)/Astra/Resource/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.4;
+				MARKETING_VERSION = 1.6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = app.astra;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Astra AppStore";
-				SWIFT_OBJC_BRIDGING_HEADER = "Astra/Resource/Astra-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

@@ -5,6 +5,8 @@
 //  Created by Andrey Chernyshev on 14.09.2021.
 //
 
+import CoreGraphics
+
 enum BiorhythmsTableElement {
     case offset(CGFloat)
     case chart(BiorhythmsTableChartElement)

@@ -16,7 +16,7 @@ final class MeditationCourseViewModel {
     private lazy var activeSubscription = makeActiveSubscription()
     
     private lazy var meditationManager = MeditationManagerCore()
-    private lazy var sessionManager = SessionManagerCore()
+    private lazy var sessionManager = SessionManager()
 }
 
 // MARK: Private
@@ -66,24 +66,10 @@ private extension MeditationCourseViewModel {
     }
     
     func makeActiveSubscription() -> Driver<Bool> {
-        let updated = SDKStorage.shared
-            .purchaseMediator
-            .rxPurchaseMediatorDidValidateReceipt
-            .compactMap { $0?.activeSubscription }
+        PurchaseValidationObserver.shared
+            .didValidatedWithActiveSubscription
+            .map { SessionManager().hasActiveSubscriptions() }
             .asDriver(onErrorJustReturn: false)
-        
-        let initial = Driver<Bool>
-            .deferred { [weak self] in
-                guard let this = self else {
-                    return .never()
-                }
-                
-                let activeSubscription = this.sessionManager.getSession()?.activeSubscription ?? false
-                
-                return .just(activeSubscription)
-            }
-        
-        return Driver
-            .merge(initial, updated)
+            .startWith(SessionManager().hasActiveSubscriptions())
     }
 }

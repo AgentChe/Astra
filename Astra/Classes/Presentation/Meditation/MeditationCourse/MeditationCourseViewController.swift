@@ -32,10 +32,10 @@ final class MeditationCourseViewController: UIViewController {
             .subscribe(onNext: { element in
                 if element.needPayment {
                     let vc = PaygateViewController.make()
-                    UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true)
+                    UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController?.present(vc, animated: true)
                 } else {
                     let vc = MeditationAudioViewController.make(audio: element.audio)
-                    UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true)
+                    UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController?.present(vc, animated: true)
                 }
             })
             .disposed(by: disposeBag)

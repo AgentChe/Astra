@@ -7,7 +7,9 @@
 
 import RxSwift
 
-final class UserManagerCore: UserManager {}
+final class UserManagerCore: UserManager {
+    private let defaultRequestWrapper = DefaultRequestWrapper()
+}
 
 // MARK: Public
 extension UserManagerCore {
@@ -22,7 +24,7 @@ extension UserManagerCore {
              goals: [Int]? = nil,
              enjoy: [Int]? = nil,
              notificationKey: String? = nil) -> Single<Void> {
-        guard let userToken = SessionManagerCore().getSession()?.userToken else {
+        guard let userToken = SessionManager().getSession()?.userToken else {
             return .error(SignError.tokenNotFound)
         }
         
@@ -39,35 +41,45 @@ extension UserManagerCore {
                                  enjoy: enjoy,
                                  notificationKey: notificationKey)
         
-        return SDKStorage.shared
-            .restApiTransport
+        return defaultRequestWrapper
             .callServerApi(requestBody: request)
             .map { _ in Void() }
     }
     
+    func syncTokens(oldToken: String, newToken: String) -> Single<Void> {
+        let request = SyncTokensRequest(oldToken: oldToken, newToken: newToken)
+        
+        return defaultRequestWrapper
+            .callServerApi(requestBody: request)
+            .mapToVoid()
+    }
+    
+    func login(userToken: String) -> Single<Void> {
+        defaultRequestWrapper
+            .callServerApi(requestBody: LoginRequest(userToken: userToken))
+            .mapToVoid()
+    }
+    
     func onboarded() -> Single<Void> {
-        guard let userToken = SessionManagerCore().getSession()?.userToken else {
+        guard let userToken = SessionManager().getSession()?.userToken else {
             return .error(SignError.tokenNotFound)
         }
         
         let request = OnboardedRequest(userToken: userToken)
         
-        return SDKStorage.shared
-            .restApiTransport
+        return defaultRequestWrapper
             .callServerApi(requestBody: request)
             .map { _ in Void() }
     }
     
     func searchCities(with name: String) -> Single<[City]> {
-        SDKStorage.shared
-            .restApiTransport
+        defaultRequestWrapper
             .callServerApi(requestBody: GetCitiesRequest(name: name))
             .map { GetCitiesResponse.map(from: $0) }
     }
     
     func add(city name: String) -> Single<City?> {
-        SDKStorage.shared
-            .restApiTransport
+        defaultRequestWrapper
             .callServerApi(requestBody: AddCityRequest(name: name))
             .map { AddCityResponse.map(from: $0, name: name) }
     }

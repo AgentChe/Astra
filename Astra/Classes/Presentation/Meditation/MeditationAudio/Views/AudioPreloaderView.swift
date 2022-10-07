@@ -48,7 +48,8 @@ private extension AudioPreloaderView {
 private extension AudioPreloaderView {
     func makePreloader() -> UIActivityIndicatorView {
         let view = UIActivityIndicatorView()
-        view.style = .whiteLarge
+        view.style = .large
+        view.color = .white
         view.hidesWhenStopped = true
         view.stopAnimating()
         view.translatesAutoresizingMaskIntoConstraints = false

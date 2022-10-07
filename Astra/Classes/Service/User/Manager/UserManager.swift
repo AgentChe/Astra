@@ -19,6 +19,8 @@ protocol UserManager {
              goals: [Int]?,
              enjoy: [Int]?,
              notificationKey: String?) -> Single<Void>
+    func syncTokens(oldToken: String, newToken: String) -> Single<Void>
+    func login(userToken: String) -> Single<Void>
     
     func onboarded() -> Single<Void>
     

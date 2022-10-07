@@ -44,8 +44,7 @@ final class OPalmView: OSlideView {
     override func moveToThis() {
         super.moveToThis()
         
-        SDKStorage.shared
-            .amplitudeManager
+        AmplitudeManager.shared
             .logEvent(name: "Palmistry Camera Screen", parameters: [:])
         
         showCamera()
@@ -210,7 +209,8 @@ private extension OPalmView {
     
     func makePreloader() -> UIActivityIndicatorView {
         let view = UIActivityIndicatorView()
-        view.style = .gray
+        view.style = .medium
+        view.color = .gray
         view.hidesWhenStopped = true
         view.stopAnimating()
         view.translatesAutoresizingMaskIntoConstraints = false

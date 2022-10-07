@@ -34,8 +34,7 @@ final class OPrePalmView: OSlideView {
     override func moveToThis() {
         super.moveToThis()
         
-        SDKStorage.shared
-            .amplitudeManager
+        AmplitudeManager.shared
             .logEvent(name: "Palmistry Screen", parameters: [:])
     }
     

@@ -39,8 +39,7 @@ final class OFeelTodayView: OSlideView {
     override func moveToThis() {
         super.moveToThis()
         
-        SDKStorage.shared
-            .amplitudeManager
+        AmplitudeManager.shared
             .logEvent(name: "Feel Screen", parameters: [:])
     }
 }

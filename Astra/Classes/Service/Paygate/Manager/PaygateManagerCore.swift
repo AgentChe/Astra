@@ -6,17 +6,20 @@
 //
 
 import RxSwift
+import SwiftyStoreKit
 
 final class PaygateManagerCore: PaygateManager {
     enum Constants {
         static let configKey = "paygate_manager_core_config_key"
     }
+    
+    private let defaultRequestWrapper = DefaultRequestWrapper()
 }
 
 // MARK: Public
 extension PaygateManagerCore {
     func obtainSource() -> Single<PaygateSource?> {
-        guard let userToken = SessionManagerCore().getSession()?.userToken else {
+        guard let userToken = SessionManager().getSession()?.userToken else {
             return .error(SignError.tokenNotFound)
         }
         
@@ -24,21 +27,25 @@ extension PaygateManagerCore {
                                         locale: UIDevice.deviceLanguageCode ?? "en",
                                         version: UIDevice.appVersion ?? 1)
         
-        return SDKStorage.shared
-            .restApiTransport
+        return defaultRequestWrapper
             .callServerApi(requestBody: request)
             .map { GetPaygateResponse.map(from: $0) }
     }
     
     func preparePrices(for source: PaygateSource) -> Single<Paygate?> {
-        SDKStorage.shared
-            .iapManager
-            .obtainProducts(ids: [
-                source.first.productId,
-                source.second.productId
-            ])
+        Single<[IAPProduct]>
+            .create { event in
+                let ids = Set(arrayLiteral: source.first.productId, source.second.productId)
+                SwiftyStoreKit.retrieveProductsInfo(ids) { result in
+                    let products = result.retrievedProducts.map { IAPProduct(original: $0) }
+
+                    event(.success(products))
+                }
+
+                return Disposables.create()
+            }
             .map { iapProducts -> [ProductPrice] in
-                iapProducts.map { ProductPrice(product: $0.product) }
+                iapProducts.map { ProductPrice(product: $0.original) }
             }
             .map { productPrices -> Paygate? in
                 PreparePaygatePricesMapper.map(source: source, prices: productPrices)
@@ -46,7 +53,7 @@ extension PaygateManagerCore {
     }
     
     func obtainSource2() -> Single<PaygateSource2?> {
-        guard let userToken = SessionManagerCore().getSession()?.userToken else {
+        guard let userToken = SessionManager().getSession()?.userToken else {
             return .error(SignError.tokenNotFound)
         }
         
@@ -54,22 +61,25 @@ extension PaygateManagerCore {
                                          locale: UIDevice.deviceLanguageCode ?? "en",
                                          version: UIDevice.appVersion ?? 1)
         
-        return SDKStorage.shared
-            .restApiTransport
+        return defaultRequestWrapper
             .callServerApi(requestBody: request)
             .map { GetPaygate2Response.map(from: $0) }
     }
     
     func preparePrices2(for source: PaygateSource2) -> Single<Paygate2?> {
-        SDKStorage.shared
-            .iapManager
-            .obtainProducts(ids: [
-                source.first.productId,
-                source.second.productId,
-                source.third.productId
-            ])
+        Single<[IAPProduct]>
+            .create { event in
+                let ids = Set(arrayLiteral: source.first.productId, source.second.productId, source.third.productId)
+                SwiftyStoreKit.retrieveProductsInfo(ids) { result in
+                    let products = result.retrievedProducts.map { IAPProduct(original: $0) }
+
+                    event(.success(products))
+                }
+
+                return Disposables.create()
+            }
             .map { iapProducts -> [ProductPrice] in
-                iapProducts.map { ProductPrice(product: $0.product) }
+                iapProducts.map { ProductPrice(product: $0.original) }
             }
             .map { productPrices -> Paygate2? in
                 PreparePaygate2PricesMapper.map(source: source, prices: productPrices)
@@ -77,7 +87,7 @@ extension PaygateManagerCore {
     }
     
     func retrieveConfig(forceUpdate: Bool) -> Single<PaygateConfig?> {
-        guard let userToken = SessionManagerCore().getSession()?.userToken else {
+        guard let userToken = SessionManager().getSession()?.userToken else {
             return .error(SignError.tokenNotFound)
         }
         
@@ -88,8 +98,7 @@ extension PaygateManagerCore {
         let request = GetPaygateConfigRequest(userToken: userToken,
                                               locale: UIDevice.deviceLanguageCode ?? "en")
         
-        return SDKStorage.shared
-            .restApiTransport
+        return defaultRequestWrapper
             .callServerApi(requestBody: request)
             .map { GetPaygateConfigResponse.map(from: $0) }
             .flatMap { [weak self] config in

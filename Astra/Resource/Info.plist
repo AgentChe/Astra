@@ -39,6 +39,8 @@
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>FacebookAppID</key>
 	<string>382265213286819</string>
+	<key>FacebookClientToken</key>
+	<string>fd1fd20055f508175e84f478d8524ee1</string>
 	<key>FacebookDisplayName</key>
 	<string>Astra</string>
 	<key>LSRequiresIPhoneOS</key>

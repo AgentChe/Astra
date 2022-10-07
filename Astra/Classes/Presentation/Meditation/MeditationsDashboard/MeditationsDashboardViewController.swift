@@ -44,18 +44,18 @@ final class MeditationsDashboardViewController: UIViewController {
                 case .daily(let element):
                     if element.needPayment {
                         let vc = PaygateViewController.make()
-                        UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true)
+                        UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController?.present(vc, animated: true)
                     } else {
                         let vc = MeditationAudioViewController.make(audio: element.daily.audio)
-                        UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true)
+                        UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController?.present(vc, animated: true)
                     }
                 case .audio(let element):
                     if element.needPayment {
                         let vc = PaygateViewController.make()
-                        UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true)
+                        UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController?.present(vc, animated: true)
                     } else {
                         let vc = MeditationAudioViewController.make(audio: element.audio)
-                        UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true)
+                        UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController?.present(vc, animated: true)
                     }
                 case .course(let course):
                     let vc = MeditationCourseViewController.make(courseId: course.id)

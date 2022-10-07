@@ -7,7 +7,9 @@
 
 import RxSwift
 
-final class TarotManagerCore: TarotManager {}
+final class TarotManagerCore: TarotManager {
+    private let defaultRequestWrapper = DefaultRequestWrapper()
+}
 
 // MARK: Public
 extension TarotManagerCore {
@@ -25,7 +27,7 @@ extension TarotManagerCore {
     }
     
     func obtainTarot(with type: TarotType, forceUpdate: Bool) -> Single<Tarot?> {
-        guard let userToken = SessionManagerCore().getSession()?.userToken else {
+        guard let userToken = SessionManager().getSession()?.userToken else {
             return .error(SignError.tokenNotFound)
         }
         
@@ -37,8 +39,7 @@ extension TarotManagerCore {
                                       locale: UIDevice.deviceLanguageCode ?? "en",
                                       type: type.code)
         
-        return SDKStorage.shared
-            .restApiTransport
+        return defaultRequestWrapper
             .callServerApi(requestBody: request)
             .map { GetTarotResponse.map(from: $0, type: type) }
             .flatMap { [weak self] tarot -> Single<Tarot?> in

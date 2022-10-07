@@ -64,13 +64,13 @@ final class CompatibilitySignsViewController: UIViewController {
         mainView.button.rx.tap
             .subscribe(onNext: { [weak self] in
                 let config = PaygateManagerCore().cachedConfig() ?? PaygateConfig.default()
-                let activeSubscription = SessionManagerCore().getSession()?.activeSubscription ?? false
+                let activeSubscription = SessionManager().hasActiveSubscriptions()
                 
                 let needPayment = config.compatibility && !activeSubscription
                 
                 if needPayment {
                     let vc = PaygateViewController.make()
-                    UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true)
+                    UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController?.present(vc, animated: true)
                 } else {
                     let vc = CompatibilityViewController.make()
                     self?.navigationController?.pushViewController(vc, animated: true)

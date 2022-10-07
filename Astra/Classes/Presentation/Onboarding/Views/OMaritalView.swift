@@ -38,8 +38,7 @@ final class OMaritalView: OSlideView {
     override func moveToThis() {
         super.moveToThis()
         
-        SDKStorage.shared
-            .amplitudeManager
+        AmplitudeManager.shared
             .logEvent(name: "Marital Screen", parameters: [:])
     }
 }

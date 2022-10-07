@@ -5,6 +5,8 @@
 //  Created by Andrey Chernyshev on 22.09.2021.
 //
 
+import Foundation
+
 final class PreparePaygate2PricesMapper {
     static func map(source: PaygateSource2, prices: [ProductPrice]) -> Paygate2? {
         guard

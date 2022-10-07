@@ -5,6 +5,8 @@
 //  Created by Andrey Chernyshev on 18.08.2021.
 //
 
+import CoreGraphics
+
 enum LunarTableElement {
     case offset(CGFloat)
     case lunarCalendar([LunarCalendarDay])

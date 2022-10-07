@@ -35,8 +35,7 @@ final class OCityView: OSlideView {
     override func moveToThis() {
         super.moveToThis()
         
-        SDKStorage.shared
-            .amplitudeManager
+        AmplitudeManager.shared
             .logEvent(name: "City Screen", parameters: [:])
     }
 }

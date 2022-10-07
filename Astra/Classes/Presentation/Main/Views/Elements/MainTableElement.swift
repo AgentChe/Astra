@@ -5,6 +5,8 @@
 //  Created by Andrey Chernyshev on 14.08.2021.
 //
 
+import CoreGraphics
+
 enum MainTableElement {
     case offset(CGFloat)
     case profile(ProfileMainTableElement)

@@ -26,8 +26,7 @@ final class OWelcomeView: OSlideView {
 // MARK: Private
 private extension OWelcomeView {
     func initialize() {
-        SDKStorage.shared
-            .amplitudeManager
+        AmplitudeManager.shared
             .logEvent(name: "Welcome Screen", parameters: [:])
         
         UIView.animate(withDuration: 1, animations: { [weak self] in

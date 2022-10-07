@@ -22,7 +22,7 @@ final class PaygateViewModel {
     lazy var activityIndicator = RxActivityIndicator()
     
     private lazy var paygateManager = PaygateManagerCore()
-    private lazy var purchaseInteractor = SDKStorage.shared.purchaseInteractor
+    private lazy var purchaseInteractor = PaygateInteractor()
 }
 
 // MARK: Private
@@ -60,18 +60,18 @@ private extension PaygateViewModel {
     }
     
     func makeBuyed() -> Driver<Step> {
-        buy
+        let purchase = buy
             .flatMapLatest { [weak self] productId -> Observable<Step> in
                 guard let self = self else {
                     return .never()
                 }
                 
                 return self.purchaseInteractor
-                    .makeActiveSubscriptionByBuy(productId: productId)
+                    .makeActiveSubscription(by: .buy(productId))
                     .map { result -> Step in
                         switch result {
                         case .completed(let response):
-                            return response != nil ? .buyed : .error
+                            return response ? .buyed : .error
                         case .cancelled:
                             return .canceled
                         }
@@ -79,22 +79,24 @@ private extension PaygateViewModel {
                     .trackActivity(self.activityIndicator)
                     .catchAndReturn(.error)
             }
+        
+        return purchase
             .asDriver(onErrorJustReturn: .error)
     }
     
     func makeRestored() -> Driver<Step> {
-        restore
-            .flatMapLatest { [weak self] _ -> Observable<Step> in
+        let purchase = restore
+            .flatMapLatest { [weak self] productId -> Observable<Step> in
                 guard let self = self else {
                     return .never()
                 }
                 
                 return self.purchaseInteractor
-                    .makeActiveSubscriptionByRestore()
+                    .makeActiveSubscription(by: .restore)
                     .map { result -> Step in
                         switch result {
                         case .completed(let response):
-                            return response != nil ? .restored : .error
+                            return response ? .restored : .error
                         case .cancelled:
                             return .canceled
                         }
@@ -102,6 +104,8 @@ private extension PaygateViewModel {
                     .trackActivity(self.activityIndicator)
                     .catchAndReturn(.error)
             }
+        
+        return purchase
             .asDriver(onErrorJustReturn: .error)
     }
 }

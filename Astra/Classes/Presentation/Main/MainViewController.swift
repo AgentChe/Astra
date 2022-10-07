@@ -50,13 +50,13 @@ extension MainViewController: MainTableViewDelegate {
     
     func mainTableViewHoroDidTapped() {
         let config = PaygateManagerCore().cachedConfig() ?? PaygateConfig.default()
-        let activeSubscription = SessionManagerCore().getSession()?.activeSubscription ?? false
+        let activeSubscription = SessionManager().hasActiveSubscriptions()
         
         let needPayment = config.horoscopes && !activeSubscription
         
         if needPayment {
             let vc = PaygateViewController.make()
-            UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true)
+            UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController?.present(vc, animated: true)
         } else {
             let vc = HoroViewController.make()
             navigationController?.pushViewController(vc, animated: true)
@@ -65,13 +65,13 @@ extension MainViewController: MainTableViewDelegate {
     
     func mainTableViewBiorhythmsTapped() {
         let config = PaygateManagerCore().cachedConfig() ?? PaygateConfig.default()
-        let activeSubscription = SessionManagerCore().getSession()?.activeSubscription ?? false
+        let activeSubscription = SessionManager().hasActiveSubscriptions()
         
         let needPayment = config.biorhythms && !activeSubscription
         
         if needPayment {
             let vc = PaygateViewController.make()
-            UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true)
+            UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController?.present(vc, animated: true)
         } else {
             let vc = BiorhythmsViewController.make()
             navigationController?.pushViewController(vc, animated: true)
@@ -80,16 +80,16 @@ extension MainViewController: MainTableViewDelegate {
     
     func mainTableViewLunarDidTapped() {
         let config = PaygateManagerCore().cachedConfig() ?? PaygateConfig.default()
-        let activeSubscription = SessionManagerCore().getSession()?.activeSubscription ?? false
+        let activeSubscription = SessionManager().hasActiveSubscriptions()
         
         let needPayment = config.lunar && !activeSubscription
         
         if needPayment {
             let vc = PaygateViewController.make()
-            UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true)
+            UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController?.present(vc, animated: true)
         } else {
             let vc = LunarViewController.make()
-            UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true)
+            UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController?.present(vc, animated: true)
         }
     }
     
@@ -99,7 +99,7 @@ extension MainViewController: MainTableViewDelegate {
         }
         
         let config = PaygateManagerCore().cachedConfig() ?? PaygateConfig.default()
-        let activeSubscription = SessionManagerCore().getSession()?.activeSubscription ?? false
+        let activeSubscription = SessionManager().hasActiveSubscriptions()
         
         var needPayment: Bool
         
@@ -118,13 +118,13 @@ extension MainViewController: MainTableViewDelegate {
         
         if needPayment {
             let vc = PaygateViewController.make()
-            UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true)
+            UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController?.present(vc, animated: true)
         } else if TarotManagerCore().hasTarotOnToday(with: type) {
             let vc = TarotViewController.make(type: type)
-            UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true)
+            UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController?.present(vc, animated: true)
         } else {
             let vc = ChooseTarotViewController.make(type: type)
-            UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true)
+            UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController?.present(vc, animated: true)
         }
     }
 }
