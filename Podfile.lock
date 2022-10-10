@@ -121,7 +121,7 @@ PODS:
   - GoogleUtilities/UserDefaults (7.8.0):
     - GoogleUtilities/Logger
   - Kingfisher (7.4.0)
-  - lottie-ios (3.4.3)
+  - lottie-ios (3.4.4)
   - MarqueeLabel (4.0.5)
   - nanopb (2.30909.0):
     - nanopb/decode (= 2.30909.0)
@@ -243,7 +243,7 @@ SPEC CHECKSUMS:
   GoogleDataTransport: 1c8145da7117bd68bbbed00cf304edb6a24de00f
   GoogleUtilities: 1d20a6ad97ef46f67bbdec158ce00563a671ebb7
   Kingfisher: 596b207973051aae5e4c54a1c1cb39837ea10d36
-  lottie-ios: 9ae750cdc7820fecbd3c2f0cfc493038208fcdc4
+  lottie-ios: 8f97d3271e155c2d688875c29cd3c74908aef5f8
   MarqueeLabel: 00cc0bcd087111dca575878b3531af980559707d
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
   NotificationBannerSwift: 49912a48b37e2f55d1cef4e8a38f15394f66a70a
@@ -262,4 +262,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: a2f6c96e8f2292c8104c0b4832019d20213c9abe
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.11.0
