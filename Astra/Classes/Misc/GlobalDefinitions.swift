@@ -14,7 +14,7 @@ final class GlobalDefinitions {
 
     static let applicationTag = "ASTRA"
 
-    static let amplitudeApiKey = "b503251969f4b1d7901d2f7d1388d476"
+    static let amplitudeApiKey = "1336d08d429ceb343970fd360e3253f6"
     static let appsFlyerApiKey = "DCciCfYXjMQ8QnkdCg8qzk"
     static let revenueCatKey = "RwJfeqINgmQJYdTOthvXmeJMtbaNnOXW"
     static let appHUDKey = "app_zZDL4JMTStmMRNwjJWtd3QkQDJyTCF"
