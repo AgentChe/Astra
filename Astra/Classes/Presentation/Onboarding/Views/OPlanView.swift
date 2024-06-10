@@ -52,7 +52,7 @@ extension OPlanView: OGenderViewDelegate {
             name = "Onboarding.Women"
         }
         
-        animationView.animation = Animation.named(name)
+        animationView.animation = LottieAnimation.named(name)
     }
 }
 
@@ -138,8 +138,8 @@ private extension OPlanView {
         return view
     }
     
-    func makeAnimationView() -> AnimationView {
-        let view = AnimationView()
+    func makeAnimationView() -> LottieAnimationView {
+        let view = LottieAnimationView()
         view.contentMode = .scaleAspectFit
         view.loopMode = .playOnce
         view.translatesAutoresizingMaskIntoConstraints = false

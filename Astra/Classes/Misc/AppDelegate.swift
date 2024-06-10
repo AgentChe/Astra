@@ -37,9 +37,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Purchases.configure(withAPIKey: GlobalDefinitions.revenueCatKey)
         Apphud.start(apiKey: GlobalDefinitions.appHUDKey)
-        Qonversion.launch(withKey: GlobalDefinitions.qonversionKey)
         Adapty.activate(GlobalDefinitions.adaptyKey)
         Purchasely.start(withAPIKey: GlobalDefinitions.purchaselyKey)
+        
+        let configuration = Qonversion.Configuration(projectKey: GlobalDefinitions.qonversionKey, launchMode: .subscriptionManagement)
+        Qonversion.initWithConfig(configuration)
+
         
         return true
     }

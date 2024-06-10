@@ -149,9 +149,9 @@ private extension OPreloaderView {
         return view
     }
     
-    func makeAnimationView() -> AnimationView {
-        let view = AnimationView()
-        view.animation = Animation.named("Onboarding.Preloader")
+    func makeAnimationView() -> LottieAnimationView {
+        let view = LottieAnimationView()
+        view.animation = LottieAnimation.named("Onboarding.Preloader")
         view.contentMode = .scaleAspectFill
         view.loopMode = .loop
         view.translatesAutoresizingMaskIntoConstraints = false

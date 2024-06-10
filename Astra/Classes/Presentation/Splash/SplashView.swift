@@ -53,9 +53,9 @@ private extension SplashView {
         return view
     }
     
-    func makeAnimationView() -> AnimationView {
-        let view = AnimationView()
-        view.animation = Animation.named("Splash.Animation")
+    func makeAnimationView() -> LottieAnimationView {
+        let view = LottieAnimationView()
+        view.animation = LottieAnimation.named("Splash.Animation")
         view.contentMode = .scaleAspectFill
         view.loopMode = .playOnce
         view.translatesAutoresizingMaskIntoConstraints = false
